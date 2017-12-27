@@ -30,7 +30,7 @@ Add the following dependency to your `build.gradle`:
 ```
 dependencies {
    ... other dependencies ...
-   compile "io.github.dkimitsa.robovm:robopods-charts-ios:$altrobopodsVersion"
+   compile "io.github.dkimitsa.robovm:robopods-charts-ios:$altpodsVersion"
 }
 ```
 
