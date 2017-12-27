@@ -123,5 +123,6 @@
     </build>
 
     <modules>
+        <module>charts</module>
     </modules>
 </project>
