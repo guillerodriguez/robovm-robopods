@@ -1,8 +1,0 @@
-<config>
-    <libs>
-        <lib>libs/libAdIdAccess.a</lib>
-    </libs>
-    <frameworks>
-        <framework>AdSupport</framework>
-    </frameworks>
-</config>

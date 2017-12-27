@@ -1,7 +1,0 @@
-<config>    
-    <frameworks>
-        <framework>Bolts</framework>
-        
-        <framework>CoreGraphics</framework>
-    </frameworks>
-</config>

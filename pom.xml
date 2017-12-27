@@ -1,68 +1,60 @@
-<?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
-
-    <groupId>com.mobidevelop.robovm</groupId>
-    <version>2.2.3-SNAPSHOT</version>
+    <groupId>io.github.dkimitsa.robovm</groupId>
+    <version>1.0.0-SNAPSHOT</version>
     <artifactId>robopods-parent</artifactId>
     <name>RoboPods Parent</name>
     <packaging>pom</packaging>
-    <url>http://http://robovm.mobidevelop.com</url>
+    <url>https://dkimitsa.github.io</url>
     <description>
-        RoboPods provides bindings to popular 3rd party libraries.
+        Alternative RoboPods: currently in development or not yet in official repo.
     </description>
-    <inceptionYear>2015</inceptionYear>
+    <inceptionYear>2017</inceptionYear>
 
     <organization>
-        <name>MobiDevelop</name>
-        <url>http://http://robovm.mobidevelop.com</url>
+        <name>Demyan Kimitsa</name>
+        <url>https://dkimitsa.github.io</url>
     </organization>
 
-    <developers>
-    </developers>
-
     <scm>
-        <url>https://github.com/MobiDevelop/robovm-robopods</url>
-        <connection>scm:git:git://github.com/mobidevelop/robovm-robopods.git</connection>
-        <developerConnection>scm:git:git@github.com:mobidevelop/robovm-robopods.git</developerConnection>
+        <url>https://github.com/dkimitsa/robovm-robopods</url>
+        <connection>scm:git:git://github.com/dkimitsa/robovm-robopods.git</connection>
+        <developerConnection>scm:git:git@github.com:github.com/dkimitsa/robovm-robopods.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/mobidevelop/robovm-robopods/issues</url>
+        <url>https://github.com/dkimitsa/robovm-robopods/issues</url>
     </issueManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <robovm.version>2.3.3</robovm.version>
         <robopods.version>${project.version}</robopods.version>
-        <android.version>4.1.1.4</android.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-        </dependencies>
-    </dependencyManagement>
 
-    <profiles>
-        <profile>
-            <id>doclint-java8-disable</id>
-            <activation>
-                <jdk>[1.8,)</jdk>
-            </activation>
-            <properties>
-                <javadoc.opts>-Xdoclint:none</javadoc.opts>
-            </properties>
-        </profile>
-    </profiles>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>maven.org</id>
+            <url>http://repo1.maven.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
 
     <build>
         <plugins>
@@ -88,17 +80,7 @@
                     <target>1.8</target>
                     <debug>true</debug>
                     <optimize>true</optimize>
-                    <showDeprecations>true</showDeprecations>
                     <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.11</version>
-                <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
                 </configuration>
             </plugin>
             <plugin>
@@ -135,62 +117,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>2.9</version>
-                    <configuration>
-                        <additionalparam>${javadoc.opts}</additionalparam>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>net.orfjackal.retrolambda</groupId>
-                    <artifactId>retrolambda-maven-plugin</artifactId>
-                    <version>2.0.6</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>process-main</goal>
-                                <goal>process-test</goal>
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
     </build>
 
-    <repositories>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>maven.org</id>
-            <url>http://repo1.maven.org/maven2/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </pluginRepository>
-        <pluginRepository>
-            <id>Codehaus repository</id>
-            <url>http://repository.codehaus.org/</url>
-        </pluginRepository>
-    </pluginRepositories>
-
     <modules>
-        <module>plugins</module>
-
-        <module>appmetrica</module>
-        <module>appodeal</module>
-        <module>bolts</module>
-        <module>chartboost</module>
-        <module>fabric</module>
-        <module>facebook</module>
-        <module>firebase</module>
-        <module>flurry</module>
-        <module>google-apis</module>
-        <module>google-analytics</module>
-        <module>google-mobile-ads</module>
-        <module>google-play-games</module>
-        <module>google-signin</module>
-        <module>heyzap</module>
-        <module>parse</module>
-        <module>reachability</module>
     </modules>
 </project>
