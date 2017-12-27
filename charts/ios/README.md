@@ -1,4 +1,4 @@
-# Parse iOS
+# Charts iOS
 
 ## Sample app
 
