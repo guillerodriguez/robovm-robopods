@@ -11,6 +11,7 @@ This is the list of currently available AltPods. Click them to get more informat
 | Name                               | Description                                                                            |
 |------------------------------------|----------------------------------------------------------------------------------------|
 | [Charts](charts/)                  | Beautiful charts for iOS/tvOS/OSX! The Apple side of the crossplatform MPAndroidChart. |
+| [OneSignal](onesignal/)            | OneSignal is a free push notification service for mobile apps                          |
 
 
 ## Version of AltPods to framework version mapping
@@ -18,3 +19,4 @@ This is the list of currently available AltPods. Click them to get more informat
 | Name                               | 1.0.0  |
 |------------------------------------|--------|
 | [Charts](charts/)                  | 3.0.4  |
+| [OneSignal](onesignal/)            | 2.6.0  |

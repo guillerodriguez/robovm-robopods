@@ -124,5 +124,6 @@
 
     <modules>
         <module>charts</module>
+        <module>onesignal</module>
     </modules>
 </project>

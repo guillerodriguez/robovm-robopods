@@ -1,0 +1,106 @@
+package: org.robovm.pods.onesignal
+include: [foundation, usernotifications, uikit]
+framework: OneSignal
+clang_args: ['-x', 'objective-c']
+headers:
+    - OneSignal.h
+
+private_typedefs: {}
+
+typedefs: {}
+
+enums:
+    OSNotificationActionType: {}
+    OSNotificationDisplayType: {}
+    OSNotificationPermission: {}
+    ONE_S_LOG_LEVEL: {name: OSLogLevel, prefix: ONE_S_LL_}
+
+classes:
+    OSNotification: {}
+    OSNotificationAction: {}
+    OSNotificationOpenedResult: {}
+    OSNotificationPayload: {}
+    OSPermissionState: {}
+    OSPermissionStateChanges: {}
+    OSPermissionSubscriptionState: {}
+    OSSubscriptionState: {}
+    OSSubscriptionStateChanges: {}
+    OneSignal:
+        methods:
+            '+initWith.*':
+                name: Init
+                return_type: ObjCClass
+                parameters:
+                    launchOptions:
+                        type: UIApplicationLaunchOptions
+                    settings:
+                        type: OSSettings
+            '+setLogLevel:visualLevel:':
+                name: setLogLevel
+            '+onesignal_Log:message:':
+                name: onesignalLog
+            '+sendTag:value:onSuccess:onFailure:':
+                name: sendTag
+            '+sendTag:value:':
+                name: sendTag
+            '+sendTags:onSuccess:onFailure:':
+                name: sendTags
+            '+getTags:onFailure:':
+                name: getTags
+            '+deleteTag:onSuccess:onFailure:':
+                name: deleteTag
+            '+deleteTags:onSuccess:onFailure:':
+                name: deleteTags
+            '+deleteTagsWithJsonString:':
+                name: deleteTags
+            '+postNotification:onSuccess:onFailure:':
+                name: postNotification
+            '+postNotificationWithJsonString:onSuccess:onFailure:':
+                name: postNotification
+            '+didReceiveNotificationExtensionRequest:withMutableNotificationContent:':
+                name: didReceiveNotification
+            '+serviceExtensionTimeWillExpireRequest:withMutableNotificationContent:':
+                name: serviceExtensionTimeWillExpire
+            '+app_id':
+                name: getAppId
+            '+sdk_version_raw':
+                name: getSdkVersionRaw
+            '+sdk_semantic_version':
+                name: getSdkSemanticVersion
+            '+promptForPushNotificationsWithUserResponse':
+                name: promptForPushNotifications
+
+protocols:
+    OSPermissionObserver: {}
+    OSSubscriptionObserver: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    kOSSettingsKey(.*):
+        dictionary: OSSettings
+        name: '#{g[0]}'
+        type: NSString
+
+    ONESIGNAL_VERSION:
+        class: OneSignal
+        name: getVersion
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # internal control not required to be exposed
+    XC8_AVAILABLE:
+        exclude: true
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
