@@ -125,5 +125,6 @@
     <modules>
         <module>charts</module>
         <module>onesignal</module>
+        <module>lottie</module>
     </modules>
 </project>
