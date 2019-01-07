@@ -139,8 +139,12 @@ import org.robovm.apple.uikit.*;
         public static native NSString InAppAlerts();
         @GlobalValue(symbol="kOSSettingsKeyInAppLaunchURL", optional=true)
         public static native NSString InAppLaunchURL();
+        @GlobalValue(symbol="kOSSSettingsKeyPromptBeforeOpeningPushURL", optional=true)
+        public static native NSString PromptBeforeOpeningPushURL();
         @GlobalValue(symbol="kOSSettingsKeyInFocusDisplayOption", optional=true)
         public static native NSString InFocusDisplayOption();
+        @GlobalValue(symbol="kOSSettingsKeyProvidesAppNotificationSettings", optional=true)
+        public static native NSString ProvidesAppNotificationSettings();
     }
     /*</keys>*/
 }

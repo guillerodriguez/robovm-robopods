@@ -53,6 +53,8 @@ import org.robovm.apple.uikit.*;
     public native OSPermissionState getPermissionStatus();
     @Property(selector = "subscriptionStatus")
     public native OSSubscriptionState getSubscriptionStatus();
+    @Property(selector = "emailSubscriptionStatus")
+    public native OSEmailSubscriptionState getEmailSubscriptionStatus();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

@@ -63,6 +63,8 @@ import org.robovm.apple.uikit.*;
     public native String getCategory();
     @Property(selector = "badge")
     public native @MachineSizedUInt long getBadge();
+    @Property(selector = "badgeIncrement")
+    public native @MachineSizedSInt long getBadgeIncrement();
     @Property(selector = "sound")
     public native String getSound();
     @Property(selector = "title")
@@ -81,6 +83,8 @@ import org.robovm.apple.uikit.*;
     public native NSArray<?> getActionButtons();
     @Property(selector = "rawPayload")
     public native NSDictionary<?, ?> getRawPayload();
+    @Property(selector = "threadId")
+    public native String getThreadId();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

@@ -36,27 +36,25 @@ import org.robovm.apple.uikit.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/OSPermissionState/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/OSEmailSubscriptionState/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class OSPermissionStatePtr extends Ptr<OSPermissionState, OSPermissionStatePtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(OSPermissionState.class); }/*</bind>*/
+    /*<ptr>*/public static class OSEmailSubscriptionStatePtr extends Ptr<OSEmailSubscriptionState, OSEmailSubscriptionStatePtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(OSEmailSubscriptionState.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public OSPermissionState() {}
-    protected OSPermissionState(Handle h, long handle) { super(h, handle); }
-    protected OSPermissionState(SkipInit skipInit) { super(skipInit); }
+    public OSEmailSubscriptionState() {}
+    protected OSEmailSubscriptionState(Handle h, long handle) { super(h, handle); }
+    protected OSEmailSubscriptionState(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "reachable")
-    public native boolean isReachable();
-    @Property(selector = "hasPrompted")
-    public native boolean hasPrompted();
-    @Property(selector = "providesAppNotificationSettings")
-    public native boolean providesAppNotificationSettings();
-    @Property(selector = "status")
-    public native OSNotificationPermission getStatus();
+    @Property(selector = "emailUserId")
+    public native String getEmailUserId();
+    @Property(selector = "emailAddress")
+    public native String getEmailAddress();
+    @Property(selector = "subscribed")
+    public native boolean isSubscribed();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

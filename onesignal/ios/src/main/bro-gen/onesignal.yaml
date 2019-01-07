@@ -67,12 +67,27 @@ classes:
                 name: getSdkVersionRaw
             '+sdk_semantic_version':
                 name: getSdkSemanticVersion
-            '+promptForPushNotificationsWithUserResponse':
+            '+promptForPushNotificationsWithUserResponse:':
                 name: promptForPushNotifications
+            '+promptForPushNotificationsWithUserResponse:fallbackToSettings:':
+                name: promptForPushNotifications
+            '+sendTagsWithJsonString:':
+                name: sendTags
+            '+setEmail:withEmailAuthHashToken:withSuccess:withFailure:':
+                trim_after_first_colon: true
+            '+setEmail:withSuccess:withFailure:':
+                trim_after_first_colon: true
+            '+logoutEmailWithSuccess:withFailure:':
+                name: logoutEmail
+            '+setEmail:withEmailAuthHashToken:':
+                trim_after_first_colon: true
+    OSEmailSubscriptionState: {}
+    OSEmailSubscriptionStateChanges: {}
 
 protocols:
     OSPermissionObserver: {}
     OSSubscriptionObserver: {}
+    OSEmailSubscriptionObserver: {}
 
 functions:
     # Make sure we don't miss any functions if new ones are introduced in a later version
@@ -81,7 +96,7 @@ functions:
         name: 'Function_#{g[0]}'
 
 values:
-    kOSSettingsKey(.*):
+    kOSSS?ettingsKey(.*):
         dictionary: OSSettings
         name: '#{g[0]}'
         type: NSString

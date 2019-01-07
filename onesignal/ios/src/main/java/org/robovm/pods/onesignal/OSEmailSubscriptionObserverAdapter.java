@@ -33,34 +33,24 @@ import org.robovm.apple.uikit.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
 /*</javadoc>*/
-/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/OSPermissionState/*</name>*/ 
+/*<annotations>*//*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/OSEmailSubscriptionObserverAdapter/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*//*</implements>*/ {
+    /*<implements>*/implements OSEmailSubscriptionObserver/*</implements>*/ {
 
-    /*<ptr>*/public static class OSPermissionStatePtr extends Ptr<OSPermissionState, OSPermissionStatePtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(OSPermissionState.class); }/*</bind>*/
+    /*<ptr>*/
+    /*</ptr>*/
+    /*<bind>*/
+    /*</bind>*/
     /*<constants>*//*</constants>*/
-    /*<constructors>*/
-    public OSPermissionState() {}
-    protected OSPermissionState(Handle h, long handle) { super(h, handle); }
-    protected OSPermissionState(SkipInit skipInit) { super(skipInit); }
-    /*</constructors>*/
+    /*<constructors>*//*</constructors>*/
     /*<properties>*/
-    @Property(selector = "reachable")
-    public native boolean isReachable();
-    @Property(selector = "hasPrompted")
-    public native boolean hasPrompted();
-    @Property(selector = "providesAppNotificationSettings")
-    public native boolean providesAppNotificationSettings();
-    @Property(selector = "status")
-    public native OSNotificationPermission getStatus();
+    
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "toDictionary")
-    public native NSDictionary<?, ?> toDictionary();
+    @NotImplemented("onOSEmailSubscriptionChanged:")
+    public void onOSEmailSubscriptionChanged(OSEmailSubscriptionStateChanges stateChanges) {}
     /*</methods>*/
 }

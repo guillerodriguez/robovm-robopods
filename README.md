@@ -17,6 +17,14 @@ This is the list of currently available AltPods. Click them to get more informat
 
 ## Version of AltPods to framework version mapping
 
+v1.1.0
+| Name                               | 1.1.0  |
+|------------------------------------|--------|
+| [Charts](charts/)                  | 3.0.4  |
+| [OneSignal](onesignal/)            | 2.9.4  |
+| [Lottie](lottie/)                  | 2.5.0  |
+
+v1.0.0
 | Name                               | 1.0.0  |
 |------------------------------------|--------|
 | [Charts](charts/)                  | 3.0.4  |

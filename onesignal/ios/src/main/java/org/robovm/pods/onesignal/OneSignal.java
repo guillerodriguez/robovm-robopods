@@ -67,6 +67,12 @@ import org.robovm.apple.uikit.*;
     public static native ObjCClass Init(UIApplicationLaunchOptions launchOptions, String appId, @Block VoidBlock1<OSNotificationOpenedResult> actionCallback, OSSettings settings);
     @Method(selector = "initWithLaunchOptions:appId:handleNotificationReceived:handleNotificationAction:settings:")
     public static native ObjCClass Init(UIApplicationLaunchOptions launchOptions, String appId, @Block VoidBlock1<OSNotification> receivedCallback, @Block VoidBlock1<OSNotificationOpenedResult> actionCallback, OSSettings settings);
+    @Method(selector = "consentGranted:")
+    public static native void consentGranted(boolean granted);
+    @Method(selector = "requiresUserPrivacyConsent")
+    public static native boolean requiresUserPrivacyConsent();
+    @Method(selector = "setRequiresUserPrivacyConsent:")
+    public static native void setRequiresUserPrivacyConsent(boolean required);
     @Method(selector = "app_id")
     public static native String getAppId();
     @Method(selector = "sdk_version_raw")
@@ -76,7 +82,13 @@ import org.robovm.apple.uikit.*;
     @Method(selector = "registerForPushNotifications")
     public static native void registerForPushNotifications();
     @Method(selector = "promptForPushNotificationsWithUserResponse:")
-    public static native void promptForPushNotificationsWithUserResponse(@Block VoidBooleanBlock completionHandler);
+    public static native void promptForPushNotifications(@Block VoidBooleanBlock completionHandler);
+    @Method(selector = "promptForPushNotificationsWithUserResponse:fallbackToSettings:")
+    public static native void promptForPushNotifications(@Block VoidBooleanBlock completionHandler, boolean fallback);
+    @Method(selector = "presentAppSettings")
+    public static native void presentAppSettings();
+    @Method(selector = "registerForProvisionalAuthorization:")
+    public static native void registerForProvisionalAuthorization(@Block VoidBooleanBlock completionHandler);
     @Method(selector = "setLogLevel:visualLevel:")
     public static native void setLogLevel(OSLogLevel logLevel, OSLogLevel visualLogLevel);
     @Method(selector = "onesignal_Log:message:")
@@ -90,7 +102,7 @@ import org.robovm.apple.uikit.*;
     @Method(selector = "sendTags:")
     public static native void sendTags(NSDictionary<?, ?> keyValuePair);
     @Method(selector = "sendTagsWithJsonString:")
-    public static native void sendTagsWithJsonString(String jsonString);
+    public static native void sendTags(String jsonString);
     @Method(selector = "getTags:onFailure:")
     public static native void getTags(@Block VoidBlock1<NSDictionary<?, ?>> successBlock, @Block VoidBlock1<NSError> failureBlock);
     @Method(selector = "getTags:")
@@ -108,7 +120,7 @@ import org.robovm.apple.uikit.*;
     @Method(selector = "syncHashedEmail:")
     public static native void syncHashedEmail(String email);
     @Method(selector = "IdsAvailable:")
-    public static native void IdsAvailable(@Block VoidBlock2<String, String> idsAvailableBlock);
+    public static native void IdsAvailable(@Block VoidBlock2<NSString, NSString> idsAvailableBlock);
     @Method(selector = "getPermissionSubscriptionState")
     public static native OSPermissionSubscriptionState getPermissionSubscriptionState();
     @Method(selector = "addPermissionObserver:")
@@ -119,6 +131,10 @@ import org.robovm.apple.uikit.*;
     public static native void addSubscriptionObserver(OSSubscriptionObserver observer);
     @Method(selector = "removeSubscriptionObserver:")
     public static native void removeSubscriptionObserver(OSSubscriptionObserver observer);
+    @Method(selector = "addEmailSubscriptionObserver:")
+    public static native void addEmailSubscriptionObserver(OSEmailSubscriptionObserver observer);
+    @Method(selector = "removeEmailSubscriptionObserver:")
+    public static native void removeEmailSubscriptionObserver(OSEmailSubscriptionObserver observer);
     @Method(selector = "setSubscription:")
     public static native void setSubscription(boolean enable);
     @Method(selector = "postNotification:")
@@ -139,5 +155,21 @@ import org.robovm.apple.uikit.*;
     public static native UNMutableNotificationContent didReceiveNotification(UNNotificationRequest request, UNMutableNotificationContent replacementContent);
     @Method(selector = "serviceExtensionTimeWillExpireRequest:withMutableNotificationContent:")
     public static native UNMutableNotificationContent serviceExtensionTimeWillExpire(UNNotificationRequest request, UNMutableNotificationContent replacementContent);
+    @Method(selector = "setEmail:withEmailAuthHashToken:withSuccess:withFailure:")
+    public static native void setEmail(String email, String hashToken, @Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
+    @Method(selector = "setEmail:withSuccess:withFailure:")
+    public static native void setEmail(String email, @Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
+    @Method(selector = "logoutEmailWithSuccess:withFailure:")
+    public static native void logoutEmail(@Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
+    @Method(selector = "logoutEmail")
+    public static native void logoutEmail();
+    @Method(selector = "setEmail:")
+    public static native void setEmail(String email);
+    @Method(selector = "setEmail:withEmailAuthHashToken:")
+    public static native void setEmail(String email, String hashToken);
+    @Method(selector = "setExternalUserId:")
+    public static native void setExternalUserId(String externalId);
+    @Method(selector = "removeExternalUserId")
+    public static native void removeExternalUserId();
     /*</methods>*/
 }
