@@ -1,0 +1,506 @@
+package: org.robovm.pods.branchmetrics
+include: [foundation, uikit, corespotlight]
+framework: Branch
+clang_args: ['-x', 'objective-c']
+headers:
+    - Branch.h
+
+private_typedefs:
+    BranchOpenRequest: NSObject
+
+typedefs: {}
+
+enums:
+    BNCErrorCode: {prefix: BNC, nserror: true}
+    BranchLinkType: {}
+    BNCLogLevel: {}
+    BNCViewControllerPresentationOption: {prefix: BNCViewControllerOption}
+    BranchContentIndexMode: {}
+    BranchCreditHistoryOrder: {prefix: Branch}
+
+classes:
+    BNCCommerceEvent: {}
+    BNCLinkCache:
+        methods:
+            '-setObject:forKey:':
+                name: setObject
+    BNCLinkData: {}
+    BNCPreferenceHelper:
+        methods:
+            '-setCreditCount:forBucket:':
+                trim_after_first_colon: true
+            '-setRequestMetadataKey:value:':
+                name: setRequestMetadata
+            '-addInstrumentationDictionaryKey:value:':
+                name: addInstrumentationDictionary
+    BNCProduct: {}
+    BNCServerInterface:
+        methods:
+            '-getRequest:url:key:callback:':
+                trim_after_first_colon: true
+            '-postRequestSynchronous:url:key:':
+                trim_after_first_colon: true
+            '-postRequest:url:key:callback:':
+                trim_after_first_colon: true
+            '-genericHTTPRequest:retryNumber:callback:retryHandler:':
+                trim_after_first_colon: true
+    BNCServerRequest:
+        methods:
+            '-makeRequest:key:callback:':
+                trim_after_first_colon: true
+            '-processResponse:error:':
+                name: processResponse
+            '-safeSetValue:forKey:onDict:':
+                trim_after_first_colon: true
+    BNCServerRequestQueue:
+        methods:
+            '-insert:at:':
+                name: insert
+    BNCServerResponse: {}
+    Branch:
+        methods:
+            '-initSessionWithLaunchOptions:':
+                name: init
+            '-initSessionWithLaunchOptions:isReferrable:':
+                name: init
+            '-initSessionWithLaunchOptions:andRegisterDeepLinkHandler:':
+                name: init
+            '-initSessionWithLaunchOptions:andRegisterDeepLinkHandlerUsingBranchUniversalObject:':
+                name: init
+            '-initSessionWithLaunchOptions:automaticallyDisplayDeepLinkController:':
+                # to static constructor as conflicts with '-initSessionWithLaunchOptions:isReferrable:':
+                name: initWithAutomaticallyDisplayDeepLinkController
+                static_constructor_name: createWithAutomaticallyDisplayDeepLinkController
+            '-initSessionWithLaunchOptions:isReferrable:andRegisterDeepLinkHandler:':
+                name: init
+            '-initSessionWithLaunchOptions:isReferrable:automaticallyDisplayDeepLinkController:':
+                name: init
+            '-initSessionWithLaunchOptions:automaticallyDisplayDeepLinkController:deepLinkHandler:':
+                # to static constructor as conflicts with '-initSessionWithLaunchOptions:isReferrable:andRegisterDeepLinkHandler:'
+                name: initWithAutomaticallyDisplayDeepLinkControllerAndHandler
+                static_constructor_name: createWithAutomaticallyDisplayDeepLinkControllerAndHandler
+
+            '-initSessionWithLaunchOptions:automaticallyDisplayDeepLinkController:isReferrable:deepLinkHandler:':
+                name: init
+            '-handleDeepLinkWithNewSession:':
+                name: handleDeepLinkWithNewSession
+            '-application:openURL:sourceApplication:annotation:':
+                name: openURL
+            '-application:openURL:options:':
+                name: openURL
+            '-registerDeepLinkController:forKey:':
+                name: registerDeepLinkController
+            '-registerDeepLinkController:forKey:withPresentation:':
+                name: registerDeepLinkController
+            '-setRequestMetadataKey:value:':
+                name: setRequestMetadata
+            '-getUrlForOnboardingWithRedirectUrl:':
+                name: getUrl
+            '-setIdentity:withCallback:':
+                trim_after_first_colon: true
+            '-logoutWithCallback:':
+                name: logout
+            '-loadRewardsWithCallback:':
+                name: loadRewards
+            '-redeemRewards:callback:':
+                name: redeemRewards
+            '-redeemRewards:forBucket:':
+                name: redeemRewards
+            '-redeemRewards:forBucket:callback:':
+                name: redeemRewards
+            '-getCreditHistoryWithCallback:':
+                name: getCreditHistory
+            '-getCreditHistoryForBucket:andCallback:':
+                name: getCreditHistory
+            '-getCreditHistoryAfter:number:order:andCallback:':
+                name: getCreditHistory
+            '-getCreditHistoryForBucket:after:number:order:andCallback:':
+                name: getCreditHistory
+            '-userCompletedAction:withState:':
+                name: userCompletedAction
+            '-userCompletedAction:withState:withDelegate:':
+                name: userCompletedAction
+            '-sendCommerceEvent:metadata:withCompletion:':
+                name: sendCommerceEvent
+            '-getShortURLWithParams:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:andStage:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:andStage:andAlias:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:andStage:andType:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:andStage:andMatchDuration:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:andAlias:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:andAlias:ignoreUAString:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:andCampaign:andAlias:ignoreUAString:forceLinkCreation:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:andType:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:andMatchDuration:':
+                name: getShortURL
+            '-getShortUrlWithParams:andTags:andAlias:andChannel:andFeature:andStage:andMatchDuration:':
+                name: getShortUrl
+            '-getShortUrlWithParams:andTags:andAlias:andChannel:andFeature:andStage:andCampaign:andMatchDuration:':
+                name: getShortUrl
+            '-getLongURLWithParams:':
+                name: getLongURL
+            '-getLongURLWithParams:andFeature:':
+                name: getLongURL
+            '-getLongURLWithParams:andFeature:andStage:':
+                name: getLongURL
+            '-getLongURLWithParams:andFeature:andStage:andTags:':
+                name: getLongURL
+            '-getLongURLWithParams:andFeature:andStage:andAlias:':
+                name: getLongURL
+            '-getLongURLWithParams:andChannel:andTags:andFeature:andStage:andAlias:':
+                name: getLongURL
+            '-getShortURLWithCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:andCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:andStage:andCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:andStage:andAlias:andCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:andStage:andType:andCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andChannel:andFeature:andStage:andMatchDuration:andCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:andCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:andAlias:andCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:andType:andCallback:':
+                name: getShortURL
+            '-getShortURLWithParams:andTags:andChannel:andFeature:andStage:andMatchDuration:andCallback:':
+                name: getShortURL
+            '-getShortUrlWithParams:andTags:andAlias:andMatchDuration:andChannel:andFeature:andStage:andCallback:':
+                name: getShortUrl
+            '-getShortUrlWithParams:andTags:andAlias:andMatchDuration:andChannel:andFeature:andStage:andCampaign:andCallback:':
+                name: getShortUrl
+            '-getSpotlightUrlWithParams:callback:':
+                name: getSpotlightUrl
+            '-createDiscoverableContentWithTitle:description:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:callback:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:publiclyIndexable:callback:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:type:publiclyIndexable:callback:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:type:publiclyIndexable:callback:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:type:publiclyIndexable:keywords:callback:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:linkParams:publiclyIndexable:keywords:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:linkParams:type:publiclyIndexable:keywords:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:type:publiclyIndexable:keywords:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:linkParams:publiclyIndexable:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:linkParams:type:publiclyIndexable:keywords:callback:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:linkParams:type:publiclyIndexable:keywords:expirationDate:callback:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:canonicalId:linkParams:type:publiclyIndexable:keywords:expirationDate:callback:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:linkParams:type:publiclyIndexable:keywords:expirationDate:spotlightCallback:':
+                name: createDiscoverableContent
+            '-createDiscoverableContentWithTitle:description:thumbnailUrl:canonicalId:linkParams:type:publiclyIndexable:keywords:expirationDate:spotlightCallback:':
+                name: createDiscoverableContent
+            '-indexOnSpotlightWithBranchUniversalObject:linkProperties:completion:':
+                name: indexOnSpotlight
+            '-indexOnSpotlightUsingSearchableItems:completion:':
+                name: indexOnSpotlightUsingSearchableItems
+            '-removeSearchableItemWithBranchUniversalObject:callback:':
+                name: removeSearchableItem
+            '-removeSearchableItemsWithBranchUniversalObjects:callback:':
+                name: removeSearchableItems
+            '-removeAllPrivateContentFromSpotLightWithCallback:':
+                name: removeAllPrivateContentFromSpotLight
+            '-initWithInterface:queue:cache:preferenceHelper:key:':
+                name: init
+                parameters:
+                    interface:
+                        name: inf
+            '-registerViewWithParams:andCallback:':
+                name: registerView
+            '-sendServerRequestWithoutSession:':
+                name: sendServerRequestWithoutSession
+            '+setBranchKey:error:':
+                name: setBranch
+                throws: NSErrorException
+            '+getBranchActivityItemWithParams:':
+                name: getBranchActivityItem
+            '+getBranchActivityItemWithParams:feature:':
+                name: getBranchActivityItem
+            '+getBranchActivityItemWithParams:feature:stage:':
+                name: getBranchActivityItem
+            '+getBranchActivityItemWithParams:feature:stage:tags:':
+                name: getBranchActivityItem
+            '+getBranchActivityItemWithParams:feature:stage:tags:alias:':
+                name: getBranchActivityItem
+            '+getBranchActivityItemWithParams:feature:stage:campaign:tags:alias:':
+                name: getBranchActivityItem
+            '+getBranchActivityItemWithParams:feature:stage:tags:alias:delegate:':
+                name: getBranchActivityItem
+    BranchActivityItemProvider:
+        methods:
+            '-initWithParams:andTags:andFeature:andStage:andAlias:':
+                name: init
+            '-initWithParams:tags:feature:stage:campaign:alias:delegate:':
+                name: init
+            '+humanReadableChannelWithActivityType:':
+                name: getHumanReadableChannel
+    BranchCSSearchableItemAttributeSet:
+        methods:
+            '-initWithContentType:':
+                # as conflicts with super "initWithItemContentType:"
+                name: initWithContentType
+                static_constructor_name: createWithContentType
+            '-indexWithCallback:':
+                name: index
+        properties:
+            # workaround as it conflicts with super property keywords by type
+            'keywords':
+                name: keywordsBNC
+    BranchCommerceEventRequest:
+        methods:
+            '-initWithCommerceEvent:metadata:completion:':
+                name: init
+    BranchContentMetadata:
+        methods:
+            '+contentMetadataWithDictionary:':
+                name: create
+                constructor: true
+    BranchEvent:
+        methods:
+            '-initWithName:':
+                name: init
+            '+standardEvent:withContentItem:':
+                name: create
+                constructor: true
+            '+customEventWithName:':
+                name: createCustomEvent # returns autorelease object
+            '+customEventWithName:contentItem:':
+                name: createCustomEvent # returns autorelease object
+    BranchEventRequest:
+        methods:
+            '-initWithServerURL:eventDictionary:completion:':
+                name: init
+    BranchLink:
+        methods:
+            '+linkWithUniversalObject:properties:':
+                name: create
+                constructor: true
+    BranchLinkProperties:
+        methods:
+            '-addControlParam:withValue:':
+                trim_after_first_colon: true
+    BranchShareLink:
+        methods:
+            '-initWithUniversalObject:linkProperties:':
+                name: init
+            '-presentActivityViewControllerFromViewController:anchor:':
+                name: presentActivityViewController
+    BranchUniversalObject:
+        methods:
+            '-initWithCanonicalIdentifier:':
+                # as conflicts with '-initWithTitle:'
+                name: initWithCanonicalIdentifier
+                static_constructor_name: CreateWithCanonicalIdentifier
+            '-initWithTitle:':
+                name: init
+            '-addMetadataKey:value:':
+                name: addMetadata
+            '-registerViewWithCallback:':
+                name: registerView
+            '-userCompletedAction:withState:':
+                trim_after_first_colon: true
+            '-getShortUrlWithLinkProperties:':
+                name: getShortUrl
+            '-getShortUrlWithLinkPropertiesAndIgnoreFirstClick:':
+                name: getShortUrlAndIgnoreFirstClick
+            '-getShortUrlWithLinkProperties:andCallback:':
+                name: getShortUrl
+            '-getLongUrlWithChannel:andTags:andFeature:andStage:andAlias:':
+                name: getLongUrl
+            '-getBranchActivityItemWithLinkProperties:':
+                name: getBranchActivityItem
+            '-showShareSheetWithShareText:completion:':
+                name: showShareSheet
+            '-showShareSheetWithLinkProperties:andShareText:fromViewController:completion:':
+                name: showShareSheet
+            '-showShareSheetWithLinkProperties:andShareText:fromViewController:completionWithError:':
+                name: showShareSheet
+            '-showShareSheetWithLinkProperties:andShareText:fromViewController:anchor:completion:':
+                name: showShareSheet
+            '-showShareSheetWithLinkProperties:andShareText:fromViewController:anchor:completionWithError:':
+                name: showShareSheet
+            '-listOnSpotlightWithCallback:':
+                name: listOnSpotlight
+            '-listOnSpotlightWithIdentifierCallback:':
+                name: listOnSpotlight
+            '-listOnSpotlightWithLinkProperties:callback:':
+                name: listOnSpotlight
+            '-removeFromSpotlightWithCallback:':
+                name: removeFromSpotlight
+            '-getDictionaryWithCompleteLinkProperties:':
+                name: getDictionary
+            '-getParamsForServerRequestWithAddedLinkProperties:':
+                name: getParamsForServerRequest
+            '+objectWithDictionary:':
+                name: create
+                constructor: true
+    BranchView:
+        methods:
+            '-initWithBranchView:andActionName:':
+                name: init
+    BranchViewHandler:
+        methods:
+            '-showBranchView:withBranchViewDictionary:andWithDelegate:':
+                trim_after_first_colon: true
+
+protocols:
+    BNCNetworkOperationProtocol: {}
+    BNCNetworkServiceProtocol:
+        methods:
+            '-networkOperationWithURLRequest:completion:':
+                name: networkOperation
+    BranchActivityItemProviderDelegate: {}
+    BranchDeepLinkingController:
+        methods:
+            '-configureControlWithData:':
+                name: configureControl
+    BranchDeepLinkingControllerCompletionDelegate: {}
+    BranchDelegate:
+        methods:
+            '-branch:willStartSessionWithURL:':
+                name: willStartSession
+            '-branch:didStartSessionWithURL:branchLink:':
+                name: didStartSession
+            '-branch:failedToStartSessionWithURL:error:':
+                name: failedToStartSession
+    BranchShareLinkDelegate:
+        methods:
+            '-branchShareLink:didComplete:withError:':
+                name: branchShareLink
+    BranchViewControllerDelegate:
+        methods:
+            '-branchViewVisible:withID:':
+                name: branchViewVisible
+            '-branchViewAccepted:withID:':
+                name: branchViewAccepted
+            '-branchViewCancelled:withID:':
+                name: branchViewCancelled
+            '-branchViewErrorCode:message:actionName:withID:':
+                name: branchViewError
+
+functions:
+    # move all functions to one class
+    BNC(.*):
+        class: BNCFunctions
+        name: '#{g[0].downcase_first}'
+
+
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    BNCErrorDomain:
+        class: BNCErrorCode
+        name: getClassDomain
+
+    BNCProductCategory(.*):
+        class: BNCProductCategories
+        name: '#{g[0]}'
+
+    BNCCurrency(.*):
+        class: BNCCurrencies
+        name: '#{g[0]}'
+
+#    BRANCH_REQUEST_KEY_(.*):
+#        class: BranchRequestKeys
+#        name: '#{g[0].camelize}'
+#
+#    BRANCH_RESPONSE_KEY_(.*):
+#        class: BranchResponseKeys
+#        name: '#{g[0].camelize}'
+#
+#    BRANCH_LINK_DATA_KEY_(.*):
+#        class: BranchLinkDataKeys
+#        name: '#{g[0].camelize}'
+#
+#    BRANCH_REQUEST_ENDPOINT_(.*):
+#        class: BranchRequestEndpoints
+#        name: '#{g[0].camelize}'
+
+    BranchContentSchema(.*):
+        class: BranchContentSchemas
+        name: '#{g[0]}'
+
+    BranchCondition(.*):
+        class: BranchConditions
+        name: '#{g[0]}'
+
+    BranchStandardEvent(.*):
+        class: BranchStandardEvents
+        name: 'get#{g[0]}'
+
+#    BRANCH_FEATURE_TAG_(.*):
+#        class: BranchFeatureTags
+#        name: 'get#{g[0].camelize}'
+#
+#    BRANCH_INIT_KEY_(.*):
+#        class: BranchInitKeys
+#        name: 'get#{g[0].camelize}'
+
+    BNC(.*)Event:
+      class: BranchEvents
+      name: 'get#{g[0]}'
+
+    BRANCH_(.*):
+        class: BranchConstants
+        name: 'get#{g[0].camelize}'
+
+    Branch(ErrorKey|URLKey|UniversalObjectKey|LinkPropertiesKey|WillStartSessionNotification|DidStartSessionNotification):
+        class: BranchDelegateConstants
+        name: 'get#{g[0]}'
+
+    # BUO Constants
+    BNC(CanonicalIdList|PurchaseAmount|PurchaseCurrency|CanonicalIdList|RegisterViewEvent|AddToWishlistEvent|AddToCartEvent|PurchaseInitiatedEvent|PurchasedEvent|ShareInitiatedEvent|ShareCompletedEvent):
+        class: BNCBUOConstants
+        name: 'get#{g[0]}'
+
+    BNC(SpotlightFeature):
+        class: BNCSpotlightConstants
+        name: 'get#{g[0]}'
+
+    BNC_(SDK_VERSION|API_BASE_URL|API_PINNED|API_VERSION|LINK_URL):
+        class: BNCConfig
+        name: 'get#{g[0].camelize}'
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
