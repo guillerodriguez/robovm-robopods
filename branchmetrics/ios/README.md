@@ -8,7 +8,7 @@ TODO
 ### 3rd party native framework
 This RoboPod requires you to add the native `Branch.framework`. Easiest way is to use [Carthage](https://github.com/Carthage/Carthage#installing-carthage):
 ```
-echo `github "BranchMetrics/ios-branch-deep-linking"` > Cartfile
+echo 'github "BranchMetrics/ios-branch-deep-linking"' > Cartfile
 carthage update
 ```
 
