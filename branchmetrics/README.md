@@ -1,11 +1,11 @@
-# RoboPods for OneSignal
+# RoboPods for BranchMetrics
 
 ## Available RoboPods
 
-| RoboPods Version  | OneSignal Version |
-|-------------------|-------------------|
-| 1.1.0             | 2.9.4             |
+| RoboPods Version  | BranchMetrics Version |
+|-------------------|-----------------------|
+| 1.1.0             | 0.25.10               |
 
 ## Official website
 
-https://github.com/OneSignal/OneSignal-iOS-SDK
+https://github.com/BranchMetrics/ios-branch-deep-linking
