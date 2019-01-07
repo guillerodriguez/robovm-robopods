@@ -1,0 +1,91 @@
+package: org.robovm.pods.samkeychain
+include: [foundation]
+framework: SAMKeychain
+clang_args: ['-x', 'objective-c']
+headers:
+    - SAMKeychain.h
+
+private_typedefs: {}
+
+typedefs: {}
+
+enums:
+    SAMKeychainErrorCode: {name: SAMKeychainError, prefix: SAMKeychainError, nserror: true}
+    SAMKeychainQuerySynchronizationMode: {}
+
+classes:
+    SAMKeychain:
+        methods:
+            '+passwordForService:account:':
+                name: passwordForService
+            '+passwordForService:account:error:':
+                name: passwordForServiceWithError
+                throws: NSErrorException
+            '+passwordDataForService:account:':
+                trim_after_first_colon: true
+            '+passwordDataForService:account:error:':
+                trim_after_first_colon: true
+            '+deletePasswordForService:account:':
+                trim_after_first_colon: true
+            '+deletePasswordForService:account:error:':
+                name: deletePasswordForServiceWithError
+                throws: NSErrorException
+            '+setPassword:forService:account:':
+                trim_after_first_colon: true
+            '+setPassword:forService:account:error:':
+                name: setPasswordWithError
+                throws: NSErrorException
+            '+setPasswordData:forService:account:':
+                trim_after_first_colon: true
+            '+setPasswordData:forService:account:error:':
+                name: setPasswordDataWithError
+                throws: NSErrorException
+            '+accountsForService:error:':
+                name: accountsForServiceWithError
+                throws: NSErrorException
+    SAMKeychainQuery:
+        methods:
+            '-save:':
+                throws: NSErrorException
+            '-deleteItem:':
+                throws: NSErrorException
+            '-fetchAll:':
+                throws: NSErrorException
+            '-fetch:':
+                throws: NSErrorException
+
+protocols: {}
+
+functions: 
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    kSAMKeychainErrorDomain:
+        class: SAMKeychainError
+        name: getClassDomain
+
+    kSAMKeychain(.*)Key:
+        class: SAMKeychainKeys
+        name: '#{g[0]}'
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # exclude flow control macro
+    SAMKEYCHAIN_SYNCHRONIZATION_AVAILABLE:
+        exclude: true
+    SAMKEYCHAIN_ACCESS_GROUP_AVAILABLE:
+        exclude: true
+
+
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
