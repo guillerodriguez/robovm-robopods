@@ -126,5 +126,8 @@
         <module>charts</module>
         <module>onesignal</module>
         <module>lottie</module>
+        <module>samkeychain</module>
+        <module>branchmetrics</module>
+        <module>helpshift</module>
     </modules>
 </project>
