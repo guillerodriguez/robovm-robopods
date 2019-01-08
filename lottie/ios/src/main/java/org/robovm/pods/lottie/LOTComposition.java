@@ -51,6 +51,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithJSON:withAssetBundle:")
     public LOTComposition(NSDictionary<?, ?> jsonDictionary, NSBundle bundle) { super((SkipInit) null); initObject(init(jsonDictionary, bundle)); }
     public LOTComposition(String animationName, NSBundle bundle) { super((Handle) null, create(animationName, bundle)); retain(getHandle()); }
+    public LOTComposition(String filePath) { super((Handle) null, create(filePath)); retain(getHandle()); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "compBounds")
@@ -87,10 +88,8 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "animationNamed:inBundle:")
     protected static native @Pointer long create(String animationName, NSBundle bundle);
     @Method(selector = "animationWithFilePath:")
-    public static native LOTComposition animationWithFilePath(String filePath);
+    protected static native @Pointer long create(String filePath);
     @Method(selector = "animationFromJSON:")
     public static native LOTComposition animationFromJSON(NSDictionary<?, ?> animationJSON);
-    @Method(selector = "animationFromJSON:inBundle:")
-    public static native LOTComposition create(NSDictionary<?, ?> animationJSON, NSBundle bundle);
     /*</methods>*/
 }

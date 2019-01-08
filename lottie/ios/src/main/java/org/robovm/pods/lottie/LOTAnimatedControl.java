@@ -48,6 +48,10 @@ import org.robovm.apple.coreanimation.*;
     public LOTAnimatedControl() {}
     protected LOTAnimatedControl(Handle h, long handle) { super(h, handle); }
     protected LOTAnimatedControl(SkipInit skipInit) { super(skipInit); }
+    @Method(selector = "initWithFrame:")
+    public LOTAnimatedControl(@ByVal CGRect frame) { super(frame); }
+    @Method(selector = "initWithCoder:")
+    public LOTAnimatedControl(NSCoder decoder) { super(decoder); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "animationView")

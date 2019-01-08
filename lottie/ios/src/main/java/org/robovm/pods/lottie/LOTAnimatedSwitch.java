@@ -49,6 +49,10 @@ import org.robovm.apple.coreanimation.*;
     protected LOTAnimatedSwitch(Handle h, long handle) { super(h, handle); }
     protected LOTAnimatedSwitch(SkipInit skipInit) { super(skipInit); }
     public LOTAnimatedSwitch(String toggleName, NSBundle bundle) { super((Handle) null, create(toggleName, bundle)); retain(getHandle()); }
+    @Method(selector = "initWithFrame:")
+    public LOTAnimatedSwitch(@ByVal CGRect frame) { super(frame); }
+    @Method(selector = "initWithCoder:")
+    public LOTAnimatedSwitch(NSCoder decoder) { super(decoder); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "isOn")

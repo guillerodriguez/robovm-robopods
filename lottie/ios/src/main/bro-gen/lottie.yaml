@@ -43,6 +43,8 @@ classes:
         methods:
             '-initWithModel:inBundle:':
                 name: init
+            '-initWithContentsOfURL:':
+                name: init
             '-playToProgress:withCompletion:':
                 name: playToProgress
             '-playFromProgress:toProgress:withCompletion:':
@@ -80,6 +82,12 @@ classes:
             '+animationFromJSON:inBundle:':
                 name: create
                 constructor: true
+            '-playWithCompletion:':
+                name: play
+            '-setProgressWithFrame:':
+                name: setProgress
+            '+animationWithFilePath:':
+                name: createWithFilePath
     LOTCacheProvider: {}
     LOTColorBlockCallback: {}
     LOTColorValueCallback: {}
@@ -91,13 +99,20 @@ classes:
                 name: create
                 constructor: true
             '+animationFromJSON:inBundle:':
+                exclude: true # same as '-initWithJSON:withAssetBundle:'
+            '+animationWithFilePath:':
                 name: create
+                constructor: true
     LOTFloatInterpolatorCallback:
         methods:
             '+withFromFloat:toFloat:':
                 name: create
                 constructor: true
-    LOTKeypath: {}
+    LOTKeypath:
+        methods:
+            '+keypathWithString:':
+                name: create
+                constructor: true
     LOTNumberBlockCallback: {}
     LOTNumberValueCallback: {}
     LOTPathBlockCallback: {}

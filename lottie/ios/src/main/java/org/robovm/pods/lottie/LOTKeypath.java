@@ -48,6 +48,7 @@ import org.robovm.apple.coreanimation.*;
     public LOTKeypath() {}
     protected LOTKeypath(Handle h, long handle) { super(h, handle); }
     protected LOTKeypath(SkipInit skipInit) { super(skipInit); }
+    public LOTKeypath(String keypath) { super((Handle) null, create(keypath)); retain(getHandle()); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "absoluteKeypath")
@@ -79,6 +80,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "addSearchResultForCurrentPath:")
     public native void addSearchResultForCurrentPath(NSObject result);
     @Method(selector = "keypathWithString:")
-    public static native LOTKeypath keypathWithString(String keypath);
+    protected static native @Pointer long create(String keypath);
     /*</methods>*/
 }

@@ -51,12 +51,20 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithModel:inBundle:")
     public LOTAnimationView(LOTComposition model, NSBundle bundle) { super((SkipInit) null); initObject(init(model, bundle)); }
     @Method(selector = "initWithContentsOfURL:")
-    public LOTAnimationView(NSURL url) { super((SkipInit) null); initObject(initWithContentsOfURL(url)); }
+    public LOTAnimationView(NSURL url) { super((SkipInit) null); initObject(init(url)); }
     public LOTAnimationView(String animationName) { super((Handle) null, create(animationName)); retain(getHandle()); }
     public LOTAnimationView(String animationName, NSBundle bundle) { super((Handle) null, create(animationName, bundle)); retain(getHandle()); }
     public LOTAnimationView(NSDictionary<?, ?> animationJSON, NSBundle bundle) { super((Handle) null, create(animationJSON, bundle)); retain(getHandle()); }
+    @Method(selector = "initWithFrame:")
+    public LOTAnimationView(@ByVal CGRect frame) { super(frame); }
+    @Method(selector = "initWithCoder:")
+    public LOTAnimationView(NSCoder decoder) { super(decoder); }
     /*</constructors>*/
     /*<properties>*/
+    @Property(selector = "animation")
+    public native String getAnimation();
+    @Property(selector = "setAnimation:")
+    public native void setAnimation(String v);
     @Property(selector = "isAnimationPlaying")
     public native boolean isAnimationPlaying();
     @Property(selector = "loopAnimation")
@@ -89,15 +97,21 @@ import org.robovm.apple.coreanimation.*;
     public native LOTComposition getSceneModel();
     @Property(selector = "setSceneModel:")
     public native void setSceneModel(LOTComposition v);
+    @Property(selector = "shouldRasterizeWhenIdle")
+    public native boolean shouldRasterizeWhenIdle();
+    @Property(selector = "setShouldRasterizeWhenIdle:")
+    public native void setShouldRasterizeWhenIdle(boolean v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithModel:inBundle:")
     protected native @Pointer long init(LOTComposition model, NSBundle bundle);
     @Method(selector = "initWithContentsOfURL:")
-    protected native @Pointer long initWithContentsOfURL(NSURL url);
+    protected native @Pointer long init(NSURL url);
     @Method(selector = "setAnimationNamed:")
     public native void setAnimationNamed(String animationName);
+    @Method(selector = "setAnimationFromJSON:")
+    public native void setAnimationFromJSON(NSDictionary<?, ?> animationJSON);
     @Method(selector = "playToProgress:withCompletion:")
     public native void playToProgress(@MachineSizedFloat double toProgress, @Block VoidBooleanBlock completion);
     @Method(selector = "playFromProgress:toProgress:withCompletion:")
@@ -107,7 +121,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "playFromFrame:toFrame:withCompletion:")
     public native void playFromFrame(NSNumber fromStartFrame, NSNumber toEndFrame, @Block VoidBooleanBlock completion);
     @Method(selector = "playWithCompletion:")
-    public native void playWithCompletion(@Block VoidBooleanBlock completion);
+    public native void play(@Block VoidBooleanBlock completion);
     @Method(selector = "play")
     public native void play();
     @Method(selector = "pause")
@@ -115,7 +129,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "stop")
     public native void stop();
     @Method(selector = "setProgressWithFrame:")
-    public native void setProgressWithFrame(NSNumber currentFrame);
+    public native void setProgress(NSNumber currentFrame);
     @Method(selector = "forceDrawingUpdate")
     public native void forceDrawingUpdate();
     @Method(selector = "logHierarchyKeypaths")
@@ -149,7 +163,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "animationFromJSON:")
     public static native LOTAnimationView animationFromJSON(NSDictionary<?, ?> animationJSON);
     @Method(selector = "animationWithFilePath:")
-    public static native LOTAnimationView animationWithFilePath(String filePath);
+    public static native LOTAnimationView createWithFilePath(String filePath);
     @Method(selector = "animationFromJSON:inBundle:")
     protected static native @Pointer long create(NSDictionary<?, ?> animationJSON, NSBundle bundle);
     /*</methods>*/
