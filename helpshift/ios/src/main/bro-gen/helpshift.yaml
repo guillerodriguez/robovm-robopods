@@ -1,0 +1,118 @@
+package: org.robovm.pods.helpshift
+include: [foundation, uikit]
+clang_args: ['-x', 'objective-c']
+framework: Helpshift
+headers:
+    - HelpshiftAll.h
+private_typedefs: {}
+
+typedefs: {}
+
+enums:
+    HsAddFAQsToDeviceSearch: {prefix: HsAddFaqsToDeviceSearch}
+    HsOperator: {}
+    HsEnableContactUs: {}
+
+classes:
+    HelpshiftAPIConfig: {}
+    HelpshiftAPIConfigBuilder: {}
+    HelpshiftAll: {}
+    HelpshiftCore:
+        methods:
+            '+initializeWithProvider:':
+                name: initialize
+            '+installForApiKey:domainName:appID:':
+                trim_after_first_colon: true
+            '+installForApiKey:domainName:appID:withOptions:':
+                trim_after_first_colon: true
+            '+installForApiKey:domainName:appID:withConfig:':
+                trim_after_first_colon: true
+            '+loginWithIdentifier:withName:andEmail:':
+                name: login
+            '+setName:andEmail:':
+                name: setNameAndEmail
+            '+handleNotificationWithUserInfoDictionary:isAppLaunch:withController:':
+                name: handleNotification
+            '+handleNotificationResponseWithActionIdentifier:userInfo:completionHandler:':
+                name: handleNotificationResponse
+            '+handleEventsForBackgroundURLSession:completionHandler:':
+                trim_after_first_colon: true
+            '+handleRemoteNotification:withController:':
+                trim_after_first_colon: true
+            '+handleRemoteNotification:isAppLaunch:withController:':
+                trim_after_first_colon: true
+            '+handleLocalNotification:withController:':
+                trim_after_first_colon: true
+            '+handleInteractiveLocalNotification:forAction:completionHandler:':
+                trim_after_first_colon: true
+            '+handleInteractiveRemoteNotification:forAction:completionHandler:':
+                trim_after_first_colon: true
+            '+handleInteractiveLocalNotificationWithUserInfoDictionary:forAction:completionHandler:':
+                name: handleInteractiveLocalNotification
+    HelpshiftFAQFilter:
+        methods:
+            '-initWithFilterOperator:andTags:':
+                name: init
+    HelpshiftInstallConfig: {}
+    HelpshiftInstallConfigBuilder: {}
+    HelpshiftSupportMetaData:
+        methods:
+            '-initWithMetaData:':
+                name: init
+            '-initWithMetaData:andTags:':
+                name: init
+    HelpshiftUser: {}
+    HelpshiftUserBuilder:
+        methods:
+            '-initWithIdentifier:andEmail:':
+                name: init
+
+protocols:
+    HsApiProvider:
+        methods:
+            '-_installForApiKey:domainName:appID:':
+                name: installForApiKey
+            '-_installForApiKey:domainName:appID:withConfig:':
+                name: installForApiKey
+            '-_setName:andEmail:':
+                name: setNameAndEmail
+            '-_handleRemoteNotification:withController:':
+                name: handleRemoteNotification
+            '-_handleRemoteNotification:isAppLaunch:withController:':
+                name: handleRemoteNotification
+            '-_handleLocalNotificationWithUserInfoDictionary:withController:':
+                name: handleLocalNotification
+            '-_handleInteractiveRemoteNotification:forAction:completionHandler:':
+                name: handleInteractiveRemoteNotification
+            '-_handleInteractiveLocalNotification:forAction:completionHandler:':
+                name: handleInteractiveLocalNotification
+            '-_handleEventsForBackgroundURLSession:completionHandler:':
+                name: handleEventsForBackgroundURLSession
+            '-_login:':
+                name: login
+            '-_logout':
+                name: logout
+            '-_clearAnonymousUser':
+                name: clearAnonymousUser
+            '-_registerDeviceToken:':
+                name: registerDeviceToken
+            '-_setSDKLanguage:':
+                name: setSDKLanguage
+
+functions: 
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
