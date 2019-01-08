@@ -45,37 +45,14 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartViewPortJob.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected ChartViewPortJob() {}
     protected ChartViewPortJob(Handle h, long handle) { super(h, handle); }
     protected ChartViewPortJob(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithViewPortHandler:xValue:yValue:transformer:view:")
     public ChartViewPortJob(ChartViewPortHandler viewPortHandler, double xValue, double yValue, ChartTransformer transformer, ChartViewBase view) { super((SkipInit) null); initObject(init(viewPortHandler, xValue, yValue, transformer, view)); }
+    public ChartViewPortJob() { super((Handle) null, newJob());  }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "point")
-    public native @ByVal CGPoint getPoint();
-    @Property(selector = "setPoint:")
-    public native void setPoint(@ByVal CGPoint v);
-    @Property(selector = "viewPortHandler")
-    public native ChartViewPortHandler getViewPortHandler();
-    @Property(selector = "setViewPortHandler:", strongRef = true)
-    public native void setViewPortHandler(ChartViewPortHandler v);
-    @Property(selector = "xValue")
-    public native double getXValue();
-    @Property(selector = "setXValue:")
-    public native void setXValue(double v);
-    @Property(selector = "yValue")
-    public native double getYValue();
-    @Property(selector = "setYValue:")
-    public native void setYValue(double v);
-    @Property(selector = "transformer")
-    public native ChartTransformer getTransformer();
-    @Property(selector = "setTransformer:", strongRef = true)
-    public native void setTransformer(ChartTransformer v);
-    @Property(selector = "view")
-    public native ChartViewBase getView();
-    @Property(selector = "setView:", strongRef = true)
-    public native void setView(ChartViewBase v);
+    
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -83,5 +60,7 @@ import org.robovm.apple.coreanimation.*;
     protected native @Pointer long init(ChartViewPortHandler viewPortHandler, double xValue, double yValue, ChartTransformer transformer, ChartViewBase view);
     @Method(selector = "doJob")
     public native void doJob();
+    @Method(selector = "new")
+    protected static native @Pointer long newJob();
     /*</methods>*/
 }

@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(PieChartDataEntry.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected PieChartDataEntry() {}
+    public PieChartDataEntry() {}
     protected PieChartDataEntry(Handle h, long handle) { super(h, handle); }
     protected PieChartDataEntry(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithValue:label:")
@@ -74,10 +74,6 @@ import org.robovm.apple.coreanimation.*;
     public native double getValue();
     @Property(selector = "setValue:")
     public native void setValue(double v);
-    @Property(selector = "x")
-    public native double getX();
-    @Property(selector = "setX:")
-    public native void setX(double v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -98,6 +94,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithValue:icon:data:")
     protected native @Pointer long init(double value, UIImage icon, NSObject data);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     /*</methods>*/
 }

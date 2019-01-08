@@ -49,7 +49,7 @@ import org.robovm.apple.coreanimation.*;
     protected ChartIndexAxisValueFormatter(Handle h, long handle) { super(h, handle); }
     protected ChartIndexAxisValueFormatter(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithValues:")
-    public ChartIndexAxisValueFormatter(NSArray<NSString> values) { super((SkipInit) null); initObject(initWithValues(values)); }
+    public ChartIndexAxisValueFormatter(NSArray<NSString> values) { super((SkipInit) null); initObject(init(values)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "values")
@@ -60,7 +60,7 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithValues:")
-    protected native @Pointer long initWithValues(NSArray<NSString> values);
+    protected native @Pointer long init(NSArray<NSString> values);
     @Method(selector = "stringForValue:axis:")
     public native String getStringForValue(double value, ChartAxisBase axis);
     @Method(selector = "withValues:")

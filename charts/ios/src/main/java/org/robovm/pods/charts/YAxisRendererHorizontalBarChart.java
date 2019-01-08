@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(YAxisRendererHorizontalBarChart.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public YAxisRendererHorizontalBarChart() {}
+    protected YAxisRendererHorizontalBarChart() {}
     protected YAxisRendererHorizontalBarChart(Handle h, long handle) { super(h, handle); }
     protected YAxisRendererHorizontalBarChart(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithViewPortHandler:yAxis:transformer:")
@@ -62,9 +62,9 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "computeAxisWithMin:max:inverted:")
     public native void computeAxis(double min, double max, boolean inverted);
     @Method(selector = "renderAxisLabelsWithContext:")
-    public native void renderAxisLabelsWithContext(CGContext context);
+    public native void renderAxisLabels(CGContext context);
     @Method(selector = "renderAxisLineWithContext:")
-    public native void renderAxisLineWithContext(CGContext context);
+    public native void renderAxisLine(CGContext context);
     @Method(selector = "drawYLabelsWithContext:fixedPosition:positions:offset:")
     public native void drawYLabels(CGContext context, @MachineSizedFloat double fixedPosition, NSArray<NSValue> positions, @MachineSizedFloat double offset);
     @Method(selector = "drawGridLineWithContext:position:")
@@ -72,8 +72,8 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "transformedPositions")
     public native NSArray<NSValue> transformedPositions();
     @Method(selector = "drawZeroLineWithContext:")
-    public native void drawZeroLineWithContext(CGContext context);
+    public native void drawZeroLine(CGContext context);
     @Method(selector = "renderLimitLinesWithContext:")
-    public native void renderLimitLinesWithContext(CGContext context);
+    public native void renderLimitLines(CGContext context);
     /*</methods>*/
 }

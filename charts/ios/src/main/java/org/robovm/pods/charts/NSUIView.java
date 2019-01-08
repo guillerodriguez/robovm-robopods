@@ -49,13 +49,17 @@ import org.robovm.apple.coreanimation.*;
     protected NSUIView(Handle h, long handle) { super(h, handle); }
     protected NSUIView(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public NSUIView(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public NSUIView(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public NSUIView(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public NSUIView(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "nsuiLayer")
     public native CALayer getNsuiLayer();
+    @Property(selector = "isAccessibilityElement")
+    public native boolean isAccessibilityElement();
+    @Property(selector = "setIsAccessibilityElement:")
+    public native void setIsAccessibilityElement(boolean v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -76,8 +80,16 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "nsuiTouchesCancelled:withEvent:")
     public native void nsuiTouchesCancelled(NSSet<UITouch> touches, UIEvent event);
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
+    protected native @Pointer long init(NSCoder decoder);
+    @Method(selector = "accessibilityChildren")
+    public native NSArray<?> accessibilityChildren();
+    @Method(selector = "accessibilityElementCount")
+    public native @MachineSizedSInt long accessibilityElementCount();
+    @Method(selector = "accessibilityElementAtIndex:")
+    public native NSObject accessibilityElementAtIndex(@MachineSizedSInt long index);
+    @Method(selector = "indexOfAccessibilityElement:")
+    public native @MachineSizedSInt long indexOfAccessibilityElement(NSObject element);
     /*</methods>*/
 }

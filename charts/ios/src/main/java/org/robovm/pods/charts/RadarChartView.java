@@ -49,9 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected RadarChartView(Handle h, long handle) { super(h, handle); }
     protected RadarChartView(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public RadarChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public RadarChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public RadarChartView(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public RadarChartView(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "webLineWidth")
@@ -78,14 +78,6 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isDrawWeb();
     @Property(selector = "setDrawWeb:")
     public native void setDrawWeb(boolean v);
-    @Property(selector = "_yAxisRenderer")
-    public native YAxisRendererRadarChart get_yAxisRenderer();
-    @Property(selector = "set_yAxisRenderer:")
-    public native void set_yAxisRenderer(YAxisRendererRadarChart v);
-    @Property(selector = "_xAxisRenderer")
-    public native XAxisRendererRadarChart get_xAxisRenderer();
-    @Property(selector = "set_xAxisRenderer:")
-    public native void set_xAxisRenderer(XAxisRendererRadarChart v);
     @Property(selector = "factor")
     public native @MachineSizedFloat double getFactor();
     @Property(selector = "sliceAngle")
@@ -96,10 +88,6 @@ import org.robovm.apple.coreanimation.*;
     public native @MachineSizedSInt long getSkipWebLineCount();
     @Property(selector = "setSkipWebLineCount:")
     public native void setSkipWebLineCount(@MachineSizedSInt long v);
-    @Property(selector = "requiredLegendOffset")
-    public native @MachineSizedFloat double getRequiredLegendOffset();
-    @Property(selector = "requiredBaseOffset")
-    public native @MachineSizedFloat double getRequiredBaseOffset();
     @Property(selector = "radius")
     public native @MachineSizedFloat double getRadius();
     @Property(selector = "chartYMax")
@@ -112,17 +100,13 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
-    @Method(selector = "initialize")
-    public native void initialize();
-    @Method(selector = "calcMinMax")
-    public native void calcMinMax();
+    protected native @Pointer long init(NSCoder decoder);
     @Method(selector = "notifyDataSetChanged")
     public native void notifyDataSetChanged();
     @Method(selector = "drawRect:")
-    public native void drawRect(@ByVal CGRect rect);
+    public native void draw(@ByVal CGRect rect);
     @Method(selector = "indexForAngle:")
     public native @MachineSizedSInt long indexForAngle(@MachineSizedFloat double angle);
     /*</methods>*/

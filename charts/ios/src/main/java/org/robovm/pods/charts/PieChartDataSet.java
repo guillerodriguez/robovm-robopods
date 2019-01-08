@@ -45,11 +45,13 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(PieChartDataSet.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected PieChartDataSet() {}
+    public PieChartDataSet() {}
     protected PieChartDataSet(Handle h, long handle) { super(h, handle); }
     protected PieChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithValues:label:")
     public PieChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
+    @Method(selector = "initWithValues:")
+    public PieChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "sliceSpace")
@@ -104,14 +106,16 @@ import org.robovm.apple.coreanimation.*;
     public native UIColor getEntryLabelColor();
     @Property(selector = "setEntryLabelColor:")
     public native void setEntryLabelColor(UIColor v);
+    @Property(selector = "highlightColor")
+    public native UIColor getHighlightColor();
+    @Property(selector = "setHighlightColor:")
+    public native void setHighlightColor(UIColor v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithValues:label:")
     protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
-    @Method(selector = "calcMinMaxWithEntry:")
-    public native void calcMinMaxWithEntry(ChartDataEntry e);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     /*</methods>*/
 }

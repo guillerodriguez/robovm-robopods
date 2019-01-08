@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(AnimatedMoveViewJob.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public AnimatedMoveViewJob() {}
+    protected AnimatedMoveViewJob() {}
     protected AnimatedMoveViewJob(Handle h, long handle) { super(h, handle); }
     protected AnimatedMoveViewJob(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithViewPortHandler:xValue:yValue:transformer:view:xOrigin:yOrigin:duration:easing:")
@@ -58,7 +58,5 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "initWithViewPortHandler:xValue:yValue:transformer:view:xOrigin:yOrigin:duration:easing:")
     protected native @Pointer long init(ChartViewPortHandler viewPortHandler, double xValue, double yValue, ChartTransformer transformer, ChartViewBase view, @MachineSizedFloat double xOrigin, @MachineSizedFloat double yOrigin, double duration, @Block Block2<Double, Double, Double> easing);
-    @Method(selector = "animationUpdate")
-    public native void animationUpdate();
     /*</methods>*/
 }

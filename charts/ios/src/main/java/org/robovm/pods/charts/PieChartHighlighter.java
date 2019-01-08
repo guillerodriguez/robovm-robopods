@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(PieChartHighlighter.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public PieChartHighlighter() {}
+    protected PieChartHighlighter() {}
     protected PieChartHighlighter(Handle h, long handle) { super(h, handle); }
     protected PieChartHighlighter(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithChart:")
-    public PieChartHighlighter(ChartDataProvider chart) { super((SkipInit) null); initObject(initWithChart(chart)); }
+    public PieChartHighlighter(ChartDataProvider chart) { super((SkipInit) null); initObject(init(chart)); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -59,6 +59,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "closestHighlightWithIndex:x:y:")
     public native ChartHighlight getClosestHighlight(@MachineSizedSInt long index, @MachineSizedFloat double x, @MachineSizedFloat double y);
     @Method(selector = "initWithChart:")
-    protected native @Pointer long initWithChart(ChartDataProvider chart);
+    protected native @Pointer long init(ChartDataProvider chart);
     /*</methods>*/
 }

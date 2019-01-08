@@ -64,10 +64,6 @@ import org.robovm.apple.coreanimation.*;
     public native boolean drawBarShadowEnabled();
     @Property(selector = "setDrawBarShadowEnabled:")
     public native void setDrawBarShadowEnabled(boolean v);
-    @Property(selector = "_renderers")
-    public native NSArray<ChartDataRendererBase> get_renderers();
-    @Property(selector = "set_renderers:")
-    public native void set_renderers(NSArray<ChartDataRendererBase> v);
     @Property(selector = "subRenderers")
     public native NSArray<ChartDataRendererBase> getSubRenderers();
     @Property(selector = "setSubRenderers:")
@@ -81,19 +77,17 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "initWithChart:animator:viewPortHandler:")
     protected native @Pointer long init(CombinedChartView chart, ChartAnimator animator, ChartViewPortHandler viewPortHandler);
-    @Method(selector = "createRenderers")
-    public native void createRenderers();
     @Method(selector = "initBuffers")
     public native void initBuffers();
     @Method(selector = "drawDataWithContext:")
-    public native void drawDataWithContext(CGContext context);
+    public native void drawData(CGContext context);
     @Method(selector = "drawValuesWithContext:")
-    public native void drawValuesWithContext(CGContext context);
+    public native void drawValues(CGContext context);
     @Method(selector = "drawExtrasWithContext:")
-    public native void drawExtrasWithContext(CGContext context);
+    public native void drawExtras(CGContext context);
     @Method(selector = "drawHighlightedWithContext:indices:")
     public native void drawHighlighted(CGContext context, NSArray<ChartHighlight> indices);
     @Method(selector = "getSubRendererWithIndex:")
-    public native ChartDataRendererBase getSubRendererWithIndex(@MachineSizedSInt long index);
+    public native ChartDataRendererBase getSubRenderer(@MachineSizedSInt long index);
     /*</methods>*/
 }

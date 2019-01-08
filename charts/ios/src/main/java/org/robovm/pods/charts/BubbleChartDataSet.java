@@ -49,15 +49,13 @@ import org.robovm.apple.coreanimation.*;
     protected BubbleChartDataSet(Handle h, long handle) { super(h, handle); }
     protected BubbleChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLabel:")
-    public BubbleChartDataSet(String label) { super((SkipInit) null); initObject(initWithLabel(label)); }
+    public BubbleChartDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
     @Method(selector = "initWithValues:label:")
     public BubbleChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
+    @Method(selector = "initWithValues:")
+    public BubbleChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "_maxSize")
-    public native @MachineSizedFloat double get_maxSize();
-    @Property(selector = "set_maxSize:")
-    public native void set_maxSize(@MachineSizedFloat double v);
     @Property(selector = "maxSize")
     public native @MachineSizedFloat double getMaxSize();
     @Property(selector = "normalizeSizeEnabled")
@@ -73,12 +71,10 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "calcMinMaxWithEntry:")
-    public native void calcMinMaxWithEntry(ChartDataEntry e);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     @Method(selector = "initWithLabel:")
-    protected native @Pointer long initWithLabel(String label);
+    protected native @Pointer long init(String label);
     @Method(selector = "initWithValues:label:")
     protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
     /*</methods>*/

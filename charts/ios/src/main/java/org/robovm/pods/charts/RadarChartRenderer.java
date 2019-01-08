@@ -62,18 +62,14 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithChart:animator:viewPortHandler:")
     protected native @Pointer long init(RadarChartView chart, ChartAnimator animator, ChartViewPortHandler viewPortHandler);
     @Method(selector = "drawDataWithContext:")
-    public native void drawDataWithContext(CGContext context);
-    @Method(selector = "drawDataSetWithContext:dataSet:mostEntries:")
-    public native void drawDataSet(CGContext context, IRadarChartDataSet dataSet, @MachineSizedSInt long mostEntries);
+    public native void drawData(CGContext context);
     @Method(selector = "drawValuesWithContext:")
-    public native void drawValuesWithContext(CGContext context);
+    public native void drawValues(CGContext context);
     @Method(selector = "drawExtrasWithContext:")
-    public native void drawExtrasWithContext(CGContext context);
+    public native void drawExtras(CGContext context);
     @Method(selector = "drawWebWithContext:")
-    public native void drawWebWithContext(CGContext context);
+    public native void drawWeb(CGContext context);
     @Method(selector = "drawHighlightedWithContext:indices:")
     public native void drawHighlighted(CGContext context, NSArray<ChartHighlight> indices);
-    @Method(selector = "drawHighlightCircleWithContext:atPoint:innerRadius:outerRadius:fillColor:strokeColor:strokeWidth:")
-    public native void drawHighlightCircle(CGContext context, @ByVal CGPoint point, @MachineSizedFloat double innerRadius, @MachineSizedFloat double outerRadius, UIColor fillColor, UIColor strokeColor, @MachineSizedFloat double strokeWidth);
     /*</methods>*/
 }

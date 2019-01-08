@@ -168,26 +168,18 @@ import org.robovm.apple.coreanimation.*;
     public native double getSpaceMax();
     @Property(selector = "setSpaceMax:")
     public native void setSpaceMax(double v);
-    @Property(selector = "_customAxisMin")
-    public native boolean is_customAxisMin();
-    @Property(selector = "set_customAxisMin:")
-    public native void set_customAxisMin(boolean v);
-    @Property(selector = "_customAxisMax")
-    public native boolean is_customAxisMax();
-    @Property(selector = "set_customAxisMax:")
-    public native void set_customAxisMax(boolean v);
-    @Property(selector = "_axisMinimum")
-    public native double get_axisMinimum();
-    @Property(selector = "set_axisMinimum:")
-    public native void set_axisMinimum(double v);
-    @Property(selector = "_axisMaximum")
-    public native double get_axisMaximum();
-    @Property(selector = "set_axisMaximum:")
-    public native void set_axisMaximum(double v);
     @Property(selector = "axisRange")
     public native double getAxisRange();
     @Property(selector = "setAxisRange:")
     public native void setAxisRange(double v);
+    @Property(selector = "axisMinLabels")
+    public native @MachineSizedSInt long getAxisMinLabels();
+    @Property(selector = "setAxisMinLabels:")
+    public native void setAxisMinLabels(@MachineSizedSInt long v);
+    @Property(selector = "axisMaxLabels")
+    public native @MachineSizedSInt long getAxisMaxLabels();
+    @Property(selector = "setAxisMaxLabels:")
+    public native void setAxisMaxLabels(@MachineSizedSInt long v);
     @Property(selector = "labelCount")
     public native @MachineSizedSInt long getLabelCount();
     @Property(selector = "setLabelCount:")
@@ -200,14 +192,6 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isAxisMinCustom();
     @Property(selector = "isAxisMaxCustom")
     public native boolean isAxisMaxCustom();
-    @Property(selector = "axisMinValue")
-    public native double getAxisMinValue();
-    @Property(selector = "setAxisMinValue:")
-    public native void setAxisMinValue(double v);
-    @Property(selector = "axisMaxValue")
-    public native double getAxisMaxValue();
-    @Property(selector = "setAxisMaxValue:")
-    public native void setAxisMaxValue(double v);
     @Property(selector = "axisMinimum")
     public native double getAxisMinimum();
     @Property(selector = "setAxisMinimum:")

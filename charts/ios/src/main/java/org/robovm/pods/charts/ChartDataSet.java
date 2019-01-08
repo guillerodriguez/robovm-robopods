@@ -49,33 +49,13 @@ import org.robovm.apple.coreanimation.*;
     protected ChartDataSet(Handle h, long handle) { super(h, handle); }
     protected ChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLabel:")
-    public ChartDataSet(String label) { super((SkipInit) null); initObject(initWithLabel(label)); }
+    public ChartDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
     @Method(selector = "initWithValues:label:")
     public ChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
     @Method(selector = "initWithValues:")
-    public ChartDataSet(NSArray<ChartDataEntry> values) { super((SkipInit) null); initObject(initWithValues(values)); }
+    public ChartDataSet(NSArray<ChartDataEntry> values) { super((SkipInit) null); initObject(init(values)); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "_values")
-    public native NSArray<ChartDataEntry> get_values();
-    @Property(selector = "set_values:")
-    public native void set_values(NSArray<ChartDataEntry> v);
-    @Property(selector = "_yMax")
-    public native double get_yMax();
-    @Property(selector = "set_yMax:")
-    public native void set_yMax(double v);
-    @Property(selector = "_yMin")
-    public native double get_yMin();
-    @Property(selector = "set_yMin:")
-    public native void set_yMin(double v);
-    @Property(selector = "_xMax")
-    public native double get_xMax();
-    @Property(selector = "set_xMax:")
-    public native void set_xMax(double v);
-    @Property(selector = "_xMin")
-    public native double get_xMin();
-    @Property(selector = "set_xMin:")
-    public native void set_xMin(double v);
     @Property(selector = "values")
     public native NSArray<ChartDataEntry> getValues();
     @Property(selector = "setValues:")
@@ -94,23 +74,19 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithLabel:")
-    protected native @Pointer long initWithLabel(String label);
+    protected native @Pointer long init(String label);
     @Method(selector = "initWithValues:label:")
     protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
     @Method(selector = "initWithValues:")
-    protected native @Pointer long initWithValues(NSArray<ChartDataEntry> values);
-    @Method(selector = "notifyDataSetChanged")
-    public native void notifyDataSetChanged();
+    protected native @Pointer long init(NSArray<ChartDataEntry> values);
     @Method(selector = "calcMinMax")
     public native void calcMinMax();
     @Method(selector = "calcMinMaxYFromX:toX:")
     public native void calcMinMaxY(double fromX, double toX);
     @Method(selector = "calcMinMaxXWithEntry:")
-    public native void calcMinMaxXWithEntry(ChartDataEntry e);
+    public native void calcMinMaxX(ChartDataEntry e);
     @Method(selector = "calcMinMaxYWithEntry:")
-    public native void calcMinMaxYWithEntry(ChartDataEntry e);
-    @Method(selector = "calcMinMaxWithEntry:")
-    public native void calcMinMaxWithEntry(ChartDataEntry e);
+    public native void calcMinMaxY(ChartDataEntry e);
     @Method(selector = "entryForIndex:")
     public native ChartDataEntry entryForIndex(@MachineSizedSInt long i);
     @Method(selector = "entryForXValue:closestToY:rounding:")
@@ -122,7 +98,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "entryIndexWithX:closestToY:rounding:")
     public native @MachineSizedSInt long getEntryIndex(double xValue, double yValue, ChartDataSetRounding rounding);
     @Method(selector = "entryIndexWithEntry:")
-    public native @MachineSizedSInt long entryIndexWithEntry(ChartDataEntry e);
+    public native @MachineSizedSInt long getEntryIndex(ChartDataEntry e);
     @Method(selector = "addEntry:")
     public native boolean addEntry(ChartDataEntry e);
     @Method(selector = "addEntryOrdered:")
@@ -138,6 +114,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "clear")
     public native void clear();
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     /*</methods>*/
 }

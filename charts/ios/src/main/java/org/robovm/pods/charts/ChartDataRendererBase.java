@@ -52,26 +52,30 @@ import org.robovm.apple.coreanimation.*;
     public ChartDataRendererBase(ChartAnimator animator, ChartViewPortHandler viewPortHandler) { super((SkipInit) null); initObject(init(animator, viewPortHandler)); }
     /*</constructors>*/
     /*<properties>*/
+    @Property(selector = "accessibleChartElements")
+    public native NSArray<NSUIAccessibilityElement> getAccessibleChartElements();
+    @Property(selector = "setAccessibleChartElements:")
+    public native void setAccessibleChartElements(NSArray<NSUIAccessibilityElement> v);
     @Property(selector = "animator")
     public native ChartAnimator getAnimator();
-    @Property(selector = "setAnimator:")
-    public native void setAnimator(ChartAnimator v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithAnimator:viewPortHandler:")
     protected native @Pointer long init(ChartAnimator animator, ChartViewPortHandler viewPortHandler);
     @Method(selector = "drawDataWithContext:")
-    public native void drawDataWithContext(CGContext context);
+    public native void drawData(CGContext context);
     @Method(selector = "drawValuesWithContext:")
-    public native void drawValuesWithContext(CGContext context);
+    public native void drawValues(CGContext context);
     @Method(selector = "drawExtrasWithContext:")
-    public native void drawExtrasWithContext(CGContext context);
+    public native void drawExtras(CGContext context);
     @Method(selector = "drawHighlightedWithContext:indices:")
     public native void drawHighlighted(CGContext context, NSArray<ChartHighlight> indices);
     @Method(selector = "initBuffers")
     public native void initBuffers();
     @Method(selector = "isDrawingValuesAllowedWithDataProvider:")
-    public native boolean isDrawingValuesAllowedWithDataProvider(ChartDataProvider dataProvider);
+    public native boolean isDrawingValuesAllowed(ChartDataProvider dataProvider);
+    @Method(selector = "createAccessibleHeaderUsingChart:andData:withDefaultDescription:")
+    public native NSUIAccessibilityElement createAccessibleHeaderUsingChart(ChartViewBase chart, ChartData data, String defaultDescription);
     /*</methods>*/
 }

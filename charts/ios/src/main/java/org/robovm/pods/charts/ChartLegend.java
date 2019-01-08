@@ -49,9 +49,7 @@ import org.robovm.apple.coreanimation.*;
     protected ChartLegend(Handle h, long handle) { super(h, handle); }
     protected ChartLegend(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithEntries:")
-    public ChartLegend(NSArray<ChartLegendEntry> entries) { super((SkipInit) null); initObject(initWithEntries(entries)); }
-    @Method(selector = "initWithColors:labels:")
-    public ChartLegend(NSArray<?> colors, NSArray<?> labels) { super((SkipInit) null); initObject(init(colors, labels)); }
+    public ChartLegend(NSArray<ChartLegendEntry> entries) { super((SkipInit) null); initObject(init(entries)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "entries")
@@ -62,10 +60,6 @@ import org.robovm.apple.coreanimation.*;
     public native NSArray<ChartLegendEntry> getExtraEntries();
     @Property(selector = "setExtraEntries:")
     public native void setExtraEntries(NSArray<ChartLegendEntry> v);
-    @Property(selector = "position")
-    public native ChartLegendPosition getPosition();
-    @Property(selector = "setPosition:")
-    public native void setPosition(ChartLegendPosition v);
     @Property(selector = "horizontalAlignment")
     public native ChartLegendHorizontalAlignment getHorizontalAlignment();
     @Property(selector = "setHorizontalAlignment:")
@@ -172,38 +166,18 @@ import org.robovm.apple.coreanimation.*;
     public native void setMaxSizePercent(@MachineSizedFloat double v);
     @Property(selector = "isLegendCustom")
     public native boolean isLegendCustom();
-    @Property(selector = "extraColorsObjc")
-    public native NSArray<?> getExtraColorsObjc();
-    @Property(selector = "extraLabelsObjc")
-    public native NSArray<?> getExtraLabelsObjc();
-    @Property(selector = "colorsObjc")
-    public native NSArray<?> getColorsObjc();
-    @Property(selector = "setColorsObjc:")
-    public native void setColorsObjc(NSArray<?> v);
-    @Property(selector = "labelsObjc")
-    public native NSArray<?> getLabelsObjc();
-    @Property(selector = "setLabelsObjc:")
-    public native void setLabelsObjc(NSArray<?> v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithEntries:")
-    protected native @Pointer long initWithEntries(NSArray<ChartLegendEntry> entries);
+    protected native @Pointer long init(NSArray<ChartLegendEntry> entries);
     @Method(selector = "getMaximumEntrySizeWithFont:")
-    public native @ByVal CGSize getMaximumEntrySizeWithFont(UIFont font);
+    public native @ByVal CGSize getMaximumEntrySize(UIFont font);
     @Method(selector = "calculateDimensionsWithLabelFont:viewPortHandler:")
     public native void calculateDimensions(UIFont labelFont, ChartViewPortHandler viewPortHandler);
     @Method(selector = "setCustomWithEntries:")
-    public native void setCustomWithEntries(NSArray<ChartLegendEntry> entries);
+    public native void setCustom(NSArray<ChartLegendEntry> entries);
     @Method(selector = "resetCustom")
     public native void resetCustom();
-    @Method(selector = "initWithColors:labels:")
-    protected native @Pointer long init(NSArray<?> colors, NSArray<?> labels);
-    @Method(selector = "getLabel:")
-    public native String getLabel(@MachineSizedSInt long index);
-    @Method(selector = "setExtraWithColors:labels:")
-    public native void setExtra(NSArray<?> colors, NSArray<?> labels);
-    @Method(selector = "setCustomWithColors:labels:")
-    public native void setCustom(NSArray<?> colors, NSArray<?> labels);
     /*</methods>*/
 }

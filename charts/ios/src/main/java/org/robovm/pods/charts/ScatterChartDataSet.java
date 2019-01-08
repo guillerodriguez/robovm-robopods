@@ -49,9 +49,11 @@ import org.robovm.apple.coreanimation.*;
     protected ScatterChartDataSet(Handle h, long handle) { super(h, handle); }
     protected ScatterChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLabel:")
-    public ScatterChartDataSet(String label) { super((SkipInit) null); initObject(initWithLabel(label)); }
+    public ScatterChartDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
     @Method(selector = "initWithValues:label:")
     public ScatterChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
+    @Method(selector = "initWithValues:")
+    public ScatterChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "scatterShapeSize")
@@ -76,9 +78,9 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "setScatterShape:")
     public native void setScatterShape(ScatterShape shape);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     @Method(selector = "initWithLabel:")
-    protected native @Pointer long initWithLabel(String label);
+    protected native @Pointer long init(String label);
     @Method(selector = "initWithValues:label:")
     protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
     @Method(selector = "rendererForShape:")

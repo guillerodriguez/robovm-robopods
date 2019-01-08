@@ -52,18 +52,7 @@ import org.robovm.apple.coreanimation.*;
     public ZoomChartViewJob(ChartViewPortHandler viewPortHandler, @MachineSizedFloat double scaleX, @MachineSizedFloat double scaleY, double xValue, double yValue, ChartTransformer transformer, AxisDependency axis, ChartViewBase view) { super((SkipInit) null); initObject(init(viewPortHandler, scaleX, scaleY, xValue, yValue, transformer, axis, view)); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "scaleX")
-    public native @MachineSizedFloat double getScaleX();
-    @Property(selector = "setScaleX:")
-    public native void setScaleX(@MachineSizedFloat double v);
-    @Property(selector = "scaleY")
-    public native @MachineSizedFloat double getScaleY();
-    @Property(selector = "setScaleY:")
-    public native void setScaleY(@MachineSizedFloat double v);
-    @Property(selector = "axisDependency")
-    public native AxisDependency getAxisDependency();
-    @Property(selector = "setAxisDependency:")
-    public native void setAxisDependency(AxisDependency v);
+    
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

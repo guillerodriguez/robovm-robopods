@@ -49,9 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected PieChartView(Handle h, long handle) { super(h, handle); }
     protected PieChartView(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public PieChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public PieChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public PieChartView(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public PieChartView(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "xAxis")
@@ -94,10 +94,6 @@ import org.robovm.apple.coreanimation.*;
     public native void setDrawCenterTextEnabled(boolean v);
     @Property(selector = "isDrawCenterTextEnabled")
     public native boolean isDrawCenterTextEnabled();
-    @Property(selector = "requiredLegendOffset")
-    public native @MachineSizedFloat double getRequiredLegendOffset();
-    @Property(selector = "requiredBaseOffset")
-    public native @MachineSizedFloat double getRequiredBaseOffset();
     @Property(selector = "radius")
     public native @MachineSizedFloat double getRadius();
     @Property(selector = "circleBox")
@@ -116,12 +112,6 @@ import org.robovm.apple.coreanimation.*;
     public native @MachineSizedFloat double getTransparentCircleRadiusPercent();
     @Property(selector = "setTransparentCircleRadiusPercent:")
     public native void setTransparentCircleRadiusPercent(@MachineSizedFloat double v);
-    @Property(selector = "drawSliceTextEnabled")
-    public native boolean drawSliceTextEnabled();
-    @Property(selector = "setDrawSliceTextEnabled:")
-    public native void setDrawSliceTextEnabled(boolean v);
-    @Property(selector = "isDrawSliceTextEnabled")
-    public native boolean isDrawSliceTextEnabled();
     @Property(selector = "entryLabelColor")
     public native UIColor getEntryLabelColor();
     @Property(selector = "setEntryLabelColor:")
@@ -154,21 +144,15 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
-    @Method(selector = "initialize")
-    public native void initialize();
+    protected native @Pointer long init(NSCoder decoder);
     @Method(selector = "drawRect:")
-    public native void drawRect(@ByVal CGRect rect);
-    @Method(selector = "calculateOffsets")
-    public native void calculateOffsets();
-    @Method(selector = "calcMinMax")
-    public native void calcMinMax();
+    public native void draw(@ByVal CGRect rect);
     @Method(selector = "getMarkerPositionWithHighlight:")
-    public native @ByVal CGPoint getMarkerPositionWithHighlight(ChartHighlight highlight);
+    public native @ByVal CGPoint getMarkerPosition(ChartHighlight highlight);
     @Method(selector = "needsHighlightWithIndex:")
-    public native boolean needsHighlightWithIndex(@MachineSizedSInt long index);
+    public native boolean needsHighlight(@MachineSizedSInt long index);
     @Method(selector = "indexForAngle:")
     public native @MachineSizedSInt long indexForAngle(@MachineSizedFloat double angle);
     @Method(selector = "dataSetIndexForIndex:")

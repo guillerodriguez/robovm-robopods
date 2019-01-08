@@ -49,9 +49,11 @@ import org.robovm.apple.coreanimation.*;
     protected LineScatterCandleRadarChartDataSet(Handle h, long handle) { super(h, handle); }
     protected LineScatterCandleRadarChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLabel:")
-    public LineScatterCandleRadarChartDataSet(String label) { super((SkipInit) null); initObject(initWithLabel(label)); }
+    public LineScatterCandleRadarChartDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
     @Method(selector = "initWithValues:label:")
     public LineScatterCandleRadarChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
+    @Method(selector = "initWithValues:")
+    public LineScatterCandleRadarChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "drawHorizontalHighlightIndicatorEnabled")
@@ -72,9 +74,9 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "setDrawHighlightIndicators:")
     public native void setDrawHighlightIndicators(boolean enabled);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     @Method(selector = "initWithLabel:")
-    protected native @Pointer long initWithLabel(String label);
+    protected native @Pointer long init(String label);
     @Method(selector = "initWithValues:label:")
     protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
     /*</methods>*/

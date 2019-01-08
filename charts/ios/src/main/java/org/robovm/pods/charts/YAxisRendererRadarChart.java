@@ -61,8 +61,8 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "computeAxisValuesWithMin:max:")
     public native void computeAxisValues(double yMin, double yMax);
     @Method(selector = "renderAxisLabelsWithContext:")
-    public native void renderAxisLabelsWithContext(CGContext context);
+    public native void renderAxisLabels(CGContext context);
     @Method(selector = "renderLimitLinesWithContext:")
-    public native void renderLimitLinesWithContext(CGContext context);
+    public native void renderLimitLines(CGContext context);
     /*</methods>*/
 }

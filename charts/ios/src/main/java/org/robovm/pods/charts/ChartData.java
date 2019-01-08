@@ -49,47 +49,11 @@ import org.robovm.apple.coreanimation.*;
     protected ChartData(Handle h, long handle) { super(h, handle); }
     protected ChartData(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithDataSets:")
-    public ChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(initWithDataSets(dataSets)); }
+    public ChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(init(dataSets)); }
     @Method(selector = "initWithDataSet:")
-    public ChartData(IChartDataSet dataSet) { super((SkipInit) null); initObject(initWithDataSet(dataSet)); }
+    public ChartData(IChartDataSet dataSet) { super((SkipInit) null); initObject(init(dataSet)); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "_yMax")
-    public native double get_yMax();
-    @Property(selector = "set_yMax:")
-    public native void set_yMax(double v);
-    @Property(selector = "_yMin")
-    public native double get_yMin();
-    @Property(selector = "set_yMin:")
-    public native void set_yMin(double v);
-    @Property(selector = "_xMax")
-    public native double get_xMax();
-    @Property(selector = "set_xMax:")
-    public native void set_xMax(double v);
-    @Property(selector = "_xMin")
-    public native double get_xMin();
-    @Property(selector = "set_xMin:")
-    public native void set_xMin(double v);
-    @Property(selector = "_leftAxisMax")
-    public native double get_leftAxisMax();
-    @Property(selector = "set_leftAxisMax:")
-    public native void set_leftAxisMax(double v);
-    @Property(selector = "_leftAxisMin")
-    public native double get_leftAxisMin();
-    @Property(selector = "set_leftAxisMin:")
-    public native void set_leftAxisMin(double v);
-    @Property(selector = "_rightAxisMax")
-    public native double get_rightAxisMax();
-    @Property(selector = "set_rightAxisMax:")
-    public native void set_rightAxisMax(double v);
-    @Property(selector = "_rightAxisMin")
-    public native double get_rightAxisMin();
-    @Property(selector = "set_rightAxisMin:")
-    public native void set_rightAxisMin(double v);
-    @Property(selector = "_dataSets")
-    public native NSArray<?> get_dataSets();
-    @Property(selector = "set_dataSets:")
-    public native void set_dataSets(NSArray<?> v);
     @Property(selector = "dataSetCount")
     public native @MachineSizedSInt long getDataSetCount();
     @Property(selector = "yMin")
@@ -114,15 +78,25 @@ import org.robovm.apple.coreanimation.*;
     public native @MachineSizedSInt long getEntryCount();
     @Property(selector = "maxEntryCountSet")
     public native IChartDataSet getMaxEntryCountSet();
+    @Property(selector = "accessibilityEntryLabelPrefix")
+    public native String getAccessibilityEntryLabelPrefix();
+    @Property(selector = "setAccessibilityEntryLabelPrefix:")
+    public native void setAccessibilityEntryLabelPrefix(String v);
+    @Property(selector = "accessibilityEntryLabelSuffix")
+    public native String getAccessibilityEntryLabelSuffix();
+    @Property(selector = "setAccessibilityEntryLabelSuffix:")
+    public native void setAccessibilityEntryLabelSuffix(String v);
+    @Property(selector = "accessibilityEntryLabelSuffixIsCount")
+    public native boolean isAccessibilityEntryLabelSuffixIsCount();
+    @Property(selector = "setAccessibilityEntryLabelSuffixIsCount:")
+    public native void setAccessibilityEntryLabelSuffixIsCount(boolean v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithDataSets:")
-    protected native @Pointer long initWithDataSets(NSArray<?> dataSets);
+    protected native @Pointer long init(NSArray<?> dataSets);
     @Method(selector = "initWithDataSet:")
-    protected native @Pointer long initWithDataSet(IChartDataSet dataSet);
-    @Method(selector = "initializeWithDataSets:")
-    public native void initializeWithDataSets(NSArray<?> dataSets);
+    protected native @Pointer long init(IChartDataSet dataSet);
     @Method(selector = "notifyDataChanged")
     public native void notifyDataChanged();
     @Method(selector = "calcMinMaxYFromX:toX:")
@@ -132,15 +106,11 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "calcMinMaxWithEntry:axis:")
     public native void calcMinMax(ChartDataEntry e, AxisDependency axis);
     @Method(selector = "calcMinMaxWithDataSet:")
-    public native void calcMinMaxWithDataSet(IChartDataSet d);
+    public native void calcMinMax(IChartDataSet d);
     @Method(selector = "getYMinWithAxis:")
-    public native double getYMinWithAxis(AxisDependency axis);
+    public native double getYMin(AxisDependency axis);
     @Method(selector = "getYMaxWithAxis:")
-    public native double getYMaxWithAxis(AxisDependency axis);
-    @Method(selector = "getDataSetIndexByLabel:ignorecase:")
-    public native @MachineSizedSInt long getDataSetIndex(String label, boolean ignorecase);
-    @Method(selector = "dataSetLabels")
-    public native NSArray<NSString> dataSetLabels();
+    public native double getYMax(AxisDependency axis);
     @Method(selector = "entryForHighlight:")
     public native ChartDataEntry entryForHighlight(ChartHighlight highlight);
     @Method(selector = "getDataSetByLabel:ignorecase:")
@@ -164,9 +134,9 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "indexOfDataSet:")
     public native @MachineSizedSInt long indexOfDataSet(IChartDataSet dataSet);
     @Method(selector = "getFirstLeftWithDataSets:")
-    public native IChartDataSet getFirstLeftWithDataSets(NSArray<?> dataSets);
+    public native IChartDataSet getFirstLeft(NSArray<?> dataSets);
     @Method(selector = "getFirstRightWithDataSets:")
-    public native IChartDataSet getFirstRightWithDataSets(NSArray<?> dataSets);
+    public native IChartDataSet getFirstRight(NSArray<?> dataSets);
     @Method(selector = "getColors")
     public native NSArray<UIColor> getColors();
     @Method(selector = "setValueFormatter:")
@@ -180,6 +150,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "clearValues")
     public native void clearValues();
     @Method(selector = "containsWithDataSet:")
-    public native boolean containsWithDataSet(IChartDataSet dataSet);
+    public native boolean contains(IChartDataSet dataSet);
     /*</methods>*/
 }

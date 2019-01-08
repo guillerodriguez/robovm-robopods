@@ -49,9 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected HorizontalBarChartView(Handle h, long handle) { super(h, handle); }
     protected HorizontalBarChartView(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public HorizontalBarChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public HorizontalBarChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public HorizontalBarChartView(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public HorizontalBarChartView(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "lowestVisibleX")
@@ -61,16 +61,10 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initialize")
-    public native void initialize();
-    @Method(selector = "calculateOffsets")
-    public native void calculateOffsets();
-    @Method(selector = "prepareValuePxMatrix")
-    public native void prepareValuePxMatrix();
     @Method(selector = "getMarkerPositionWithHighlight:")
-    public native @ByVal CGPoint getMarkerPositionWithHighlight(ChartHighlight highlight);
+    public native @ByVal CGPoint getMarkerPosition(ChartHighlight highlight);
     @Method(selector = "getBarBoundsWithEntry:")
-    public native @ByVal CGRect getBarBoundsWithEntry(BarChartDataEntry e);
+    public native @ByVal CGRect getBarBounds(BarChartDataEntry e);
     @Method(selector = "getPositionWithEntry:axis:")
     public native @ByVal CGPoint getPosition(ChartDataEntry e, AxisDependency axis);
     @Method(selector = "getHighlightByTouchPoint:")
@@ -88,8 +82,8 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "setVisibleYRangeWithMinYRange:maxYRange:axis:")
     public native void setVisibleYRange(double minYRange, double maxYRange, AxisDependency axis);
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
+    protected native @Pointer long init(NSCoder decoder);
     /*</methods>*/
 }

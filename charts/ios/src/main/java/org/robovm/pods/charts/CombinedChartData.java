@@ -49,7 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected CombinedChartData(Handle h, long handle) { super(h, handle); }
     protected CombinedChartData(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithDataSets:")
-    public CombinedChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(initWithDataSets(dataSets)); }
+    public CombinedChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(init(dataSets)); }
+    @Method(selector = "initWithDataSet:")
+    public CombinedChartData(IChartDataSet dataSet) { super(dataSet); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "lineData")
@@ -78,7 +80,7 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithDataSets:")
-    protected native @Pointer long initWithDataSets(NSArray<?> dataSets);
+    protected native @Pointer long init(NSArray<?> dataSets);
     @Method(selector = "calcMinMax")
     public native void calcMinMax();
     @Method(selector = "dataByIndex:")

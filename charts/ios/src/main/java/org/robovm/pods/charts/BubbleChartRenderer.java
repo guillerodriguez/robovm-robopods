@@ -62,13 +62,13 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithDataProvider:animator:viewPortHandler:")
     protected native @Pointer long init(BubbleChartDataProvider dataProvider, ChartAnimator animator, ChartViewPortHandler viewPortHandler);
     @Method(selector = "drawDataWithContext:")
-    public native void drawDataWithContext(CGContext context);
-    @Method(selector = "drawDataSetWithContext:dataSet:")
-    public native void drawDataSet(CGContext context, IBubbleChartDataSet dataSet);
+    public native void drawData(CGContext context);
+    @Method(selector = "drawDataSetWithContext:dataSet:dataSetIndex:")
+    public native void drawDataSet(CGContext context, IBubbleChartDataSet dataSet, @MachineSizedSInt long dataSetIndex);
     @Method(selector = "drawValuesWithContext:")
-    public native void drawValuesWithContext(CGContext context);
+    public native void drawValues(CGContext context);
     @Method(selector = "drawExtrasWithContext:")
-    public native void drawExtrasWithContext(CGContext context);
+    public native void drawExtras(CGContext context);
     @Method(selector = "drawHighlightedWithContext:indices:")
     public native void drawHighlighted(CGContext context, NSArray<ChartHighlight> indices);
     /*</methods>*/

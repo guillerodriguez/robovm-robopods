@@ -62,9 +62,9 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithViewPortHandler:legend:")
     protected native @Pointer long init(ChartViewPortHandler viewPortHandler, ChartLegend legend);
     @Method(selector = "computeLegendWithData:")
-    public native void computeLegendWithData(ChartData data);
+    public native void computeLegend(ChartData data);
     @Method(selector = "renderLegendWithContext:")
-    public native void renderLegendWithContext(CGContext context);
+    public native void renderLegend(CGContext context);
     @Method(selector = "drawFormWithContext:x:y:entry:legend:")
     public native void drawForm(CGContext context, @MachineSizedFloat double x, @MachineSizedFloat double y, ChartLegendEntry entry, ChartLegend legend);
     @Method(selector = "drawLabelWithContext:x:y:label:font:textColor:")

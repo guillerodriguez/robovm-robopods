@@ -98,6 +98,10 @@ import org.robovm.apple.coreanimation.*;
     UIColor getEntryLabelColor();
     @Property(selector = "setEntryLabelColor:")
     void setEntryLabelColor(UIColor v);
+    @Property(selector = "highlightColor")
+    UIColor getHighlightColor();
+    @Property(selector = "setHighlightColor:")
+    void setHighlightColor(UIColor v);
     /*</properties>*/
     /*<methods>*/
     

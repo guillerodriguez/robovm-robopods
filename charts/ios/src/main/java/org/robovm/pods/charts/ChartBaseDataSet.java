@@ -49,7 +49,7 @@ import org.robovm.apple.coreanimation.*;
     protected ChartBaseDataSet(Handle h, long handle) { super(h, handle); }
     protected ChartBaseDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLabel:")
-    public ChartBaseDataSet(String label) { super((SkipInit) null); initObject(initWithLabel(label)); }
+    public ChartBaseDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "yMin")
@@ -84,10 +84,6 @@ import org.robovm.apple.coreanimation.*;
     public native void setHighlightEnabled(boolean v);
     @Property(selector = "isHighlightEnabled")
     public native boolean isHighlightEnabled();
-    @Property(selector = "_valueFormatter")
-    public native IChartValueFormatter get_valueFormatter();
-    @Property(selector = "set_valueFormatter:")
-    public native void set_valueFormatter(IChartValueFormatter v);
     @Property(selector = "valueFormatter")
     public native IChartValueFormatter getValueFormatter();
     @Property(selector = "setValueFormatter:")
@@ -152,7 +148,7 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithLabel:")
-    protected native @Pointer long initWithLabel(String label);
+    protected native @Pointer long init(String label);
     @Method(selector = "notifyDataSetChanged")
     public native void notifyDataSetChanged();
     @Method(selector = "calcMinMax")
@@ -170,7 +166,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "entryIndexWithX:closestToY:rounding:")
     public native @MachineSizedSInt long getEntryIndex(double xValue, double y, ChartDataSetRounding rounding);
     @Method(selector = "entryIndexWithEntry:")
-    public native @MachineSizedSInt long entryIndexWithEntry(ChartDataEntry e);
+    public native @MachineSizedSInt long getEntryIndex(ChartDataEntry e);
     @Method(selector = "addEntry:")
     public native boolean addEntry(ChartDataEntry e);
     @Method(selector = "addEntryOrdered:")
@@ -178,7 +174,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "removeEntry:")
     public native boolean removeEntry(ChartDataEntry entry);
     @Method(selector = "removeEntryWithIndex:")
-    public native boolean removeEntryWithIndex(@MachineSizedSInt long index);
+    public native boolean removeEntry(@MachineSizedSInt long index);
     @Method(selector = "removeEntryWithX:")
     public native boolean removeEntryWithX(double x);
     @Method(selector = "removeFirst")
@@ -204,6 +200,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "valueTextColorAt:")
     public native UIColor valueTextColorAt(@MachineSizedSInt long index);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     /*</methods>*/
 }

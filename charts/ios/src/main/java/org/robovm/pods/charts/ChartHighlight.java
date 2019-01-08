@@ -54,8 +54,8 @@ import org.robovm.apple.coreanimation.*;
     public ChartHighlight(double x, double y, @MachineSizedFloat double xPx, @MachineSizedFloat double yPx, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long stackIndex, AxisDependency axis) { super((SkipInit) null); initObject(init(x, y, xPx, yPx, dataSetIndex, stackIndex, axis)); }
     @Method(selector = "initWithX:y:xPx:yPx:dataSetIndex:axis:")
     public ChartHighlight(double x, double y, @MachineSizedFloat double xPx, @MachineSizedFloat double yPx, @MachineSizedSInt long dataSetIndex, AxisDependency axis) { super((SkipInit) null); initObject(init(x, y, xPx, yPx, dataSetIndex, axis)); }
-    @Method(selector = "initWithX:y:dataSetIndex:")
-    public ChartHighlight(double x, double y, @MachineSizedSInt long dataSetIndex) { super((SkipInit) null); initObject(init(x, y, dataSetIndex)); }
+    @Method(selector = "initWithX:y:dataSetIndex:dataIndex:")
+    public ChartHighlight(double x, double y, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long dataIndex) { super((SkipInit) null); initObject(init(x, y, dataSetIndex, dataIndex)); }
     @Method(selector = "initWithX:dataSetIndex:stackIndex:")
     public ChartHighlight(double x, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long stackIndex) { super((SkipInit) null); initObject(init(x, dataSetIndex, stackIndex)); }
     /*</constructors>*/
@@ -99,14 +99,14 @@ import org.robovm.apple.coreanimation.*;
     protected native @Pointer long init(double x, double y, @MachineSizedFloat double xPx, @MachineSizedFloat double yPx, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long stackIndex, AxisDependency axis);
     @Method(selector = "initWithX:y:xPx:yPx:dataSetIndex:axis:")
     protected native @Pointer long init(double x, double y, @MachineSizedFloat double xPx, @MachineSizedFloat double yPx, @MachineSizedSInt long dataSetIndex, AxisDependency axis);
-    @Method(selector = "initWithX:y:dataSetIndex:")
-    protected native @Pointer long init(double x, double y, @MachineSizedSInt long dataSetIndex);
+    @Method(selector = "initWithX:y:dataSetIndex:dataIndex:")
+    protected native @Pointer long init(double x, double y, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long dataIndex);
     @Method(selector = "initWithX:dataSetIndex:stackIndex:")
     protected native @Pointer long init(double x, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long stackIndex);
     @Method(selector = "setDrawWithX:y:")
     public native void setDraw(@MachineSizedFloat double x, @MachineSizedFloat double y);
     @Method(selector = "setDrawWithPt:")
-    public native void setDrawWithPt(@ByVal CGPoint pt);
+    public native void setDraw(@ByVal CGPoint pt);
     @Method(selector = "isEqual:")
     public native boolean isEqual(NSObject object);
     /*</methods>*/

@@ -49,9 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected CandleStickChartView(Handle h, long handle) { super(h, handle); }
     protected CandleStickChartView(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public CandleStickChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public CandleStickChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public CandleStickChartView(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public CandleStickChartView(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "candleData")
@@ -59,11 +59,9 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initialize")
-    public native void initialize();
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
+    protected native @Pointer long init(NSCoder decoder);
     /*</methods>*/
 }

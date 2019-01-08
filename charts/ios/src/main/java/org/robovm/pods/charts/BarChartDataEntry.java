@@ -58,8 +58,6 @@ import org.robovm.apple.coreanimation.*;
     public BarChartDataEntry(double x, double y, UIImage icon, NSObject data) { super((SkipInit) null); initObject(init(x, y, icon, data)); }
     @Method(selector = "initWithX:yValues:")
     public BarChartDataEntry(double x, NSArray<NSNumber> yValues) { super((SkipInit) null); initObject(init(x, yValues)); }
-    @Method(selector = "initWithX:yValues:label:")
-    public BarChartDataEntry(double x, NSArray<NSNumber> yValues, String label) { super((SkipInit) null); initObject(init(x, yValues, label)); }
     @Method(selector = "initWithX:yValues:data:")
     public BarChartDataEntry(double x, NSArray<NSNumber> yValues, NSObject data) { super((SkipInit) null); initObject(init(x, yValues, data)); }
     @Method(selector = "initWithX:yValues:icon:data:")
@@ -93,8 +91,6 @@ import org.robovm.apple.coreanimation.*;
     protected native @Pointer long init(double x, double y, UIImage icon, NSObject data);
     @Method(selector = "initWithX:yValues:")
     protected native @Pointer long init(double x, NSArray<NSNumber> yValues);
-    @Method(selector = "initWithX:yValues:label:")
-    protected native @Pointer long init(double x, NSArray<NSNumber> yValues, String label);
     @Method(selector = "initWithX:yValues:data:")
     protected native @Pointer long init(double x, NSArray<NSNumber> yValues, NSObject data);
     @Method(selector = "initWithX:yValues:icon:data:")
@@ -108,6 +104,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "calcRanges")
     public native void calcRanges();
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     /*</methods>*/
 }

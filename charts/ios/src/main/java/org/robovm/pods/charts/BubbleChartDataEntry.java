@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(BubbleChartDataEntry.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected BubbleChartDataEntry() {}
+    public BubbleChartDataEntry() {}
     protected BubbleChartDataEntry(Handle h, long handle) { super(h, handle); }
     protected BubbleChartDataEntry(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithX:y:size:")
@@ -74,6 +74,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithX:y:size:icon:data:")
     protected native @Pointer long init(double x, double y, @MachineSizedFloat double size, UIImage icon, NSObject data);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     /*</methods>*/
 }

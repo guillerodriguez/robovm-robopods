@@ -49,15 +49,11 @@ import org.robovm.apple.coreanimation.*;
     protected BarLineChartViewBase(Handle h, long handle) { super(h, handle); }
     protected BarLineChartViewBase(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public BarLineChartViewBase(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public BarLineChartViewBase(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public BarLineChartViewBase(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public BarLineChartViewBase(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "_maxVisibleCount")
-    public native @MachineSizedSInt long get_maxVisibleCount();
-    @Property(selector = "set_maxVisibleCount:")
-    public native void set_maxVisibleCount(@MachineSizedSInt long v);
     @Property(selector = "gridBackgroundColor")
     public native UIColor getGridBackgroundColor();
     @Property(selector = "setGridBackgroundColor:")
@@ -82,6 +78,10 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isClipValuesToContentEnabled();
     @Property(selector = "setClipValuesToContentEnabled:")
     public native void setClipValuesToContentEnabled(boolean v);
+    @Property(selector = "clipDataToContentEnabled")
+    public native boolean isClipDataToContentEnabled();
+    @Property(selector = "setClipDataToContentEnabled:")
+    public native void setClipDataToContentEnabled(boolean v);
     @Property(selector = "minOffset")
     public native @MachineSizedFloat double getMinOffset();
     @Property(selector = "setMinOffset:")
@@ -90,50 +90,26 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isKeepPositionOnRotation();
     @Property(selector = "setKeepPositionOnRotation:")
     public native void setKeepPositionOnRotation(boolean v);
-    @Property(selector = "_leftAxis")
-    public native ChartYAxis get_leftAxis();
-    @Property(selector = "set_leftAxis:")
-    public native void set_leftAxis(ChartYAxis v);
-    @Property(selector = "_rightAxis")
-    public native ChartYAxis get_rightAxis();
-    @Property(selector = "set_rightAxis:")
-    public native void set_rightAxis(ChartYAxis v);
-    @Property(selector = "_leftYAxisRenderer")
-    public native ChartYAxisRenderer get_leftYAxisRenderer();
-    @Property(selector = "set_leftYAxisRenderer:")
-    public native void set_leftYAxisRenderer(ChartYAxisRenderer v);
-    @Property(selector = "_rightYAxisRenderer")
-    public native ChartYAxisRenderer get_rightYAxisRenderer();
-    @Property(selector = "set_rightYAxisRenderer:")
-    public native void set_rightYAxisRenderer(ChartYAxisRenderer v);
-    @Property(selector = "_leftAxisTransformer")
-    public native ChartTransformer get_leftAxisTransformer();
-    @Property(selector = "set_leftAxisTransformer:")
-    public native void set_leftAxisTransformer(ChartTransformer v);
-    @Property(selector = "_rightAxisTransformer")
-    public native ChartTransformer get_rightAxisTransformer();
-    @Property(selector = "set_rightAxisTransformer:")
-    public native void set_rightAxisTransformer(ChartTransformer v);
-    @Property(selector = "_xAxisRenderer")
-    public native ChartXAxisRenderer get_xAxisRenderer();
-    @Property(selector = "set_xAxisRenderer:")
-    public native void set_xAxisRenderer(ChartXAxisRenderer v);
-    @Property(selector = "_tapGestureRecognizer")
-    public native UITapGestureRecognizer get_tapGestureRecognizer();
-    @Property(selector = "set_tapGestureRecognizer:")
-    public native void set_tapGestureRecognizer(UITapGestureRecognizer v);
-    @Property(selector = "_doubleTapGestureRecognizer")
-    public native UITapGestureRecognizer get_doubleTapGestureRecognizer();
-    @Property(selector = "set_doubleTapGestureRecognizer:")
-    public native void set_doubleTapGestureRecognizer(UITapGestureRecognizer v);
-    @Property(selector = "_pinchGestureRecognizer")
-    public native UIPinchGestureRecognizer get_pinchGestureRecognizer();
-    @Property(selector = "set_pinchGestureRecognizer:")
-    public native void set_pinchGestureRecognizer(UIPinchGestureRecognizer v);
-    @Property(selector = "_panGestureRecognizer")
-    public native UIPanGestureRecognizer get_panGestureRecognizer();
-    @Property(selector = "set_panGestureRecognizer:")
-    public native void set_panGestureRecognizer(UIPanGestureRecognizer v);
+    @Property(selector = "leftAxis")
+    public native ChartYAxis getLeftAxis();
+    @Property(selector = "setLeftAxis:")
+    public native void setLeftAxis(ChartYAxis v);
+    @Property(selector = "rightAxis")
+    public native ChartYAxis getRightAxis();
+    @Property(selector = "setRightAxis:")
+    public native void setRightAxis(ChartYAxis v);
+    @Property(selector = "leftYAxisRenderer")
+    public native ChartYAxisRenderer getLeftYAxisRenderer();
+    @Property(selector = "setLeftYAxisRenderer:")
+    public native void setLeftYAxisRenderer(ChartYAxisRenderer v);
+    @Property(selector = "rightYAxisRenderer")
+    public native ChartYAxisRenderer getRightYAxisRenderer();
+    @Property(selector = "setRightYAxisRenderer:")
+    public native void setRightYAxisRenderer(ChartYAxisRenderer v);
+    @Property(selector = "xAxisRenderer")
+    public native ChartXAxisRenderer getXAxisRenderer();
+    @Property(selector = "setXAxisRenderer:")
+    public native void setXAxisRenderer(ChartXAxisRenderer v);
     @Property(selector = "visibleXRange")
     public native double getVisibleXRange();
     @Property(selector = "dragEnabled")
@@ -142,6 +118,14 @@ import org.robovm.apple.coreanimation.*;
     public native void setDragEnabled(boolean v);
     @Property(selector = "isDragEnabled")
     public native boolean isDragEnabled();
+    @Property(selector = "dragXEnabled")
+    public native boolean isDragXEnabled();
+    @Property(selector = "setDragXEnabled:")
+    public native void setDragXEnabled(boolean v);
+    @Property(selector = "dragYEnabled")
+    public native boolean isDragYEnabled();
+    @Property(selector = "setDragYEnabled:")
+    public native void setDragYEnabled(boolean v);
     @Property(selector = "scaleXEnabled")
     public native boolean scaleXEnabled();
     @Property(selector = "setScaleXEnabled:")
@@ -176,10 +160,6 @@ import org.robovm.apple.coreanimation.*;
     public native @MachineSizedFloat double getScaleY();
     @Property(selector = "isFullyZoomedOut")
     public native boolean isFullyZoomedOut();
-    @Property(selector = "leftAxis")
-    public native ChartYAxis getLeftAxis();
-    @Property(selector = "rightAxis")
-    public native ChartYAxis getRightAxis();
     @Property(selector = "pinchZoomEnabled")
     public native boolean pinchZoomEnabled();
     @Property(selector = "setPinchZoomEnabled:")
@@ -188,18 +168,6 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isPinchZoomEnabled();
     @Property(selector = "hasNoDragOffset")
     public native boolean hasNoDragOffset();
-    @Property(selector = "xAxisRenderer")
-    public native ChartXAxisRenderer getXAxisRenderer();
-    @Property(selector = "setXAxisRenderer:")
-    public native void setXAxisRenderer(ChartXAxisRenderer v);
-    @Property(selector = "leftYAxisRenderer")
-    public native ChartYAxisRenderer getLeftYAxisRenderer();
-    @Property(selector = "setLeftYAxisRenderer:")
-    public native void setLeftYAxisRenderer(ChartYAxisRenderer v);
-    @Property(selector = "rightYAxisRenderer")
-    public native ChartYAxisRenderer getRightYAxisRenderer();
-    @Property(selector = "setRightYAxisRenderer:")
-    public native void setRightYAxisRenderer(ChartYAxisRenderer v);
     @Property(selector = "chartYMax")
     public native double getChartYMax();
     @Property(selector = "chartYMin")
@@ -224,29 +192,15 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
-    @Method(selector = "initialize")
-    public native void initialize();
+    protected native @Pointer long init(NSCoder decoder);
     @Method(selector = "observeValueForKeyPath:ofObject:change:context:")
     public native void observeValue(String keyPath, NSObject object, NSDictionary<NSString, ?> change, VoidPtr context);
     @Method(selector = "drawRect:")
-    public native void drawRect(@ByVal CGRect rect);
-    @Method(selector = "autoScale")
-    public native void autoScale();
-    @Method(selector = "prepareValuePxMatrix")
-    public native void prepareValuePxMatrix();
-    @Method(selector = "prepareOffsetMatrix")
-    public native void prepareOffsetMatrix();
+    public native void draw(@ByVal CGRect rect);
     @Method(selector = "notifyDataSetChanged")
     public native void notifyDataSetChanged();
-    @Method(selector = "calcMinMax")
-    public native void calcMinMax();
-    @Method(selector = "calculateOffsets")
-    public native void calculateOffsets();
-    @Method(selector = "drawGridBackgroundWithContext:")
-    public native void drawGridBackgroundWithContext(CGContext context);
     @Method(selector = "stopDeceleration")
     public native void stopDeceleration();
     @Method(selector = "gestureRecognizerShouldBegin:")
@@ -312,7 +266,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "resetViewPortOffsets")
     public native void resetViewPortOffsets();
     @Method(selector = "getAxisRangeWithAxis:")
-    public native double getAxisRangeWithAxis(AxisDependency axis);
+    public native double getAxisRange(AxisDependency axis);
     @Method(selector = "getPositionWithEntry:axis:")
     public native @ByVal CGPoint getPosition(ChartDataEntry e, AxisDependency axis);
     @Method(selector = "setScaleEnabled:")
@@ -322,9 +276,9 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "pixelForValuesWithX:y:axis:")
     public native @ByVal CGPoint getPixelForValues(double x, double y, AxisDependency axis);
     @Method(selector = "getEntryByTouchPointWithPoint:")
-    public native ChartDataEntry getEntryByTouchPointWithPoint(@ByVal CGPoint pt);
+    public native ChartDataEntry getEntryByTouchPoint(@ByVal CGPoint pt);
     @Method(selector = "getDataSetByTouchPointWithPoint:")
-    public native IBarLineScatterCandleBubbleChartDataSet getDataSetByTouchPointWithPoint(@ByVal CGPoint pt);
+    public native IBarLineScatterCandleBubbleChartDataSet getDataSetByTouchPoint(@ByVal CGPoint pt);
     @Method(selector = "getAxis:")
     public native ChartYAxis getAxis(AxisDependency axis);
     @Method(selector = "setDragOffsetX:")
@@ -344,7 +298,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "getTransformerForAxis:")
     public native ChartTransformer getTransformerForAxis(AxisDependency axis);
     @Method(selector = "isInvertedWithAxis:")
-    public native boolean isInvertedWithAxis(AxisDependency axis);
+    public native boolean isInverted(AxisDependency axis);
     /**
      * @since Available in iOS 7.0 and later.
      */

@@ -45,25 +45,13 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartTransformer.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected ChartTransformer() {}
     protected ChartTransformer(Handle h, long handle) { super(h, handle); }
     protected ChartTransformer(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithViewPortHandler:")
-    public ChartTransformer(ChartViewPortHandler viewPortHandler) { super((SkipInit) null); initObject(initWithViewPortHandler(viewPortHandler)); }
+    public ChartTransformer(ChartViewPortHandler viewPortHandler) { super((SkipInit) null); initObject(init(viewPortHandler)); }
+    public ChartTransformer() { super((Handle) null, newTransformer());  }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "_matrixValueToPx")
-    public native @ByVal CGAffineTransform get_matrixValueToPx();
-    @Property(selector = "set_matrixValueToPx:")
-    public native void set_matrixValueToPx(@ByVal CGAffineTransform v);
-    @Property(selector = "_matrixOffset")
-    public native @ByVal CGAffineTransform get_matrixOffset();
-    @Property(selector = "set_matrixOffset:")
-    public native void set_matrixOffset(@ByVal CGAffineTransform v);
-    @Property(selector = "_viewPortHandler")
-    public native ChartViewPortHandler get_viewPortHandler();
-    @Property(selector = "set_viewPortHandler:")
-    public native void set_viewPortHandler(ChartViewPortHandler v);
     @Property(selector = "valueToPixelMatrix")
     public native @ByVal CGAffineTransform getValueToPixelMatrix();
     @Property(selector = "pixelToValueMatrix")
@@ -72,16 +60,18 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithViewPortHandler:")
-    protected native @Pointer long initWithViewPortHandler(ChartViewPortHandler viewPortHandler);
+    protected native @Pointer long init(ChartViewPortHandler viewPortHandler);
     @Method(selector = "prepareMatrixValuePxWithChartXMin:deltaX:deltaY:chartYMin:")
     public native void prepareMatrixValuePx(double chartXMin, @MachineSizedFloat double deltaX, @MachineSizedFloat double deltaY, double chartYMin);
     @Method(selector = "prepareMatrixOffsetWithInverted:")
-    public native void prepareMatrixOffsetWithInverted(boolean inverted);
+    public native void prepareMatrixOffset(boolean inverted);
     @Method(selector = "pixelForValuesWithX:y:")
     public native @ByVal CGPoint getPixelForValues(double x, double y);
     @Method(selector = "valueForTouchPoint:")
     public native @ByVal CGPoint valueForTouchPoint(@ByVal CGPoint point);
     @Method(selector = "valueForTouchPointWithX:y:")
     public native @ByVal CGPoint getValueForTouchPoint(@MachineSizedFloat double x, @MachineSizedFloat double y);
+    @Method(selector = "new")
+    protected static native @Pointer long newTransformer();
     /*</methods>*/
 }

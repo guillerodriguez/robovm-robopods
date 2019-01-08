@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-charts-ios</artifactId>
-    <name>RoboPods Charts iOS</name>
+    <name>RoboPods Charts iOS (v3.2.1)</name>
     <packaging>jar</packaging>
 
     <licenses>

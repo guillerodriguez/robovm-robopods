@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(CandleChartDataEntry.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected CandleChartDataEntry() {}
+    public CandleChartDataEntry() {}
     protected CandleChartDataEntry(Handle h, long handle) { super(h, handle); }
     protected CandleChartDataEntry(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithX:shadowH:shadowL:open:close:")
@@ -94,6 +94,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithX:shadowH:shadowL:open:close:icon:data:")
     protected native @Pointer long init(double x, double shadowH, double shadowL, double open, double close, UIImage icon, NSObject data);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     /*</methods>*/
 }

@@ -135,7 +135,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "entryIndexWithX:closestToY:rounding:")
     @MachineSizedSInt long getEntryIndex(double xValue, double yValue, ChartDataSetRounding rounding);
     @Method(selector = "entryIndexWithEntry:")
-    @MachineSizedSInt long entryIndexWithEntry(ChartDataEntry e);
+    @MachineSizedSInt long getEntryIndex(ChartDataEntry e);
     @Method(selector = "addEntry:")
     boolean addEntry(ChartDataEntry e);
     @Method(selector = "addEntryOrdered:")
@@ -143,7 +143,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "removeEntry:")
     boolean removeEntry(ChartDataEntry entry);
     @Method(selector = "removeEntryWithIndex:")
-    boolean removeEntryWithIndex(@MachineSizedSInt long index);
+    boolean removeEntry(@MachineSizedSInt long index);
     @Method(selector = "removeEntryWithX:")
     boolean removeEntryWithX(double x);
     @Method(selector = "removeFirst")

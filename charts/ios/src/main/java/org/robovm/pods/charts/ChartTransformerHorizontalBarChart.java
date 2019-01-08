@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartTransformerHorizontalBarChart.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public ChartTransformerHorizontalBarChart() {}
+    protected ChartTransformerHorizontalBarChart() {}
     protected ChartTransformerHorizontalBarChart(Handle h, long handle) { super(h, handle); }
     protected ChartTransformerHorizontalBarChart(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithViewPortHandler:")
-    public ChartTransformerHorizontalBarChart(ChartViewPortHandler viewPortHandler) { super((SkipInit) null); initObject(initWithViewPortHandler(viewPortHandler)); }
+    public ChartTransformerHorizontalBarChart(ChartViewPortHandler viewPortHandler) { super((SkipInit) null); initObject(init(viewPortHandler)); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -57,8 +57,8 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "prepareMatrixOffsetWithInverted:")
-    public native void prepareMatrixOffsetWithInverted(boolean inverted);
+    public native void prepareMatrixOffset(boolean inverted);
     @Method(selector = "initWithViewPortHandler:")
-    protected native @Pointer long initWithViewPortHandler(ChartViewPortHandler viewPortHandler);
+    protected native @Pointer long init(ChartViewPortHandler viewPortHandler);
     /*</methods>*/
 }

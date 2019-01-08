@@ -45,11 +45,13 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(RadarChartDataSet.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected RadarChartDataSet() {}
+    public RadarChartDataSet() {}
     protected RadarChartDataSet(Handle h, long handle) { super(h, handle); }
     protected RadarChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithValues:label:")
     public RadarChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
+    @Method(selector = "initWithValues:")
+    public RadarChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "drawHighlightCircleEnabled")

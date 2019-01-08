@@ -56,5 +56,7 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "reduceWithDouglasPeuker:tolerance:")
     public static native NSArray<NSValue> reduceWithDouglasPeuker(NSArray<NSValue> points, @MachineSizedFloat double tolerance);
+    @Method(selector = "reduceWithDouglasPeukerN:resultCount:")
+    public static native NSArray<NSValue> reduceWithDouglasPeuker(NSArray<NSValue> points, @MachineSizedSInt long resultCount);
     /*</methods>*/
 }

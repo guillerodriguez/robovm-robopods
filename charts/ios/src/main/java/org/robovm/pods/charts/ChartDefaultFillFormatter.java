@@ -49,7 +49,7 @@ import org.robovm.apple.coreanimation.*;
     protected ChartDefaultFillFormatter(Handle h, long handle) { super(h, handle); }
     protected ChartDefaultFillFormatter(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithBlock:")
-    public ChartDefaultFillFormatter(@Block Block2<ILineChartDataSet, LineChartDataProvider, Double> block) { super((SkipInit) null); initObject(initWithBlock(block)); }
+    public ChartDefaultFillFormatter(@Block Block2<ILineChartDataSet, LineChartDataProvider, Double> block) { super((SkipInit) null); initObject(init(block)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "block")
@@ -60,7 +60,7 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithBlock:")
-    protected native @Pointer long initWithBlock(@Block Block2<ILineChartDataSet, LineChartDataProvider, Double> block);
+    protected native @Pointer long init(@Block Block2<ILineChartDataSet, LineChartDataProvider, Double> block);
     @Method(selector = "getFillLinePositionWithDataSet:dataProvider:")
     public native @MachineSizedFloat double getFillLinePosition(ILineChartDataSet dataSet, LineChartDataProvider dataProvider);
     @Method(selector = "withBlock:")

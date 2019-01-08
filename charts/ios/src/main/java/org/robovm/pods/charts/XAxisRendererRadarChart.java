@@ -62,10 +62,10 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithViewPortHandler:xAxis:chart:")
     protected native @Pointer long init(ChartViewPortHandler viewPortHandler, ChartXAxis xAxis, RadarChartView chart);
     @Method(selector = "renderAxisLabelsWithContext:")
-    public native void renderAxisLabelsWithContext(CGContext context);
+    public native void renderAxisLabels(CGContext context);
     @Method(selector = "drawLabelWithContext:formattedLabel:x:y:attributes:anchor:angleRadians:")
     public native void drawLabel(CGContext context, String formattedLabel, @MachineSizedFloat double x, @MachineSizedFloat double y, NSDictionary<NSString, ?> attributes, @ByVal CGPoint anchor, @MachineSizedFloat double angleRadians);
     @Method(selector = "renderLimitLinesWithContext:")
-    public native void renderLimitLinesWithContext(CGContext context);
+    public native void renderLimitLines(CGContext context);
     /*</methods>*/
 }

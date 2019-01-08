@@ -49,9 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected ChartMarkerView(Handle h, long handle) { super(h, handle); }
     protected ChartMarkerView(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public ChartMarkerView(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public ChartMarkerView(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public ChartMarkerView(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public ChartMarkerView(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "offset")
@@ -72,10 +72,10 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "drawWithContext:point:")
     public native void draw(CGContext context, @ByVal CGPoint point);
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
-    @Method(selector = "viewFromXib")
-    public static native ChartMarkerView viewFromXib();
+    protected native @Pointer long init(NSCoder decoder);
+    @Method(selector = "viewFromXibIn:")
+    public static native ChartMarkerView viewFromXibIn(NSBundle bundle);
     /*</methods>*/
 }

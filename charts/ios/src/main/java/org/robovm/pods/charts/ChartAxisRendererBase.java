@@ -66,13 +66,13 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithViewPortHandler:transformer:axis:")
     protected native @Pointer long init(ChartViewPortHandler viewPortHandler, ChartTransformer transformer, ChartAxisBase axis);
     @Method(selector = "renderAxisLabelsWithContext:")
-    public native void renderAxisLabelsWithContext(CGContext context);
+    public native void renderAxisLabels(CGContext context);
     @Method(selector = "renderGridLinesWithContext:")
-    public native void renderGridLinesWithContext(CGContext context);
+    public native void renderGridLines(CGContext context);
     @Method(selector = "renderAxisLineWithContext:")
-    public native void renderAxisLineWithContext(CGContext context);
+    public native void renderAxisLine(CGContext context);
     @Method(selector = "renderLimitLinesWithContext:")
-    public native void renderLimitLinesWithContext(CGContext context);
+    public native void renderLimitLines(CGContext context);
     @Method(selector = "computeAxisWithMin:max:inverted:")
     public native void computeAxis(double min, double max, boolean inverted);
     @Method(selector = "computeAxisValuesWithMin:max:")

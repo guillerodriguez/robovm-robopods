@@ -49,57 +49,21 @@ import org.robovm.apple.coreanimation.*;
     protected ChartViewBase(Handle h, long handle) { super(h, handle); }
     protected ChartViewBase(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public ChartViewBase(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public ChartViewBase(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public ChartViewBase(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public ChartViewBase(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "xAxis")
     public native ChartXAxis getXAxis();
-    @Property(selector = "_defaultValueFormatter")
-    public native IChartValueFormatter get_defaultValueFormatter();
-    @Property(selector = "set_defaultValueFormatter:")
-    public native void set_defaultValueFormatter(IChartValueFormatter v);
-    @Property(selector = "_data")
-    public native ChartData get_data();
-    @Property(selector = "set_data:")
-    public native void set_data(ChartData v);
     @Property(selector = "dragDecelerationEnabled")
     public native boolean dragDecelerationEnabled();
     @Property(selector = "setDragDecelerationEnabled:")
     public native void setDragDecelerationEnabled(boolean v);
-    @Property(selector = "_drawUnitInChart")
-    public native boolean is_drawUnitInChart();
-    @Property(selector = "set_drawUnitInChart:")
-    public native void set_drawUnitInChart(boolean v);
-    @Property(selector = "_xAxis")
-    public native ChartXAxis get_xAxis();
-    @Property(selector = "set_xAxis:")
-    public native void set_xAxis(ChartXAxis v);
     @Property(selector = "chartDescription")
     public native ChartDescription getChartDescription();
     @Property(selector = "setChartDescription:")
     public native void setChartDescription(ChartDescription v);
-    @Property(selector = "descriptionText")
-    public native String getDescriptionText();
-    @Property(selector = "setDescriptionText:")
-    public native void setDescriptionText(String v);
-    @Property(selector = "descriptionFont")
-    public native UIFont getDescriptionFont();
-    @Property(selector = "setDescriptionFont:")
-    public native void setDescriptionFont(UIFont v);
-    @Property(selector = "descriptionTextColor")
-    public native UIColor getDescriptionTextColor();
-    @Property(selector = "setDescriptionTextColor:")
-    public native void setDescriptionTextColor(UIColor v);
-    @Property(selector = "descriptionTextAlign")
-    public native NSTextAlignment getDescriptionTextAlign();
-    @Property(selector = "setDescriptionTextAlign:")
-    public native void setDescriptionTextAlign(NSTextAlignment v);
-    @Property(selector = "_legend")
-    public native ChartLegend get_legend();
-    @Property(selector = "set_legend:")
-    public native void set_legend(ChartLegend v);
     @Property(selector = "delegate")
     public native ChartViewDelegate getDelegate();
     @Property(selector = "setDelegate:", strongRef = true)
@@ -116,10 +80,6 @@ import org.robovm.apple.coreanimation.*;
     public native UIColor getNoDataTextColor();
     @Property(selector = "setNoDataTextColor:")
     public native void setNoDataTextColor(UIColor v);
-    @Property(selector = "_legendRenderer")
-    public native ChartLegendRenderer get_legendRenderer();
-    @Property(selector = "set_legendRenderer:")
-    public native void set_legendRenderer(ChartLegendRenderer v);
     @Property(selector = "renderer")
     public native ChartDataRendererBase getRenderer();
     @Property(selector = "setRenderer:")
@@ -128,18 +88,6 @@ import org.robovm.apple.coreanimation.*;
     public native IChartHighlighter getHighlighter();
     @Property(selector = "setHighlighter:")
     public native void setHighlighter(IChartHighlighter v);
-    @Property(selector = "_viewPortHandler")
-    public native ChartViewPortHandler get_viewPortHandler();
-    @Property(selector = "set_viewPortHandler:")
-    public native void set_viewPortHandler(ChartViewPortHandler v);
-    @Property(selector = "_animator")
-    public native ChartAnimator get_animator();
-    @Property(selector = "set_animator:")
-    public native void set_animator(ChartAnimator v);
-    @Property(selector = "_indicesToHighlight")
-    public native NSArray<ChartHighlight> get_indicesToHighlight();
-    @Property(selector = "set_indicesToHighlight:")
-    public native void set_indicesToHighlight(NSArray<ChartHighlight> v);
     @Property(selector = "drawMarkers")
     public native boolean isDrawMarkers();
     @Property(selector = "setDrawMarkers:")
@@ -206,10 +154,6 @@ import org.robovm.apple.coreanimation.*;
     public native @ByVal CGRect getContentRect();
     @Property(selector = "viewPortHandler")
     public native ChartViewPortHandler getViewPortHandler();
-    @Property(selector = "_viewportJobs")
-    public native NSArray<ChartViewPortJob> get_viewportJobs();
-    @Property(selector = "set_viewportJobs:")
-    public native void set_viewportJobs(NSArray<ChartViewPortJob> v);
     @Property(selector = "isDragDecelerationEnabled")
     public native boolean isDragDecelerationEnabled();
     @Property(selector = "dragDecelerationFrictionCoef")
@@ -228,11 +172,9 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "setExtraOffsetsWithLeft:top:right:bottom:")
     public native void setExtraOffsets(@MachineSizedFloat double left, @MachineSizedFloat double top, @MachineSizedFloat double right, @MachineSizedFloat double bottom);
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
-    @Method(selector = "initialize")
-    public native void initialize();
+    protected native @Pointer long init(NSCoder decoder);
     @Method(selector = "clear")
     public native void clear();
     @Method(selector = "clearValues")
@@ -241,38 +183,30 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isEmpty();
     @Method(selector = "notifyDataSetChanged")
     public native void notifyDataSetChanged();
-    @Method(selector = "calculateOffsets")
-    public native void calculateOffsets();
-    @Method(selector = "calcMinMax")
-    public native void calcMinMax();
-    @Method(selector = "setupDefaultFormatterWithMin:max:")
-    public native void setupDefaultFormatter(double min, double max);
     @Method(selector = "drawRect:")
-    public native void drawRect(@ByVal CGRect rect);
-    @Method(selector = "drawDescriptionWithContext:")
-    public native void drawDescriptionWithContext(CGContext context);
+    public native void draw(@ByVal CGRect rect);
+    @Method(selector = "accessibilityChildren")
+    public native NSArray<?> accessibilityChildren();
     @Method(selector = "valuesToHighlight")
     public native boolean valuesToHighlight();
     @Method(selector = "highlightValues:")
     public native void setHighlightValues(NSArray<ChartHighlight> highs);
-    @Method(selector = "highlightValueWithX:dataSetIndex:")
-    public native void highlightValue(double x, @MachineSizedSInt long dataSetIndex);
-    @Method(selector = "highlightValueWithX:y:dataSetIndex:")
-    public native void highlightValue(double x, double y, @MachineSizedSInt long dataSetIndex);
-    @Method(selector = "highlightValueWithX:dataSetIndex:callDelegate:")
-    public native void highlightValue(double x, @MachineSizedSInt long dataSetIndex, boolean callDelegate);
-    @Method(selector = "highlightValueWithX:y:dataSetIndex:callDelegate:")
-    public native void highlightValue(double x, double y, @MachineSizedSInt long dataSetIndex, boolean callDelegate);
+    @Method(selector = "highlightValueWithX:dataSetIndex:dataIndex:")
+    public native void highlightValue(double x, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long dataIndex);
+    @Method(selector = "highlightValueWithX:y:dataSetIndex:dataIndex:")
+    public native void highlightValue(double x, double y, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long dataIndex);
+    @Method(selector = "highlightValueWithX:dataSetIndex:dataIndex:callDelegate:")
+    public native void highlightValue(double x, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long dataIndex, boolean callDelegate);
+    @Method(selector = "highlightValueWithX:y:dataSetIndex:dataIndex:callDelegate:")
+    public native void highlightValue(double x, double y, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long dataIndex, boolean callDelegate);
     @Method(selector = "highlightValue:")
     public native void highlightValue(ChartHighlight highlight);
     @Method(selector = "highlightValue:callDelegate:")
     public native void highlightValue(ChartHighlight highlight, boolean callDelegate);
     @Method(selector = "getHighlightByTouchPoint:")
     public native ChartHighlight getHighlightByTouchPoint(@ByVal CGPoint pt);
-    @Method(selector = "drawMarkersWithContext:")
-    public native void drawMarkersWithContext(CGContext context);
     @Method(selector = "getMarkerPositionWithHighlight:")
-    public native @ByVal CGPoint getMarkerPositionWithHighlight(ChartHighlight highlight);
+    public native @ByVal CGPoint getMarkerPosition(ChartHighlight highlight);
     @Method(selector = "animateWithXAxisDuration:yAxisDuration:easingX:easingY:")
     public native void animate(double xAxisDuration, double yAxisDuration, @Block Block2<Double, Double, Double> easingX, @Block Block2<Double, Double, Double> easingY);
     @Method(selector = "animateWithXAxisDuration:yAxisDuration:easingOptionX:easingOptionY:")
@@ -288,15 +222,15 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "animateWithXAxisDuration:easingOption:")
     public native void animateXAxis(double xAxisDuration, ChartEasingOption easingOption);
     @Method(selector = "animateWithXAxisDuration:")
-    public native void animateWithXAxisDuration(double xAxisDuration);
+    public native void animateXAxis(double xAxisDuration);
     @Method(selector = "animateWithYAxisDuration:easing:")
     public native void animateYAxis(double yAxisDuration, @Block Block2<Double, Double, Double> easing);
     @Method(selector = "animateWithYAxisDuration:easingOption:")
     public native void animateYAxis(double yAxisDuration, ChartEasingOption easingOption);
     @Method(selector = "animateWithYAxisDuration:")
-    public native void animateWithYAxisDuration(double yAxisDuration);
+    public native void animateYAxis(double yAxisDuration);
     @Method(selector = "getChartImageWithTransparent:")
-    public native UIImage getChartImageWithTransparent(boolean transparent);
+    public native UIImage getChartImage(boolean transparent);
     @Method(selector = "observeValueForKeyPath:ofObject:change:context:")
     public native void observeValue(String keyPath, NSObject object, NSDictionary<NSString, ?> change, VoidPtr context);
     @Method(selector = "removeViewportJob:")

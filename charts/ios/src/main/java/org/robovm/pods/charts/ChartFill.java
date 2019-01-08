@@ -115,17 +115,5 @@ import org.robovm.apple.coreanimation.*;
     protected native @Pointer long init(CGLayer CGLayer);
     @Method(selector = "fillPathWithContext:rect:")
     public native void fillPath(CGContext context, @ByVal CGRect rect);
-    @Method(selector = "fillWithCGColor:")
-    public static native ChartFill fillWithCGColor(CGColor CGColor);
-    @Method(selector = "fillWithColor:")
-    public static native ChartFill fillWithColor(UIColor color);
-    @Method(selector = "fillWithRadialGradient:")
-    public static native ChartFill fillWithRadialGradient(CGGradient radialGradient);
-    @Method(selector = "fillWithCGImage:")
-    public static native ChartFill fillWithCGImage(CGImage CGImage);
-    @Method(selector = "fillWithImage:")
-    public static native ChartFill fillWithImage(UIImage image);
-    @Method(selector = "fillWithCGLayer:")
-    public static native ChartFill fillWithCGLayer(CGLayer CGLayer);
     /*</methods>*/
 }

@@ -36,31 +36,32 @@ import org.robovm.apple.coreanimation.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*/@Library(Library.INTERNAL) @NativeClass("_TtC6Charts16ScatterChartData")/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/ScatterChartData/*</name>*/ 
-    extends /*<extends>*/BarLineScatterCandleBubbleChartData/*</extends>*/ 
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass("_TtC6Charts24NSUIAccessibilityElement")/*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/NSUIAccessibilityElement/*</name>*/ 
+    extends /*<extends>*/UIAccessibilityElement/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class ScatterChartDataPtr extends Ptr<ScatterChartData, ScatterChartDataPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(ScatterChartData.class); }/*</bind>*/
+    /*<ptr>*/public static class NSUIAccessibilityElementPtr extends Ptr<NSUIAccessibilityElement, NSUIAccessibilityElementPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(NSUIAccessibilityElement.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public ScatterChartData() {}
-    protected ScatterChartData(Handle h, long handle) { super(h, handle); }
-    protected ScatterChartData(SkipInit skipInit) { super(skipInit); }
-    @Method(selector = "initWithDataSets:")
-    public ScatterChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(init(dataSets)); }
-    @Method(selector = "initWithDataSet:")
-    public ScatterChartData(IChartDataSet dataSet) { super(dataSet); }
+    protected NSUIAccessibilityElement(Handle h, long handle) { super(h, handle); }
+    protected NSUIAccessibilityElement(SkipInit skipInit) { super(skipInit); }
+    @Method(selector = "initWithAccessibilityContainer:")
+    public NSUIAccessibilityElement(UIAccessibilityContainer container) { super((SkipInit) null); initObject(init(container)); }
+    public NSUIAccessibilityElement() { super((Handle) null, newElement());  }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "accessibilityFrame")
+    public native @ByVal CGRect getAccessibilityFrame();
+    @Property(selector = "setAccessibilityFrame:")
+    public native void setAccessibilityFrame(@ByVal CGRect v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initWithDataSets:")
-    protected native @Pointer long init(NSArray<?> dataSets);
-    @Method(selector = "getGreatestShapeSize")
-    public native @MachineSizedFloat double getGreatestShapeSize();
+    @Method(selector = "initWithAccessibilityContainer:")
+    protected native @Pointer long init(UIAccessibilityContainer container);
+    @Method(selector = "new")
+    protected static native @Pointer long newElement();
     /*</methods>*/
 }

@@ -137,7 +137,7 @@ import org.robovm.apple.coreanimation.*;
     @NotImplemented("entryIndexWithX:closestToY:rounding:")
     public @MachineSizedSInt long getEntryIndex(double xValue, double yValue, ChartDataSetRounding rounding) { return 0; }
     @NotImplemented("entryIndexWithEntry:")
-    public @MachineSizedSInt long entryIndexWithEntry(ChartDataEntry e) { return 0; }
+    public @MachineSizedSInt long getEntryIndex(ChartDataEntry e) { return 0; }
     @NotImplemented("addEntry:")
     public boolean addEntry(ChartDataEntry e) { return false; }
     @NotImplemented("addEntryOrdered:")
@@ -145,7 +145,7 @@ import org.robovm.apple.coreanimation.*;
     @NotImplemented("removeEntry:")
     public boolean removeEntry(ChartDataEntry entry) { return false; }
     @NotImplemented("removeEntryWithIndex:")
-    public boolean removeEntryWithIndex(@MachineSizedSInt long index) { return false; }
+    public boolean removeEntry(@MachineSizedSInt long index) { return false; }
     @NotImplemented("removeEntryWithX:")
     public boolean removeEntryWithX(double x) { return false; }
     @NotImplemented("removeFirst")

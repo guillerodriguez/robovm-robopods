@@ -52,10 +52,6 @@ import org.robovm.apple.coreanimation.*;
     public XAxisRendererHorizontalBarChart(ChartViewPortHandler viewPortHandler, ChartXAxis xAxis, ChartTransformer transformer, BarChartView chart) { super((SkipInit) null); initObject(init(viewPortHandler, xAxis, transformer, chart)); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "chart")
-    public native BarChartView getChart();
-    @Property(selector = "setChart:")
-    public native void setChart(BarChartView v);
     @Property(selector = "gridClippingRect")
     public native @ByVal CGRect getGridClippingRect();
     /*</properties>*/
@@ -68,7 +64,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "computeSize")
     public native void computeSize();
     @Method(selector = "renderAxisLabelsWithContext:")
-    public native void renderAxisLabelsWithContext(CGContext context);
+    public native void renderAxisLabels(CGContext context);
     @Method(selector = "drawLabelsWithContext:pos:anchor:")
     public native void drawLabels(CGContext context, @MachineSizedFloat double pos, @ByVal CGPoint anchor);
     @Method(selector = "drawLabelWithContext:formattedLabel:x:y:attributes:anchor:angleRadians:")
@@ -76,8 +72,8 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "drawGridLineWithContext:x:y:")
     public native void drawGridLine(CGContext context, @MachineSizedFloat double x, @MachineSizedFloat double y);
     @Method(selector = "renderAxisLineWithContext:")
-    public native void renderAxisLineWithContext(CGContext context);
+    public native void renderAxisLine(CGContext context);
     @Method(selector = "renderLimitLinesWithContext:")
-    public native void renderLimitLinesWithContext(CGContext context);
+    public native void renderLimitLines(CGContext context);
     /*</methods>*/
 }

@@ -49,7 +49,7 @@ import org.robovm.apple.coreanimation.*;
     protected ChartYAxis(Handle h, long handle) { super(h, handle); }
     protected ChartYAxis(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithPosition:")
-    public ChartYAxis(AxisDependency position) { super((SkipInit) null); initObject(initWithPosition(position)); }
+    public ChartYAxis(AxisDependency position) { super((SkipInit) null); initObject(init(position)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "drawBottomYLabelEntryEnabled")
@@ -96,6 +96,14 @@ import org.robovm.apple.coreanimation.*;
     public native YAxisLabelPosition getLabelPosition();
     @Property(selector = "setLabelPosition:")
     public native void setLabelPosition(YAxisLabelPosition v);
+    @Property(selector = "labelAlignment")
+    public native NSTextAlignment getLabelAlignment();
+    @Property(selector = "setLabelAlignment:")
+    public native void setLabelAlignment(NSTextAlignment v);
+    @Property(selector = "labelXOffset")
+    public native @MachineSizedFloat double getLabelXOffset();
+    @Property(selector = "setLabelXOffset:")
+    public native void setLabelXOffset(@MachineSizedFloat double v);
     @Property(selector = "minWidth")
     public native @MachineSizedFloat double getMinWidth();
     @Property(selector = "setMinWidth:")
@@ -118,7 +126,7 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithPosition:")
-    protected native @Pointer long initWithPosition(AxisDependency position);
+    protected native @Pointer long init(AxisDependency position);
     @Method(selector = "requiredSize")
     public native @ByVal CGSize requiredSize();
     @Method(selector = "getRequiredHeightSpace")

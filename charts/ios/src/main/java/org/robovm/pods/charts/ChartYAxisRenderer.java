@@ -60,20 +60,18 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithViewPortHandler:yAxis:transformer:")
     protected native @Pointer long init(ChartViewPortHandler viewPortHandler, ChartYAxis yAxis, ChartTransformer transformer);
     @Method(selector = "renderAxisLabelsWithContext:")
-    public native void renderAxisLabelsWithContext(CGContext context);
+    public native void renderAxisLabels(CGContext context);
     @Method(selector = "renderAxisLineWithContext:")
-    public native void renderAxisLineWithContext(CGContext context);
-    @Method(selector = "drawYLabelsWithContext:fixedPosition:positions:offset:textAlign:")
-    public native void drawYLabels(CGContext context, @MachineSizedFloat double fixedPosition, NSArray<NSValue> positions, @MachineSizedFloat double offset, NSTextAlignment textAlign);
+    public native void renderAxisLine(CGContext context);
     @Method(selector = "renderGridLinesWithContext:")
-    public native void renderGridLinesWithContext(CGContext context);
+    public native void renderGridLines(CGContext context);
     @Method(selector = "drawGridLineWithContext:position:")
     public native void drawGridLine(CGContext context, @ByVal CGPoint position);
     @Method(selector = "transformedPositions")
     public native NSArray<NSValue> transformedPositions();
     @Method(selector = "drawZeroLineWithContext:")
-    public native void drawZeroLineWithContext(CGContext context);
+    public native void drawZeroLine(CGContext context);
     @Method(selector = "renderLimitLinesWithContext:")
-    public native void renderLimitLinesWithContext(CGContext context);
+    public native void renderLimitLines(CGContext context);
     /*</methods>*/
 }

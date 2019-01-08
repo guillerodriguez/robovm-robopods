@@ -49,9 +49,15 @@ import org.robovm.apple.coreanimation.*;
     protected PieChartData(Handle h, long handle) { super(h, handle); }
     protected PieChartData(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithDataSets:")
-    public PieChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(initWithDataSets(dataSets)); }
+    public PieChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(init(dataSets)); }
+    @Method(selector = "initWithDataSet:")
+    public PieChartData(IChartDataSet dataSet) { super(dataSet); }
     /*</constructors>*/
     /*<properties>*/
+    @Property(selector = "dataSets")
+    public native NSArray<?> getDataSets();
+    @Property(selector = "setDataSets:")
+    public native void setDataSets(NSArray<?> v);
     @Property(selector = "dataSet")
     public native IPieChartDataSet getDataSet();
     @Property(selector = "setDataSet:")
@@ -62,7 +68,7 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithDataSets:")
-    protected native @Pointer long initWithDataSets(NSArray<?> dataSets);
+    protected native @Pointer long init(NSArray<?> dataSets);
     @Method(selector = "getDataSetByIndex:")
     public native IChartDataSet getDataSetByIndex(@MachineSizedSInt long index);
     @Method(selector = "getDataSetByLabel:ignorecase:")

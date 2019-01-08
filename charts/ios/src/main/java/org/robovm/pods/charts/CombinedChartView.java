@@ -49,15 +49,11 @@ import org.robovm.apple.coreanimation.*;
     protected CombinedChartView(Handle h, long handle) { super(h, handle); }
     protected CombinedChartView(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public CombinedChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public CombinedChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public CombinedChartView(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public CombinedChartView(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "_fillFormatter")
-    public native IChartFillFormatter get_fillFormatter();
-    @Property(selector = "set_fillFormatter:")
-    public native void set_fillFormatter(IChartFillFormatter v);
     @Property(selector = "data")
     public native ChartData getData();
     @Property(selector = "setData:")
@@ -103,16 +99,12 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initialize")
-    public native void initialize();
     @Method(selector = "getHighlightByTouchPoint:")
     public native ChartHighlight getHighlightByTouchPoint(@ByVal CGPoint pt);
-    @Method(selector = "drawMarkersWithContext:")
-    public native void drawMarkersWithContext(CGContext context);
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
+    protected native @Pointer long init(NSCoder decoder);
     @Method(selector = "getAxis:")
     public native ChartYAxis getAxis(AxisDependency axis);
     /*</methods>*/

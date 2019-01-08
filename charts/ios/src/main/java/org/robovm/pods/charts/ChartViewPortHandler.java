@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartViewPortHandler.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public ChartViewPortHandler() {}
     protected ChartViewPortHandler(Handle h, long handle) { super(h, handle); }
     protected ChartViewPortHandler(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithWidth:height:")
     public ChartViewPortHandler(@MachineSizedFloat double width, @MachineSizedFloat double height) { super((SkipInit) null); initObject(init(width, height)); }
+    public ChartViewPortHandler() { super((Handle) null, newViewPortHandler());  }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "hasChartDimens")
@@ -142,7 +142,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "fitScreen")
     public native @ByVal CGAffineTransform fitScreen();
     @Method(selector = "translateWithPt:")
-    public native @ByVal CGAffineTransform translateWithPt(@ByVal CGPoint pt);
+    public native @ByVal CGAffineTransform translate(@ByVal CGPoint pt);
     @Method(selector = "centerViewPortWithPt:chart:")
     public native void centerViewPort(@ByVal CGPoint pt, ChartViewBase chart);
     @Method(selector = "refreshWithNewMatrix:chart:invalidate:")
@@ -177,5 +177,7 @@ import org.robovm.apple.coreanimation.*;
     public native void setDragOffsetX(@MachineSizedFloat double offset);
     @Method(selector = "setDragOffsetY:")
     public native void setDragOffsetY(@MachineSizedFloat double offset);
+    @Method(selector = "new")
+    protected static native @Pointer long newViewPortHandler();
     /*</methods>*/
 }

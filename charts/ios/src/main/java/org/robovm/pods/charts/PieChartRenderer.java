@@ -62,17 +62,17 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithChart:animator:viewPortHandler:")
     protected native @Pointer long init(PieChartView chart, ChartAnimator animator, ChartViewPortHandler viewPortHandler);
     @Method(selector = "drawDataWithContext:")
-    public native void drawDataWithContext(CGContext context);
+    public native void drawData(CGContext context);
     @Method(selector = "calculateMinimumRadiusForSpacedSliceWithCenter:radius:angle:arcStartPointX:arcStartPointY:startAngle:sweepAngle:")
     public native @MachineSizedFloat double calculateMinimumRadiusForSpacedSliceWithCenter(@ByVal CGPoint center, @MachineSizedFloat double radius, @MachineSizedFloat double angle, @MachineSizedFloat double arcStartPointX, @MachineSizedFloat double arcStartPointY, @MachineSizedFloat double startAngle, @MachineSizedFloat double sweepAngle);
     @Method(selector = "getSliceSpaceWithDataSet:")
-    public native @MachineSizedFloat double getSliceSpaceWithDataSet(IPieChartDataSet dataSet);
+    public native @MachineSizedFloat double getSliceSpace(IPieChartDataSet dataSet);
     @Method(selector = "drawDataSetWithContext:dataSet:")
     public native void drawDataSet(CGContext context, IPieChartDataSet dataSet);
     @Method(selector = "drawValuesWithContext:")
-    public native void drawValuesWithContext(CGContext context);
+    public native void drawValues(CGContext context);
     @Method(selector = "drawExtrasWithContext:")
-    public native void drawExtrasWithContext(CGContext context);
+    public native void drawExtras(CGContext context);
     @Method(selector = "drawHighlightedWithContext:indices:")
     public native void drawHighlighted(CGContext context, NSArray<ChartHighlight> indices);
     /*</methods>*/

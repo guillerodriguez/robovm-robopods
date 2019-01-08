@@ -49,7 +49,7 @@ import org.robovm.apple.coreanimation.*;
     protected ChartLimitLine(Handle h, long handle) { super(h, handle); }
     protected ChartLimitLine(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLimit:")
-    public ChartLimitLine(double limit) { super((SkipInit) null); initObject(initWithLimit(limit)); }
+    public ChartLimitLine(double limit) { super((SkipInit) null); initObject(init(limit)); }
     @Method(selector = "initWithLimit:label:")
     public ChartLimitLine(double limit, String label) { super((SkipInit) null); initObject(init(limit, label)); }
     /*</constructors>*/
@@ -98,7 +98,7 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithLimit:")
-    protected native @Pointer long initWithLimit(double limit);
+    protected native @Pointer long init(double limit);
     @Method(selector = "initWithLimit:label:")
     protected native @Pointer long init(double limit, String label);
     /*</methods>*/

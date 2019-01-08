@@ -49,9 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected PieRadarChartViewBase(Handle h, long handle) { super(h, handle); }
     protected PieRadarChartViewBase(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public PieRadarChartViewBase(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public PieRadarChartViewBase(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public PieRadarChartViewBase(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public PieRadarChartViewBase(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "rotationEnabled")
@@ -74,10 +74,6 @@ import org.robovm.apple.coreanimation.*;
     public native @MachineSizedFloat double getDiameter();
     @Property(selector = "radius")
     public native @MachineSizedFloat double getRadius();
-    @Property(selector = "requiredLegendOffset")
-    public native @MachineSizedFloat double getRequiredLegendOffset();
-    @Property(selector = "requiredBaseOffset")
-    public native @MachineSizedFloat double getRequiredBaseOffset();
     @Property(selector = "chartYMax")
     public native double getChartYMax();
     @Property(selector = "chartYMin")
@@ -94,17 +90,11 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
-    @Method(selector = "initialize")
-    public native void initialize();
-    @Method(selector = "calcMinMax")
-    public native void calcMinMax();
+    protected native @Pointer long init(NSCoder decoder);
     @Method(selector = "notifyDataSetChanged")
     public native void notifyDataSetChanged();
-    @Method(selector = "calculateOffsets")
-    public native void calculateOffsets();
     @Method(selector = "angleForPointWithX:y:")
     public native @MachineSizedFloat double getAngleForPoint(@MachineSizedFloat double x, @MachineSizedFloat double y);
     @Method(selector = "getPositionWithCenter:dist:angle:")
@@ -121,14 +111,6 @@ import org.robovm.apple.coreanimation.*;
     public native void spin(double duration, @MachineSizedFloat double fromAngle, @MachineSizedFloat double toAngle);
     @Method(selector = "stopSpinAnimation")
     public native void stopSpinAnimation();
-    @Method(selector = "processRotationGestureBeganWithLocation:")
-    public native void processRotationGestureBeganWithLocation(@ByVal CGPoint location);
-    @Method(selector = "processRotationGestureMovedWithLocation:")
-    public native void processRotationGestureMovedWithLocation(@ByVal CGPoint location);
-    @Method(selector = "processRotationGestureEndedWithLocation:")
-    public native void processRotationGestureEndedWithLocation(@ByVal CGPoint location);
-    @Method(selector = "processRotationGestureCancelled")
-    public native void processRotationGestureCancelled();
     @Method(selector = "nsuiTouchesBegan:withEvent:")
     public native void nsuiTouchesBegan(NSSet<UITouch> touches, UIEvent event);
     @Method(selector = "nsuiTouchesMoved:withEvent:")

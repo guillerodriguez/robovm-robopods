@@ -83,19 +83,13 @@ import org.robovm.apple.coreanimation.*;
     public native void animate(double xAxisDuration, double yAxisDuration, @Block Block2<Double, Double, Double> easing);
     @Method(selector = "animateWithXAxisDuration:yAxisDuration:easingOption:")
     public native void animate(double xAxisDuration, double yAxisDuration, ChartEasingOption easingOption);
-    @Method(selector = "animateWithXAxisDuration:yAxisDuration:")
-    public native void animate(double xAxisDuration, double yAxisDuration);
     @Method(selector = "animateWithXAxisDuration:easing:")
     public native void animateX(double xAxisDuration, @Block Block2<Double, Double, Double> easing);
     @Method(selector = "animateWithXAxisDuration:easingOption:")
     public native void animateX(double xAxisDuration, ChartEasingOption easingOption);
-    @Method(selector = "animateWithXAxisDuration:")
-    public native void animateWithXAxisDuration(double xAxisDuration);
     @Method(selector = "animateWithYAxisDuration:easing:")
     public native void animateY(double yAxisDuration, @Block Block2<Double, Double, Double> easing);
     @Method(selector = "animateWithYAxisDuration:easingOption:")
     public native void animateY(double yAxisDuration, ChartEasingOption easingOption);
-    @Method(selector = "animateWithYAxisDuration:")
-    public native void animateWithYAxisDuration(double yAxisDuration);
     /*</methods>*/
 }

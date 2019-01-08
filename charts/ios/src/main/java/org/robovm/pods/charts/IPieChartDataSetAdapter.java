@@ -99,6 +99,10 @@ import org.robovm.apple.coreanimation.*;
     public UIColor getEntryLabelColor() { return null; }
     @NotImplemented("setEntryLabelColor:")
     public void setEntryLabelColor(UIColor v) {}
+    @NotImplemented("highlightColor")
+    public UIColor getHighlightColor() { return null; }
+    @NotImplemented("setHighlightColor:")
+    public void setHighlightColor(UIColor v) {}
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

@@ -45,13 +45,13 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(RadarChartDataEntry.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected RadarChartDataEntry() {}
+    public RadarChartDataEntry() {}
     protected RadarChartDataEntry(Handle h, long handle) { super(h, handle); }
     protected RadarChartDataEntry(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithValue:data:")
     public RadarChartDataEntry(double value, NSObject data) { super((SkipInit) null); initObject(init(value, data)); }
     @Method(selector = "initWithValue:")
-    public RadarChartDataEntry(double value) { super((SkipInit) null); initObject(initWithValue(value)); }
+    public RadarChartDataEntry(double value) { super((SkipInit) null); initObject(init(value)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "value")
@@ -64,8 +64,8 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithValue:data:")
     protected native @Pointer long init(double value, NSObject data);
     @Method(selector = "initWithValue:")
-    protected native @Pointer long initWithValue(double value);
+    protected native @Pointer long init(double value);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     /*</methods>*/
 }

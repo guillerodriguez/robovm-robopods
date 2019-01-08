@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartDataEntry.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected ChartDataEntry() {}
+    public ChartDataEntry() {}
     protected ChartDataEntry(Handle h, long handle) { super(h, handle); }
     protected ChartDataEntry(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithX:y:")
@@ -75,9 +75,9 @@ import org.robovm.apple.coreanimation.*;
     protected native @Pointer long init(double x, double y, UIImage icon);
     @Method(selector = "initWithX:y:icon:data:")
     protected native @Pointer long init(double x, double y, UIImage icon, NSObject data);
+    @Method(selector = "copyWithZone:")
+    public native NSObject copy(NSZone zone);
     @Method(selector = "isEqual:")
     public native boolean isEqual(NSObject object);
-    @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
     /*</methods>*/
 }

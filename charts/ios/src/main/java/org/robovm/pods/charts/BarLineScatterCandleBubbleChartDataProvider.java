@@ -55,7 +55,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "getTransformerForAxis:")
     ChartTransformer getTransformerForAxis(AxisDependency forAxis);
     @Method(selector = "isInvertedWithAxis:")
-    boolean isInvertedWithAxis(AxisDependency axis);
+    boolean isInverted(AxisDependency axis);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartRange.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected ChartRange() {}
     protected ChartRange(Handle h, long handle) { super(h, handle); }
     protected ChartRange(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initFrom:to:")
     public ChartRange(double from, double to) { super((SkipInit) null); initObject(init(from, to)); }
+    public ChartRange() { super((Handle) null, newRange());  }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "from")
@@ -71,5 +71,7 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isLarger(double value);
     @Method(selector = "isSmaller:")
     public native boolean isSmaller(double value);
+    @Method(selector = "new")
+    protected static native @Pointer long newRange();
     /*</methods>*/
 }

@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(HorizontalBarChartHighlighter.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public HorizontalBarChartHighlighter() {}
+    protected HorizontalBarChartHighlighter() {}
     protected HorizontalBarChartHighlighter(Handle h, long handle) { super(h, handle); }
     protected HorizontalBarChartHighlighter(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithChart:")
-    public HorizontalBarChartHighlighter(ChartDataProvider chart) { super((SkipInit) null); initObject(initWithChart(chart)); }
+    public HorizontalBarChartHighlighter(ChartDataProvider chart) { super((SkipInit) null); initObject(init(chart)); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -58,11 +58,7 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "getHighlightWithX:y:")
     public native ChartHighlight getHighlight(@MachineSizedFloat double x, @MachineSizedFloat double y);
-    @Method(selector = "buildHighlightsWithDataSet:dataSetIndex:xValue:rounding:")
-    public native NSArray<ChartHighlight> buildHighlights(IChartDataSet set, @MachineSizedSInt long dataSetIndex, double xValue, ChartDataSetRounding rounding);
-    @Method(selector = "getDistanceWithX1:y1:x2:y2:")
-    public native @MachineSizedFloat double getDistance(@MachineSizedFloat double x1, @MachineSizedFloat double y1, @MachineSizedFloat double x2, @MachineSizedFloat double y2);
     @Method(selector = "initWithChart:")
-    protected native @Pointer long initWithChart(ChartDataProvider chart);
+    protected native @Pointer long init(ChartDataProvider chart);
     /*</methods>*/
 }

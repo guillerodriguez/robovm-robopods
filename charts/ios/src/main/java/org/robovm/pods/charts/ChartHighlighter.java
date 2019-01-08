@@ -45,24 +45,22 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartHighlighter.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected ChartHighlighter() {}
     protected ChartHighlighter(Handle h, long handle) { super(h, handle); }
     protected ChartHighlighter(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithChart:")
-    public ChartHighlighter(ChartDataProvider chart) { super((SkipInit) null); initObject(initWithChart(chart)); }
+    public ChartHighlighter(ChartDataProvider chart) { super((SkipInit) null); initObject(init(chart)); }
+    public ChartHighlighter() { super((Handle) null, newHighlighter());  }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "chart")
     public native ChartDataProvider getChart();
     @Property(selector = "setChart:", strongRef = true)
     public native void setChart(ChartDataProvider v);
-    @Property(selector = "data")
-    public native ChartData getData();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithChart:")
-    protected native @Pointer long initWithChart(ChartDataProvider chart);
+    protected native @Pointer long init(ChartDataProvider chart);
     @Method(selector = "getHighlightWithX:y:")
     public native ChartHighlight getHighlight(@MachineSizedFloat double x, @MachineSizedFloat double y);
     @Method(selector = "getValsForTouchWithX:y:")
@@ -71,13 +69,7 @@ import org.robovm.apple.coreanimation.*;
     public native ChartHighlight getHighlight(double xVal, @MachineSizedFloat double x, @MachineSizedFloat double y);
     @Method(selector = "getHighlightsWithXValue:x:y:")
     public native NSArray<ChartHighlight> getHighlights(double xValue, @MachineSizedFloat double x, @MachineSizedFloat double y);
-    @Method(selector = "buildHighlightsWithDataSet:dataSetIndex:xValue:rounding:")
-    public native NSArray<ChartHighlight> buildHighlights(IChartDataSet set, @MachineSizedSInt long dataSetIndex, double xValue, ChartDataSetRounding rounding);
-    @Method(selector = "getMinimumDistanceWithClosestValues:y:axis:")
-    public native @MachineSizedFloat double getMinimumDistance(NSArray<ChartHighlight> closestValues, @MachineSizedFloat double y, AxisDependency axis);
-    @Method(selector = "getHighlightPosWithHigh:")
-    public native @MachineSizedFloat double getHighlightPosWithHigh(ChartHighlight high);
-    @Method(selector = "getDistanceWithX1:y1:x2:y2:")
-    public native @MachineSizedFloat double getDistance(@MachineSizedFloat double x1, @MachineSizedFloat double y1, @MachineSizedFloat double x2, @MachineSizedFloat double y2);
+    @Method(selector = "new")
+    protected static native @Pointer long newHighlighter();
     /*</methods>*/
 }

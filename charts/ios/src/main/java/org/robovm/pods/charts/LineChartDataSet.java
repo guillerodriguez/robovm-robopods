@@ -45,11 +45,13 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(LineChartDataSet.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected LineChartDataSet() {}
+    public LineChartDataSet() {}
     protected LineChartDataSet(Handle h, long handle) { super(h, handle); }
     protected LineChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithValues:label:")
     public LineChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
+    @Method(selector = "initWithValues:")
+    public LineChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "mode")
@@ -60,18 +62,6 @@ import org.robovm.apple.coreanimation.*;
     public native @MachineSizedFloat double getCubicIntensity();
     @Property(selector = "setCubicIntensity:")
     public native void setCubicIntensity(@MachineSizedFloat double v);
-    @Property(selector = "drawCubicEnabled")
-    public native boolean drawCubicEnabled();
-    @Property(selector = "setDrawCubicEnabled:")
-    public native void setDrawCubicEnabled(boolean v);
-    @Property(selector = "isDrawCubicEnabled")
-    public native boolean isDrawCubicEnabled();
-    @Property(selector = "drawSteppedEnabled")
-    public native boolean drawSteppedEnabled();
-    @Property(selector = "setDrawSteppedEnabled:")
-    public native void setDrawSteppedEnabled(boolean v);
-    @Property(selector = "isDrawSteppedEnabled")
-    public native boolean isDrawSteppedEnabled();
     @Property(selector = "circleRadius")
     public native @MachineSizedFloat double getCircleRadius();
     @Property(selector = "setCircleRadius:")
@@ -128,6 +118,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "resetCircleColors:")
     public native void resetCircleColors(@MachineSizedSInt long index);
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     /*</methods>*/
 }

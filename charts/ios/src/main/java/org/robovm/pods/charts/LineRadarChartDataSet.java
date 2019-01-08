@@ -49,9 +49,11 @@ import org.robovm.apple.coreanimation.*;
     protected LineRadarChartDataSet(Handle h, long handle) { super(h, handle); }
     protected LineRadarChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLabel:")
-    public LineRadarChartDataSet(String label) { super((SkipInit) null); initObject(initWithLabel(label)); }
+    public LineRadarChartDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
     @Method(selector = "initWithValues:label:")
     public LineRadarChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
+    @Method(selector = "initWithValues:")
+    public LineRadarChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "fillColor")
@@ -80,9 +82,9 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     @Method(selector = "initWithLabel:")
-    protected native @Pointer long initWithLabel(String label);
+    protected native @Pointer long init(String label);
     @Method(selector = "initWithValues:label:")
     protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
     /*</methods>*/

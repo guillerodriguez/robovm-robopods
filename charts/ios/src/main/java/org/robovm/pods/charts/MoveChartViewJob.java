@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(MoveChartViewJob.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MoveChartViewJob() {}
+    protected MoveChartViewJob() {}
     protected MoveChartViewJob(Handle h, long handle) { super(h, handle); }
     protected MoveChartViewJob(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithViewPortHandler:xValue:yValue:transformer:view:")
@@ -56,9 +56,9 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initWithViewPortHandler:xValue:yValue:transformer:view:")
-    protected native @Pointer long init(ChartViewPortHandler viewPortHandler, double xValue, double yValue, ChartTransformer transformer, ChartViewBase view);
     @Method(selector = "doJob")
     public native void doJob();
+    @Method(selector = "initWithViewPortHandler:xValue:yValue:transformer:view:")
+    protected native @Pointer long init(ChartViewPortHandler viewPortHandler, double xValue, double yValue, ChartTransformer transformer, ChartViewBase view);
     /*</methods>*/
 }

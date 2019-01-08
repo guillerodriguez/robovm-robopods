@@ -55,18 +55,6 @@ import org.robovm.apple.coreanimation.*;
     public @MachineSizedFloat double getCubicIntensity() { return 0; }
     @NotImplemented("setCubicIntensity:")
     public void setCubicIntensity(@MachineSizedFloat double v) {}
-    @NotImplemented("drawCubicEnabled")
-    public boolean drawCubicEnabled() { return false; }
-    @NotImplemented("setDrawCubicEnabled:")
-    public void setDrawCubicEnabled(boolean v) {}
-    @NotImplemented("isDrawCubicEnabled")
-    public boolean isDrawCubicEnabled() { return false; }
-    @NotImplemented("drawSteppedEnabled")
-    public boolean drawSteppedEnabled() { return false; }
-    @NotImplemented("setDrawSteppedEnabled:")
-    public void setDrawSteppedEnabled(boolean v) {}
-    @NotImplemented("isDrawSteppedEnabled")
-    public boolean isDrawSteppedEnabled() { return false; }
     @NotImplemented("circleRadius")
     public @MachineSizedFloat double getCircleRadius() { return 0; }
     @NotImplemented("setCircleRadius:")

@@ -49,7 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected LineChartData(Handle h, long handle) { super(h, handle); }
     protected LineChartData(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithDataSets:")
-    public LineChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(initWithDataSets(dataSets)); }
+    public LineChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(init(dataSets)); }
+    @Method(selector = "initWithDataSet:")
+    public LineChartData(IChartDataSet dataSet) { super(dataSet); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -57,6 +59,6 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithDataSets:")
-    protected native @Pointer long initWithDataSets(NSArray<?> dataSets);
+    protected native @Pointer long init(NSArray<?> dataSets);
     /*</methods>*/
 }

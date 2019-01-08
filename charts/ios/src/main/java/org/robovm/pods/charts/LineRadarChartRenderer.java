@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(LineRadarChartRenderer.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public LineRadarChartRenderer() {}
+    protected LineRadarChartRenderer() {}
     protected LineRadarChartRenderer(Handle h, long handle) { super(h, handle); }
     protected LineRadarChartRenderer(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithAnimator:viewPortHandler:")

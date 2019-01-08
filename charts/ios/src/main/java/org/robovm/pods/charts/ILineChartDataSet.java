@@ -54,18 +54,6 @@ import org.robovm.apple.coreanimation.*;
     @MachineSizedFloat double getCubicIntensity();
     @Property(selector = "setCubicIntensity:")
     void setCubicIntensity(@MachineSizedFloat double v);
-    @Property(selector = "drawCubicEnabled")
-    boolean drawCubicEnabled();
-    @Property(selector = "setDrawCubicEnabled:")
-    void setDrawCubicEnabled(boolean v);
-    @Property(selector = "isDrawCubicEnabled")
-    boolean isDrawCubicEnabled();
-    @Property(selector = "drawSteppedEnabled")
-    boolean drawSteppedEnabled();
-    @Property(selector = "setDrawSteppedEnabled:")
-    void setDrawSteppedEnabled(boolean v);
-    @Property(selector = "isDrawSteppedEnabled")
-    boolean isDrawSteppedEnabled();
     @Property(selector = "circleRadius")
     @MachineSizedFloat double getCircleRadius();
     @Property(selector = "setCircleRadius:")

@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(LineScatterCandleRadarChartRenderer.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public LineScatterCandleRadarChartRenderer() {}
+    protected LineScatterCandleRadarChartRenderer() {}
     protected LineScatterCandleRadarChartRenderer(Handle h, long handle) { super(h, handle); }
     protected LineScatterCandleRadarChartRenderer(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithAnimator:viewPortHandler:")

@@ -49,7 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected BubbleChartData(Handle h, long handle) { super(h, handle); }
     protected BubbleChartData(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithDataSets:")
-    public BubbleChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(initWithDataSets(dataSets)); }
+    public BubbleChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(init(dataSets)); }
+    @Method(selector = "initWithDataSet:")
+    public BubbleChartData(IChartDataSet dataSet) { super(dataSet); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -57,7 +59,7 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithDataSets:")
-    protected native @Pointer long initWithDataSets(NSArray<?> dataSets);
+    protected native @Pointer long init(NSArray<?> dataSets);
     @Method(selector = "setHighlightCircleWidth:")
     public native void setHighlightCircleWidth(@MachineSizedFloat double width);
     /*</methods>*/

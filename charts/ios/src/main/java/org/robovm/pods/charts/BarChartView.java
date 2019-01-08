@@ -49,9 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected BarChartView(Handle h, long handle) { super(h, handle); }
     protected BarChartView(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFrame:")
-    public BarChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(initWithFrame(frame)); }
+    public BarChartView(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public BarChartView(NSCoder aDecoder) { super((SkipInit) null); initObject(initWithCoder(aDecoder)); }
+    public BarChartView(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "drawValueAboveBarEnabled")
@@ -81,21 +81,17 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initialize")
-    public native void initialize();
-    @Method(selector = "calcMinMax")
-    public native void calcMinMax();
     @Method(selector = "getHighlightByTouchPoint:")
     public native ChartHighlight getHighlightByTouchPoint(@ByVal CGPoint pt);
     @Method(selector = "getBarBoundsWithEntry:")
-    public native @ByVal CGRect getBarBoundsWithEntry(BarChartDataEntry e);
+    public native @ByVal CGRect getBarBounds(BarChartDataEntry e);
     @Method(selector = "groupBarsFromX:groupSpace:barSpace:")
     public native void groupBars(double fromX, double groupSpace, double barSpace);
     @Method(selector = "highlightValueWithX:dataSetIndex:stackIndex:")
     public native void highlightValue(double x, @MachineSizedSInt long dataSetIndex, @MachineSizedSInt long stackIndex);
     @Method(selector = "initWithFrame:")
-    protected native @Pointer long initWithFrame(@ByVal CGRect frame);
+    protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long initWithCoder(NSCoder aDecoder);
+    protected native @Pointer long init(NSCoder decoder);
     /*</methods>*/
 }

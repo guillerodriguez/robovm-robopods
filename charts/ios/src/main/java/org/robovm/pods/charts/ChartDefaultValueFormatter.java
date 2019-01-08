@@ -49,11 +49,11 @@ import org.robovm.apple.coreanimation.*;
     protected ChartDefaultValueFormatter(Handle h, long handle) { super(h, handle); }
     protected ChartDefaultValueFormatter(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFormatter:")
-    public ChartDefaultValueFormatter(NSNumberFormatter formatter) { super((SkipInit) null); initObject(initWithFormatter(formatter)); }
+    public ChartDefaultValueFormatter(NSNumberFormatter formatter) { super((SkipInit) null); initObject(init(formatter)); }
     @Method(selector = "initWithDecimals:")
-    public ChartDefaultValueFormatter(@MachineSizedSInt long decimals) { super((SkipInit) null); initObject(initWithDecimals(decimals)); }
+    public ChartDefaultValueFormatter(@MachineSizedSInt long decimals) { super((SkipInit) null); initObject(init(decimals)); }
     @Method(selector = "initWithBlock:")
-    public ChartDefaultValueFormatter(@Block("(,,@MachineSizedSInt,)") Block4<Double, ChartDataEntry, Long, ChartViewPortHandler, String> block) { super((SkipInit) null); initObject(initWithBlock(block)); }
+    public ChartDefaultValueFormatter(@Block("(,,@MachineSizedSInt,)") Block4<Double, ChartDataEntry, Long, ChartViewPortHandler, String> block) { super((SkipInit) null); initObject(init(block)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "block")
@@ -72,11 +72,11 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithFormatter:")
-    protected native @Pointer long initWithFormatter(NSNumberFormatter formatter);
+    protected native @Pointer long init(NSNumberFormatter formatter);
     @Method(selector = "initWithDecimals:")
-    protected native @Pointer long initWithDecimals(@MachineSizedSInt long decimals);
+    protected native @Pointer long init(@MachineSizedSInt long decimals);
     @Method(selector = "initWithBlock:")
-    protected native @Pointer long initWithBlock(@Block("(,,@MachineSizedSInt,)") Block4<Double, ChartDataEntry, Long, ChartViewPortHandler, String> block);
+    protected native @Pointer long init(@Block("(,,@MachineSizedSInt,)") Block4<Double, ChartDataEntry, Long, ChartViewPortHandler, String> block);
     @Method(selector = "stringForValue:entry:dataSetIndex:viewPortHandler:")
     public native String getStringForValue(double value, ChartDataEntry entry, @MachineSizedSInt long dataSetIndex, ChartViewPortHandler viewPortHandler);
     @Method(selector = "withBlock:")

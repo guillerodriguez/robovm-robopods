@@ -62,7 +62,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithDataProvider:animator:viewPortHandler:")
     protected native @Pointer long init(LineChartDataProvider dataProvider, ChartAnimator animator, ChartViewPortHandler viewPortHandler);
     @Method(selector = "drawDataWithContext:")
-    public native void drawDataWithContext(CGContext context);
+    public native void drawData(CGContext context);
     @Method(selector = "drawDataSetWithContext:dataSet:")
     public native void drawDataSet(CGContext context, ILineChartDataSet dataSet);
     @Method(selector = "drawCubicBezierWithContext:dataSet:")
@@ -72,9 +72,9 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "drawLinearWithContext:dataSet:")
     public native void drawLinear(CGContext context, ILineChartDataSet dataSet);
     @Method(selector = "drawValuesWithContext:")
-    public native void drawValuesWithContext(CGContext context);
+    public native void drawValues(CGContext context);
     @Method(selector = "drawExtrasWithContext:")
-    public native void drawExtrasWithContext(CGContext context);
+    public native void drawExtras(CGContext context);
     @Method(selector = "drawHighlightedWithContext:indices:")
     public native void drawHighlighted(CGContext context, NSArray<ChartHighlight> indices);
     /*</methods>*/

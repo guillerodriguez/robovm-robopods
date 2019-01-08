@@ -49,7 +49,9 @@ import org.robovm.apple.coreanimation.*;
     protected BarChartData(Handle h, long handle) { super(h, handle); }
     protected BarChartData(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithDataSets:")
-    public BarChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(initWithDataSets(dataSets)); }
+    public BarChartData(NSArray<?> dataSets) { super((SkipInit) null); initObject(init(dataSets)); }
+    @Method(selector = "initWithDataSet:")
+    public BarChartData(IChartDataSet dataSet) { super(dataSet); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "barWidth")
@@ -60,7 +62,7 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithDataSets:")
-    protected native @Pointer long initWithDataSets(NSArray<?> dataSets);
+    protected native @Pointer long init(NSArray<?> dataSets);
     @Method(selector = "groupBarsFromX:groupSpace:barSpace:")
     public native void groupBars(double fromX, double groupSpace, double barSpace);
     @Method(selector = "groupWidthWithGroupSpace:barSpace:")

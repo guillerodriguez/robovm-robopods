@@ -45,27 +45,24 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(BarChartHighlighter.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public BarChartHighlighter() {}
+    protected BarChartHighlighter() {}
     protected BarChartHighlighter(Handle h, long handle) { super(h, handle); }
     protected BarChartHighlighter(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithChart:")
-    public BarChartHighlighter(ChartDataProvider chart) { super((SkipInit) null); initObject(initWithChart(chart)); }
+    public BarChartHighlighter(ChartDataProvider chart) { super((SkipInit) null); initObject(init(chart)); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "data")
-    public native ChartData getData();
+    
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "getHighlightWithX:y:")
     public native ChartHighlight getHighlight(@MachineSizedFloat double x, @MachineSizedFloat double y);
-    @Method(selector = "getDistanceWithX1:y1:x2:y2:")
-    public native @MachineSizedFloat double getDistance(@MachineSizedFloat double x1, @MachineSizedFloat double y1, @MachineSizedFloat double x2, @MachineSizedFloat double y2);
     @Method(selector = "getStackedHighlightWithHigh:set:xValue:yValue:")
     public native ChartHighlight getStackedHighlight(ChartHighlight high, IBarChartDataSet set, double xValue, double yValue);
     @Method(selector = "getClosestStackIndexWithRanges:value:")
     public native @MachineSizedSInt long getClosestStackIndex(NSArray<ChartRange> ranges, double value);
     @Method(selector = "initWithChart:")
-    protected native @Pointer long initWithChart(ChartDataProvider chart);
+    protected native @Pointer long init(ChartDataProvider chart);
     /*</methods>*/
 }

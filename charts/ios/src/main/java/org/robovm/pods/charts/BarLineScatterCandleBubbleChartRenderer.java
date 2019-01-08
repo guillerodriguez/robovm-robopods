@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(BarLineScatterCandleBubbleChartRenderer.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public BarLineScatterCandleBubbleChartRenderer() {}
+    protected BarLineScatterCandleBubbleChartRenderer() {}
     protected BarLineScatterCandleBubbleChartRenderer(Handle h, long handle) { super(h, handle); }
     protected BarLineScatterCandleBubbleChartRenderer(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithAnimator:viewPortHandler:")
@@ -58,9 +58,5 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "initWithAnimator:viewPortHandler:")
     protected native @Pointer long init(ChartAnimator animator, ChartViewPortHandler viewPortHandler);
-    @Method(selector = "isInBoundsXWithEntry:dataSet:")
-    public native boolean isInBoundsX(ChartDataEntry e, IBarLineScatterCandleBubbleChartDataSet dataSet);
-    @Method(selector = "shouldDrawValuesForDataSet:")
-    public native boolean shouldDrawValuesForDataSet(IChartDataSet set);
     /*</methods>*/
 }

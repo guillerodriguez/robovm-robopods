@@ -45,7 +45,7 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(HorizontalBarChartRenderer.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public HorizontalBarChartRenderer() {}
+    protected HorizontalBarChartRenderer() {}
     protected HorizontalBarChartRenderer(Handle h, long handle) { super(h, handle); }
     protected HorizontalBarChartRenderer(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithDataProvider:animator:viewPortHandler:")
@@ -63,10 +63,8 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "drawDataSetWithContext:dataSet:index:")
     public native void drawDataSet(CGContext context, IBarChartDataSet dataSet, @MachineSizedSInt long index);
     @Method(selector = "drawValuesWithContext:")
-    public native void drawValuesWithContext(CGContext context);
+    public native void drawValues(CGContext context);
     @Method(selector = "isDrawingValuesAllowedWithDataProvider:")
-    public native boolean isDrawingValuesAllowedWithDataProvider(ChartDataProvider dataProvider);
-    @Method(selector = "setHighlightDrawPosWithHighlight:barRect:")
-    public native void setHighlightDrawPos(ChartHighlight high, @ByVal CGRect barRect);
+    public native boolean isDrawingValuesAllowed(ChartDataProvider dataProvider);
     /*</methods>*/
 }

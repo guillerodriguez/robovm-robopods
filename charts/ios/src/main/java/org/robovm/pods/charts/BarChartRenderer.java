@@ -64,18 +64,16 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initBuffers")
     public native void initBuffers();
     @Method(selector = "drawDataWithContext:")
-    public native void drawDataWithContext(CGContext context);
+    public native void drawData(CGContext context);
     @Method(selector = "drawDataSetWithContext:dataSet:index:")
     public native void drawDataSet(CGContext context, IBarChartDataSet dataSet, @MachineSizedSInt long index);
     @Method(selector = "drawValuesWithContext:")
-    public native void drawValuesWithContext(CGContext context);
+    public native void drawValues(CGContext context);
     @Method(selector = "drawValueWithContext:value:xPos:yPos:font:align:color:")
     public native void drawValue(CGContext context, String value, @MachineSizedFloat double xPos, @MachineSizedFloat double yPos, UIFont font, NSTextAlignment align, UIColor color);
     @Method(selector = "drawExtrasWithContext:")
-    public native void drawExtrasWithContext(CGContext context);
+    public native void drawExtras(CGContext context);
     @Method(selector = "drawHighlightedWithContext:indices:")
     public native void drawHighlighted(CGContext context, NSArray<ChartHighlight> indices);
-    @Method(selector = "setHighlightDrawPosWithHighlight:barRect:")
-    public native void setHighlightDrawPos(ChartHighlight high, @ByVal CGRect barRect);
     /*</methods>*/
 }

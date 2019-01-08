@@ -49,9 +49,11 @@ import org.robovm.apple.coreanimation.*;
     protected BarLineScatterCandleBubbleChartDataSet(Handle h, long handle) { super(h, handle); }
     protected BarLineScatterCandleBubbleChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLabel:")
-    public BarLineScatterCandleBubbleChartDataSet(String label) { super((SkipInit) null); initObject(initWithLabel(label)); }
+    public BarLineScatterCandleBubbleChartDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
     @Method(selector = "initWithValues:label:")
     public BarLineScatterCandleBubbleChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
+    @Method(selector = "initWithValues:")
+    public BarLineScatterCandleBubbleChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "highlightColor")
@@ -74,9 +76,9 @@ import org.robovm.apple.coreanimation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "copyWithZone:")
-    public native NSObject copyWithZone(NSZone zone);
+    public native NSObject copy(NSZone zone);
     @Method(selector = "initWithLabel:")
-    protected native @Pointer long initWithLabel(String label);
+    protected native @Pointer long init(String label);
     @Method(selector = "initWithValues:label:")
     protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
     /*</methods>*/
