@@ -4,6 +4,9 @@ clang_args: ['-x', 'objective-c']
 framework: Helpshift
 headers:
     - HelpshiftAll.h
+    - HelpshiftCampaigns.h
+    - HelpshiftInbox.h
+    - HelpshiftSupport.h
 private_typedefs: {}
 
 typedefs: {}
@@ -12,6 +15,9 @@ enums:
     HsAddFAQsToDeviceSearch: {prefix: HsAddFaqsToDeviceSearch}
     HsOperator: {}
     HsEnableContactUs: {}
+    HelpshiftInboxMessageActionType: {}
+    HelpshiftSupportAlertToRateAppAction: {}
+    HelpshiftAuthenticationFailureReason: {}    
 
 classes:
     HelpshiftAPIConfig: {}
@@ -66,6 +72,97 @@ classes:
         methods:
             '-initWithIdentifier:andEmail:':
                 name: init
+    HelpshiftCampaigns:
+        methods:
+            '+addProperty:withInteger:':
+                name: addProperty
+            '+addProperty:withLongLong:':
+                name: addPropertyLong
+            '+addProperty:withString:':
+                name: addProperty
+            '+addProperty:withBoolean:':
+                name: addProperty
+            '+addProperty:withDate:':
+                name: addProperty
+            '+showInboxOnViewController:withOptions:':
+                name: showInbox
+            '+showInboxOnViewController:withConfig:':
+                name: showInbox
+            '+showMessageWithId:onViewController:withOptions:':
+                name: showMessage
+            '+showMessageWithId:onViewController:withConfig:':
+                name: showMessage
+            '+configureWithOptions:':
+                name: configure
+    HelpshiftInbox: {}
+    HelpshiftSupport:
+        methods:
+            '-showDynamicFormOnViewController:withTitle:andFlows:withConfigOptions:':
+                exclude: true # as deprecated and conflicts
+            '-pushDynamicFormOnViewController:withTitle:andFlows:':
+                exclude: true # as deprecated and conflicts
+            '-dynamicFormWithTitle:andFlows:':
+                name: getDynamicForm
+            '+showConversation:withOptions:':
+                name: showConversation
+            '+showConversation:withConfig:':
+                name: showConversation
+            '+showFAQs:withOptions:':
+                name: showFAQs
+            '+showFAQs:withConfig:':
+                name: showFAQs
+            '+showFAQSection:withController:withOptions:':
+                name: showFAQSection
+            '+showFAQSection:withController:withConfig:':
+                name: showFAQSection
+            '+showSingleFAQ:withController:withOptions:':
+                name: showSingleFAQ
+            '+showSingleFAQ:withController:withConfig:':
+                name: showSingleFAQ
+            '+showAlertToRateAppWithURL:withCompletionBlock:':
+                name: showAlertToRateApp
+            '+handleContinueUserActivity:withController:andRestorationHandler:':
+                name: handleContinueUserActivity
+            '+showDynamicFormOnViewController:withTitle:andFlows:withConfigOptions:':
+                name: showDynamicForm
+            '+showDynamicFormOnViewController:withTitle:andFlows:withConfig:':
+                name: showDynamicForm
+            '+showDynamicFormOnViewController:withTitle:andFlowsData:withConfigOptions:':
+                name: showDynamicFormWithFlowsData
+            '+pushDynamicFormOnViewController:withTitle:andFlows:':
+                name: pushDynamicForm
+            '+dynamicFormWithTitle:andFlows:':
+                name: createDynamicForm
+            '+requestDynamicFormWithTitle:andFlows:':
+                name: requestDynamicFormWithTitle$andFlows$
+            '+flowToShowConversationWithDisplayText:andConfigOptions:':
+                name: createDlowToShowConversation
+            '+flowToShowConversationWithDisplayText:andConfig:':
+                name: createFlowToShowConversation
+            '+flowToShowFAQsWithDisplayText:andConfigOptions:':
+                name: createFlowToShowFAQs
+            '+flowToShowFAQsWithDisplayText:andConfig:':
+                name: createFlowToShowFAQs
+            '+flowToShowFAQSectionForPublishId:withDisplayText:andConfigOptions:':
+                name: createFlowToShowFAQSection
+            '+flowToShowFAQSectionForPublishId:withDisplayText:andConfig:':
+                name: createFlowToShowFAQSection
+            '+flowToShowSingleFAQForPublishId:withDisplayText:andConfigOptions:':
+                name: createFlowToShowSingleFAQForPublishId
+            '+flowToShowSingleFAQForPublishId:withDisplayText:andConfig:':
+                name: createFlowToShowSingleFAQForPublishId
+            '+flowToShowNestedDynamicFormWithFlows:withDisplayText:':
+                name: createFlowToShowNestedDynamicForm
+            '+flowToPerformCustomActionOnTarget:andSelector:withOptionalObject:withDisplayText:':
+                name: createFlowToPerformCustomAction
+            '+conversationViewControllerWithConfig:completion:':
+                name: getConversationViewController
+            '+handleRemoteNotification:withController:':
+                exclude: true # outdated and conflicts
+            '+handleLocalNotification:withController:':
+                exclude: true # outdated
+            '+setSDKLanguage:':
+                exclude: true # outdated and conflicts
 
 protocols:
     HsApiProvider:
@@ -98,6 +195,30 @@ protocols:
                 name: registerDeviceToken
             '-_setSDKLanguage:':
                 name: setSDKLanguage
+    HelpshiftCampaignsDelegate: {}
+    HelpshiftInboxDelegate:
+        methods:
+            '-failedToAddInboxMessageWithId:':
+                name: failedToAddInboxMessage
+    HelpshiftInboxMessage:
+        methods:
+            '-executeActionAtIndex:onViewController:':
+                name: executeAction
+    HelpshiftInboxNotificationDelegate: {}
+    HelpshiftSupportDelegate:
+        methods:
+            '-didReceiveInAppNotificationWithMessageCount:':
+                name: didReceiveInAppNotification
+            '-newConversationStartedWithMessage:':
+                name: newConversationStarted
+            '-userRepliedToConversationWithMessage:':
+                name: userRepliedToConversation
+            '-userCompletedCustomerSatisfactionSurvey:withFeedback:':
+                trim_after_first_colon: true
+            '-displayAttachmentFileAtLocation:onViewController:':
+                name: displayAttachmentFile
+            '-authenticationFailedForUser:withReason:':
+                name: authenticationFailed
 
 functions: 
     # Make sure we don't miss any functions if new ones are introduced in a later version
@@ -106,6 +227,19 @@ functions:
         name: 'Function_#{g[0]}'
 
 values:
+    HS_NO_EXPIRY_TIMESTAMP:
+        class: HelpshiftInbox
+        name: NO_EXPIRY_TIMESTAMP
+
+    HelpshiftSupportCustomMetadataKey:
+        class: HelpshiftSupport
+        name: getHelpshiftSupportCustomMetadata
+
+    HelpshiftSupportTagsKey:
+        class: HelpshiftSupport
+        name: getHelpshiftSupportTagsKey
+
+
     # Make sure we don't miss any values if new ones are introduced in a later version
     (.*):
         class: __FixMe
