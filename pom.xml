@@ -129,5 +129,6 @@
         <module>samkeychain</module>
         <module>branchmetrics</module>
         <module>helpshift</module>
+        <module>firebase</module>
     </modules>
 </project>

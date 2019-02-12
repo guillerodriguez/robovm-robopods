@@ -1,0 +1,109 @@
+package: org.robovm.pods.firebase.database
+include: [foundation, dispatch]
+framework: FirebaseDatabase
+clang_args: ['-x', 'objective-c']
+headers:
+    - FirebaseDatabase.h
+
+private_typedefs:
+    "FIRApp *": org.robovm.pods.firebase.core.FIRApp
+
+typedefs: {}
+
+enums:
+    FIRDataEventType: {}
+
+classes:
+    FIRDataSnapshot: {}
+    FIRDatabase:
+        methods:
+            '-referenceWithPath:':
+                name: reference
+            '+databaseWithURL:':
+                name: create
+                constructor: true
+            '+databaseForApp:URL:':
+                name: create
+                constructor: true
+    FIRDatabaseQuery:
+        methods:
+            '-observeEventType:withBlock:':
+                name: observeEvent
+            '-observeEventType:andPreviousSiblingKeyWithBlock:':
+                name: observeEvent
+            '-observeEventType:withBlock:withCancelBlock:':
+                name: observeEvent
+            '-observeEventType:andPreviousSiblingKeyWithBlock:withCancelBlock:':
+                name: observeEvent
+            '-observeSingleEventOfType:withBlock:':
+                name: observeSingleEvent
+            '-observeSingleEventOfType:andPreviousSiblingKeyWithBlock:':
+                name: observeSingleEvent
+            '-observeSingleEventOfType:withBlock:withCancelBlock:':
+                name: observeSingleEvent
+            '-observeSingleEventOfType:andPreviousSiblingKeyWithBlock:withCancelBlock:':
+                name: observeSingleEvent
+            '-removeObserverWithHandle:':
+                name: removeObserver
+            '-queryStartingAtValue:childKey:':
+                name: queryStartingAtValue
+            '-queryEndingAtValue:childKey:':
+                name: queryEndingAtValue
+            '-queryEqualToValue:childKey:':
+                name: queryEqualToValue
+    FIRDatabaseReference:
+        methods:
+            '-setValue:withCompletionBlock:':
+                name: setValue
+            '-setValue:andPriority:':
+                name: setValue
+            '-setValue:andPriority:withCompletionBlock:':
+                name: setValue
+            '-removeValueWithCompletionBlock:':
+                name: removeValue
+            '-setPriority:withCompletionBlock:':
+                name: setPriority
+            '-updateChildValues:withCompletionBlock:':
+                name: updateChildValues
+            '-onDisconnectSetValue:withCompletionBlock:':
+                name: onDisconnectSetValue
+            '-onDisconnectSetValue:andPriority:':
+                name: onDisconnectSetValue
+            '-onDisconnectSetValue:andPriority:withCompletionBlock:':
+                name: onDisconnectSetValue
+            '-onDisconnectRemoveValueWithCompletionBlock:':
+                name: onDisconnectRemoveValue
+            '-onDisconnectUpdateChildValues:withCompletionBlock:':
+                name: onDisconnectUpdateChildValues
+            '-cancelDisconnectOperationsWithCompletionBlock:':
+                name: cancelDisconnectOperations
+            '-runTransactionBlock:andCompletionBlock:':
+                name: runTransactionBlock
+            '-runTransactionBlock:andCompletionBlock:withLocalEvents:':
+                name: runTransactionBlock
+    FIRMutableData: {}
+    FIRServerValue: {}
+    FIRTransactionResult:
+        methods:
+            '+successWithValue:':
+                name: success
+
+protocols: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'

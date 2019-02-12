@@ -1,0 +1,51 @@
+package: org.robovm.pods.firebase.analytics
+framework: FirebaseAnalytics
+include: [foundation]
+clang_args: ['-x', 'objective-c']
+headers:
+    - FirebaseAnalytics.h
+
+enums: {}
+
+classes:
+    FIRAnalytics:
+        methods:
+            '+logEventWithName:parameters:':
+                name: logEvent
+            '+setUserPropertyString:forName:':
+                name: setUserPropertyString
+            '+setScreenName:screenClass:':
+                name: setScreenName
+            '+handleEventsForBackgroundURLSession:completionHandler:':
+                name: handleEventsForBackgroundURLSession
+protocols: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    kFIREvent(.*):
+        class: FIREvents
+        name: '#{g[0]}'
+
+    kFIRParameter(.*):
+        class: FIRParameters
+        name: '#{g[0]}'
+
+    kFIRUserProperty(.*):
+        class: FIRUserProperties
+        name: '#{g[0]}'
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
