@@ -1,0 +1,18 @@
+<config>
+    <libs>
+        <lib>z</lib>
+    </libs>
+    <frameworks>
+        <framework>AdSupport</framework>
+        <framework>AVFoundation</framework>
+        <framework>CoreGraphics</framework>
+        <framework>CoreMedia</framework>
+        <framework>CoreTelephony</framework>
+        <framework>SafariServices</framework>
+        <framework>StoreKit</framework>
+        <framework>SystemConfiguration</framework>
+        <framework>UIKit</framework>
+        <framework>WebKit</framework>
+        <framework>CoreMedia</framework>
+    </frameworks>
+</config>

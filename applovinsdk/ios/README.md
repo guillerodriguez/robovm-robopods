@@ -1,9 +1,5 @@
 # AppLovinSDK iOS
 
-## Sample app
-
-TODO
-
 ## Install Instructions
 
 ### 3rd party native framework
@@ -34,6 +30,45 @@ dependencies {
 }
 ```
 
-## Pollfish home page
+## Sample code 
+```java
+public class Main extends UIApplicationDelegateAdapter {
+    private UIWindow window;
+    private MyViewController rootViewController;
+
+    @Override
+    public boolean didFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions) {
+        rootViewController = new MyViewController();
+        window = new UIWindow(UIScreen.getMainScreen().getBounds());
+        window.setRootViewController(rootViewController);
+        window.makeKeyAndVisible();
+        
+        ALSdk.InitializeSdk();
+
+        return true;
+    }
+}
+
+public class MyViewController extends UIViewController implements ALAdLoadDelegate {
+
+    public MyViewController() {
+        .... 
+        ALSdk.shared().getAdService().loadNextAd(ALAdSize.sizeBanner(), this);
+    }
+
+    @Override
+    public void didLoadAd(ALAdService adService, ALAd ad) {
+        System.out.println("didLoadAd");
+        ALInterstitialAd.shared().showAd(ad);
+    }
+
+    @Override
+    public void didFailToLoadAd(ALAdService adService, int code) {
+        System.out.println("didFailToLoadAd " + code);
+    }
+}
+```
+
+## AppLovin home page
 
 [Link](https://dash.applovin.com/docs)
