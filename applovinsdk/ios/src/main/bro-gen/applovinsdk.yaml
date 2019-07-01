@@ -1,0 +1,317 @@
+package: org.robovm.pods.applovinsdk
+include: [foundation, uikit, coregraphics]
+clang_args: ['-x', 'objective-c']
+framework: AppLovinSDK
+exclude_deprecated: true
+headers:
+    - AppLovinSDK.h
+
+private_typedefs: {}
+
+typedefs: {}
+
+enums:
+    ALConsentDialogState: {}
+    ALAdViewDisplayErrorCode: {}
+
+classes:
+    ALAd: {}
+    ALAdService:
+        methods:
+            '-loadNextAd:andNotify:':
+                name: loadNextAd
+            '-loadNextAdForZoneIdentifier:andNotify:':
+                name: loadNextAdForZoneIdentifier
+            '-loadNextAdForAdToken:andNotify:':
+                name: loadNextAdForAdToken
+            '-loadNextAdForZoneIdentifiers:andNotify:':
+                name: loadNextAdForZoneIdentifiers
+    ALAdSize: {}
+    ALAdType: {}
+    ALAdView:
+        methods:
+            '-initWithSize:':
+                name: init
+            '-initWithSize:zoneIdentifier:':
+                name: init
+            '-initWithSdk:size:':
+                name: init
+            '-initWithSdk:size:zoneIdentifier:':
+                name: init
+            '-initWithFrame:size:sdk:':
+                name: init
+    ALEventService:
+        methods:
+            '-setSuperProperty:forKey:':
+                name: setSuperProperty
+            '-trackEvent:parameters:':
+                name: trackEvent
+                parameters:
+                    1:
+                        type: ALEventParameters
+            '-trackInAppPurchaseWithTransactionIdentifier:parameters:':
+                name: trackInAppPurchase
+                parameters:
+                    1:
+                        type: ALEventParameters
+            '-trackCheckoutWithTransactionIdentifier:parameters:':
+                name: trackCheckout
+                parameters:
+                    1:
+                        type: ALEventParameters
+    ALIncentivizedInterstitialAd:
+        methods:
+            '-initWithSdk:':
+                name: init
+            '-initWithZoneIdentifier:':
+                name: init
+            '-initWithZoneIdentifier:sdk:':
+                name: init
+            '-showAd:andNotify:':
+                name: showAd
+            '-show':
+                name: show
+            '-showAndNotify:':
+                name: show
+            '-preloadAndNotify:':
+                name: preload
+            '+preloadAndNotify:':
+                name: Preload
+            '+isReadyForDisplay':
+                name: IsReadyForDisplay
+            '+show':
+                name: Show
+            '+showAndNotify:':
+                name: Show
+
+    ALInterstitialAd:
+        methods:
+            '-initWithSdk:':
+                name: init
+            '+show':
+                name: Show
+    ALNativeAd:
+        methods:
+            '-videoEndTrackingURL:firstPlay:':
+                name: videoEndTrackingURL
+    ALNativeAdService:
+        methods:
+            '-precacheResourcesForNativeAd:andNotify:':
+                name: precacheResourcesForNativeAd
+    ALPostbackService:
+        methods:
+            '-dispatchPostbackAsync:andNotify:':
+                name: dispatchPostbackAsync
+    ALPrivacySettings: {}
+    ALSdk:
+        methods:
+            '-initializeSdkWithCompletionHandler:':
+                name: initializeSdk
+            '+initializeSdkWithCompletionHandler:':
+                name: InitializeSdk
+            '+initializeSdk':
+                name: InitializeSdk
+            '+sharedWithKey:':
+                name: getShared
+            '+sharedWithKey:settings:':
+                name: getShared
+    ALSdkConfiguration: {}
+    ALSdkSettings: {}
+    ALUserService:
+        methods:
+            '-showConsentDialogWithCompletionHandler:':
+                name: showConsentDialog
+    ALVariableService:
+        methods:
+            '-boolForKey:defaultValue:':
+                name: getBool
+            '-stringForKey:defaultValue:':
+                name: getString
+    MAAd: {}
+    MAAdFormat: {}
+    MAAdView:
+        methods:
+            '-initWithAdUnitIdentifier:':
+                name: init
+            '-initWithAdUnitIdentifier:sdk:':
+                name: init
+            '-setExtraParameterForKey:value:':
+                name: setExtraParameter
+    MAInterstitialAd:
+        methods:
+            '-initWithAdUnitIdentifier:':
+                name: init
+            '-initWithAdUnitIdentifier:sdk:':
+                name: init
+            '-setExtraParameterForKey:value:':
+                name: setExtraParameter
+    MAReward:
+        methods:
+            '+rewardWithAmount:label:':
+                constructor: true
+                name: create
+    MARewardedAd:
+        methods:
+            '-setExtraParameterForKey:value:':
+                name: setExtraParameter
+            '+sharedWithAdUnitIdentifier:':
+                name: getShared
+            '+sharedWithAdUnitIdentifier:sdk:':
+                name: getShared
+
+protocols:
+    ALAdDisplayDelegate:
+        methods:
+            '-ad:wasDisplayedIn:':
+                name: wasDisplayed
+            '-ad:wasHiddenIn:':
+                name: wasHidden
+            '-ad:wasClickedIn:':
+                name: wasClicked
+    ALAdLoadDelegate:
+        methods:
+            '-adService:didLoadAd:':
+                name: didLoadAd
+            '-adService:didFailToLoadAdWithError:':
+                name: didFailToLoadAd
+    ALAdRewardDelegate:
+        methods:
+            '-rewardValidationRequestForAd:didSucceedWithResponse:':
+                name: didSucceed
+            '-rewardValidationRequestForAd:didExceedQuotaWithResponse:':
+                name: didExceedQuota
+            '-rewardValidationRequestForAd:wasRejectedWithResponse:':
+                name: wasRejected
+            '-rewardValidationRequestForAd:didFailWithError:':
+                name: didFail
+    ALAdVideoPlaybackDelegate:
+        methods:
+            '-videoPlaybackEndedInAd:atPlaybackPercent:fullyWatched:':
+                name: videoPlaybackEnded
+    ALAdViewEventDelegate:
+        methods:
+            '-ad:didPresentFullscreenForAdView:':
+                name: didPresentFullscreen
+            '-ad:willDismissFullscreenForAdView:':
+                name: willDismissFullscreen
+            '-ad:didDismissFullscreenForAdView:':
+                name: didDismissFullscreen
+            '-ad:willLeaveApplicationForAdView:':
+                name: willLeaveApplication
+            '-ad:didReturnToApplicationForAdView:':
+                name: didReturnToApplication
+            '-ad:didFailToDisplayInAdView:withError:':
+                name: didFailToDisplay
+    ALNativeAdLoadDelegate:
+        methods:
+            '-nativeAdService:didLoadAds:':
+                name: didLoadAds
+            '-nativeAdService:didFailToLoadAdsWithError:':
+                name: didFailToLoadAds
+    ALNativeAdPrecacheDelegate:
+        methods:
+            '-nativeAdService:didPrecacheImagesForAd:':
+                name: didPrecacheImages
+            '-nativeAdService:didPrecacheVideoForAd:':
+                name: didPrecacheVideo
+            '-nativeAdService:didFailToPrecacheImagesForAd:withError:':
+                name: didFailToPrecacheImages
+            '-nativeAdService:didFailToPrecacheVideoForAd:withError:':
+                name: didFailToPrecacheVideo
+    ALPostbackDelegate:
+        methods:
+            '-postbackService:didExecutePostback:':
+                name: didExecutePostback
+            '-postbackService:didFailToExecutePostback:errorCode:':
+                name: didFailToExecutePostback
+    ALVariableServiceDelegate:
+        methods:
+            '-variableService:didUpdateVariables:':
+                name: didUpdateVariables
+    MAAdDelegate:
+        methods:
+            '-didFailToLoadAdForAdUnitIdentifier:withErrorCode:':
+                name: didFailToLoadAd
+            '-didFailToDisplayAd:withErrorCode:':
+                name: didFailToDisplayAd
+    MAAdViewAdDelegate: {}
+    MARewardedAdDelegate:
+        methods:
+            '-didRewardUserForAd:withReward:':
+                name: didRewardUser
+
+functions:
+
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    kALEventType(.*):
+        class: ALEventTypes
+        name: '#{g[0]}'
+        type: NSString
+
+    ALDeepLinkCommand(.*):
+        class: ALDeepLinkCommands
+        name: '#{g[0]}'
+        type: NSString
+
+    ALMediationProvider(.*):
+        class: ALMediationProviders
+        name: '#{g[0]}'
+        type: NSString
+
+    kALEventParameter(.*)Key:
+        dictionary: ALEventParameters
+        name: '#{g[0]}'
+        type: NSString
+        methods:
+            UserAccountIdentifier:
+                type: NSString
+            ContentIdentifier:
+                type: NSString
+            SearchQuery:
+                type: NSString
+            CompletedLevel:
+                type: NSString
+            CompletedAchievement:
+                type: NSString
+            VirtualCurrencyAmount:
+                type: NSNumber
+            VirtualCurrencyName:
+                type: NSString
+            ProductIdentifier:
+                type: NSString
+            RevenueAmount:
+                type: NSNumber
+            RevenueCurrency:
+                type: NSString
+            CheckoutTransactionIdentifier:
+                type: NSString
+            StoreKitTransactionIdentifier:
+                type: NSString
+            StoreKitReceipt:
+                type: NSData
+            ReservationStartDate:
+                type: NSDate
+            ReservationEndDate:
+                type: NSDate
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    kALErrorCode(.*):
+        class: ALErrorCodes
+
+    kMAErrorCode(.*):
+        class: MAErrorCodes
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'

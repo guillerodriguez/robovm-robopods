@@ -1,0 +1,72 @@
+/*
+ * Copyright (C) 2013-2015 RoboVM AB
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.robovm.pods.applovinsdk;
+
+/*<imports>*/
+import java.io.*;
+import java.nio.*;
+import java.util.*;
+import org.robovm.objc.*;
+import org.robovm.objc.annotation.*;
+import org.robovm.objc.block.*;
+import org.robovm.rt.*;
+import org.robovm.rt.annotation.*;
+import org.robovm.rt.bro.*;
+import org.robovm.rt.bro.annotation.*;
+import org.robovm.rt.bro.ptr.*;
+import org.robovm.apple.foundation.*;
+import org.robovm.apple.uikit.*;
+import org.robovm.apple.coregraphics.*;
+/*</imports>*/
+
+/*<javadoc>*/
+/*</javadoc>*/
+/*<annotations>*//*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/ALErrorCodes/*</name>*/ 
+    extends /*<extends>*/CocoaUtility/*</extends>*/ 
+    /*<implements>*//*</implements>*/ {
+
+    /*<ptr>*/
+    /*</ptr>*/
+    /*<bind>*/
+    /*</bind>*/
+    /*<constants>*/
+    public static final int kALErrorCodeSdkDisabled = -22;
+    public static final int kALErrorCodeNoFill = 204;
+    public static final int kALErrorCodeAdRequestNetworkTimeout = -1001;
+    public static final int kALErrorCodeNotConnectedToInternet = -1009;
+    public static final int kALErrorCodeAdRequestUnspecifiedError = -1;
+    public static final int kALErrorCodeUnableToRenderAd = -6;
+    public static final int kALErrorCodeInvalidZone = -7;
+    public static final int kALErrorCodeInvalidAdToken = -8;
+    public static final int kALErrorCodeUnableToPrecacheResources = -200;
+    public static final int kALErrorCodeUnableToPrecacheImageResources = -201;
+    public static final int kALErrorCodeUnableToPrecacheVideoResources = -202;
+    public static final int kALErrorCodeInvalidResponse = -800;
+    public static final int kALErrorCodeUnableToRenderNativeAd = -700;
+    public static final int kALErrorCodeUnableToPreloadNativeAd = -701;
+    public static final int kALErrorCodeNativeAdImpressionAlreadyTracked = -702;
+    public static final int kALErrorCodeIncentiviziedAdNotPreloaded = -300;
+    public static final int kALErrorCodeIncentivizedUnknownServerError = -400;
+    public static final int kALErrorCodeIncentivizedValidationNetworkTimeout = -500;
+    public static final int kALErrorCodeIncentivizedUserClosedVideo = -600;
+    public static final int kALErrorCodeInvalidURL = -900;
+    /*</constants>*/
+    /*<constructors>*//*</constructors>*/
+    /*<properties>*//*</properties>*/
+    /*<members>*//*</members>*/
+    /*<methods>*//*</methods>*/
+}
