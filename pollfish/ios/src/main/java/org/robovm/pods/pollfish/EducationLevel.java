@@ -50,8 +50,12 @@ public enum /*<name>*/EducationLevel/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*/
     @Bridge(symbol="EDUCATION_LEVEL", optional=true)
-    public native NSString asString();
+    protected static native NSString asString0(EducationLevel education);
     /*</methods>*/
+
+    public NSString asString() {
+        return asString0(this);
+    }
 
     private final long n;
 

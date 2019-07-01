@@ -76,8 +76,12 @@ public enum /*<name>*/Career/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*/
     @Bridge(symbol="CAREER", optional=true)
-    public native NSString asString();
+    protected static native NSString asString0(Career career);
     /*</methods>*/
+
+    public NSString asString() {
+        return asString0(this);
+    }
 
     private final long n;
 

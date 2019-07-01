@@ -1,9 +1,5 @@
 # PollFish iOS
 
-## Sample app
-
-TODO
-
 ## Install Instructions
 
 ### 3rd party native framework
@@ -32,6 +28,35 @@ dependencies {
    ... other dependencies ...
    compile "io.github.dkimitsa.robovm:robopods-pollfish-ios:$altpodsVersion"
 }
+```
+
+## Sample code 
+```java
+UserAttributesDictionary userAttributesDictionary = new UserAttributesDictionary();
+userAttributesDictionary
+        .setGender(Gender.MALE)
+        .setRace(Race.WHITE)
+        .setYearOfBirth(YearOfBirth._1984)
+        .setMaritalStatus(MaritalStatus.MARRIED)
+        .setParentalStatus(ParentalStatus.THREE)
+        .setEducation(EducationLevel.UNIVERSITY)
+        .setEmployment(EmploymentStatus.EMPLOYED_FOR_WAGES)
+        .setCareer(Career.TELECOMMUNICATIONS)
+        .setIncome(Income.MIDDLE_I);
+
+PollfishParams pollfishParams = new PollfishParams(new VoidBlock1<PollfishParams>() {
+    @Override
+    public void invoke(PollfishParams pollfishParams) {
+        pollfishParams.setIndicatorPosition(PollfishPosition.MiddleRight);
+        pollfishParams.setIndicatorPadding(10);
+        pollfishParams.setReleaseMode(false);
+        pollfishParams.setOfferwallMode(false);
+        pollfishParams.setRequestUUID("USER_ID");
+        pollfishParams.setUserAttributes(userAttributesDictionary);
+    }
+});
+
+Pollfish.init("YOUR_API_KEY", pollfishParams);
 ```
 
 ## Pollfish home page

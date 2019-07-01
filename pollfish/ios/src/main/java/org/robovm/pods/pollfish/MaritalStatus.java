@@ -51,8 +51,12 @@ public enum /*<name>*/MaritalStatus/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*/
     @Bridge(symbol="MARITAL_STATUS", optional=true)
-    public native NSString asString();
+    protected static native NSString asString0(MaritalStatus marital_status);
     /*</methods>*/
+
+    public NSString asString() {
+        return asString0(this);
+    }
 
     private final long n;
 

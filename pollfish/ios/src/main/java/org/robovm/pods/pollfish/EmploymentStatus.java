@@ -54,8 +54,12 @@ public enum /*<name>*/EmploymentStatus/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*/
     @Bridge(symbol="EMPLOYMENT_STATUS", optional=true)
-    public native NSString asString();
+    protected static native NSString asString0(EmploymentStatus employment);
     /*</methods>*/
+
+    public NSString asString() {
+        return asString0(this);
+    }
 
     private final long n;
 

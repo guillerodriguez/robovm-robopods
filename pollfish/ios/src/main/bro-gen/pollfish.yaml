@@ -74,40 +74,58 @@ protocols: {}
 functions:
     # turn into toString()
     "GENDER":
+        static: true
         class: Gender
-        name: asString
+        name: asString0
+        visibility: protected
         return_type: NSString
     "YEAR_OF_BIRTH":
+        static: true
         class: YearOfBirth
-        name: asString
+        name: asString0
+        visibility: protected
         return_type: NSString
     "MARITAL_STATUS":
+        static: true
         class: MaritalStatus
-        name: asString
+        name: asString0
+        visibility: protected
         return_type: NSString
     "PARENTAL_STATUS":
+        static: true
         class: ParentalStatus
-        name: asString
+        name: asString0
+        visibility: protected
         return_type: NSString
     "EDUCATION_LEVEL":
+        static: true
         class: EducationLevel
-        name: asString
+        name: asString0
+        visibility: protected
         return_type: NSString
     "EMPLOYMENT_STATUS":
+        static: true
         class: EmploymentStatus
-        name: asString
+        name: asString0
+        visibility: protected
         return_type: NSString
     "CAREER":
+        static: true
         class: Career
-        name: asString
+        name: asString0
+        visibility: protected
         return_type: NSString
     "RACE":
+        static: true
         class: Race
-        name: asString
+        name: asString0
+        visibility: protected
         return_type: NSString
     "INCOME":
+        static: true
         class: Income
-        name: asString
+        name: asString0
+        visibility: protected
         return_type: NSString
 
     # Make sure we don't miss any functions if new ones are introduced in a later version

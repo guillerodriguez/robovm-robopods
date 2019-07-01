@@ -112,8 +112,12 @@ public enum /*<name>*/YearOfBirth/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*/
     @Bridge(symbol="YEAR_OF_BIRTH", optional=true)
-    public native NSString asString();
+    protected static native NSString asString0(YearOfBirth year_of_birth);
     /*</methods>*/
+
+    public NSString asString() {
+        return asString0(this);
+    }
 
     private final long n;
 

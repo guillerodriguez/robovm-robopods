@@ -47,8 +47,12 @@ public enum /*<name>*/Gender/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*/
     @Bridge(symbol="GENDER", optional=true)
-    public native NSString asString();
+    protected static native NSString asString0(Gender gender);
     /*</methods>*/
+
+    public NSString asString() {
+        return asString0(this);
+    }
 
     private final long n;
 

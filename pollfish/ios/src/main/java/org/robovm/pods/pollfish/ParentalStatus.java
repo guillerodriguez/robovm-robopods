@@ -52,8 +52,12 @@ public enum /*<name>*/ParentalStatus/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*/
     @Bridge(symbol="PARENTAL_STATUS", optional=true)
-    public native NSString asString();
+    protected static native NSString asString0(ParentalStatus parental_status);
     /*</methods>*/
+
+    public NSString asString() {
+        return asString0(this);
+    }
 
     private final long n;
 

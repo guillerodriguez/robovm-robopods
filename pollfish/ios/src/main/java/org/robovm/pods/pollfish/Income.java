@@ -52,8 +52,12 @@ public enum /*<name>*/Income/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*/
     @Bridge(symbol="INCOME", optional=true)
-    public native NSString asString();
+    protected static native NSString asString0(Income income);
     /*</methods>*/
+
+    public NSString asString() {
+        return asString0(this);
+    }
 
     private final long n;
 

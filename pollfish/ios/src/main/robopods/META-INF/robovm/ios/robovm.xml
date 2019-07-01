@@ -1,0 +1,19 @@
+<config>
+    <frameworks>
+        <framework>AdSupport</framework>
+        <framework>CoreTelephony</framework>
+        <framework>SystemConfiguration</framework>
+        <framework>WebKit</framework>
+    </frameworks>
+    <exportedSymbols>
+        <symbol>GENDER</symbol>
+        <symbol>YEAR_OF_BIRTH</symbol>
+        <symbol>MARITAL_STATUS</symbol>
+        <symbol>PARENTAL_STATUS</symbol>
+        <symbol>EDUCATION_LEVEL</symbol>
+        <symbol>EMPLOYMENT_STATUS</symbol>
+        <symbol>CAREER</symbol>
+        <symbol>RACE</symbol>
+        <symbol>INCOME</symbol>
+    </exportedSymbols>
+</config>

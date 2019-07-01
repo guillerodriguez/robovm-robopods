@@ -53,8 +53,12 @@ public enum /*<name>*/Race/*</name>*/ implements ValuedEnum {
     /*<constants>*//*</constants>*/
     /*<methods>*/
     @Bridge(symbol="RACE", optional=true)
-    public native NSString asString();
+    protected static native NSString asString0(Race race);
     /*</methods>*/
+
+    public NSString asString() {
+        return asString0(this);
+    }
 
     private final long n;
 
