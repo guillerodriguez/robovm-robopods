@@ -16,9 +16,24 @@ This is the list of currently available AltPods. Click them to get more informat
 | [SAMKeychain](samkeychain/)        | SAMKeychain is a simple wrapper for accessing accounts, getting passwords, setting passwords, and deleting passwords using the system Keychain on Mac OS X and iOS|
 | [BranchMetrics](branchmetrics/)    | The Branch Metrics iOS SDK for deferred and contextual mobile deep linking|
 | [HelpShift](helpshift/)            | Deliver a superior customer service experience at a lower cost with Helpshift’s AI-powered messaging platform.|
+| [AppLovinSDK](applovinsdk/)        | An advertisement mediator SDK |
+| [Pollfish](pollfish/)              | Simple Surveys |
 
 
 ## Version of AltPods to framework version mapping
+
+v1.2.0 -- in development
+
+| Name                               | 1.2.0  |
+|------------------------------------|--------|
+| [Charts](charts/)                  | 3.2.1  |
+| [OneSignal](onesignal/)            | 2.9.4  |
+| [Lottie](lottie/)                  | 2.5.2  |
+| [SAMKeychain](samkeychain/)        | 1.5.3  |
+| [BranchMetrics](branchmetrics/)    | 0.25.10|
+| [HelpShift](helpshift/)            | 7.3.0  |
+| [AppLovinSDK](applovinsdk/)        | 6.7.1  |
+| [Pollfish](pollfish/)              | 5.0.0  |
 
 v1.1.0 -- in development
 
