@@ -51,6 +51,7 @@ import org.robovm.apple.uikit.*;
     /*<methods>*/
     @NotImplemented("didReceiveUnreadMessagesCount:")
     public void didReceiveUnreadMessagesCount(@MachineSizedSInt long count) {}
+    @Deprecated
     @NotImplemented("didReceiveNotificationCount:")
     public void didReceiveNotificationCount(@MachineSizedSInt long count) {}
     @NotImplemented("helpshiftSupportSessionHasBegun")

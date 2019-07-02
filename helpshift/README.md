@@ -4,7 +4,7 @@
 
 | RoboPods Version  | HelpShift Version |
 |-------------------|-------------------|
-| 1.1.0             | 7.3.0             |
+| 1.1.0             | 7.5.3             |
 
 ## Official website
 

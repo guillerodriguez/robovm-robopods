@@ -60,6 +60,7 @@ import org.robovm.apple.uikit.*;
     @GlobalValue(symbol="HelpshiftSupportTagsKey", optional=true)
     public static native String getHelpshiftSupportTagsKey();
     
+    @Deprecated
     @Method(selector = "dynamicFormWithTitle:andFlows:")
     public native UIViewController getDynamicForm(String title, NSArray<?> flows);
     @Method(selector = "sharedInstance")
@@ -68,48 +69,76 @@ import org.robovm.apple.uikit.*;
     public static native void pauseDisplayOfInAppNotification(boolean pauseInApp);
     @Method(selector = "setLanguage:")
     public static native void setLanguage(String languageCode);
+    @Deprecated
     @Method(selector = "showConversation:withOptions:")
     public static native void showConversation(UIViewController viewController, NSDictionary<?, ?> optionsDictionary);
     @Method(selector = "showConversation:withConfig:")
     public static native void showConversation(UIViewController viewController, HelpshiftAPIConfig configObject);
+    @Deprecated
     @Method(selector = "showFAQs:withOptions:")
     public static native void showFAQs(UIViewController viewController, NSDictionary<?, ?> optionsDictionary);
     @Method(selector = "showFAQs:withConfig:")
     public static native void showFAQs(UIViewController viewController, HelpshiftAPIConfig configObject);
+    @Deprecated
     @Method(selector = "showFAQSection:withController:withOptions:")
     public static native void showFAQSection(String faqSectionPublishID, UIViewController viewController, NSDictionary<?, ?> optionsDictionary);
     @Method(selector = "showFAQSection:withController:withConfig:")
     public static native void showFAQSection(String faqSectionPublishID, UIViewController viewController, HelpshiftAPIConfig configObject);
+    @Deprecated
     @Method(selector = "showSingleFAQ:withController:withOptions:")
     public static native void showSingleFAQ(String faqPublishID, UIViewController viewController, NSDictionary<?, ?> optionsDictionary);
     @Method(selector = "showSingleFAQ:withController:withConfig:")
     public static native void showSingleFAQ(String faqPublishID, UIViewController viewController, HelpshiftAPIConfig configObject);
+    /**
+     * @deprecated This API is non operational and deprecated
+     */
+    @Deprecated
     @Method(selector = "showAlertToRateAppWithURL:withCompletionBlock:")
     public static native void showAlertToRateApp(String url, @Block VoidBlock1<HelpshiftSupportAlertToRateAppAction> completionBlock);
+    /**
+     * @deprecated Use login: instead
+     */
+    @Deprecated
     @Method(selector = "setUserIdentifier:")
     public static native void setUserIdentifier(String userIdentifier);
     @Method(selector = "leaveBreadCrumb:")
     public static native void leaveBreadCrumb(String breadCrumbString);
+    @Deprecated
     @Method(selector = "setMetadataBlock:")
     public static native void setMetadataBlock(@Block Block0<NSDictionary<?, ?>> metadataBlock);
     @Method(selector = "setMetadataObjectBlock:")
     public static native void setMetadataObjectBlock(@Block Block0<HelpshiftSupportMetaData> metadataBlock);
+    /**
+     * @deprecated Use checkIfConversationActive instead
+     */
+    @Deprecated
     @Method(selector = "isConversationActive")
     public static native boolean isConversationActive();
     @Method(selector = "checkIfConversationActive")
     public static native void checkIfConversationActive();
+    /**
+     * @deprecated Use requestUnreadMessagesCount instead.
+     */
+    @Deprecated
     @Method(selector = "getNotificationCountFromRemote:")
     public static native @MachineSizedSInt long getNotificationCountFromRemote(boolean isRemote);
     @Method(selector = "requestUnreadMessagesCount:")
     public static native void requestUnreadMessagesCount(boolean isRemote);
     @Method(selector = "clearBreadCrumbs")
     public static native void clearBreadCrumbs();
+    /**
+     * @deprecated Use closeHelpshiftSupportSessionWithCompletionHandler: instead
+     */
+    @Deprecated
     @Method(selector = "closeHelpshiftSupportSession")
     public static native void closeHelpshiftSupportSession();
+    @Method(selector = "closeHelpshiftSupportSessionWithCompletionHandler:")
+    public static native void closeHelpshiftSupportSession(@Block Runnable completionHandler);
     @Method(selector = "handleContinueUserActivity:withController:andRestorationHandler:")
     public static native boolean handleContinueUserActivity(NSUserActivity userActivity, UIViewController viewController, @Block VoidBlock1<NSArray<?>> restorationHandler);
     @Method(selector = "addLog:")
     public static native void addLog(String message);
+    @Deprecated
     @Method(selector = "showDynamicFormOnViewController:withTitle:andFlows:withConfigOptions:")
     public static native boolean showDynamicForm(UIViewController viewController, String title, NSArray<?> flows, NSDictionary<?, ?> configOptions);
     @Method(selector = "showDynamicFormOnViewController:withTitle:andFlows:withConfig:")
@@ -118,22 +147,30 @@ import org.robovm.apple.uikit.*;
     public static native boolean showDynamicFormWithFlowsData(UIViewController viewController, String title, NSArray<?> flows, NSDictionary<?, ?> configOptions);
     @Method(selector = "pushDynamicFormOnViewController:withTitle:andFlows:")
     public static native boolean pushDynamicForm(UIViewController viewController, String title, NSArray<?> flows);
+    /**
+     * @deprecated Use requestDynamicFormWithTitle:andFlows: instead
+     */
+    @Deprecated
     @Method(selector = "dynamicFormWithTitle:andFlows:")
     public static native UINavigationController createDynamicForm(String title, NSArray<?> flows);
     @Method(selector = "requestDynamicFormWithTitle:andFlows:")
     public static native void requestDynamicFormWithTitle$andFlows$(String title, NSArray<?> flows);
+    @Deprecated
     @Method(selector = "flowToShowConversationWithDisplayText:andConfigOptions:")
     public static native NSObject createDlowToShowConversation(String displayText, NSDictionary<?, ?> configOptions);
     @Method(selector = "flowToShowConversationWithDisplayText:andConfig:")
     public static native NSObject createFlowToShowConversation(String displayText, HelpshiftAPIConfig configObject);
+    @Deprecated
     @Method(selector = "flowToShowFAQsWithDisplayText:andConfigOptions:")
     public static native NSObject createFlowToShowFAQs(String displayText, NSDictionary<?, ?> configOptions);
     @Method(selector = "flowToShowFAQsWithDisplayText:andConfig:")
     public static native NSObject createFlowToShowFAQs(String displayText, HelpshiftAPIConfig configObject);
+    @Deprecated
     @Method(selector = "flowToShowFAQSectionForPublishId:withDisplayText:andConfigOptions:")
     public static native NSObject createFlowToShowFAQSection(String sectionPublishId, String displayText, NSDictionary<?, ?> configOptions);
     @Method(selector = "flowToShowFAQSectionForPublishId:withDisplayText:andConfig:")
     public static native NSObject createFlowToShowFAQSection(String sectionPublishId, String displayText, HelpshiftAPIConfig configObject);
+    @Deprecated
     @Method(selector = "flowToShowSingleFAQForPublishId:withDisplayText:andConfigOptions:")
     public static native NSObject createFlowToShowSingleFAQForPublishId(String FAQPublishId, String displayText, NSDictionary<?, ?> configOptions);
     @Method(selector = "flowToShowSingleFAQForPublishId:withDisplayText:andConfig:")

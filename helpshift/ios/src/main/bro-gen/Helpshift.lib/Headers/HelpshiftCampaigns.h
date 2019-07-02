@@ -1,6 +1,6 @@
 /*
  *    HelpshiftCampaigns.h
- *    SDK Version 7.3.0
+ *    SDK Version 7.5.3-withCampaigns
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -18,7 +18,6 @@
  *  Campaigns API provider
  */
 @interface HelpshiftCampaigns : NSObject <HsApiProvider> {
-    BOOL isInitialized;
 }
 
 @property (nonatomic, weak) id<HelpshiftCampaignsDelegate> delegate;
@@ -26,7 +25,7 @@
 /**
  *  Delegate for getting callbacks related to Campaigns inbox messages.
  */
-@property (weak, nonatomic) id<HelpshiftInboxDelegate> inboxDelegate;
+@property (weak, nonatomic) id<HelpshiftInboxDelegate> inboxDelegate __deprecated_msg("This delegate is now deprecated. Please use HelpshiftInbox.delegate instead.");
 
 /**
  *  Return the shared instance object of the HelpshiftCampaigns class

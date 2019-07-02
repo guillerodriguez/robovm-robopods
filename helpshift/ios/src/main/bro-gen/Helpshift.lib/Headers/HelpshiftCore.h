@@ -1,6 +1,6 @@
 /*
  *    HelpshiftCore.h
- *    SDK Version 7.3.0
+ *    SDK Version 7.5.3-withCampaigns
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -12,7 +12,7 @@
 
 typedef enum HsAddFAQsToDeviceSearch
 {
-    HsAddFaqsToDeviceSearchOnInstall = 0,
+    HsAddFaqsToDeviceSearchOnInstall __attribute__((deprecated)) = 0,
     HsAddFaqsToDeviceSearchAfterViewingFAQs,
     HsAddFaqsToDeviceSearchNever
 } HsAddFAQsToDeviceSearch;
@@ -108,7 +108,7 @@ typedef enum HsEnableContactUs
 @property (nonatomic, assign) BOOL requireEmail __deprecated_msg("This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.");
 @property (nonatomic, assign) BOOL hideNameAndEmail __deprecated_msg("This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.");
 @property (nonatomic, assign) BOOL showSearchOnNewConversation __deprecated_msg("This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.");
-@property (strong, nonatomic) NSString *conversationPrefillText __deprecated_msg("This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.");
+@property (strong, nonatomic) NSString *conversationPrefillText;
 @property (nonatomic, assign) BOOL showConversationResolutionQuestion __deprecated_msg("This config is now deprecated. Please turn On/Off this config from app settings (In App SDK configuration page on Admin dashboard)");
 @property (nonatomic, assign) BOOL enableTypingIndicator __deprecated_msg("This config is now deprecated. Please turn On/Off this config from app settings (In App SDK configuration page on Admin dashboard)");
 
@@ -139,6 +139,12 @@ typedef enum HsEnableContactUs
  */
 
 @interface HelpshiftCore : NSObject
+/**
+ * Enable the testing mode for the SDK. This will give additional debug information to help you with SDK integration.
+ * DO NOT enable this in production build of your application.
+ */
++ (void) enableTestingMode;
+
 /**
  *  Initialize the HelpshiftCore class with an instance of the Helpshift service which you want to use.
  *  @param apiProvider An implementation of the HsApiProvider protocol. Current implementors of this service are the HelpshiftCampaigns, HelpshiftSupport and HelpshiftAll classes.

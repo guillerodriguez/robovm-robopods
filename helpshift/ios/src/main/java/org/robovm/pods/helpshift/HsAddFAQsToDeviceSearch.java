@@ -37,6 +37,7 @@ import org.robovm.apple.uikit.*;
 /*<annotations>*//*</annotations>*/
 public enum /*<name>*/HsAddFAQsToDeviceSearch/*</name>*/ implements ValuedEnum {
     /*<values>*/
+    @Deprecated
     OnInstall(0L),
     AfterViewingFAQs(1L),
     Never(2L);

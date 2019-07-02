@@ -49,6 +49,7 @@ import org.robovm.apple.uikit.*;
     /*<methods>*/
     @Method(selector = "didReceiveUnreadMessagesCount:")
     void didReceiveUnreadMessagesCount(@MachineSizedSInt long count);
+    @Deprecated
     @Method(selector = "didReceiveNotificationCount:")
     void didReceiveNotificationCount(@MachineSizedSInt long count);
     @Method(selector = "helpshiftSupportSessionHasBegun")

@@ -31,11 +31,11 @@ v1.2.0 -- in development
 | [Lottie](lottie/)                  | 2.5.2  |
 | [SAMKeychain](samkeychain/)        | 1.5.3  |
 | [BranchMetrics](branchmetrics/)    | 0.27.1 |
-| [HelpShift](helpshift/)            | 7.3.0  |
+| [HelpShift](helpshift/)            | 7.5.3  |
 | [AppLovinSDK](applovinsdk/)        | 6.7.1  |
 | [Pollfish](pollfish/)              | 5.0.0  |
 
-v1.1.0 -- in development
+v1.1.0
 
 | Name                               | 1.1.0  |
 |------------------------------------|--------|

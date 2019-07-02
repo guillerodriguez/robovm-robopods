@@ -52,8 +52,16 @@ import org.robovm.apple.uikit.*;
     public native HelpshiftCampaignsDelegate getDelegate();
     @Property(selector = "setDelegate:", strongRef = true)
     public native void setDelegate(HelpshiftCampaignsDelegate v);
+    /**
+     * @deprecated This delegate is now deprecated. Please use HelpshiftInbox.delegate instead.
+     */
+    @Deprecated
     @Property(selector = "inboxDelegate")
     public native HelpshiftInboxDelegate getInboxDelegate();
+    /**
+     * @deprecated This delegate is now deprecated. Please use HelpshiftInbox.delegate instead.
+     */
+    @Deprecated
     @Property(selector = "setInboxDelegate:", strongRef = true)
     public native void setInboxDelegate(HelpshiftInboxDelegate v);
     /*</properties>*/
@@ -83,6 +91,10 @@ import org.robovm.apple.uikit.*;
     public static native void showMessage(String messageId, UIViewController viewController, HelpshiftAPIConfig configObject);
     @Method(selector = "refetchMessages")
     public static native void refetchMessages();
+    /**
+     * @deprecated Use requestUnreadMessagesCount instead.
+     */
+    @Deprecated
     @Method(selector = "getCountOfUnreadMessages")
     public static native @MachineSizedSInt long getCountOfUnreadMessages();
     @Method(selector = "requestUnreadMessagesCount")

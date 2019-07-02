@@ -52,14 +52,21 @@ import org.robovm.apple.uikit.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Method(selector = "enableTestingMode")
+    public static native void enableTestingMode();
     @Method(selector = "initializeWithProvider:")
     public static native void initialize(HsApiProvider apiProvider);
     @Method(selector = "installForApiKey:domainName:appID:")
     public static native void installForApiKey(String apiKey, String domainName, String appID);
+    @Deprecated
     @Method(selector = "installForApiKey:domainName:appID:withOptions:")
     public static native void installForApiKey(String apiKey, String domainName, String appID, NSDictionary<?, ?> optionsDictionary);
     @Method(selector = "installForApiKey:domainName:appID:withConfig:")
     public static native void installForApiKey(String apiKey, String domainName, String appID, HelpshiftInstallConfig configObject);
+    /**
+     * @deprecated Use login: instead
+     */
+    @Deprecated
     @Method(selector = "loginWithIdentifier:withName:andEmail:")
     public static native void login(String identifier, String name, String email);
     @Method(selector = "login:")
@@ -68,6 +75,10 @@ import org.robovm.apple.uikit.*;
     public static native void logout();
     @Method(selector = "clearAnonymousUser")
     public static native void clearAnonymousUser();
+    /**
+     * @deprecated Use login: instead
+     */
+    @Deprecated
     @Method(selector = "setName:andEmail:")
     public static native void setNameAndEmail(String name, String email);
     @Method(selector = "registerDeviceToken:")
@@ -80,18 +91,46 @@ import org.robovm.apple.uikit.*;
     public static native boolean handleEventsForBackgroundURLSession(String identifier, @Block Runnable completionHandler);
     @Method(selector = "setLanguage:")
     public static native void setLanguage(String languageCode);
+    /**
+     * @deprecated Use setLanguage: instead
+     */
+    @Deprecated
     @Method(selector = "setSDKLanguage:")
     public static native boolean setSDKLanguage(String languageCode);
+    /**
+     * @deprecated Use handleNotificationWithUserInfoDictionary:isAppLaunch:withController: instead
+     */
+    @Deprecated
     @Method(selector = "handleRemoteNotification:withController:")
     public static native boolean handleRemoteNotification(NSDictionary<?, ?> notification, UIViewController viewController);
+    /**
+     * @deprecated Use handleNotificationWithUserInfoDictionary:isAppLaunch:withController: instead
+     */
+    @Deprecated
     @Method(selector = "handleRemoteNotification:isAppLaunch:withController:")
     public static native boolean handleRemoteNotification(NSDictionary<?, ?> notification, boolean isAppLaunch, UIViewController viewController);
+    /**
+     * @deprecated Use handleNotificationWithUserInfoDictionary:isAppLaunch:withController: instead
+     */
+    @Deprecated
     @Method(selector = "handleLocalNotification:withController:")
     public static native boolean handleLocalNotification(UILocalNotification notification, UIViewController viewController);
+    /**
+     * @deprecated Use handleInteractiveLocalNotificationWithUserInfoDictionary:forAction:completionHandler: instead
+     */
+    @Deprecated
     @Method(selector = "handleInteractiveLocalNotification:forAction:completionHandler:")
     public static native boolean handleInteractiveLocalNotification(UILocalNotification notification, String actionIdentifier, @Block Runnable completionHandler);
+    /**
+     * @deprecated Use handleNotificationResponseWithActionIdentifier:userInfo:completionHandler: instead
+     */
+    @Deprecated
     @Method(selector = "handleInteractiveRemoteNotification:forAction:completionHandler:")
     public static native boolean handleInteractiveRemoteNotification(NSDictionary<?, ?> notification, String actionIdentifier, @Block Runnable completionHandler);
+    /**
+     * @deprecated Use handleNotificationResponseWithActionIdentifier:userInfo:completionHandler: instead
+     */
+    @Deprecated
     @Method(selector = "handleInteractiveLocalNotificationWithUserInfoDictionary:forAction:completionHandler:")
     public static native boolean handleInteractiveLocalNotification(NSDictionary<?, ?> userInfo, String actionIdentifier, @Block Runnable completionHandler);
     /*</methods>*/

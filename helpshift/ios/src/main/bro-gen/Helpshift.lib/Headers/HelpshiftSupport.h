@@ -1,6 +1,6 @@
 /*
  *    HelpshiftSupport.h
- *    SDK Version 7.3.0
+ *    SDK Version 7.5.3-withCampaigns
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -394,7 +394,19 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  * Available in SDK version 5.0.0 or later
  *
  */
-+ (void) closeHelpshiftSupportSession;
++ (void) closeHelpshiftSupportSession __deprecated_msg("Use closeHelpshiftSupportSessionWithCompletionHandler: instead");
+
+/** Close the current Helpshift session
+ *
+ * If currently any Helpshift session is active, this API will close that session.
+ * Otherwise if any Helpshift session is not active, completion handler will be called immediately.
+ *
+ * Available in SDK version 7.5.0 or later
+ *
+ *  @param completionHandler       completion handler to be called when the Helpshift session has been closed
+ *
+ */
++ (void) closeHelpshiftSupportSessionWithCompletionHandler:(void (^)(void))completionHandler;
 
 /**
  *  Let the Helpshift SDK handle the continue user activity delegate.

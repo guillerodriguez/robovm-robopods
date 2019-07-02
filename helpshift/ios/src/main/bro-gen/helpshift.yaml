@@ -163,7 +163,8 @@ classes:
                 exclude: true # outdated
             '+setSDKLanguage:':
                 exclude: true # outdated and conflicts
-
+            '+closeHelpshiftSupportSessionWithCompletionHandler:':
+                name: closeHelpshiftSupportSession
 protocols:
     HsApiProvider:
         methods:

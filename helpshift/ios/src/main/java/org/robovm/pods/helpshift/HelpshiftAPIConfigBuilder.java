@@ -84,32 +84,80 @@ import org.robovm.apple.uikit.*;
     public native NSDictionary<?, ?> getExtraConfig();
     @Property(selector = "setExtraConfig:")
     public native void setExtraConfig(NSDictionary<?, ?> v);
+    /**
+     * @deprecated This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.
+     */
+    @Deprecated
     @Property(selector = "gotoConversationAfterContactUs")
     public native boolean isGotoConversationAfterContactUs();
+    /**
+     * @deprecated This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.
+     */
+    @Deprecated
     @Property(selector = "setGotoConversationAfterContactUs:")
     public native void setGotoConversationAfterContactUs(boolean v);
+    /**
+     * @deprecated This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.
+     */
+    @Deprecated
     @Property(selector = "requireEmail")
     public native boolean isRequireEmail();
+    /**
+     * @deprecated This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.
+     */
+    @Deprecated
     @Property(selector = "setRequireEmail:")
     public native void setRequireEmail(boolean v);
+    /**
+     * @deprecated This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.
+     */
+    @Deprecated
     @Property(selector = "hideNameAndEmail")
     public native boolean isHideNameAndEmail();
+    /**
+     * @deprecated This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.
+     */
+    @Deprecated
     @Property(selector = "setHideNameAndEmail:")
     public native void setHideNameAndEmail(boolean v);
+    /**
+     * @deprecated This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.
+     */
+    @Deprecated
     @Property(selector = "showSearchOnNewConversation")
     public native boolean isShowSearchOnNewConversation();
+    /**
+     * @deprecated This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.
+     */
+    @Deprecated
     @Property(selector = "setShowSearchOnNewConversation:")
     public native void setShowSearchOnNewConversation(boolean v);
     @Property(selector = "conversationPrefillText")
     public native String getConversationPrefillText();
     @Property(selector = "setConversationPrefillText:")
     public native void setConversationPrefillText(String v);
+    /**
+     * @deprecated This config is now deprecated. Please turn On/Off this config from app settings (In App SDK configuration page on Admin dashboard)
+     */
+    @Deprecated
     @Property(selector = "showConversationResolutionQuestion")
     public native boolean isShowConversationResolutionQuestion();
+    /**
+     * @deprecated This config is now deprecated. Please turn On/Off this config from app settings (In App SDK configuration page on Admin dashboard)
+     */
+    @Deprecated
     @Property(selector = "setShowConversationResolutionQuestion:")
     public native void setShowConversationResolutionQuestion(boolean v);
+    /**
+     * @deprecated This config is now deprecated. Please turn On/Off this config from app settings (In App SDK configuration page on Admin dashboard)
+     */
+    @Deprecated
     @Property(selector = "enableTypingIndicator")
     public native boolean isEnableTypingIndicator();
+    /**
+     * @deprecated This config is now deprecated. Please turn On/Off this config from app settings (In App SDK configuration page on Admin dashboard)
+     */
+    @Deprecated
     @Property(selector = "setEnableTypingIndicator:")
     public native void setEnableTypingIndicator(boolean v);
     /*</properties>*/
