@@ -102,32 +102,88 @@ import org.robovm.apple.corespotlight.*;
     public native BranchContentMetadata getContentMetadata();
     @Property(selector = "setContentMetadata:")
     public native void setContentMetadata(BranchContentMetadata v);
+    /**
+     * @deprecated Use `BranchUniversalObject.contentMetadata.customMetadata` instead.
+     */
+    @Deprecated
     @Property(selector = "metadata")
     public native NSDictionary<?, ?> getMetadata();
+    /**
+     * @deprecated Use `BranchUniversalObject.contentMetadata.customMetadata` instead.
+     */
+    @Deprecated
     @Property(selector = "setMetadata:")
     public native void setMetadata(NSDictionary<?, ?> v);
+    /**
+     * @deprecated Use `BranchUniversalObject.contentMetadata.contentSchema` instead.
+     */
+    @Deprecated
     @Property(selector = "type")
     public native String getType();
+    /**
+     * @deprecated Use `BranchUniversalObject.contentMetadata.contentSchema` instead.
+     */
+    @Deprecated
     @Property(selector = "setType:")
     public native void setType(String v);
+    /**
+     * @deprecated Use `BranchUniversalObject.locallyIndex and BranchUniversalObject.publiclyIndex` instead.
+     */
+    @Deprecated
     @Property(selector = "contentIndexMode")
     public native BranchContentIndexMode getContentIndexMode();
+    /**
+     * @deprecated Use `BranchUniversalObject.locallyIndex and BranchUniversalObject.publiclyIndex` instead.
+     */
+    @Deprecated
     @Property(selector = "setContentIndexMode:")
     public native void setContentIndexMode(BranchContentIndexMode v);
+    /**
+     * @deprecated Not used due to iOS 10.0 Spotlight changes.
+     */
+    @Deprecated
     @Property(selector = "spotlightIdentifier")
     public native String getSpotlightIdentifier();
+    /**
+     * @deprecated Not used due to iOS 10.0 Spotlight changes.
+     */
+    @Deprecated
     @Property(selector = "setSpotlightIdentifier:")
     public native void setSpotlightIdentifier(String v);
+    /**
+     * @deprecated Use `BranchUniversalObject.contentMetadata.price` instead.
+     */
+    @Deprecated
     @Property(selector = "price")
     public native double getPrice();
+    /**
+     * @deprecated Use `BranchUniversalObject.contentMetadata.price` instead.
+     */
+    @Deprecated
     @Property(selector = "setPrice:")
     public native void setPrice(double v);
+    /**
+     * @deprecated Use `BranchUniversalObject.contentMetadata.currency` instead.
+     */
+    @Deprecated
     @Property(selector = "currency")
     public native String getCurrency();
+    /**
+     * @deprecated Use `BranchUniversalObject.contentMetadata.currency` instead.
+     */
+    @Deprecated
     @Property(selector = "setCurrency:")
     public native void setCurrency(String v);
+    /**
+     * @deprecated Use `BranchUniversalObject.locallyIndex` instead.
+     */
+    @Deprecated
     @Property(selector = "automaticallyListOnSpotlight")
     public native boolean automaticallyListOnSpotlight();
+    /**
+     * @deprecated Use `BranchUniversalObject.locallyIndex` instead.
+     */
+    @Deprecated
     @Property(selector = "setAutomaticallyListOnSpotlight:")
     public native void setAutomaticallyListOnSpotlight(boolean v);
     /*</properties>*/
@@ -137,6 +193,10 @@ import org.robovm.apple.corespotlight.*;
     protected native @Pointer long initWithCanonicalIdentifier(String canonicalIdentifier);
     @Method(selector = "initWithTitle:")
     protected native @Pointer long init(String title);
+    /**
+     * @deprecated Use `BranchUniversalObject.contentMetadata.customMetadata` instead.
+     */
+    @Deprecated
     @Method(selector = "addMetadataKey:value:")
     public native void addMetadata(String key, String value);
     @Method(selector = "registerView")
@@ -171,6 +231,10 @@ import org.robovm.apple.corespotlight.*;
     public native void listOnSpotlight();
     @Method(selector = "listOnSpotlightWithCallback:")
     public native void listOnSpotlight(@Block VoidBlock2<NSString, NSError> callback);
+    /**
+     * @deprecated Please see https://dev.branch.io/features/spotlight-indexing/overview/ for instructions on migration.
+     */
+    @Deprecated
     @Method(selector = "listOnSpotlightWithIdentifierCallback:")
     public native void listOnSpotlight(@Block VoidBlock3<NSString, NSString, NSError> spotlightCallback);
     @Method(selector = "listOnSpotlightWithLinkProperties:callback:")

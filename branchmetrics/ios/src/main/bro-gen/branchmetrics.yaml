@@ -17,6 +17,7 @@ enums:
     BNCViewControllerPresentationOption: {prefix: BNCViewControllerOption}
     BranchContentIndexMode: {}
     BranchCreditHistoryOrder: {prefix: Branch}
+    BranchEventAdType: {}
 
 classes:
     BNCCommerceEvent: {}

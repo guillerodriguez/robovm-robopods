@@ -75,6 +75,22 @@ import org.robovm.apple.corespotlight.*;
     public static native String getSpendCredits();
     @GlobalValue(symbol="BranchStandardEventSpendCredits", optional=true)
     public static native void getSpendCredits(String v);
+    @GlobalValue(symbol="BranchStandardEventSubscribe", optional=true)
+    public static native String getSubscribe();
+    @GlobalValue(symbol="BranchStandardEventSubscribe", optional=true)
+    public static native void getSubscribe(String v);
+    @GlobalValue(symbol="BranchStandardEventStartTrial", optional=true)
+    public static native String getStartTrial();
+    @GlobalValue(symbol="BranchStandardEventStartTrial", optional=true)
+    public static native void getStartTrial(String v);
+    @GlobalValue(symbol="BranchStandardEventClickAd", optional=true)
+    public static native String getClickAd();
+    @GlobalValue(symbol="BranchStandardEventClickAd", optional=true)
+    public static native void getClickAd(String v);
+    @GlobalValue(symbol="BranchStandardEventViewAd", optional=true)
+    public static native String getViewAd();
+    @GlobalValue(symbol="BranchStandardEventViewAd", optional=true)
+    public static native void getViewAd(String v);
     @GlobalValue(symbol="BranchStandardEventSearch", optional=true)
     public static native String getSearch();
     @GlobalValue(symbol="BranchStandardEventSearch", optional=true)
@@ -111,5 +127,17 @@ import org.robovm.apple.corespotlight.*;
     public static native String getUnlockAchievement();
     @GlobalValue(symbol="BranchStandardEventUnlockAchievement", optional=true)
     public static native void getUnlockAchievement(String v);
+    @GlobalValue(symbol="BranchStandardEventInvite", optional=true)
+    public static native String getInvite();
+    @GlobalValue(symbol="BranchStandardEventInvite", optional=true)
+    public static native void getInvite(String v);
+    @GlobalValue(symbol="BranchStandardEventLogin", optional=true)
+    public static native String getLogin();
+    @GlobalValue(symbol="BranchStandardEventLogin", optional=true)
+    public static native void getLogin(String v);
+    @GlobalValue(symbol="BranchStandardEventReserve", optional=true)
+    public static native String getReserve();
+    @GlobalValue(symbol="BranchStandardEventReserve", optional=true)
+    public static native void getReserve(String v);
     /*</methods>*/
 }

@@ -50,6 +50,10 @@ import org.robovm.apple.corespotlight.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    /**
+     * @deprecated This API is deprecated. Instead, use deepLinkingControllerCompletedFrom: viewController
+     */
+    @Deprecated
     @NotImplemented("deepLinkingControllerCompleted")
     public void deepLinkingControllerCompleted() {}
     @NotImplemented("deepLinkingControllerCompletedFrom:")

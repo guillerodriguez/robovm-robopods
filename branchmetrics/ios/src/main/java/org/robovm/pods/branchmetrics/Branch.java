@@ -102,6 +102,10 @@ import org.robovm.apple.corespotlight.*;
     public native boolean openURL(UIApplication application, NSURL url, NSDictionary<NSString, ?> options);
     @Method(selector = "handlePushNotification:")
     public native void handlePushNotification(NSDictionary<?, ?> userInfo);
+    /**
+     * @deprecated This API is deprecated. Please use registerDeepLinkController: forKey: withOption:
+     */
+    @Deprecated
     @Method(selector = "registerDeepLinkController:forKey:")
     public native void registerDeepLinkController(UIViewController controller, String key);
     @Method(selector = "registerDeepLinkController:forKey:withPresentation:")
@@ -130,6 +134,10 @@ import org.robovm.apple.corespotlight.*;
     public native void setNetworkTimeout(double timeout);
     @Method(selector = "disableCookieBasedMatching")
     public native void disableCookieBasedMatching();
+    /**
+     * @deprecated Please ensure application:didFinishLaunchingWithOptions: always returns YES/true instead of using this method. It will be removed in a future release.
+     */
+    @Deprecated
     @Method(selector = "accountForFacebookSDKPreventingAppLaunch")
     public native void accountForFacebookSDKPreventingAppLaunch();
     @Method(selector = "suppressWarningLogs")
@@ -314,6 +322,10 @@ import org.robovm.apple.corespotlight.*;
     public native void removeAllPrivateContentFromSpotLight(@Block VoidBlock1<NSError> completion);
     @Method(selector = "initWithInterface:queue:cache:preferenceHelper:key:")
     protected native @Pointer long init(BNCServerInterface inf, BNCServerRequestQueue queue, BNCLinkCache cache, BNCPreferenceHelper preferenceHelper, String key);
+    /**
+     * @deprecated This API is deprecated. Please use BranchEvent:BranchStandardEventViewItem instead.
+     */
+    @Deprecated
     @Method(selector = "registerViewWithParams:andCallback:")
     public native void registerView(NSDictionary<?, ?> params, @Block VoidBlock2<NSDictionary<?, ?>, NSError> callback);
     @Method(selector = "sendServerRequest:")
@@ -322,6 +334,10 @@ import org.robovm.apple.corespotlight.*;
     public native void sendServerRequestWithoutSession(BNCServerRequest request);
     @Method(selector = "clearNetworkQueue")
     public native void clearNetworkQueue();
+    /**
+     * @deprecated Use `Branch.useTestBranchKey = YES;` instead.
+     */
+    @Deprecated
     @Method(selector = "getTestInstance")
     public static native Branch getTestInstance();
     @Method(selector = "getInstance")

@@ -30,7 +30,7 @@ v1.2.0 -- in development
 | [OneSignal](onesignal/)            | 2.9.4  |
 | [Lottie](lottie/)                  | 2.5.2  |
 | [SAMKeychain](samkeychain/)        | 1.5.3  |
-| [BranchMetrics](branchmetrics/)    | 0.25.10|
+| [BranchMetrics](branchmetrics/)    | 0.27.1 |
 | [HelpShift](helpshift/)            | 7.3.0  |
 | [AppLovinSDK](applovinsdk/)        | 6.7.1  |
 | [Pollfish](pollfish/)              | 5.0.0  |

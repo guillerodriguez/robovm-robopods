@@ -88,6 +88,10 @@ import org.robovm.apple.corespotlight.*;
     public native String getSearchQuery();
     @Property(selector = "setSearchQuery:")
     public native void setSearchQuery(String v);
+    @Property(selector = "adType")
+    public native BranchEventAdType getAdType();
+    @Property(selector = "setAdType:")
+    public native void setAdType(BranchEventAdType v);
     @Property(selector = "contentItems")
     public native NSMutableArray<BranchUniversalObject> getContentItems();
     @Property(selector = "setContentItems:")

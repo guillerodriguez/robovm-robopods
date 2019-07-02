@@ -35,28 +35,32 @@ import org.robovm.apple.corespotlight.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/BranchDeepLinkingControllerCompletionDelegate/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
+public enum /*<name>*/BranchEventAdType/*</name>*/ implements ValuedEnum {
+    /*<values>*/
+    None(0L),
+    Banner(1L),
+    Interstitial(2L),
+    RewardedVideo(3L),
+    Native(4L);
+    /*</values>*/
 
-    /*<ptr>*/
-    /*</ptr>*/
     /*<bind>*/
     /*</bind>*/
     /*<constants>*//*</constants>*/
-    /*<properties>*/
-    
-    /*</properties>*/
-    /*<methods>*/
-    /**
-     * @deprecated This API is deprecated. Instead, use deepLinkingControllerCompletedFrom: viewController
-     */
-    @Deprecated
-    @Method(selector = "deepLinkingControllerCompleted")
-    void deepLinkingControllerCompleted();
-    @Method(selector = "deepLinkingControllerCompletedFrom:")
-    void deepLinkingControllerCompletedFrom(UIViewController viewController);
-    /*</methods>*/
-    /*<adapter>*/
-    /*</adapter>*/
+    /*<methods>*//*</methods>*/
+
+    private final long n;
+
+    private /*<name>*/BranchEventAdType/*</name>*/(long n) { this.n = n; }
+    public long value() { return n; }
+    public static /*<name>*/BranchEventAdType/*</name>*/ valueOf(long n) {
+        for (/*<name>*/BranchEventAdType/*</name>*/ v : values()) {
+            if (v.n == n) {
+                return v;
+            }
+        }
+        throw new IllegalArgumentException("No constant with value " + n + " found in " 
+            + /*<name>*/BranchEventAdType/*</name>*/.class.getName());
+    }
 }

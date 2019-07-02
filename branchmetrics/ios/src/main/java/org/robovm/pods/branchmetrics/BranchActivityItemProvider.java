@@ -47,6 +47,10 @@ import org.robovm.apple.corespotlight.*;
     protected BranchActivityItemProvider() {}
     protected BranchActivityItemProvider(Handle h, long handle) { super(h, handle); }
     protected BranchActivityItemProvider(SkipInit skipInit) { super(skipInit); }
+    /**
+     * @deprecated Use the delegate method instead
+     */
+    @Deprecated
     @Method(selector = "initWithParams:andTags:andFeature:andStage:andAlias:")
     public BranchActivityItemProvider(NSDictionary<?, ?> params, NSArray<?> tags, String feature, String stage, String alias) { super((SkipInit) null); initObject(init(params, tags, feature, stage, alias)); }
     @Method(selector = "initWithParams:tags:feature:stage:campaign:alias:delegate:")
@@ -59,6 +63,10 @@ import org.robovm.apple.corespotlight.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    /**
+     * @deprecated Use the delegate method instead
+     */
+    @Deprecated
     @Method(selector = "initWithParams:andTags:andFeature:andStage:andAlias:")
     protected native @Pointer long init(NSDictionary<?, ?> params, NSArray<?> tags, String feature, String stage, String alias);
     @Method(selector = "initWithParams:tags:feature:stage:campaign:alias:delegate:")
