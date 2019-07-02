@@ -62,5 +62,41 @@ import org.robovm.apple.coregraphics.*;
     public native void loadNextAdForAdToken(String adToken, ALAdLoadDelegate delegate);
     @Method(selector = "loadNextAdForZoneIdentifiers:andNotify:")
     public native void loadNextAdForZoneIdentifiers(NSArray<NSString> zoneIdentifiers, ALAdLoadDelegate delegate);
+    /**
+     * @deprecated Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAd:andNotify:] to load ads to display.
+     */
+    @Deprecated
+    @Method(selector = "preloadAdOfSize:")
+    public native void preloadAdOfSize(ALAdSize adSize);
+    /**
+     * @deprecated Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAdForZoneIdentifier:andNotify:] to load ads to display.
+     */
+    @Deprecated
+    @Method(selector = "preloadAdForZoneIdentifier:")
+    public native void preloadAdForZoneIdentifier(String zoneIdentifier);
+    /**
+     * @deprecated Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAd:andNotify:] to load ads to display.
+     */
+    @Deprecated
+    @Method(selector = "hasPreloadedAdOfSize:")
+    public native boolean hasPreloadedAdOfSize(ALAdSize adSize);
+    /**
+     * @deprecated Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAdForZoneIdentifier:andNotify:] to load ads to display.
+     */
+    @Deprecated
+    @Method(selector = "hasPreloadedAdForZoneIdentifier:")
+    public native boolean hasPreloadedAdForZoneIdentifier(String zoneIdentifier);
+    /**
+     * @deprecated Listening to ad updates has been deprecated. The `ALAdView` class for banners, leaderboards, and mrecs no longer automatically refresh contents by itself. You must explicitly call `[ALAdView loadNextAd]` or `[ALAdView renderAd: ...]`. This method will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Method(selector = "addAdUpdateObserver:ofSize:")
+    public native void addAdUpdateObserver(ALAdUpdateObserver adListener, ALAdSize adSize);
+    /**
+     * @deprecated Listening to ad updates has been deprecated. The `ALAdView` class for banners, leaderboards, and mrecs no longer automatically refresh contents by itself. You must explicitly call `[ALAdView loadNextAd]` or `[ALAdView renderAd: ...]`. This method will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Method(selector = "removeAdUpdateObserver:ofSize:")
+    public native void removeAdUpdateObserver(ALAdUpdateObserver adListener, ALAdSize adSize);
     /*</methods>*/
 }

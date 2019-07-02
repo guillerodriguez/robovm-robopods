@@ -2,7 +2,7 @@ package: org.robovm.pods.applovinsdk
 include: [foundation, uikit, coregraphics]
 clang_args: ['-x', 'objective-c']
 framework: AppLovinSDK
-exclude_deprecated: true
+#exclude_deprecated: true
 headers:
     - AppLovinSDK.h
 
@@ -26,7 +26,15 @@ classes:
                 name: loadNextAdForAdToken
             '-loadNextAdForZoneIdentifiers:andNotify:':
                 name: loadNextAdForZoneIdentifiers
-    ALAdSize: {}
+            '-addAdUpdateObserver:ofSize:':
+                name: addAdUpdateObserver
+            '-removeAdUpdateObserver:ofSize:':
+                name: removeAdUpdateObserver
+    ALAdSize:
+        methods:
+            '+sizeWithLabel:orDefault:':
+                constructor: true
+                name: create
     ALAdType: {}
     ALAdView:
         methods:
@@ -40,6 +48,8 @@ classes:
                 name: init
             '-initWithFrame:size:sdk:':
                 name: init
+            '-render:overPlacement:':
+                name: render
     ALEventService:
         methods:
             '-setSuperProperty:forKey:':
@@ -83,6 +93,20 @@ classes:
                 name: Show
             '+showAndNotify:':
                 name: Show
+            '-showOver:placement:andNotify:':
+                name: showOver
+            '-initIncentivizedInterstitialWithSdk:':
+                exclude: true
+            '-showOver:andNotify:':
+                name: showOver
+            '-showOver:renderAd:andNotify:':
+                name: showOver
+            '+showOverPlacement:andNotify:':
+                name: ShowOverPlacement
+            '+showOver:placement:andNotify:':
+                name: ShowOver
+            '+showOver:andNotify:':
+                name: ShowOver
 
     ALInterstitialAd:
         methods:
@@ -90,6 +114,22 @@ classes:
                 name: init
             '+show':
                 name: Show
+            '-initInterstitialAdWithSdk:':
+                exclude: true
+            '-showOver:placement:andRender:':
+                name: showOver
+            '-initWithFrame:sdk:':
+                name: init
+            '-showOver:andRender:':
+                name: showOver
+            '+showOver:placement:':
+                name: ShowOver
+            '+showOver:':
+                name: ShowOver
+            '+showOverPlacement:':
+                name: ShowOverPlacement
+            '+isReadyForDisplay':
+                name: IsReadyForDisplay
     ALNativeAd:
         methods:
             '-videoEndTrackingURL:firstPlay:':
@@ -98,6 +138,10 @@ classes:
         methods:
             '-precacheResourcesForNativeAd:andNotify:':
                 name: precacheResourcesForNativeAd
+            '-loadNativeAdGroupOfCount:andNotify:':
+                name: loadNativeAdGroupOfCount
+            '-loadNativeAdGroupOfCount:forZoneIdentifier:andNotify:':
+                name: loadNativeAdGroupOfCount
     ALPostbackService:
         methods:
             '-dispatchPostbackAsync:andNotify:':
@@ -228,6 +272,10 @@ protocols:
         methods:
             '-variableService:didUpdateVariables:':
                 name: didUpdateVariables
+    ALAdUpdateObserver:
+        methods:
+            '-adService:didUpdateAd:':
+                name: didUpdateAd
     MAAdDelegate:
         methods:
             '-didFailToLoadAdForAdUnitIdentifier:withErrorCode:':

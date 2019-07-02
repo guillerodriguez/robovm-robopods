@@ -49,6 +49,12 @@ import org.robovm.apple.coregraphics.*;
     protected ALInterstitialAd(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithSdk:")
     public ALInterstitialAd(ALSdk sdk) { super((SkipInit) null); initObject(init(sdk)); }
+    /**
+     * @deprecated Initializing with the `frame` property has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Method(selector = "initWithFrame:sdk:")
+    public ALInterstitialAd(@ByVal CGRect frame, ALSdk sdk) { super((SkipInit) null); initObject(init(frame, sdk)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "adLoadDelegate")
@@ -63,6 +69,36 @@ import org.robovm.apple.coregraphics.*;
     public native ALAdVideoPlaybackDelegate getAdVideoPlaybackDelegate();
     @Property(selector = "setAdVideoPlaybackDelegate:")
     public native void setAdVideoPlaybackDelegate(ALAdVideoPlaybackDelegate v);
+    /**
+     * @deprecated Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `show`, `showOver:` or `showOver:andRender:` to display an ad.
+     */
+    @Deprecated
+    @Property(selector = "isReadyForDisplay")
+    public native boolean isReadyForDisplay();
+    /**
+     * @deprecated Setting the `frame` property has no effect. It has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "frame")
+    public native @ByVal CGRect getFrame();
+    /**
+     * @deprecated Setting the `frame` property has no effect. It has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "setFrame:")
+    public native void setFrame(@ByVal CGRect v);
+    /**
+     * @deprecated Setting the `hidden` property has no effect. It has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "hidden")
+    public native boolean isHidden();
+    /**
+     * @deprecated Setting the `hidden` property has no effect. It has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "setHidden:")
+    public native void setHidden(boolean v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -76,5 +112,65 @@ import org.robovm.apple.coregraphics.*;
     public static native ALInterstitialAd Show();
     @Method(selector = "shared")
     public static native ALInterstitialAd shared();
+    /**
+     * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
+     */
+    @Deprecated
+    @Method(selector = "showOverPlacement:")
+    public native void showOverPlacement(String placement);
+    /**
+     * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
+     */
+    @Deprecated
+    @Method(selector = "showOver:placement:andRender:")
+    public native void showOver(UIWindow window, String placement, ALAd ad);
+    /**
+     * @deprecated Initializing with the `frame` property has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Method(selector = "initWithFrame:sdk:")
+    protected native @Pointer long init(@ByVal CGRect frame, ALSdk sdk);
+    /**
+     * @deprecated Dismissing an interstitial while playing negatively affects CPM and is highy discouraged. It is now deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Method(selector = "dismiss")
+    public native void dismiss();
+    /**
+     * @deprecated Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use show instead.
+     */
+    @Deprecated
+    @Method(selector = "showOver:")
+    public native void showOver(UIWindow window);
+    /**
+     * @deprecated Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use showAd: instead.
+     */
+    @Deprecated
+    @Method(selector = "showOver:andRender:")
+    public native void showOver(UIWindow window, ALAd ad);
+    /**
+     * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
+     */
+    @Deprecated
+    @Method(selector = "showOverPlacement:")
+    public static native ALInterstitialAd ShowOverPlacement(String placement);
+    /**
+     * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
+     */
+    @Deprecated
+    @Method(selector = "showOver:placement:")
+    public static native ALInterstitialAd ShowOver(UIWindow window, String placement);
+    /**
+     * @deprecated Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `show`, `showOver:` or `showOver:andRender:` to display an ad.
+     */
+    @Deprecated
+    @Method(selector = "isReadyForDisplay")
+    public static native boolean IsReadyForDisplay();
+    /**
+     * @deprecated Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use show instead.
+     */
+    @Deprecated
+    @Method(selector = "showOver:")
+    public static native ALInterstitialAd ShowOver(UIWindow window);
     /*</methods>*/
 }

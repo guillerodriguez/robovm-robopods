@@ -33,10 +33,12 @@ import org.robovm.apple.coregraphics.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
+/**
+ */
+@Deprecated
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/ALAdRewardDelegate/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/ALAdUpdateObserver/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
@@ -48,20 +50,10 @@ import org.robovm.apple.coregraphics.*;
     
     /*</properties>*/
     /*<methods>*/
-    @Method(selector = "rewardValidationRequestForAd:didSucceedWithResponse:")
-    void didSucceed(ALAd ad, NSDictionary<?, ?> response);
-    @Method(selector = "rewardValidationRequestForAd:didExceedQuotaWithResponse:")
-    void didExceedQuota(ALAd ad, NSDictionary<?, ?> response);
-    @Method(selector = "rewardValidationRequestForAd:wasRejectedWithResponse:")
-    void wasRejected(ALAd ad, NSDictionary<?, ?> response);
-    @Method(selector = "rewardValidationRequestForAd:didFailWithError:")
-    void didFail(ALAd ad, @MachineSizedSInt long responseCode);
-    /**
-     * @deprecated Users will no longer be able to receive rewarded video prompts.
-     */
-    @Deprecated
-    @Method(selector = "userDeclinedToViewAd:")
-    void userDeclinedToViewAd(ALAd ad);
+    @Method(selector = "adService:didUpdateAd:")
+    void didUpdateAd(ALAdService adService, ALAd ad);
+    @Method(selector = "canAcceptUpdate")
+    boolean canAcceptUpdate();
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

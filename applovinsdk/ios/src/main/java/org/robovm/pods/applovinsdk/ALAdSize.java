@@ -47,10 +47,25 @@ import org.robovm.apple.coregraphics.*;
     protected ALAdSize() {}
     protected ALAdSize(Handle h, long handle) { super(h, handle); }
     protected ALAdSize(SkipInit skipInit) { super(skipInit); }
+    /**
+     * @deprecated Custom ad sizes are no longer supported; use an existing singleton size like [ALAdSize sizeBanner]
+     */
+    @Deprecated
+    public ALAdSize(String label, ALAdSize defaultSize) { super((Handle) null, create(label, defaultSize)); retain(getHandle()); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "label")
     public native String getLabel();
+    /**
+     */
+    @Deprecated
+    @Property(selector = "width")
+    public native @MachineSizedFloat double getWidth();
+    /**
+     */
+    @Deprecated
+    @Property(selector = "height")
+    public native @MachineSizedFloat double getHeight();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -64,5 +79,17 @@ import org.robovm.apple.coregraphics.*;
     public static native ALAdSize sizeMRec();
     @Method(selector = "sizeLeader")
     public static native ALAdSize sizeLeader();
+    /**
+     * @deprecated Retrieval of all sizes is deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Method(selector = "allSizes")
+    public static native NSArray<?> allSizes();
+    /**
+     * @deprecated Custom ad sizes are no longer supported; use an existing singleton size like [ALAdSize sizeBanner]
+     */
+    @Deprecated
+    @Method(selector = "sizeWithLabel:orDefault:")
+    protected static native @Pointer long create(String label, ALAdSize defaultSize);
     /*</methods>*/
 }

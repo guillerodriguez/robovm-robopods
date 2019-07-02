@@ -61,6 +61,30 @@ import org.robovm.apple.coregraphics.*;
     public native boolean isMuted();
     @Property(selector = "setMuted:")
     public native void setMuted(boolean v);
+    /**
+     * @deprecated Manually managing what ads SDK should automatically preload has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "autoPreloadAdSizes")
+    public native String getAutoPreloadAdSizes();
+    /**
+     * @deprecated Manually managing what ads SDK should automatically preload has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "setAutoPreloadAdSizes:")
+    public native void setAutoPreloadAdSizes(String v);
+    /**
+     * @deprecated Manually managing what ads SDK should automatically preload has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "autoPreloadAdTypes")
+    public native String getAutoPreloadAdTypes();
+    /**
+     * @deprecated Manually managing what ads SDK should automatically preload has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "setAutoPreloadAdTypes:")
+    public native void setAutoPreloadAdTypes(String v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
