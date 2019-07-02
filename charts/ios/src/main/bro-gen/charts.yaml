@@ -407,10 +407,13 @@ classes:
                 name: init
             '-initWithY:data:':
                 name: init
+                arguments_tuple: ArgsYData
             '-initWithY:icon:':
                 name: init
+                arguments_tuple: ArgsYIcon
             '-initWithY:icon:data:':
                 name: init
+                arguments_tuple: ArgsYIconData
     ChartDataRendererBase:
         methods:
             '-initWithAnimator:viewPortHandler:':
@@ -429,6 +432,10 @@ classes:
                 name: createAccessibleHeaderUsingChart
     ChartDataSet:
         methods:
+            '-initWithEntries:label:':
+                name: init
+            '-initWithEntries:':
+                name: init
             '-initWithValues:label:':
                 name: init
             '-calcMinMaxYFromX:toX:':
@@ -445,6 +452,10 @@ classes:
                 name: calcMinMaxX
             '-calcMinMaxYWithEntry:':
                 name: calcMinMaxY
+            '-removeAllWithKeepingCapacity:':
+                name: removeAll
+            '-setObject:atIndexedSubscript:':
+                name: setObject
     ChartDefaultAxisValueFormatter:
         methods:
             '-initWithFormatter:':
@@ -533,7 +544,6 @@ classes:
             '-setDrawWithPt:':
                 name: setDraw
     ChartHighlighter:
-        skip_def_constructor: true # as new will be def one
         methods:
             '-initWithChart:':
                 name: init
@@ -551,9 +561,6 @@ classes:
                 name: getMinimumDistance
             '-getDistanceWithX1:y1:x2:y2:':
                 name: getDistance
-            '+new':
-                name: newHighlighter
-                constructor: true
 
     ChartIndexAxisValueFormatter:
         methods:
@@ -615,23 +622,14 @@ classes:
             '-drawWithContext:point:':
                 name: draw
     ChartRange:
-        skip_def_constructor: true # as new will be def one
         methods:
             '-initFrom:to:':
                 name: init
-            '+new':
-                name: newRange
-                constructor: true
     ChartRenderer:
-        skip_def_constructor: true # as new will be def one
         methods:
             '-initWithViewPortHandler:':
                 name: init
-            '+new':
-                name: newRenderer
-                constructor: true
     ChartTransformer:
-        skip_def_constructor: true # as new will be def one
         methods:
             '-prepareMatrixValuePxWithChartXMin:deltaX:deltaY:chartYMin:':
                 name: prepareMatrixValuePx
@@ -643,9 +641,6 @@ classes:
                 name: init
             '-prepareMatrixOffsetWithInverted:':
                 name: prepareMatrixOffset
-            '+new':
-                name: newTransformer
-                constructor: true
     ChartTransformerHorizontalBarChart: {}
     ChartViewBase:
         properties:
@@ -713,7 +708,6 @@ classes:
             '-getChartImageWithTransparent:':
                 name: getChartImage
     ChartViewPortHandler:
-        skip_def_constructor: true # as new will be def one
         methods:
             '-initWithWidth:height:':
                 name: init
@@ -745,18 +739,11 @@ classes:
                 name: isInBounds
             '-translateWithPt:':
                 name: translate
-            '+new':
-                name: newViewPortHandler
-                constructor: true
 
     ChartViewPortJob:
-        skip_def_constructor: true # as new will be def one
         methods:
             '-initWithViewPortHandler:xValue:yValue:transformer:view:':
                 name: init
-            '+new':
-                name: newJob
-                constructor: true
     ChartXAxis:
         properties:
             'avoidFirstLastClippingEnabled':
@@ -1147,13 +1134,7 @@ classes:
         methods:
             '-initWithViewPortHandler:scaleX:scaleY:xValue:yValue:transformer:axis:view:':
                 name: init
-    NSUIAccessibilityElement:
-        skip_def_constructor: true # as new will be def one
-        methods:
-            '+new':
-                name: newElement
-                constructor: true
-
+    NSUIAccessibilityElement: {}
 
 protocols:
     BarChartDataProvider: {}
@@ -1173,6 +1154,8 @@ protocols:
                 name: chartScaled
             '-chartTranslated:dX:dY:':
                 name: chartTranslated
+            '-chartView:animatorDidStop:':
+                name: animatorDidStop
     CombinedChartDataProvider: {}
     IBarChartDataSet: {}
     IBarLineScatterCandleBubbleChartDataSet: {}

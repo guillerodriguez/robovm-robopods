@@ -56,6 +56,18 @@ import org.robovm.apple.coreanimation.*;
     public BubbleChartDataEntry(double x, double y, @MachineSizedFloat double size, UIImage icon) { super((SkipInit) null); initObject(init(x, y, size, icon)); }
     @Method(selector = "initWithX:y:size:icon:data:")
     public BubbleChartDataEntry(double x, double y, @MachineSizedFloat double size, UIImage icon, NSObject data) { super((SkipInit) null); initObject(init(x, y, size, icon, data)); }
+    @Method(selector = "initWithX:y:data:")
+    public BubbleChartDataEntry(double x, double y, NSObject data) { super(x, y, data); }
+    @Method(selector = "initWithX:y:icon:")
+    public BubbleChartDataEntry(double x, double y, UIImage icon) { super(x, y, icon); }
+    @Method(selector = "initWithX:y:icon:data:")
+    public BubbleChartDataEntry(double x, double y, UIImage icon, NSObject data) { super(x, y, icon, data); }
+    @Method(selector = "initWithY:data:")
+    public BubbleChartDataEntry(ArgsYData tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:")
+    public BubbleChartDataEntry(ArgsYIcon tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:data:")
+    public BubbleChartDataEntry(ArgsYIconData tuple) { super(tuple); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "size")

@@ -80,6 +80,10 @@ import org.robovm.apple.coreanimation.*;
     public native UIColor getNoDataTextColor();
     @Property(selector = "setNoDataTextColor:")
     public native void setNoDataTextColor(UIColor v);
+    @Property(selector = "noDataTextAlignment")
+    public native NSTextAlignment getNoDataTextAlignment();
+    @Property(selector = "setNoDataTextAlignment:")
+    public native void setNoDataTextAlignment(NSTextAlignment v);
     @Property(selector = "renderer")
     public native ChartDataRendererBase getRenderer();
     @Property(selector = "setRenderer:")

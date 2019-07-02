@@ -48,6 +48,8 @@ import org.robovm.apple.coreanimation.*;
     public PieChartDataEntry() {}
     protected PieChartDataEntry(Handle h, long handle) { super(h, handle); }
     protected PieChartDataEntry(SkipInit skipInit) { super(skipInit); }
+    @Method(selector = "initWithValue:")
+    public PieChartDataEntry(double value) { super((SkipInit) null); initObject(init(value)); }
     @Method(selector = "initWithValue:label:")
     public PieChartDataEntry(double value, String label) { super((SkipInit) null); initObject(init(value, label)); }
     @Method(selector = "initWithValue:label:data:")
@@ -56,14 +58,24 @@ import org.robovm.apple.coreanimation.*;
     public PieChartDataEntry(double value, String label, UIImage icon) { super((SkipInit) null); initObject(init(value, label, icon)); }
     @Method(selector = "initWithValue:label:icon:data:")
     public PieChartDataEntry(double value, String label, UIImage icon, NSObject data) { super((SkipInit) null); initObject(init(value, label, icon, data)); }
-    @Method(selector = "initWithValue:")
-    public PieChartDataEntry(double value) { super((SkipInit) null); initObject(init(value)); }
     @Method(selector = "initWithValue:data:")
     public PieChartDataEntry(double value, NSObject data) { super((SkipInit) null); initObject(init(value, data)); }
     @Method(selector = "initWithValue:icon:")
     public PieChartDataEntry(double value, UIImage icon) { super((SkipInit) null); initObject(init(value, icon)); }
     @Method(selector = "initWithValue:icon:data:")
     public PieChartDataEntry(double value, UIImage icon, NSObject data) { super((SkipInit) null); initObject(init(value, icon, data)); }
+    @Method(selector = "initWithX:y:data:")
+    public PieChartDataEntry(double x, double y, NSObject data) { super(x, y, data); }
+    @Method(selector = "initWithX:y:icon:")
+    public PieChartDataEntry(double x, double y, UIImage icon) { super(x, y, icon); }
+    @Method(selector = "initWithX:y:icon:data:")
+    public PieChartDataEntry(double x, double y, UIImage icon, NSObject data) { super(x, y, icon, data); }
+    @Method(selector = "initWithY:data:")
+    public PieChartDataEntry(ArgsYData tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:")
+    public PieChartDataEntry(ArgsYIcon tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:data:")
+    public PieChartDataEntry(ArgsYIconData tuple) { super(tuple); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "label")
@@ -77,6 +89,8 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Method(selector = "initWithValue:")
+    protected native @Pointer long init(double value);
     @Method(selector = "initWithValue:label:")
     protected native @Pointer long init(double value, String label);
     @Method(selector = "initWithValue:label:data:")
@@ -85,8 +99,6 @@ import org.robovm.apple.coreanimation.*;
     protected native @Pointer long init(double value, String label, UIImage icon);
     @Method(selector = "initWithValue:label:icon:data:")
     protected native @Pointer long init(double value, String label, UIImage icon, NSObject data);
-    @Method(selector = "initWithValue:")
-    protected native @Pointer long init(double value);
     @Method(selector = "initWithValue:data:")
     protected native @Pointer long init(double value, NSObject data);
     @Method(selector = "initWithValue:icon:")

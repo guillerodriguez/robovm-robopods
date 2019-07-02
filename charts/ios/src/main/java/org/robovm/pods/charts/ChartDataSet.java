@@ -50,16 +50,14 @@ import org.robovm.apple.coreanimation.*;
     protected ChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLabel:")
     public ChartDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
-    @Method(selector = "initWithValues:label:")
-    public ChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
-    @Method(selector = "initWithValues:")
-    public ChartDataSet(NSArray<ChartDataEntry> values) { super((SkipInit) null); initObject(init(values)); }
+    @Method(selector = "initWithEntries:label:")
+    public ChartDataSet(NSArray<ChartDataEntry> entries, String label) { super((SkipInit) null); initObject(init(entries, label)); }
+    @Method(selector = "initWithEntries:")
+    public ChartDataSet(NSArray<ChartDataEntry> entries) { super((SkipInit) null); initObject(init(entries)); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "values")
-    public native NSArray<ChartDataEntry> getValues();
-    @Property(selector = "setValues:")
-    public native void setValues(NSArray<ChartDataEntry> v);
+    @Property(selector = "entries")
+    public native NSArray<ChartDataEntry> getEntries();
     @Property(selector = "yMin")
     public native double getYMin();
     @Property(selector = "yMax")
@@ -68,6 +66,10 @@ import org.robovm.apple.coreanimation.*;
     public native double getXMin();
     @Property(selector = "xMax")
     public native double getXMax();
+    /**
+     * @deprecated Use `count` instead
+     */
+    @Deprecated
     @Property(selector = "entryCount")
     public native @MachineSizedSInt long getEntryCount();
     /*</properties>*/
@@ -75,10 +77,12 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "initWithLabel:")
     protected native @Pointer long init(String label);
-    @Method(selector = "initWithValues:label:")
-    protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
-    @Method(selector = "initWithValues:")
-    protected native @Pointer long init(NSArray<ChartDataEntry> values);
+    @Method(selector = "initWithEntries:label:")
+    protected native @Pointer long init(NSArray<ChartDataEntry> entries, String label);
+    @Method(selector = "initWithEntries:")
+    protected native @Pointer long init(NSArray<ChartDataEntry> entries);
+    @Method(selector = "replaceEntries:")
+    public native void replaceEntries(NSArray<ChartDataEntry> entries);
     @Method(selector = "calcMinMax")
     public native void calcMinMax();
     @Method(selector = "calcMinMaxYFromX:toX:")
@@ -87,6 +91,10 @@ import org.robovm.apple.coreanimation.*;
     public native void calcMinMaxX(ChartDataEntry e);
     @Method(selector = "calcMinMaxYWithEntry:")
     public native void calcMinMaxY(ChartDataEntry e);
+    /**
+     * @deprecated Use `subscript(index:)` instead.
+     */
+    @Deprecated
     @Method(selector = "entryForIndex:")
     public native ChartDataEntry entryForIndex(@MachineSizedSInt long i);
     @Method(selector = "entryForXValue:closestToY:rounding:")
@@ -97,23 +105,47 @@ import org.robovm.apple.coreanimation.*;
     public native NSArray<ChartDataEntry> entriesForXValue(double xValue);
     @Method(selector = "entryIndexWithX:closestToY:rounding:")
     public native @MachineSizedSInt long getEntryIndex(double xValue, double yValue, ChartDataSetRounding rounding);
+    /**
+     * @deprecated Use `firstIndex(of:)` or `lastIndex(of:)`
+     */
+    @Deprecated
     @Method(selector = "entryIndexWithEntry:")
     public native @MachineSizedSInt long getEntryIndex(ChartDataEntry e);
+    /**
+     * @deprecated Use `append(_:)` instead
+     */
+    @Deprecated
     @Method(selector = "addEntry:")
     public native boolean addEntry(ChartDataEntry e);
     @Method(selector = "addEntryOrdered:")
     public native boolean addEntryOrdered(ChartDataEntry e);
     @Method(selector = "removeEntry:")
     public native boolean removeEntry(ChartDataEntry entry);
+    /**
+     * @deprecated Use `func removeFirst() -> ChartDataEntry` instead.
+     */
+    @Deprecated
     @Method(selector = "removeFirst")
     public native boolean removeFirst();
+    /**
+     * @deprecated Use `func removeLast() -> ChartDataEntry` instead.
+     */
+    @Deprecated
     @Method(selector = "removeLast")
     public native boolean removeLast();
-    @Method(selector = "contains:")
-    public native boolean contains(ChartDataEntry e);
+    /**
+     * @deprecated Use `removeAll(keepingCapacity:)` instead.
+     */
+    @Deprecated
     @Method(selector = "clear")
     public native void clear();
     @Method(selector = "copyWithZone:")
     public native NSObject copy(NSZone zone);
+    @Method(selector = "removeAllWithKeepingCapacity:")
+    public native void removeAll(boolean keepCapacity);
+    @Method(selector = "objectAtIndexedSubscript:")
+    public native ChartDataEntry objectAtIndexedSubscript(@MachineSizedSInt long position);
+    @Method(selector = "setObject:atIndexedSubscript:")
+    public native void setObject(ChartDataEntry newValue, @MachineSizedSInt long position);
     /*</methods>*/
 }

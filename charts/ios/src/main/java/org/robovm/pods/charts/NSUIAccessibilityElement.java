@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(NSUIAccessibilityElement.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
+    protected NSUIAccessibilityElement() {}
     protected NSUIAccessibilityElement(Handle h, long handle) { super(h, handle); }
     protected NSUIAccessibilityElement(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithAccessibilityContainer:")
     public NSUIAccessibilityElement(UIAccessibilityContainer container) { super((SkipInit) null); initObject(init(container)); }
-    public NSUIAccessibilityElement() { super((Handle) null, newElement());  }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "accessibilityFrame")
@@ -61,7 +61,5 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "initWithAccessibilityContainer:")
     protected native @Pointer long init(UIAccessibilityContainer container);
-    @Method(selector = "new")
-    protected static native @Pointer long newElement();
     /*</methods>*/
 }

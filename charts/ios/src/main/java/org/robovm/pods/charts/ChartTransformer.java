@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartTransformer.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
+    protected ChartTransformer() {}
     protected ChartTransformer(Handle h, long handle) { super(h, handle); }
     protected ChartTransformer(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithViewPortHandler:")
     public ChartTransformer(ChartViewPortHandler viewPortHandler) { super((SkipInit) null); initObject(init(viewPortHandler)); }
-    public ChartTransformer() { super((Handle) null, newTransformer());  }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "valueToPixelMatrix")
@@ -71,7 +71,5 @@ import org.robovm.apple.coreanimation.*;
     public native @ByVal CGPoint valueForTouchPoint(@ByVal CGPoint point);
     @Method(selector = "valueForTouchPointWithX:y:")
     public native @ByVal CGPoint getValueForTouchPoint(@MachineSizedFloat double x, @MachineSizedFloat double y);
-    @Method(selector = "new")
-    protected static native @Pointer long newTransformer();
     /*</methods>*/
 }

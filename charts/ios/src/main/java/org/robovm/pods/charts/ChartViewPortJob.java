@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartViewPortJob.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
+    protected ChartViewPortJob() {}
     protected ChartViewPortJob(Handle h, long handle) { super(h, handle); }
     protected ChartViewPortJob(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithViewPortHandler:xValue:yValue:transformer:view:")
     public ChartViewPortJob(ChartViewPortHandler viewPortHandler, double xValue, double yValue, ChartTransformer transformer, ChartViewBase view) { super((SkipInit) null); initObject(init(viewPortHandler, xValue, yValue, transformer, view)); }
-    public ChartViewPortJob() { super((Handle) null, newJob());  }
     /*</constructors>*/
     /*<properties>*/
     
@@ -60,7 +60,5 @@ import org.robovm.apple.coreanimation.*;
     protected native @Pointer long init(ChartViewPortHandler viewPortHandler, double xValue, double yValue, ChartTransformer transformer, ChartViewBase view);
     @Method(selector = "doJob")
     public native void doJob();
-    @Method(selector = "new")
-    protected static native @Pointer long newJob();
     /*</methods>*/
 }

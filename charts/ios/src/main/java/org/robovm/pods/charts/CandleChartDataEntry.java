@@ -50,12 +50,24 @@ import org.robovm.apple.coreanimation.*;
     protected CandleChartDataEntry(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithX:shadowH:shadowL:open:close:")
     public CandleChartDataEntry(double x, double shadowH, double shadowL, double open, double close) { super((SkipInit) null); initObject(init(x, shadowH, shadowL, open, close)); }
-    @Method(selector = "initWithX:shadowH:shadowL:open:close:data:")
-    public CandleChartDataEntry(double x, double shadowH, double shadowL, double open, double close, NSObject data) { super((SkipInit) null); initObject(init(x, shadowH, shadowL, open, close, data)); }
     @Method(selector = "initWithX:shadowH:shadowL:open:close:icon:")
     public CandleChartDataEntry(double x, double shadowH, double shadowL, double open, double close, UIImage icon) { super((SkipInit) null); initObject(init(x, shadowH, shadowL, open, close, icon)); }
+    @Method(selector = "initWithX:shadowH:shadowL:open:close:data:")
+    public CandleChartDataEntry(double x, double shadowH, double shadowL, double open, double close, NSObject data) { super((SkipInit) null); initObject(init(x, shadowH, shadowL, open, close, data)); }
     @Method(selector = "initWithX:shadowH:shadowL:open:close:icon:data:")
     public CandleChartDataEntry(double x, double shadowH, double shadowL, double open, double close, UIImage icon, NSObject data) { super((SkipInit) null); initObject(init(x, shadowH, shadowL, open, close, icon, data)); }
+    @Method(selector = "initWithX:y:data:")
+    public CandleChartDataEntry(double x, double y, NSObject data) { super(x, y, data); }
+    @Method(selector = "initWithX:y:icon:")
+    public CandleChartDataEntry(double x, double y, UIImage icon) { super(x, y, icon); }
+    @Method(selector = "initWithX:y:icon:data:")
+    public CandleChartDataEntry(double x, double y, UIImage icon, NSObject data) { super(x, y, icon, data); }
+    @Method(selector = "initWithY:data:")
+    public CandleChartDataEntry(ArgsYData tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:")
+    public CandleChartDataEntry(ArgsYIcon tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:data:")
+    public CandleChartDataEntry(ArgsYIconData tuple) { super(tuple); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "high")
@@ -87,10 +99,10 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "initWithX:shadowH:shadowL:open:close:")
     protected native @Pointer long init(double x, double shadowH, double shadowL, double open, double close);
-    @Method(selector = "initWithX:shadowH:shadowL:open:close:data:")
-    protected native @Pointer long init(double x, double shadowH, double shadowL, double open, double close, NSObject data);
     @Method(selector = "initWithX:shadowH:shadowL:open:close:icon:")
     protected native @Pointer long init(double x, double shadowH, double shadowL, double open, double close, UIImage icon);
+    @Method(selector = "initWithX:shadowH:shadowL:open:close:data:")
+    protected native @Pointer long init(double x, double shadowH, double shadowL, double open, double close, NSObject data);
     @Method(selector = "initWithX:shadowH:shadowL:open:close:icon:data:")
     protected native @Pointer long init(double x, double shadowH, double shadowL, double open, double close, UIImage icon, NSObject data);
     @Method(selector = "copyWithZone:")

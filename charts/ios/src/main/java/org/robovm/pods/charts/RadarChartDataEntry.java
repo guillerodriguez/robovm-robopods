@@ -48,10 +48,22 @@ import org.robovm.apple.coreanimation.*;
     public RadarChartDataEntry() {}
     protected RadarChartDataEntry(Handle h, long handle) { super(h, handle); }
     protected RadarChartDataEntry(SkipInit skipInit) { super(skipInit); }
-    @Method(selector = "initWithValue:data:")
-    public RadarChartDataEntry(double value, NSObject data) { super((SkipInit) null); initObject(init(value, data)); }
     @Method(selector = "initWithValue:")
     public RadarChartDataEntry(double value) { super((SkipInit) null); initObject(init(value)); }
+    @Method(selector = "initWithValue:data:")
+    public RadarChartDataEntry(double value, NSObject data) { super((SkipInit) null); initObject(init(value, data)); }
+    @Method(selector = "initWithX:y:data:")
+    public RadarChartDataEntry(double x, double y, NSObject data) { super(x, y, data); }
+    @Method(selector = "initWithX:y:icon:")
+    public RadarChartDataEntry(double x, double y, UIImage icon) { super(x, y, icon); }
+    @Method(selector = "initWithX:y:icon:data:")
+    public RadarChartDataEntry(double x, double y, UIImage icon, NSObject data) { super(x, y, icon, data); }
+    @Method(selector = "initWithY:data:")
+    public RadarChartDataEntry(ArgsYData tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:")
+    public RadarChartDataEntry(ArgsYIcon tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:data:")
+    public RadarChartDataEntry(ArgsYIconData tuple) { super(tuple); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "value")
@@ -61,10 +73,10 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initWithValue:data:")
-    protected native @Pointer long init(double value, NSObject data);
     @Method(selector = "initWithValue:")
     protected native @Pointer long init(double value);
+    @Method(selector = "initWithValue:data:")
+    protected native @Pointer long init(double value, NSObject data);
     @Method(selector = "copyWithZone:")
     public native NSObject copy(NSZone zone);
     /*</methods>*/

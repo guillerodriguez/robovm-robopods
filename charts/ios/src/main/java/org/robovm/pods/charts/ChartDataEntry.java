@@ -56,6 +56,12 @@ import org.robovm.apple.coreanimation.*;
     public ChartDataEntry(double x, double y, UIImage icon) { super((SkipInit) null); initObject(init(x, y, icon)); }
     @Method(selector = "initWithX:y:icon:data:")
     public ChartDataEntry(double x, double y, UIImage icon, NSObject data) { super((SkipInit) null); initObject(init(x, y, icon, data)); }
+    @Method(selector = "initWithY:data:")
+    public ChartDataEntry(ArgsYData tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:")
+    public ChartDataEntry(ArgsYIcon tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:data:")
+    public ChartDataEntry(ArgsYIconData tuple) { super(tuple); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "x")

@@ -58,12 +58,18 @@ import org.robovm.apple.coreanimation.*;
     public BarChartDataEntry(double x, double y, UIImage icon, NSObject data) { super((SkipInit) null); initObject(init(x, y, icon, data)); }
     @Method(selector = "initWithX:yValues:")
     public BarChartDataEntry(double x, NSArray<NSNumber> yValues) { super((SkipInit) null); initObject(init(x, yValues)); }
+    @Method(selector = "initWithX:yValues:icon:")
+    public BarChartDataEntry(double x, NSArray<NSNumber> yValues, UIImage icon) { super((SkipInit) null); initObject(init(x, yValues, icon)); }
     @Method(selector = "initWithX:yValues:data:")
     public BarChartDataEntry(double x, NSArray<NSNumber> yValues, NSObject data) { super((SkipInit) null); initObject(init(x, yValues, data)); }
     @Method(selector = "initWithX:yValues:icon:data:")
     public BarChartDataEntry(double x, NSArray<NSNumber> yValues, UIImage icon, NSObject data) { super((SkipInit) null); initObject(init(x, yValues, icon, data)); }
-    @Method(selector = "initWithX:yValues:icon:")
-    public BarChartDataEntry(double x, NSArray<NSNumber> yValues, UIImage icon) { super((SkipInit) null); initObject(init(x, yValues, icon)); }
+    @Method(selector = "initWithY:data:")
+    public BarChartDataEntry(ArgsYData tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:")
+    public BarChartDataEntry(ArgsYIcon tuple) { super(tuple); }
+    @Method(selector = "initWithY:icon:data:")
+    public BarChartDataEntry(ArgsYIconData tuple) { super(tuple); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "negativeSum")
@@ -91,12 +97,12 @@ import org.robovm.apple.coreanimation.*;
     protected native @Pointer long init(double x, double y, UIImage icon, NSObject data);
     @Method(selector = "initWithX:yValues:")
     protected native @Pointer long init(double x, NSArray<NSNumber> yValues);
+    @Method(selector = "initWithX:yValues:icon:")
+    protected native @Pointer long init(double x, NSArray<NSNumber> yValues, UIImage icon);
     @Method(selector = "initWithX:yValues:data:")
     protected native @Pointer long init(double x, NSArray<NSNumber> yValues, NSObject data);
     @Method(selector = "initWithX:yValues:icon:data:")
     protected native @Pointer long init(double x, NSArray<NSNumber> yValues, UIImage icon, NSObject data);
-    @Method(selector = "initWithX:yValues:icon:")
-    protected native @Pointer long init(double x, NSArray<NSNumber> yValues, UIImage icon);
     @Method(selector = "sumBelowStackIndex:")
     public native double sumBelowStackIndex(@MachineSizedSInt long stackIndex);
     @Method(selector = "calcPosNegSum")

@@ -50,12 +50,44 @@ import org.robovm.apple.coreanimation.*;
     protected ChartDataEntryBase(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithY:")
     public ChartDataEntryBase(double y) { super((SkipInit) null); initObject(init(y)); }
+    
+    /** argument tuple for constructor bellow */
+    public static class ArgsYData {
+       public final double y;
+       public final NSObject data;
+       public ArgsYData(double y, NSObject data) {
+          this.y = y;
+          this.data = data;
+       }
+    }
     @Method(selector = "initWithY:data:")
-    public ChartDataEntryBase(double y, NSObject data) { super((SkipInit) null); initObject(init(y, data)); }
+    public ChartDataEntryBase(ArgsYData tuple) { super((SkipInit) null); initObject(init(tuple.y, tuple.data)); }
+    
+    /** argument tuple for constructor bellow */
+    public static class ArgsYIcon {
+       public final double y;
+       public final UIImage icon;
+       public ArgsYIcon(double y, UIImage icon) {
+          this.y = y;
+          this.icon = icon;
+       }
+    }
     @Method(selector = "initWithY:icon:")
-    public ChartDataEntryBase(double y, UIImage icon) { super((SkipInit) null); initObject(init(y, icon)); }
+    public ChartDataEntryBase(ArgsYIcon tuple) { super((SkipInit) null); initObject(init(tuple.y, tuple.icon)); }
+    
+    /** argument tuple for constructor bellow */
+    public static class ArgsYIconData {
+       public final double y;
+       public final UIImage icon;
+       public final NSObject data;
+       public ArgsYIconData(double y, UIImage icon, NSObject data) {
+          this.y = y;
+          this.icon = icon;
+          this.data = data;
+       }
+    }
     @Method(selector = "initWithY:icon:data:")
-    public ChartDataEntryBase(double y, UIImage icon, NSObject data) { super((SkipInit) null); initObject(init(y, icon, data)); }
+    public ChartDataEntryBase(ArgsYIconData tuple) { super((SkipInit) null); initObject(init(tuple.y, tuple.icon, tuple.data)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "y")

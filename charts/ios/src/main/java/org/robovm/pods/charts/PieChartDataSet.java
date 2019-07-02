@@ -48,10 +48,10 @@ import org.robovm.apple.coreanimation.*;
     public PieChartDataSet() {}
     protected PieChartDataSet(Handle h, long handle) { super(h, handle); }
     protected PieChartDataSet(SkipInit skipInit) { super(skipInit); }
-    @Method(selector = "initWithValues:label:")
-    public PieChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
-    @Method(selector = "initWithValues:")
-    public PieChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
+    @Method(selector = "initWithEntries:label:")
+    public PieChartDataSet(NSArray<ChartDataEntry> entries, String label) { super((SkipInit) null); initObject(init(entries, label)); }
+    @Method(selector = "initWithEntries:")
+    public PieChartDataSet(NSArray<ChartDataEntry> entries) { super(entries); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "sliceSpace")
@@ -78,6 +78,10 @@ import org.robovm.apple.coreanimation.*;
     public native UIColor getValueLineColor();
     @Property(selector = "setValueLineColor:")
     public native void setValueLineColor(UIColor v);
+    @Property(selector = "useValueColorForLine")
+    public native boolean isUseValueColorForLine();
+    @Property(selector = "setUseValueColorForLine:")
+    public native void setUseValueColorForLine(boolean v);
     @Property(selector = "valueLineWidth")
     public native @MachineSizedFloat double getValueLineWidth();
     @Property(selector = "setValueLineWidth:")
@@ -113,8 +117,8 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initWithValues:label:")
-    protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
+    @Method(selector = "initWithEntries:label:")
+    protected native @Pointer long init(NSArray<ChartDataEntry> entries, String label);
     @Method(selector = "copyWithZone:")
     public native NSObject copy(NSZone zone);
     /*</methods>*/

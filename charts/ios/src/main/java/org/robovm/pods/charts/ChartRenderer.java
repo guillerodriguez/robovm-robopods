@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartRenderer.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
+    protected ChartRenderer() {}
     protected ChartRenderer(Handle h, long handle) { super(h, handle); }
     protected ChartRenderer(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithViewPortHandler:")
     public ChartRenderer(ChartViewPortHandler viewPortHandler) { super((SkipInit) null); initObject(init(viewPortHandler)); }
-    public ChartRenderer() { super((Handle) null, newRenderer());  }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "viewPortHandler")
@@ -59,7 +59,5 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "initWithViewPortHandler:")
     protected native @Pointer long init(ChartViewPortHandler viewPortHandler);
-    @Method(selector = "new")
-    protected static native @Pointer long newRenderer();
     /*</methods>*/
 }

@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartViewPortHandler.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
+    protected ChartViewPortHandler() {}
     protected ChartViewPortHandler(Handle h, long handle) { super(h, handle); }
     protected ChartViewPortHandler(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithWidth:height:")
     public ChartViewPortHandler(@MachineSizedFloat double width, @MachineSizedFloat double height) { super((SkipInit) null); initObject(init(width, height)); }
-    public ChartViewPortHandler() { super((Handle) null, newViewPortHandler());  }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "hasChartDimens")
@@ -177,7 +177,5 @@ import org.robovm.apple.coreanimation.*;
     public native void setDragOffsetX(@MachineSizedFloat double offset);
     @Method(selector = "setDragOffsetY:")
     public native void setDragOffsetY(@MachineSizedFloat double offset);
-    @Method(selector = "new")
-    protected static native @Pointer long newViewPortHandler();
     /*</methods>*/
 }

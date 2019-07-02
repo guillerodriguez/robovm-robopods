@@ -53,11 +53,15 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @NotImplemented("chartValueSelected:entry:highlight:")
     public void chartValueSelected(ChartViewBase chartView, ChartDataEntry entry, ChartHighlight highlight) {}
+    @NotImplemented("chartViewDidEndPanning:")
+    public void chartViewDidEndPanning(ChartViewBase chartView) {}
     @NotImplemented("chartValueNothingSelected:")
     public void chartValueNothingSelected(ChartViewBase chartView) {}
     @NotImplemented("chartScaled:scaleX:scaleY:")
     public void chartScaled(ChartViewBase chartView, @MachineSizedFloat double scaleX, @MachineSizedFloat double scaleY) {}
     @NotImplemented("chartTranslated:dX:dY:")
     public void chartTranslated(ChartViewBase chartView, @MachineSizedFloat double dX, @MachineSizedFloat double dY) {}
+    @NotImplemented("chartView:animatorDidStop:")
+    public void animatorDidStop(ChartViewBase chartView, ChartAnimator animator) {}
     /*</methods>*/
 }

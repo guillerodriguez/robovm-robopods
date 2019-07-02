@@ -45,11 +45,11 @@ import org.robovm.apple.coreanimation.*;
     /*<bind>*/static { ObjCRuntime.bind(ChartHighlighter.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
+    protected ChartHighlighter() {}
     protected ChartHighlighter(Handle h, long handle) { super(h, handle); }
     protected ChartHighlighter(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithChart:")
     public ChartHighlighter(ChartDataProvider chart) { super((SkipInit) null); initObject(init(chart)); }
-    public ChartHighlighter() { super((Handle) null, newHighlighter());  }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "chart")
@@ -69,7 +69,5 @@ import org.robovm.apple.coreanimation.*;
     public native ChartHighlight getHighlight(double xVal, @MachineSizedFloat double x, @MachineSizedFloat double y);
     @Method(selector = "getHighlightsWithXValue:x:y:")
     public native NSArray<ChartHighlight> getHighlights(double xValue, @MachineSizedFloat double x, @MachineSizedFloat double y);
-    @Method(selector = "new")
-    protected static native @Pointer long newHighlighter();
     /*</methods>*/
 }

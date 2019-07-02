@@ -50,10 +50,10 @@ import org.robovm.apple.coreanimation.*;
     protected LineRadarChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithLabel:")
     public LineRadarChartDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
-    @Method(selector = "initWithValues:label:")
-    public LineRadarChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
-    @Method(selector = "initWithValues:")
-    public LineRadarChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
+    @Method(selector = "initWithEntries:label:")
+    public LineRadarChartDataSet(NSArray<ChartDataEntry> entries, String label) { super((SkipInit) null); initObject(init(entries, label)); }
+    @Method(selector = "initWithEntries:")
+    public LineRadarChartDataSet(NSArray<ChartDataEntry> entries) { super(entries); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "fillColor")
@@ -85,7 +85,7 @@ import org.robovm.apple.coreanimation.*;
     public native NSObject copy(NSZone zone);
     @Method(selector = "initWithLabel:")
     protected native @Pointer long init(String label);
-    @Method(selector = "initWithValues:label:")
-    protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
+    @Method(selector = "initWithEntries:label:")
+    protected native @Pointer long init(NSArray<ChartDataEntry> entries, String label);
     /*</methods>*/
 }

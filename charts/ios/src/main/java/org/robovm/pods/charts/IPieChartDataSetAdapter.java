@@ -71,6 +71,10 @@ import org.robovm.apple.coreanimation.*;
     public UIColor getValueLineColor() { return null; }
     @NotImplemented("setValueLineColor:")
     public void setValueLineColor(UIColor v) {}
+    @NotImplemented("useValueColorForLine")
+    public boolean isUseValueColorForLine() { return false; }
+    @NotImplemented("setUseValueColorForLine:")
+    public void setUseValueColorForLine(boolean v) {}
     @NotImplemented("valueLineWidth")
     public @MachineSizedFloat double getValueLineWidth() { return 0; }
     @NotImplemented("setValueLineWidth:")

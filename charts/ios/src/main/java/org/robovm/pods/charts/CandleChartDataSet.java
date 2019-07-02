@@ -48,10 +48,10 @@ import org.robovm.apple.coreanimation.*;
     public CandleChartDataSet() {}
     protected CandleChartDataSet(Handle h, long handle) { super(h, handle); }
     protected CandleChartDataSet(SkipInit skipInit) { super(skipInit); }
-    @Method(selector = "initWithValues:label:")
-    public CandleChartDataSet(NSArray<ChartDataEntry> values, String label) { super((SkipInit) null); initObject(init(values, label)); }
-    @Method(selector = "initWithValues:")
-    public CandleChartDataSet(NSArray<ChartDataEntry> values) { super(values); }
+    @Method(selector = "initWithEntries:label:")
+    public CandleChartDataSet(NSArray<ChartDataEntry> entries, String label) { super((SkipInit) null); initObject(init(entries, label)); }
+    @Method(selector = "initWithEntries:")
+    public CandleChartDataSet(NSArray<ChartDataEntry> entries) { super(entries); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "barSpace")
@@ -103,8 +103,8 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initWithValues:label:")
-    protected native @Pointer long init(NSArray<ChartDataEntry> values, String label);
+    @Method(selector = "initWithEntries:label:")
+    protected native @Pointer long init(NSArray<ChartDataEntry> entries, String label);
     @Method(selector = "calcMinMaxYWithEntry:")
     public native void calcMinMaxY(ChartDataEntry e);
     /*</methods>*/
