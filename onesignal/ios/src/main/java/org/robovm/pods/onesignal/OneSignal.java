@@ -79,6 +79,10 @@ import org.robovm.apple.uikit.*;
     public static native String getSdkVersionRaw();
     @Method(selector = "sdk_semantic_version")
     public static native String getSdkSemanticVersion();
+    /**
+     * @deprecated Please use promptForPushNotificationsWithUserResponse instead.
+     */
+    @Deprecated
     @Method(selector = "registerForPushNotifications")
     public static native void registerForPushNotifications();
     @Method(selector = "promptForPushNotificationsWithUserResponse:")
@@ -117,12 +121,22 @@ import org.robovm.apple.uikit.*;
     public static native void deleteTags(NSArray<?> keys);
     @Method(selector = "deleteTagsWithJsonString:")
     public static native void deleteTags(String jsonString);
+    /**
+     * @deprecated Please refer to our new Email methods/functionality such as setEmail(). This method will be removed in a future version of the OneSignal SDK
+     */
+    @Deprecated
     @Method(selector = "syncHashedEmail:")
     public static native void syncHashedEmail(String email);
+    /**
+     * @deprecated Please use getPermissionSubscriptionState or addSubscriptionObserver and addPermissionObserver instead.
+     */
+    @Deprecated
     @Method(selector = "IdsAvailable:")
     public static native void IdsAvailable(@Block VoidBlock2<NSString, NSString> idsAvailableBlock);
     @Method(selector = "getPermissionSubscriptionState")
     public static native OSPermissionSubscriptionState getPermissionSubscriptionState();
+    @Method(selector = "setNotificationDisplayTypeDelegate:")
+    public static native void setNotificationDisplayTypeDelegate(OSNotificationDisplayTypeDelegate delegate);
     @Method(selector = "addPermissionObserver:")
     public static native void addPermissionObserver(OSPermissionObserver observer);
     @Method(selector = "removePermissionObserver:")

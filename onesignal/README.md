@@ -4,7 +4,7 @@
 
 | RoboPods Version  | OneSignal Version |
 |-------------------|-------------------|
-| 1.1.0             | 2.9.4             |
+| 1.1.0             | 2.10.0            |
 
 ## Official website
 

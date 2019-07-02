@@ -88,7 +88,11 @@ protocols:
     OSPermissionObserver: {}
     OSSubscriptionObserver: {}
     OSEmailSubscriptionObserver: {}
-
+    OSNotificationDisplayTypeDelegate:
+        skip_adapter: true # only one method there
+        methods:
+            '-willPresentInFocusNotificationWithPayload:withCompletion:':
+                name: willPresentInFocusNotification
 functions:
     # Make sure we don't miss any functions if new ones are introduced in a later version
     (.*):
