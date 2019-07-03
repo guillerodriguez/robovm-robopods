@@ -5,159 +5,123 @@ clang_args: ['-x', 'objective-c']
 headers:
     - Lottie.h
 
-private_typedefs:
-    LOTLayerGroup: ObjCObject
-    LOTAssetGroup: ObjCObject
-
 typedefs: {}
 
 enums: {}
 
 classes:
-    LOTAnimatedControl:
+    AnimatedButton: {}
+
+    AnimatedControl:
         methods:
-            '-setLayerName:forState:':
-                name: setLayerName
-    LOTAnimatedSwitch:
-        methods:
-            '-setOn:animated:':
-                name: setOn
-            '-setProgressRangeForOnState:toProgress:':
-                name: setProgressRangeForOnState
-            '-setProgressRangeForOffState:toProgress:':
-                name: setProgressRangeForOffState
-            '+switchNamed:inBundle:':
-                name: create
-                constructor: true
-    LOTAnimationCache:
-        methods:
-            '-addAnimation:forKey:':
-                name: addAnimation
-    LOTAnimationTransitionController:
-        methods:
-            '-initWithAnimationNamed:fromLayerNamed:toLayerNamed:applyAnimationTransform:':
+            '-initWithCoder:':
                 name: init
-            '-initWithAnimationNamed:fromLayerNamed:toLayerNamed:applyAnimationTransform:inBundle:':
-                name: init
-    LOTAnimationView:
+            '-beginTrackingWithTouch:withEvent:':
+                name: beginTracking
+            '-continueTrackingWithTouch:withEvent:':
+                name: continueTracking
+            '-endTrackingWithTouch:withEvent:':
+                name: endTracking
+            '-cancelTrackingWithEvent:':
+                name: cancelTracking
+    AnimatedSwitch: {}
+    AnimationCompletionDelegate: {}
+    AnimationContainer:
         methods:
-            '-initWithModel:inBundle:':
+            '-initWithLayer:':
                 name: init
-            '-initWithContentsOfURL:':
+            '-initWithCoder:':
                 name: init
-            '-playToProgress:withCompletion:':
-                name: playToProgress
-            '-playFromProgress:toProgress:withCompletion:':
-                name: playFromProgress
-            '-playToFrame:withCompletion:':
-                name: playToFrame
-            '-playFromFrame:toFrame:withCompletion:':
-                name: playFromFrame
-            '-setValueDelegate:forKeypath:':
-                name: setValueDelegate
-            '-convertPoint:toKeypathLayer:':
-                name: convertPointToKeypathLayer
-            '-convertRect:toKeypathLayer:':
-                name: convertRectToKeypathLayer
-            '-convertPoint:fromKeypathLayer:':
-                name: convertPointFromKeypathLayer
-            '-convertRect:fromKeypathLayer:':
-                name: convertRectFromKeypathLayer
-            '-addSubview:toKeypathLayer:':
-                name: addSubview
-            '-maskSubview:toKeypathLayer:':
-                name: maskSubview
-            '-setValue:forKeypath:atFrame:':
-                name: setValue
-            '-addSubview:toLayerNamed:applyTransform:':
-                name: addSubview
-            '-convertRect:toLayerNamed:':
-                name: convertRectToLayer
-            '+animationNamed:':
-                name: create
-                constructor: true
-            '+animationNamed:inBundle:':
-                name: create
-                constructor: true
-            '+animationFromJSON:inBundle:':
-                name: create
-                constructor: true
+    AnimationSubview:
+        methods:
+            '-initWithFrame:':
+                name: init
+            '-initWithCoder:':
+                name: init
+    AnimationView: {}
+    CompatibleAnimation:
+        methods:
+            '-initWithName:bundle:':
+                name: init
+    CompatibleAnimationKeypath:
+        methods:
+            '-initWithKeypath:':
+                name: init
+            '-initWithKeys:':
+                name: init
+    CompatibleAnimationView:
+        methods:
+            '-initWithCompatibleAnimation:':
+                name: init
+            '-initWithFrame:':
+                name: init
+            '-initWithCoder:':
+                name: init
             '-playWithCompletion:':
                 name: play
-            '-setProgressWithFrame:':
-                name: setProgress
-            '+animationWithFilePath:':
-                name: createWithFilePath
-    LOTCacheProvider: {}
-    LOTColorBlockCallback: {}
-    LOTColorValueCallback: {}
-    LOTComposition:
+            '-playFromProgress:toProgress:completion:':
+                name: playFromProgress
+            '-playFromFrame:toFrame:completion:':
+                name: playFromFrame
+            '-playFromMarker:toMarker:completion:':
+                name: playFromMarker
+            '-getValueFor:atFrame:':
+                name: getValue
+            '-addSubview:forLayerAt:':
+                name: addSubview
+            '-convertWithRect:toLayerAt:':
+                name: convert
+            '-convertWithPoint:toLayerAt:':
+                name: convert
+    CompositionLayer:
         methods:
-            '-initWithJSON:withAssetBundle:':
+            '-initWithLayer:':
                 name: init
-            '+animationNamed:inBundle:':
-                name: create
-                constructor: true
-            '+animationFromJSON:inBundle:':
-                exclude: true # same as '-initWithJSON:withAssetBundle:'
-            '+animationWithFilePath:':
-                name: create
-                constructor: true
-    LOTFloatInterpolatorCallback:
+            '-initWithCoder:':
+                name: init
+    DebugLayer:
         methods:
-            '+withFromFloat:toFloat:':
-                name: create
-                constructor: true
-    LOTKeypath:
+            '-initWithCoder:':
+                name: init
+    DisabledTextLayer:
         methods:
-            '+keypathWithString:':
-                name: create
-                constructor: true
-    LOTNumberBlockCallback: {}
-    LOTNumberValueCallback: {}
-    LOTPathBlockCallback: {}
-    LOTPathValueCallback: {}
-    LOTPointBlockCallback: {}
-    LOTPointInterpolatorCallback:
+            '-initWithLayer:':
+                name: init
+            '-initWithCoder:':
+                name: init
+    ImageCompositionLayer: {}
+    InvertedMatteLayer:
         methods:
-            '+withFromPoint:toPoint:':
-                name: create
-                constructor: true
-    LOTPointValueCallback: {}
-    LOTSizeBlockCallback: {}
-    LOTSizeInterpolatorCallback:
+            '-initWithLayer:':
+                name: init
+            '-initWithCoder:':
+                name: init
+    LottieView:
         methods:
-            '+withFromSize:toSize:':
-                name: create
-                constructor: true
-    LOTSizeValueCallback: {}
+            '-initWithFrame:':
+                name: init
+            '-initWithCoder:':
+                name: init
+    MaskContainerLayer:
+        methods:
+            '-initWithLayer:':
+                name: init
+            '-initWithCoder:':
+                name: init
+    NullCompositionLayer: {}
+    PreCompositionLayer: {}
+    ShapeCompositionLayer: {}
+    ShapeContainerLayer:
+        methods:
+            '-initWithCoder:':
+                name: init
+            '-initWithLayer:':
+                name: init
+    ShapeRenderLayer: {}
+    SolidCompositionLayer: {}
+    TextCompositionLayer: {}
 
-protocols:
-    LOTColorValueDelegate:
-        methods:
-            '-colorForFrame:startKeyframe:endKeyframe:interpolatedProgress:startColor:endColor:currentColor:':
-                name: getColor
-    LOTImageCache:
-        methods:
-            '-setImage:forKey:':
-                name: setImage
-    LOTNumberValueDelegate:
-        methods:
-            '-floatValueForFrame:startKeyframe:endKeyframe:interpolatedProgress:startValue:endValue:currentValue:':
-                name: getFloatValue
-    LOTPathValueDelegate:
-        methods:
-            '-pathForFrame:startKeyframe:endKeyframe:interpolatedProgress:':
-                name: getPath
-    LOTPointValueDelegate:
-        methods:
-            '-pointForFrame:startKeyframe:endKeyframe:interpolatedProgress:startPoint:endPoint:currentPoint:':
-                name: getPoint
-    LOTSizeValueDelegate:
-        methods:
-            '-sizeForFrame:startKeyframe:endKeyframe:interpolatedProgress:startSize:endSize:currentSize:':
-                name: getSize
-    LOTValueDelegate: {}
+protocols: {}
 
 
 functions:
@@ -167,21 +131,15 @@ functions:
         name: 'Function_#{g[0]}'
 
 values:
-    LottieVersionNumber:
-        exclude: true
-    LottieVersionString:
-        exclude: true
-
-    kLOTKeypathEnd:
-        class: LOTKeypath
-        name: getKeypathEnd
-
     # Make sure we don't miss any values if new ones are introduced in a later version
     (.*):
         class: __FixMeLottie
         name: 'Value_#{g[0]}'
 
 constants:
+    SWIFT_TYPEDEFS:
+        exclude: true
+
     # Make sure we don't miss any constants if new ones are introduced in a later version
     (.*):
         class: __FixMeLottie

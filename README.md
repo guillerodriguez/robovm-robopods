@@ -28,7 +28,7 @@ v1.2.0 -- in development
 |------------------------------------|--------|
 | [Charts](charts/)                  | 3.3.0  |
 | [OneSignal](onesignal/)            | 2.10.0 |
-| [Lottie](lottie/)                  | 2.5.2  |
+| [Lottie](lottie/)                  | 3.1.1  |
 | [SAMKeychain](samkeychain/)        | 1.5.3  |
 | [BranchMetrics](branchmetrics/)    | 0.27.1 |
 | [HelpShift](helpshift/)            | 7.5.3  |
@@ -37,7 +37,7 @@ v1.2.0 -- in development
 
 v1.1.0
 
-| Name                               | 1.1.0  |
+| Name                               | 1.1.1  |
 |------------------------------------|--------|
 | [Charts](charts/)                  | 3.2.1  |
 | [OneSignal](onesignal/)            | 2.9.4  |

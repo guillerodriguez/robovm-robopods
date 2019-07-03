@@ -4,7 +4,7 @@
 
 | RoboPods Version  | Charts Version |
 |-------------------|----------------|
-| 1.0.0             | 2.5.2          |
+| 1.0.0             | 3.1.1          |
 
 ## Official website
 
