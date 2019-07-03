@@ -49,10 +49,6 @@ import org.robovm.apple.foundation.*;
     /*<properties>*/
     @Property(selector = "sharedInstance")
     public static native FIRConfiguration getSharedInstance();
-    @Property(selector = "analyticsConfiguration")
-    public native FIRAnalyticsConfiguration getAnalyticsConfiguration();
-    @Property(selector = "setAnalyticsConfiguration:")
-    public native void setAnalyticsConfiguration(FIRAnalyticsConfiguration v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

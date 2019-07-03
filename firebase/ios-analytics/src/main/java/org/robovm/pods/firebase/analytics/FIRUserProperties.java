@@ -43,6 +43,7 @@ import org.robovm.apple.foundation.*;
     /*</bind>*/
     /*<constants>*/
     public static final String SignUpMethod = "sign_up_method";
+    public static final String AllowAdPersonalizationSignals = "allow_personalized_ads";
     /*</constants>*/
     /*<constructors>*//*</constructors>*/
     /*<properties>*//*</properties>*/

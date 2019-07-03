@@ -63,8 +63,6 @@ import org.robovm.apple.dispatch.*;
     /*<methods>*/
     @Method(selector = "child:")
     public native FIRDatabaseReference child(String pathString);
-    @Method(selector = "childByAppendingPath:")
-    public native FIRDatabaseReference childByAppendingPath(String pathString);
     @Method(selector = "childByAutoId")
     public native FIRDatabaseReference childByAutoId();
     @Method(selector = "setValue:")

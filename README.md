@@ -31,7 +31,7 @@ v1.2.0 -- in development
 | [Pollfish (new)](pollfish/)        | 5.0.0  |
 | [BranchMetrics](branchmetrics/)    | 0.27.1 |
 | [Charts](charts/)                  | 3.3.0  |
-| [Firebase](firebase/)              | 5.16.0 |
+| [Firebase](firebase/)              | 6.3.0 |
 | [HelpShift](helpshift/)            | 7.5.3  |
 | [Lottie](lottie/)                  | 3.1.1  |
 | [OneSignal](onesignal/)            | 2.10.0 |

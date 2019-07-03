@@ -59,6 +59,10 @@ import org.robovm.apple.foundation.*;
     public static native void setUserID(String userID);
     @Method(selector = "setScreenName:screenClass:")
     public static native void setScreenName(String screenName, String screenClassOverride);
+    @Method(selector = "setAnalyticsCollectionEnabled:")
+    public static native void setAnalyticsCollectionEnabled(boolean analyticsCollectionEnabled);
+    @Method(selector = "setSessionTimeoutInterval:")
+    public static native void setSessionTimeoutInterval(double sessionTimeoutInterval);
     @Method(selector = "appInstanceID")
     public static native String appInstanceID();
     @Method(selector = "resetAnalyticsData")

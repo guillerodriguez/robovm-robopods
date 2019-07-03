@@ -92,6 +92,7 @@ import org.robovm.apple.foundation.*;
     public static final String VirtualCurrencyName = "virtual_currency_name";
     public static final String LevelName = "level_name";
     public static final String Success = "success";
+    public static final String ExtendSession = "extend_session";
     /*</constants>*/
     /*<constructors>*//*</constructors>*/
     /*<properties>*//*</properties>*/
