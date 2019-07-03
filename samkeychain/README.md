@@ -4,7 +4,8 @@
 
 | RoboPods Version  | SAMKeychain Version |
 |-------------------|---------------------|
-| 1.1.0             | 1.5.3               |
+| 1.2.0             | 1.5.3               |
+| 1.1.1             | 1.5.3               |
 
 ## Official website
 
