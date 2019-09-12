@@ -6,8 +6,8 @@
         <artifactId>robopods-facebook-parent</artifactId>
     </parent>
 
-    <artifactId>robopods-facebook-login-ios</artifactId>
-    <name>RoboPods Facebook Login iOS (v5.5.0)</name>
+    <artifactId>robopods-facebook-places-ios</artifactId>
+    <name>RoboPods Facebook Places iOS (v5.5.0)</name>
     <packaging>jar</packaging>
 
     <licenses>

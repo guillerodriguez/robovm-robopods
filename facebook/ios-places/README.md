@@ -1,1 +1,1 @@
-# Facebook iOS Login framework
+# Facebook iOS PlacesKit framework
