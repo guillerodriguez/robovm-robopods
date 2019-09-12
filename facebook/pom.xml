@@ -34,5 +34,6 @@
 
     <modules>
         <module>ios-core</module>
+        <module>ios-login</module>
     </modules>
 </project>

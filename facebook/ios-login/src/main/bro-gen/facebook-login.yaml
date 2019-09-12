@@ -1,0 +1,87 @@
+package: org.robovm.pods.facebook.login
+framework: FBSDKLoginKit
+include: [foundation, dispatch, coregraphics, uikit, ../../../../ios-core/src/main/bro-gen/facebook-core.yaml]
+clang_args: ['-x', 'objective-c']
+headers: 
+    - FBSDKLoginKit.h
+
+enums:
+    FBSDKLoginError: {nserror: true}
+    FBSDKDeviceLoginError: {merge_with: FBSDKLoginError}
+    FBSDKDefaultAudience: {}
+    FBSDKLoginBehavior: {}
+    FBSDKTooltipViewArrowDirection: {}
+    FBSDKTooltipColorStyle: {}
+    FBSDKLoginButtonTooltipBehavior: {}
+
+typed_enums:
+    FBSDKLoginAuthType:
+        enum: FBSDKLoginAuthType
+        type: NSString
+        prefix: FBSDKLoginAuthType
+
+classes:
+    FBSDKDeviceLoginCodeInfo: {}
+    FBSDKDeviceLoginManager:
+        methods:
+            '-initWithPermissions:enableSmartLogin:':
+                name: init
+    FBSDKDeviceLoginManagerResult: {}
+    FBSDKLoginButton: {}
+    FBSDKLoginManager:
+        methods:
+            '-logInWithPermissions:fromViewController:handler:':
+                name: logIn
+            '-reauthorizeDataAccess:handler:':
+                name: reauthorizeDataAccess
+    FBSDKLoginManagerLoginResult:
+        methods:
+            '-initWithToken:isCancelled:grantedPermissions:declinedPermissions:':
+                name: init
+    FBSDKLoginTooltipView: {}
+    FBSDKTooltipView:
+        methods:
+            '-initWithTagline:message:colorStyle:':
+                name: init
+            '-presentInView:withArrowPosition:direction:':
+                name: presentInView
+
+protocols:
+    FBSDKDeviceLoginManagerDelegate:
+        methods:
+            '-deviceLoginManager:startedWithCodeInfo:':
+                name: started
+            '-deviceLoginManager:completedWithResult:error:':
+                name: completed
+    FBSDKLoginButtonDelegate:
+        methods:
+            '-loginButton:didCompleteWithResult:error:':
+                name: didComplete
+    FBSDKLoginTooltipViewDelegate:
+        methods:
+            '-loginTooltipView:shouldAppear:':
+                name: shouldAppear
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+
+    FBSDKLoginErrorDomain:
+        class: FBSDKLoginError
+        name: getClassDomain
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
