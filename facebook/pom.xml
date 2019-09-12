@@ -36,5 +36,6 @@
         <module>ios-core</module>
         <module>ios-login</module>
         <module>ios-share</module>
+        <module>ios-places</module>
     </modules>
 </project>
