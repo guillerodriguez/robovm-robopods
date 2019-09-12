@@ -1,0 +1,217 @@
+package: org.robovm.pods.facebook.share
+framework: FBSDKShareKit
+include: [foundation, dispatch, coregraphics, uikit, photos, ../../../../ios-core/src/main/bro-gen/facebook-core.yaml]
+clang_args: ['-x', 'objective-c']
+headers: 
+    - FBSDKShareKit.h
+
+enums:
+    FBSDKShareBridgeOptions: {}
+    FBSDKShareError: {}
+    FBSDKShareMessengerGenericTemplateImageAspectRatio: {}
+    FBSDKShareMessengerMediaTemplateMediaType: {}
+    FBSDKShareMessengerURLActionButtonWebviewHeightRatio: {}
+    FBSDKAppGroupPrivacy: {}
+    FBSDKAppInviteDestination: {}
+    FBSDKGameRequestActionType: {}
+    FBSDKGameRequestFilter: {}
+    FBSDKLikeObjectType: {}
+    FBSDKShareDialogMode: {}
+
+typed_enums:
+
+classes:
+    FBSDKAppGroupContent: {}
+    FBSDKAppInviteContent: {}
+    FBSDKCameraEffectArguments:
+        methods:
+            '-setString:forKey:':
+                name: setString
+            '-setArray:forKey:':
+                name: setArray
+    FBSDKCameraEffectTextures:
+        methods:
+            '-setImage:forKey:':
+                name: setImage
+    FBSDKGameRequestContent: {}
+    FBSDKGameRequestDialog:
+        methods:
+            '-validateWithError:':
+                name: validate
+            '+dialogWithContent:delegate:':
+                constructor: true
+                name: create
+            '+showWithContent:delegate:':
+                name: show
+    FBSDKHashtag:
+        methods:
+            '+hashtagWithString:':
+                constructor: true
+                name: create
+    FBSDKMessageDialog:
+        methods:
+            '+dialogWithContent:delegate:':
+                constructor: true
+                name: create
+            '+showWithContent:delegate:':
+                name: show
+    FBSDKSendButton: {}
+    FBSDKShareAPI:
+        methods:
+            '+apiWithContent:delegate:':
+                constructor: true
+                name: create
+            '+shareWithContent:delegate:':
+                name: share
+    FBSDKShareButton: {}
+    FBSDKShareCameraEffectContent: {}
+    FBSDKShareDialog:
+        methods:
+            '+dialogWithViewController:withContent:delegate:':
+                constructor: true
+                name: create
+            '+showFromViewController:withContent:delegate:':
+                name: show
+    FBSDKShareLinkContent: {}
+    FBSDKShareMediaContent: {}
+    FBSDKShareMessengerGenericTemplateContent: {}
+    FBSDKShareMessengerGenericTemplateElement: {}
+    FBSDKShareMessengerMediaTemplateContent:
+        methods:
+            '-initWithAttachmentID:':
+                name: init
+            '-initWithMediaURL:':
+                name: init
+    FBSDKShareMessengerOpenGraphMusicTemplateContent: {}
+    FBSDKShareMessengerURLActionButton: {}
+    FBSDKShareOpenGraphAction:
+        methods:
+            '-initWithActionType:':
+                name: init
+            '+actionWithType:object:key:':
+                constructor: true
+                name: create
+            '+actionWithType:objectID:key:':
+                constructor: true
+                name: create
+            '+actionWithType:objectURL:key:':
+                constructor: true
+                name: create
+    FBSDKShareOpenGraphContent: {}
+    FBSDKShareOpenGraphObject:
+        methods:
+            '+objectWithProperties:':
+                constructor: true
+                name: create
+    FBSDKShareOpenGraphValueContainer: {}
+    FBSDKSharePhoto:
+        methods:
+            '+photoWithImage:userGenerated:':
+                constructor: true
+                name: create
+            '+photoWithImageURL:userGenerated:':
+                constructor: true
+                name: create
+            '+photoWithPhotoAsset:userGenerated:':
+                constructor: true
+                name: create
+    FBSDKSharePhotoContent: {}
+    FBSDKShareVideo:
+        methods:
+            '+videoWithData:':
+                constructor: true
+                name: create
+            '+videoWithData:previewPhoto:':
+                constructor: true
+                name: create
+            '+videoWithVideoAsset:':
+                constructor: true
+                name: create
+            '+videoWithVideoAsset:previewPhoto:':
+                constructor: true
+                name: create
+            '+videoWithVideoURL:':
+                constructor: true
+                name: create
+            '+videoWithVideoURL:previewPhoto:':
+                constructor: true
+                name: create
+    FBSDKShareVideoContent: {}
+
+protocols:
+    FBSDKGameRequestDialogDelegate:
+        methods:
+            '-gameRequestDialog:didCompleteWithResults:':
+                name: didComplete
+            '-gameRequestDialog:didFailWithError:':
+                name: didFail
+    FBSDKLiking: {}
+    FBSDKShareMedia: {}
+    FBSDKShareMessengerActionButton: {}
+    FBSDKShareOpenGraphValueContaining:
+        methods:
+            '-setArray:forKey:':
+                name: setArray
+            '-setNumber:forKey:':
+                name: setNumber
+            '-setObject:forKey:':
+                name: setObject
+            '-setPhoto:forKey:':
+                name: setPhoto
+            '-setString:forKey:':
+                name: setString
+            '-setURL:forKey:':
+                name: setURL
+    FBSDKSharing:
+        methods:
+            '-validateWithError:':
+                name: validate
+    FBSDKSharingButton: {}
+    FBSDKSharingContent:
+        methods:
+            '-addParameters:bridgeOptions:':
+                name: addParameters
+    FBSDKSharingDelegate:
+        methods:
+            '-sharer:didCompleteWithResults:':
+                name: didComplete
+            '-sharer:didFailWithError:':
+                name: didFail
+    FBSDKSharingDialog: {}
+    FBSDKSharingScheme: {}
+    FBSDKSharingValidation:
+        methods:
+            '-validateWithOptions:error:':
+                name: validate
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+    NSStringFromFBSDKAppGroupPrivacy:
+        class: FBSDKAppGroupPrivacy
+        name: toString
+    NSStringFromFBSDKLikeObjectType:
+        class: FBSDKLikeObjectType
+        name: toString
+    NSStringFromFBSDKShareDialogMode:
+        class: FBSDKShareDialogMode
+        name: toString
+
+values:
+    FBSDKShareErrorDomain:
+        class: FBSDKShareError
+        name: getClassDomain
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
