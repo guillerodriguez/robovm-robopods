@@ -1,0 +1,297 @@
+package: org.robovm.pods.facebook.audience
+framework: FBAudienceNetwork
+include: [foundation, coregraphics, dispatch, coremedia, uikit, storekit, avfoundation, ../../../../ios-core/src/main/bro-gen/facebook-core.yaml]
+clang_args: ['-x', 'objective-c']
+headers: 
+    - FBAudienceNetwork.h
+
+enums:
+    FBNativeAdViewTag: {}
+    FBAdLogLevel: {}
+    FBMediaViewRenderingMethod: {}
+    FBAdTestAdType: {}
+    FBAdFormatTypeName: {}
+    FBAdFormatType: {}
+    FBNativeAdsCachePolicy: {}
+    FBNativeAdViewType: {}
+    FBNativeBannerAdViewType: {}
+
+typed_enums:
+    FBAdExtraHintKeyword:
+        enum: FBAdExtraHintKeyword
+        type: NSString
+        prefix: FBAdExtraHintKeyword
+classes:
+    FBAdSize: {} # struct
+    FBAdChoicesView:
+        methods:
+            '-initWithNativeAd:':
+                name: init
+            '-initWithNativeAd:expandable:':
+                name: init
+            '-initWithNativeAd:expandable:attributes:':
+                name: init
+            '-updateFrameFromSuperview:insets:':
+                name: updateFrameFromSuperview
+    FBAdExtraHint:
+        methods:
+            '-initWithKeywords:':
+                name: init
+    FBAdIconView: {}
+    FBAdImage:
+        methods:
+            '-initWithURL:width:height:':
+                name: init
+            '-loadImageAsyncWithBlock:':
+                name: loadImageAsync
+    FBAdInitResults: {}
+    FBAdInitSettings:
+        methods:
+            '-initWithPlacementIDs:mediationService:':
+                name: init
+    FBAdOptionsView: {}
+    FBAdSettings: {}
+    FBAdView:
+        methods:
+            '-initWithPlacementID:adSize:rootViewController:':
+                name: init
+            '-initWithPlacementID:bidPayload:rootViewController:error:':
+                name: init
+            '-loadAdWithBidPayload:':
+                name: loadAd
+    FBAudienceNetworkAds:
+        methods:
+            '+initializeWithSettings:completionHandler:':
+                name: initialize
+    FBInstreamAdView:
+        methods:
+            '-initWithPlacementID:':
+                name: init
+            '-loadAdWithBidPayload:':
+                name: loadAd
+    FBInterstitialAd:
+        methods:
+            '-initWithPlacementID:':
+                name: init
+            '-loadAdWithBidPayload:':
+                name: loadAd
+    FBMediaView: {}
+    FBMediaViewVideoRenderer:
+        methods:
+            '-addPeriodicTimeObserverForInterval:queue:usingBlock:':
+                name: addPeriodicTimeObserver
+            '-videoDidFailWithError:':
+                name: videoDidFail
+    FBNativeAd:
+        methods:
+            '-initWithPlacementID:':
+                name: init
+            '-registerViewForInteraction:mediaView:iconView:viewController:':
+                name: registerViewForInteraction
+            '-registerViewForInteraction:mediaView:iconView:viewController:clickableViews:':
+                name: registerViewForInteraction
+            '-registerViewForInteraction:mediaView:iconImageView:viewController:':
+                name: registerViewForInteraction
+            '-registerViewForInteraction:mediaView:iconImageView:viewController:clickableViews:':
+                name: registerViewForInteraction
+    FBNativeAdBase:
+        methods:
+            '-loadAdWithMediaCachePolicy:':
+                name: loadAdW
+            '-loadAdWithBidPayload:':
+                name: loadAdW
+            '-loadAdWithBidPayload:mediaCachePolicy:':
+                name: loadAdW
+            '+nativeAdWithPlacementId:bidPayload:error:':
+                constructor: true
+                name: create
+    FBNativeAdBaseView: {}
+    FBNativeAdCollectionViewAdProvider:
+        methods:
+            '-initWithManager:':
+                name: init
+            '-collectionView:nativeAdForRowAtIndexPath:':
+                name: getNativeAdForRow
+            '-isAdCellAtIndexPath:forStride:':
+                name: isAdCell
+            '-adjustNonAdCellIndexPath:forStride:':
+                name: adjustNonAdCell
+            '-adjustCount:forStride:':
+                name: adjustCount
+    FBNativeAdCollectionViewCellProvider:
+        methods:
+            '-initWithManager:forType:':
+                name: init
+            '-initWithManager:forType:forAttributes:':
+                name: init
+            '-collectionView:cellForItemAtIndexPath:':
+                name: getCellForItem
+            '-collectionView:heightForRowAtIndexPath:':
+                name: getHeightForRow
+    FBNativeAdScrollView:
+        methods:
+            '-initWithNativeAdsManager:withType:':
+                name: init
+            '-initWithNativeAdsManager:withType:withAttributes:':
+                name: init
+            '-initWithNativeAdsManager:withType:withAttributes:withMaximum:':
+                name: init
+            '-initWithNativeAdsManager:withViewProvider:':
+                name: init
+            '-initWithNativeAdsManager:withViewProvider:withMaximum:':
+                name: init
+    FBNativeAdTableViewAdProvider:
+        methods:
+            '-initWithManager:':
+                name: init
+            '-tableView:nativeAdForRowAtIndexPath:':
+                name: getNativeAdForRow
+            '-isAdCellAtIndexPath:forStride:':
+                name: isAdCell
+            '-adjustNonAdCellIndexPath:forStride:':
+                name: adjustNonAdCell
+            '-adjustCount:forStride:':
+                name: adjustCount
+    FBNativeAdTableViewCellProvider:
+        methods:
+            '-initWithManager:forType:':
+                name: init
+            '-initWithManager:forType:forAttributes:':
+                name: init
+            '-tableView:cellForRowAtIndexPath:':
+                name: getCellForRow
+            '-tableView:heightForRowAtIndexPath:':
+                name: getGeightForRow
+            '-tableView:estimatedHeightForRowAtIndexPath:':
+                name: estimatedHeightForRow
+    FBNativeAdView:
+        methods:
+            '+nativeAdViewWithNativeAd:':
+                name: create
+                constructor: true
+            '+nativeAdViewWithNativeAd:withAttributes:':
+                name: create
+                constructor: true
+            '+nativeAdViewWithNativeAd:withType:':
+                name: create
+                constructor: true
+            '+nativeAdViewWithNativeAd:withType:withAttributes:':
+                name: create
+                constructor: true
+    FBNativeAdViewAttributes:
+        methods:
+            '-initWithDictionary:':
+                name: init
+    FBNativeAdsManager:
+        methods:
+            '-initWithPlacementID:forNumAdsRequested:':
+                name: init
+    FBNativeBannerAd:
+        methods:
+            '-initWithPlacementID:':
+                name: init
+            '-registerViewForInteraction:iconView:viewController:':
+                name: registerViewForInteraction
+            '-registerViewForInteraction:iconView:viewController:clickableViews:':
+                name: registerViewForInteraction
+            '-registerViewForInteraction:iconImageView:viewController:':
+                name: registerViewForInteraction
+            '-registerViewForInteraction:iconImageView:viewController:clickableViews:':
+                name: registerViewForInteraction
+    FBNativeBannerAdView:
+        methods:
+            '+nativeBannerAdViewWithNativeBannerAd:withType:':
+                constructor: true
+                name: create
+            '+nativeBannerAdViewWithNativeBannerAd:withType:withAttributes:':
+                constructor: true
+                name: create
+    FBRewardedVideoAd:
+        methods:
+            '-initWithPlacementID:':
+                name: init
+            '-initWithPlacementID:withUserID:withCurrency:':
+                name: init
+            '-loadAdWithBidPayload:':
+                name: loadAd
+            '-setRewardDataWithUserID:withCurrency:':
+                name: setRewardData
+            '-showAdFromRootViewController:animated:':
+                name: showAdFromRootViewController
+
+protocols:
+    FBAdLoggingDelegate:
+        methods:
+            '-logAtLevel:withFileName:withLineNumber:withThreadId:withBody:':
+                name: log
+    FBAdViewDelegate:
+        methods:
+            '-adView:didFailWithError:':
+                name: didFail
+    FBInstreamAdViewDelegate:
+        methods:
+            '-adView:didFailWithError:':
+                name: didFail
+    FBInterstitialAdDelegate:
+        methods:
+            '-interstitialAd:didFailWithError:':
+                name: didFail
+    FBMediaViewDelegate:
+        methods:
+            '-mediaView:videoVolumeDidChange:':
+                name: videoVolumeDidChangeß
+    FBNativeAdDelegate:
+        methods:
+            '-nativeAd:didFailWithError:':
+                name: didFail
+    FBNativeAdsManagerDelegate:
+        methods:
+            '-nativeAdsFailedToLoadWithError:':
+                name: nativeAdsFailedToLoad
+    FBNativeBannerAdDelegate:
+        methods:
+            '-nativeBannerAd:didFailWithError:':
+                name: didFail
+    FBRewardedVideoAdDelegate:
+        methods:
+            '-rewardedVideoAd:didFailWithError:':
+                name: didFail
+
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    FBAdOptionsViewWidth:
+        class: FBAdOptionsView
+        name: getMinViewWidth
+    FBAdOptionsViewHeight:
+        class: FBAdOptionsView
+        name: getMinViewHeight
+    kFBAdSize(.*):
+        class: FBAdSize
+        name: '#{g[0]}'
+    FBAudienceNetworkErrorDomain:
+        class: FBAudienceNetworkAds
+        name: getErrorDomain
+    FBAudienceNetworkMediaViewErrorDomain:
+        class: FBMediaView
+        name: getErrorDomain
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    FB_AD_SDK_VERSION:
+        class: FBAudienceNetworkAds
+        name: getVersion
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
