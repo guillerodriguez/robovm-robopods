@@ -34,7 +34,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <robovm.version>2.3.6-SNAPSHOT</robovm.version>
+        <robovm.version>2.3.7</robovm.version>
         <robopods.version>${project.version}</robopods.version>
     </properties>
 
@@ -132,5 +132,6 @@
         <module>firebase</module>
         <module>pollfish</module>
         <module>applovinsdk</module>
+        <module>facebook</module>
     </modules>
 </project>

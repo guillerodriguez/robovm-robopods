@@ -1,0 +1,328 @@
+package: org.robovm.pods.facebook.core
+framework: FBSDKCoreKit
+include: [foundation, dispatch, coregraphics, uikit, webkit]
+clang_args: ['-x', 'objective-c']
+headers: 
+    - FBSDKCoreKit.h
+
+private_typedefs:
+    OS_dispatch_source: DispatchSource
+
+enums:
+    FBSDKAppEventsFlushBehavior: {}
+    FBSDKProductAvailability: {}
+    FBSDKProductCondition: {}
+    FBSDKCoreError: {nserror: true, prefix: FBSDKError}
+    FBSDKGraphRequestError: {}
+    FBSDKAppLinkNavigationType: {}
+    FBSDKIncludeStatusBarInSize: {}
+    FBSDKProfilePictureMode: {}
+
+typed_enums:
+    FBSDKAppEventName:
+        enum: FBSDKAppEventName
+        type: NSString
+        prefix: FBSDKAppEventName
+    FBSDKAppEventParameterName:
+        enum: FBSDKAppEventParameterName
+        type: NSString
+        prefix: FBSDKAppEventParameterName
+    FBSDKAppEventParameterProduct:
+        enum: FBSDKAppEventParameterProduct
+        type: NSString
+        prefix: FBSDKAppEventParameterProduct
+    FBSDKAppEventParameterValue:
+        enum: FBSDKAppEventParameterValue
+        type: NSString
+        prefix: FBSDKAppEventParameterValue
+    FBSDKAppEventUserDataType:
+        enum: FBSDKAppEventUserDataType
+        type: NSString
+        prefix: FBSDKApp
+    FBSDKLoggingBehavior:
+        enum: FBSDKLoggingBehavior
+        type: NSString
+        prefix: FBSDKLoggingBehavior
+    FBSDKHTTPMethod:
+        enum: FBSDKHTTPMethod
+        type: NSString
+        prefix: FBSDKHTTPMethod
+
+classes:
+    FBSDKAccessToken:
+        methods:
+            '-initWithTokenString:permissions:declinedPermissions:expiredPermissions:appID:userID:expirationDate:refreshDate:dataAccessExpirationDate:':
+                name: init
+    FBSDKAppEvents:
+        methods:
+            '+logEvent:valueToSum:':
+                name: logEvent
+            '+logEvent:parameters:':
+                name: logEvent
+            '+logEvent:valueToSum:parameters:':
+                name: logEvent
+            '+logEvent:valueToSum:parameters:accessToken:':
+                name: logEvent
+            '+logPurchase:currency:':
+                name: logPurchase
+            '+logPurchase:currency:parameters:':
+                name: logPurchase
+            '+logPurchase:currency:parameters:accessToken:':
+                name: logPurchase
+            '+logPushNotificationOpen:action:':
+                name: logPushNotificationOpen
+            '+logProductItem:availability:condition:description:imageLink:link:title:priceAmount:currency:gtin:mpn:brand:parameters:':
+                name: logProductItemAvailability
+            '+requestForCustomAudienceThirdPartyIDWithAccessToken:':
+                name: requestForCustomAudienceThirdPartyID
+            '+setUserEmail:firstName:lastName:phone:dateOfBirth:gender:city:state:zip:country:':
+                name: setUserData
+            '+setUserData:forType:':
+                name: setUserData
+            '+updateUserProperties:handler:':
+                name: updateUserProperties
+    FBSDKAppLink:
+        methods:
+            '+appLinkWithSourceURL:targets:webURL:':
+                name: create
+                constructor: true
+    FBSDKAppLinkNavigation:
+        methods:
+            '+navigationWithAppLink:extras:appLinkData:':
+                name: create
+                constructor: true
+            '+callbackAppLinkDataForAppWithName:url:':
+                name: getCallbackAppLinkData
+            '+resolveAppLink:handler:':
+                name: resolveAppLink
+            '+resolveAppLink:resolver:handler:':
+                name: resolveAppLink
+            '+navigateToAppLink:error:':
+                name: navigateToAppLink
+                throws: NSErrorException
+            '+navigateToURL:handler:':
+                name: navigateToURL
+            '+navigateToURL:resolver:handler:':
+                name: navigateToURL
+    FBSDKAppLinkResolver:
+        methods:
+            '-appLinksFromURLs:handler:':
+                name: appLinksFromURLs
+    FBSDKAppLinkReturnToRefererController: {}
+    FBSDKAppLinkReturnToRefererView: {}
+    FBSDKAppLinkTarget:
+        methods:
+            '+appLinkTargetWithURL:appStoreId:appName:':
+                name: create
+                constructor: true
+    FBSDKAppLinkUtility: {}
+    FBSDKApplicationDelegate:
+        methods:
+            '-application:openURL:sourceApplication:annotation:':
+                name: openURL
+            '-application:openURL:options:':
+                name: openURL
+            '-application:didFinishLaunchingWithOptions:':
+                name: didFinishLaunching
+    FBSDKButton: {}
+    FBSDKGraphErrorRecoveryProcessor:
+        methods:
+            '-processError:request:delegate:':
+                name: processError
+            '-didPresentErrorWithRecovery:contextInfo:':
+                name: didPresentError
+    FBSDKGraphRequest:
+        methods:
+            '-initWithGraphPath:':
+                name: init
+            '-initWithGraphPath:HTTPMethod:':
+                name: init
+            '-initWithGraphPath:parameters:':
+                name: init
+            '-initWithGraphPath:parameters:HTTPMethod:':
+                name: init
+            '-initWithGraphPath:parameters:tokenString:version:HTTPMethod:':
+                name: init
+            '-startWithCompletionHandler:':
+                name: start
+    FBSDKGraphRequestConnection:
+        methods:
+            '-addRequest:completionHandler:':
+                name: addRequest
+            '-addRequest:batchEntryName:completionHandler:':
+                name: addRequest
+            '-addRequest:batchParameters:completionHandler:':
+                name: addRequest
+    FBSDKGraphRequestDataAttachment:
+        methods:
+            '-initWithData:filename:contentType:':
+                name: init
+    FBSDKMeasurementEvent: {}
+    FBSDKProfile:
+        methods:
+            '-initWithUserID:firstName:middleName:lastName:name:linkURL:refreshDate:':
+                name: init
+            '-imageURLForPictureMode:size:':
+                name: getImageURL
+            '+loadCurrentProfileWithCompletion:':
+                name: loadCurrentProfile
+    FBSDKProfilePictureView: {}
+    FBSDKSettings: {}
+    FBSDKTestUsersManager:
+        methods:
+            '-requestTestAccountTokensWithArraysOfPermissions:createIfNotFound:completionHandler:':
+                name: requestTestAccountTokens
+            '-addTestAccountWithPermissions:completionHandler:':
+                name: addTestAccount
+            '-removeTestAccount:completionHandler:':
+                name: removeTestAccount
+            '-makeFriendsWithFirst:second:callback:':
+                name: makeFriends
+            '+sharedInstanceForAppID:appSecret:':
+                name: sharedInstance
+    FBSDKURL:
+        methods:
+            '+URLWithURL:':
+                name: create
+                constructor: true
+            '+URLWithInboundURL:sourceApplication:':
+                name: create
+                constructor: true
+    FBSDKUtility:
+        methods:
+            '+dictionaryWithQueryString:':
+                name: getDictionary
+            '+queryStringWithDictionary:error:':
+                name: queryString
+                throws: NSErrorException
+            '+startGCDTimerWithInterval:block:':
+                name: startGCDTimer
+    FBSDKWebViewAppLinkResolver: {}
+
+protocols:
+    FBSDKAppLinkResolving:
+        methods:
+            '-appLinkFromURL:handler:':
+                name: getAppLink
+    FBSDKAppLinkReturnToRefererControllerDelegate:
+        methods:
+            '-returnToRefererController:willNavigateToAppLink:':
+                name: willNavigateToAppLink
+            '-returnToRefererController:didNavigateToAppLink:type:':
+                name: didNavigateToAppLink
+    FBSDKAppLinkReturnToRefererViewDelegate:
+        methods:
+            '-returnToRefererViewDidTapInsideLink:link:':
+                name: didTapInsideLink
+    FBSDKCopying: {}
+    FBSDKErrorRecoveryAttempting:
+        methods:
+            '-attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:':
+                name: didRecoverSelector
+    FBSDKGraphErrorRecoveryProcessorDelegate:
+        methods:
+            '-processorDidAttemptRecovery:didRecover:error:':
+                name: didRecover
+            '-processorWillProcessError:error:':
+                name: willProcessError
+    FBSDKGraphRequestConnectionDelegate:
+        methods:
+            '-requestConnection:didFailWithError:':
+                name: didFail
+            '-requestConnection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:':
+                name: didSendBodyData
+    FBSDKMutableCopying:
+        skip_adapter: true
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    FBSDKErrorDomain:
+        class: FBSDKCoreError
+        name: getClassDomain
+    FBSDKGraphRequestErrorKey:
+        enum: FBSDKCoreErrorKeys
+        name: GraphRequestError
+        type: NSString
+        extends: NSErrorUserInfoKey
+    FBSDKError(.*)Key:
+        enum: FBSDKCoreErrorKeys
+        name: '#{g[0]}'
+        type: NSString
+        extends: NSErrorUserInfoKey
+    FBSDKGraphRequest(.*)Key:
+        enum: FBSDKCoreErrorKeys
+        name: '#{g[0]}'
+        type: NSString
+        extends: NSErrorUserInfoKey
+    FBSDKNonJSONResponseProperty:
+        class: FBSDKGraphRequest
+        name: nonJSONResponsePropertyKey
+        type: NSString
+    FBSDKAccessToken(.*)Notification:
+        class: FBSDKAccessToken
+        static_class: Notifications
+        name: '#{g[0]}'
+        type: NSString
+    FBSDKAccessToken(.*)Key:
+        class: FBSDKAccessToken
+        static_class: Keys
+        name: 'Token#{g[0]}'
+        type: NSString
+    FBSDKAppEvents(.*)Notification:
+        class: FBSDKAppEvents
+        static_class: Notifications
+        name: '#{g[0]}'
+        type: NSString
+    FBSDKAppEventsOverrideAppIDBundleKey:
+        class: FBSDKAppEvents
+        name: getOverrideAppIDBundleKey
+        type: NSString
+    FBSDKMeasurementEvent(.*)Key:
+        class: FBSDKMeasurementEvent
+        static_class: Keys
+        name: 'Event#{g[0]}'
+        type: NSString
+    FBSDKMeasurementEventNotification:
+        class: FBSDKMeasurementEvent
+        name: 'eventNotificationName'
+        type: NSString
+    FBSDKProfileDidChangeNotification:
+        class: FBSDKProfile
+        name: 'didChangeNotification'
+        type: NSString
+    FBSDKProfileChange(.*)Key:
+        class: FBSDKProfile
+        static_class: Keys
+        name: 'Change#{g[0]}'
+        type: NSString
+    FBSDKAppLink(.*)EventName:
+        class: FBSDKAppLink
+        static_class: EventName
+        name: '#{g[0]}'
+        type: NSString
+    FBSDKAppLinkVersion:
+        class: FBSDKAppLink
+        name: getVersion
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    FBSDK_VERSION_STRING:
+        class: FBSDKCore
+        name: Version
+    FBSDK_TARGET_PLATFORM_VERSION:
+        class: FBSDKCore
+        name: PlatformVersion
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
