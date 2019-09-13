@@ -35,6 +35,6 @@ dependencies {
 }
 ```
 
-## OneSignal home page
+## SAMKeychain home page
 
 [Link](https://github.com/soffes/SAMKeychain)
