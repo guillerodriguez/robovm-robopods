@@ -20,37 +20,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.mobidevelop.robovm</groupId>
-            <artifactId>robovm-rt</artifactId>
-            <version>${robovm.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.mobidevelop.robovm</groupId>
-            <artifactId>robovm-objc</artifactId>
-            <version>${robovm.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.mobidevelop.robovm</groupId>
-            <artifactId>robovm-cocoatouch</artifactId>
-            <version>${robovm.version}</version>
-        </dependency>
-        <dependency>
             <groupId>io.github.dkimitsa.robovm</groupId>
             <artifactId>robopods-facebook-core-ios</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>
