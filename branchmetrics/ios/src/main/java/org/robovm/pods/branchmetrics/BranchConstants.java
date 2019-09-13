@@ -153,6 +153,10 @@ import org.robovm.apple.corespotlight.*;
     public static native String getRequestKeyExternalIntentUri();
     @GlobalValue(symbol="BRANCH_REQUEST_KEY_INSTRUMENTATION", optional=true)
     public static native String getRequestKeyInstrumentation();
+    @GlobalValue(symbol="BRANCH_REQUEST_KEY_APPLE_RECEIPT", optional=true)
+    public static native String getRequestKeyAppleReceipt();
+    @GlobalValue(symbol="BRANCH_REQUEST_KEY_APPLE_TESTFLIGHT", optional=true)
+    public static native String getRequestKeyAppleTestflight();
     @GlobalValue(symbol="BRANCH_REQUEST_ENDPOINT_SET_IDENTITY", optional=true)
     public static native String getRequestEndpointSetIdentity();
     @GlobalValue(symbol="BRANCH_REQUEST_ENDPOINT_APP_LINK_SETTINGS", optional=true)

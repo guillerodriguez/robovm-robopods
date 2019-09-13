@@ -48,7 +48,7 @@ import org.robovm.apple.corespotlight.*;
     protected BNCLinkData(Handle h, long handle) { super(h, handle); }
     protected BNCLinkData(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithCoder:")
-    public BNCLinkData(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
+    public BNCLinkData(NSCoder coder) { super((SkipInit) null); initObject(init(coder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "data")
@@ -83,6 +83,6 @@ import org.robovm.apple.corespotlight.*;
     @Method(selector = "encodeWithCoder:")
     public native void encode(NSCoder coder);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long init(NSCoder decoder);
+    protected native @Pointer long init(NSCoder coder);
     /*</methods>*/
 }

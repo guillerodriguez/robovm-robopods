@@ -218,10 +218,6 @@ import org.robovm.apple.corespotlight.*;
     public native @MachineSizedSInt long getCreditCount();
     @Method(selector = "getCreditCountForBucket:")
     public native @MachineSizedSInt long getCreditCountForBucket(String bucket);
-    @Method(selector = "updateBranchViewCount:")
-    public native void updateBranchViewCount(String branchViewID);
-    @Method(selector = "getBranchViewCount:")
-    public native @MachineSizedSInt long getBranchViewCount(String branchViewID);
     @Method(selector = "setRequestMetadataKey:value:")
     public native void setRequestMetadata(String key, NSObject value);
     @Method(selector = "requestMetadataDictionary")

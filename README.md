@@ -31,9 +31,9 @@ v1.3.0 -- in development
 | [Facebook (new)](facebook/)        | 5.5.0  |
 | [AppLovinSDK](applovinsdk/)        | 6.9.1  |
 | [Pollfish](pollfish/)              | 5.0.0  |
-| [BranchMetrics](branchmetrics/)    | 0.27.1 |
+| [BranchMetrics](branchmetrics/)    | 0.28.1 |
 | [Charts](charts/)                  | 3.3.0  |
-| [Firebase](firebase/)              | 6.8.1 |
+| [Firebase](firebase/)              | 6.8.1  |
 | [HelpShift](helpshift/)            | 7.5.3  |
 | [Lottie](lottie/)                  | 3.1.1  |
 | [OneSignal](onesignal/)            | 2.10.0 |

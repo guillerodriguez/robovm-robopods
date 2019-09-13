@@ -52,6 +52,10 @@ import org.robovm.apple.corespotlight.*;
     public BranchEvent(String standardEvent, BranchUniversalObject contentItem) { super((Handle) null, create(standardEvent, contentItem)); retain(getHandle()); }
     /*</constructors>*/
     /*<properties>*/
+    @Property(selector = "alias")
+    public native String getAlias();
+    @Property(selector = "setAlias:")
+    public native void setAlias(String v);
     @Property(selector = "transactionID")
     public native String getTransactionID();
     @Property(selector = "setTransactionID:")

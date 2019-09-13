@@ -49,95 +49,49 @@ import org.robovm.apple.corespotlight.*;
     /*<methods>*/
     @GlobalValue(symbol="BranchStandardEventAddToCart", optional=true)
     public static native String getAddToCart();
-    @GlobalValue(symbol="BranchStandardEventAddToCart", optional=true)
-    public static native void getAddToCart(String v);
     @GlobalValue(symbol="BranchStandardEventAddToWishlist", optional=true)
     public static native String getAddToWishlist();
-    @GlobalValue(symbol="BranchStandardEventAddToWishlist", optional=true)
-    public static native void getAddToWishlist(String v);
     @GlobalValue(symbol="BranchStandardEventViewCart", optional=true)
     public static native String getViewCart();
-    @GlobalValue(symbol="BranchStandardEventViewCart", optional=true)
-    public static native void getViewCart(String v);
     @GlobalValue(symbol="BranchStandardEventInitiatePurchase", optional=true)
     public static native String getInitiatePurchase();
-    @GlobalValue(symbol="BranchStandardEventInitiatePurchase", optional=true)
-    public static native void getInitiatePurchase(String v);
     @GlobalValue(symbol="BranchStandardEventAddPaymentInfo", optional=true)
     public static native String getAddPaymentInfo();
-    @GlobalValue(symbol="BranchStandardEventAddPaymentInfo", optional=true)
-    public static native void getAddPaymentInfo(String v);
     @GlobalValue(symbol="BranchStandardEventPurchase", optional=true)
     public static native String getPurchase();
-    @GlobalValue(symbol="BranchStandardEventPurchase", optional=true)
-    public static native void getPurchase(String v);
     @GlobalValue(symbol="BranchStandardEventSpendCredits", optional=true)
     public static native String getSpendCredits();
-    @GlobalValue(symbol="BranchStandardEventSpendCredits", optional=true)
-    public static native void getSpendCredits(String v);
     @GlobalValue(symbol="BranchStandardEventSubscribe", optional=true)
     public static native String getSubscribe();
-    @GlobalValue(symbol="BranchStandardEventSubscribe", optional=true)
-    public static native void getSubscribe(String v);
     @GlobalValue(symbol="BranchStandardEventStartTrial", optional=true)
     public static native String getStartTrial();
-    @GlobalValue(symbol="BranchStandardEventStartTrial", optional=true)
-    public static native void getStartTrial(String v);
     @GlobalValue(symbol="BranchStandardEventClickAd", optional=true)
     public static native String getClickAd();
-    @GlobalValue(symbol="BranchStandardEventClickAd", optional=true)
-    public static native void getClickAd(String v);
     @GlobalValue(symbol="BranchStandardEventViewAd", optional=true)
     public static native String getViewAd();
-    @GlobalValue(symbol="BranchStandardEventViewAd", optional=true)
-    public static native void getViewAd(String v);
     @GlobalValue(symbol="BranchStandardEventSearch", optional=true)
     public static native String getSearch();
-    @GlobalValue(symbol="BranchStandardEventSearch", optional=true)
-    public static native void getSearch(String v);
     @GlobalValue(symbol="BranchStandardEventViewItem", optional=true)
     public static native String getViewItem();
-    @GlobalValue(symbol="BranchStandardEventViewItem", optional=true)
-    public static native void getViewItem(String v);
     @GlobalValue(symbol="BranchStandardEventViewItems", optional=true)
     public static native String getViewItems();
-    @GlobalValue(symbol="BranchStandardEventViewItems", optional=true)
-    public static native void getViewItems(String v);
     @GlobalValue(symbol="BranchStandardEventRate", optional=true)
     public static native String getRate();
-    @GlobalValue(symbol="BranchStandardEventRate", optional=true)
-    public static native void getRate(String v);
     @GlobalValue(symbol="BranchStandardEventShare", optional=true)
     public static native String getShare();
-    @GlobalValue(symbol="BranchStandardEventShare", optional=true)
-    public static native void getShare(String v);
     @GlobalValue(symbol="BranchStandardEventCompleteRegistration", optional=true)
     public static native String getCompleteRegistration();
-    @GlobalValue(symbol="BranchStandardEventCompleteRegistration", optional=true)
-    public static native void getCompleteRegistration(String v);
     @GlobalValue(symbol="BranchStandardEventCompleteTutorial", optional=true)
     public static native String getCompleteTutorial();
-    @GlobalValue(symbol="BranchStandardEventCompleteTutorial", optional=true)
-    public static native void getCompleteTutorial(String v);
     @GlobalValue(symbol="BranchStandardEventAchieveLevel", optional=true)
     public static native String getAchieveLevel();
-    @GlobalValue(symbol="BranchStandardEventAchieveLevel", optional=true)
-    public static native void getAchieveLevel(String v);
     @GlobalValue(symbol="BranchStandardEventUnlockAchievement", optional=true)
     public static native String getUnlockAchievement();
-    @GlobalValue(symbol="BranchStandardEventUnlockAchievement", optional=true)
-    public static native void getUnlockAchievement(String v);
     @GlobalValue(symbol="BranchStandardEventInvite", optional=true)
     public static native String getInvite();
-    @GlobalValue(symbol="BranchStandardEventInvite", optional=true)
-    public static native void getInvite(String v);
     @GlobalValue(symbol="BranchStandardEventLogin", optional=true)
     public static native String getLogin();
-    @GlobalValue(symbol="BranchStandardEventLogin", optional=true)
-    public static native void getLogin(String v);
     @GlobalValue(symbol="BranchStandardEventReserve", optional=true)
     public static native String getReserve();
-    @GlobalValue(symbol="BranchStandardEventReserve", optional=true)
-    public static native void getReserve(String v);
     /*</methods>*/
 }

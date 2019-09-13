@@ -124,8 +124,6 @@ import org.robovm.apple.corespotlight.*;
     public native void registerFacebookDeepLinkingClass(NSObject FBSDKAppLinkUtility);
     @Method(selector = "delayInitToCheckForSearchAds")
     public native void delayInitToCheckForSearchAds();
-    @Method(selector = "setAppleSearchAdsDebugMode")
-    public native void setAppleSearchAdsDebugMode();
     @Method(selector = "setRetryInterval:")
     public native void setRetryInterval(double retryInterval);
     @Method(selector = "setMaxRetries:")
@@ -206,8 +204,16 @@ import org.robovm.apple.corespotlight.*;
     public native void userCompletedAction(String action);
     @Method(selector = "userCompletedAction:withState:")
     public native void userCompletedAction(String action, NSDictionary<?, ?> state);
+    /**
+     * @deprecated This API is deprecated. Please use userCompletedAction:action:state instead.
+     */
+    @Deprecated
     @Method(selector = "userCompletedAction:withState:withDelegate:")
     public native void userCompletedAction(String action, NSDictionary<?, ?> state, NSObject branchViewCallback);
+    /**
+     * @deprecated Please use BranchEvent to track commerce events.
+     */
+    @Deprecated
     @Method(selector = "sendCommerceEvent:metadata:withCompletion:")
     public native void sendCommerceEvent(BNCCommerceEvent commerceEvent, NSDictionary<NSString, ?> metadata, @Block VoidBlock2<NSDictionary<?, ?>, NSError> completion);
     @Method(selector = "getShortURL")
