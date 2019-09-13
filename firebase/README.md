@@ -13,6 +13,7 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 
 | RoboPods Version  | Firebase Version    |
 |-------------------|---------------------|
+| 1.3.0             | 6.8.1               |
 | 1.2.0             | 6.3.0               |
 | 1.1.1             | 5.16.0              |
 

@@ -95,6 +95,10 @@ import org.robovm.apple.foundation.*;
     public native String getStorageBucket();
     @Property(selector = "setStorageBucket:")
     public native void setStorageBucket(String v);
+    @Property(selector = "appGroupID")
+    public native String getAppGroupID();
+    @Property(selector = "setAppGroupID:")
+    public native void setAppGroupID(String v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
