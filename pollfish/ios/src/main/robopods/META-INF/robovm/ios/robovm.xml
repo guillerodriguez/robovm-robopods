@@ -3,6 +3,7 @@
         <framework>pollfish</framework>
         <framework>AdSupport</framework>
         <framework>CoreTelephony</framework>
+        <framework>CoreGraphics</framework>
         <framework>SystemConfiguration</framework>
         <framework>WebKit</framework>
     </frameworks>
