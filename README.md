@@ -29,7 +29,7 @@ v1.3.0 -- in development
 | Name                               | 1.3.0  |
 |------------------------------------|--------|
 | [Facebook (new)](facebook/)        | 5.5.0  |
-| [AppLovinSDK](applovinsdk/)        | 6.7.1  |
+| [AppLovinSDK](applovinsdk/)        | 6.9.1  |
 | [Pollfish](pollfish/)              | 5.0.0  |
 | [BranchMetrics](branchmetrics/)    | 0.27.1 |
 | [Charts](charts/)                  | 3.3.0  |

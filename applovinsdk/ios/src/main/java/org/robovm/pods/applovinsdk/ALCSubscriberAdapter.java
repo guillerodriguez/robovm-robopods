@@ -33,26 +33,24 @@ import org.robovm.apple.coregraphics.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
 /*</javadoc>*/
-/*<annotations>*/@Deprecated/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/ALAdUpdateObserver/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<annotations>*//*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/ALCSubscriberAdapter/*</name>*/ 
+    extends /*<extends>*/ALCEntityAdapter/*</extends>*/ 
+    /*<implements>*/implements ALCSubscriber/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
     /*<bind>*/
     /*</bind>*/
     /*<constants>*//*</constants>*/
+    /*<constructors>*//*</constructors>*/
     /*<properties>*/
     
     /*</properties>*/
+    /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "adService:didUpdateAd:")
-    void didUpdateAd(ALAdService adService, ALAd ad);
-    @Method(selector = "canAcceptUpdate")
-    boolean canAcceptUpdate();
+    @NotImplemented("didReceiveMessage:")
+    public void didReceiveMessage(ALCMessage message) {}
     /*</methods>*/
-    /*<adapter>*/
-    /*</adapter>*/
 }

@@ -2,8 +2,9 @@
 
 ## Available RoboPods
 
-| RoboPods Version  | Pollfish Version  |
+| RoboPods Version  | AppLovinSDK Version  |
 |-------------------|-------------------|
+| 1.3.0             | 6.9.1             |
 | 1.2.0             | 6.7.1             |
 
 ## Official website

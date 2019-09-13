@@ -65,6 +65,8 @@ import org.robovm.apple.coregraphics.*;
     public static native NSString HyperMX();
     @GlobalValue(symbol="ALMediationProviderIronsource", optional=true)
     public static native NSString Ironsource();
+    @GlobalValue(symbol="ALMediationProviderMAX", optional=true)
+    public static native NSString MAX();
     @GlobalValue(symbol="ALMediationProviderMoPub", optional=true)
     public static native NSString MoPub();
     @GlobalValue(symbol="ALMediationProviderTapdaq", optional=true)

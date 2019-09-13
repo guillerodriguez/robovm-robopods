@@ -49,18 +49,39 @@ import org.robovm.apple.coregraphics.*;
     protected ALAdType(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
+    @Property(selector = "regular")
+    public static native ALAdType getRegular();
+    @Property(selector = "incentivized")
+    public static native ALAdType getIncentivized();
+    /**
+     * @deprecated Retrieval of underlying string is deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
     @Property(selector = "label")
     public native String getLabel();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "typeRegular")
-    public static native ALAdType typeRegular();
-    @Method(selector = "typeIncentivized")
-    public static native ALAdType typeIncentivized();
+    @Deprecated
     @Method(selector = "typeNative")
     public static native ALAdType typeNative();
+    /**
+     * @deprecated Retrieval of all types is deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
     @Method(selector = "allTypes")
     public static native NSArray<?> allTypes();
+    /**
+     * @deprecated Class method `typeRegular` is deprecated and will be removed in a future SDK version. Please use ALAdType.regular instead.
+     */
+    @Deprecated
+    @Method(selector = "typeRegular")
+    public static native ALAdType typeRegular();
+    /**
+     * @deprecated Class method `typeIncentivized` is deprecated and will be removed in a future SDK version. Please use ALAdType.incentivized instead.
+     */
+    @Deprecated
+    @Method(selector = "typeIncentivized")
+    public static native ALAdType typeIncentivized();
     /*</methods>*/
 }

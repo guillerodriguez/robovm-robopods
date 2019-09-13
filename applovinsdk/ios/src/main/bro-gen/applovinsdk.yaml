@@ -202,6 +202,22 @@ classes:
                 name: getShared
             '+sharedWithAdUnitIdentifier:sdk:':
                 name: getShared
+    ALCCommunicator:
+        methods:
+            '-subscribe:forTopic:':
+                name: subscribe
+            '-subscribe:forTopics:':
+                name: subscribe
+            '-unsubscribe:forTopic:':
+                name: unsubscribe
+            '-unsubscribe:forTopics:':
+                name: unsubscribe
+    ALCMessage:
+        skip_def_constructor: true
+        methods:
+            '-initWithData:topic:fromPublisher:':
+                name: init
+    ALCMessagingService: {}
 
 protocols:
     ALAdDisplayDelegate:
@@ -287,7 +303,9 @@ protocols:
         methods:
             '-didRewardUserForAd:withReward:':
                 name: didRewardUser
-
+    ALCEntity: {}
+    ALCPublisher: {}
+    ALCSubscriber: {}
 functions:
 
     # Make sure we don't miss any functions if new ones are introduced in a later version

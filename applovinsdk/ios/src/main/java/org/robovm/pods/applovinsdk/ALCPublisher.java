@@ -35,9 +35,9 @@ import org.robovm.apple.coregraphics.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*/@Deprecated/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/ALAdUpdateObserver/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<annotations>*//*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/ALCPublisher/*</name>*/ 
+    /*<implements>*/extends ALCEntity/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
@@ -48,10 +48,7 @@ import org.robovm.apple.coregraphics.*;
     
     /*</properties>*/
     /*<methods>*/
-    @Method(selector = "adService:didUpdateAd:")
-    void didUpdateAd(ALAdService adService, ALAd ad);
-    @Method(selector = "canAcceptUpdate")
-    boolean canAcceptUpdate();
+    
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

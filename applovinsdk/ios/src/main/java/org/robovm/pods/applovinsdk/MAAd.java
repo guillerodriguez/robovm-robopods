@@ -53,8 +53,6 @@ import org.robovm.apple.coregraphics.*;
     public native MAAdFormat getFormat();
     @Property(selector = "adUnitIdentifier")
     public native String getAdUnitIdentifier();
-    @Property(selector = "isReady")
-    public native boolean isReady();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

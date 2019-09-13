@@ -36,33 +36,30 @@ import org.robovm.apple.coregraphics.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/ALAd/*</name>*/ 
-    extends /*<extends>*/NSObject/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/ALCMessage/*</name>*/ 
+    extends /*<extends>*/NSNotification/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class ALAdPtr extends Ptr<ALAd, ALAdPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(ALAd.class); }/*</bind>*/
+    /*<ptr>*/public static class ALCMessagePtr extends Ptr<ALCMessage, ALCMessagePtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(ALCMessage.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected ALAd() {}
-    protected ALAd(Handle h, long handle) { super(h, handle); }
-    protected ALAd(SkipInit skipInit) { super(skipInit); }
+    protected ALCMessage(Handle h, long handle) { super(h, handle); }
+    protected ALCMessage(SkipInit skipInit) { super(skipInit); }
+    @Method(selector = "initWithData:topic:fromPublisher:")
+    public ALCMessage(NSDictionary<NSString, ?> data, String topic, ALCPublisher publisher) { super((SkipInit) null); initObject(init(data, topic, publisher)); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "size")
-    public native ALAdSize getSize();
-    @Property(selector = "type")
-    public native ALAdType getType();
-    @Property(selector = "zoneIdentifier")
-    public native String getZoneIdentifier();
-    @Property(selector = "isVideoAd")
-    public native boolean isVideoAd();
-    @Property(selector = "adIdNumber")
-    public native NSNumber getAdIdNumber();
+    @Property(selector = "data")
+    public native NSDictionary<NSString, ?> getData();
+    @Property(selector = "topic")
+    public native String getTopic();
+    @Property(selector = "publisherIdentifier")
+    public native String getPublisherIdentifier();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "adValueForKey:")
-    public native String adValueForKey(String key);
+    @Method(selector = "initWithData:topic:fromPublisher:")
+    protected native @Pointer long init(NSDictionary<NSString, ?> data, String topic, ALCPublisher publisher);
     /*</methods>*/
 }

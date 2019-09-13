@@ -60,7 +60,7 @@ import org.robovm.apple.coregraphics.*;
     @Method(selector = "initWithFrame:")
     public ALAdView(@ByVal CGRect frame) { super(frame); }
     @Method(selector = "initWithCoder:")
-    public ALAdView(NSCoder decoder) { super(decoder); }
+    public ALAdView(NSCoder coder) { super(coder); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "adLoadDelegate")

@@ -35,24 +35,25 @@ import org.robovm.apple.coregraphics.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*/@Deprecated/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/ALAdUpdateObserver/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/ALCMessagingService/*</name>*/ 
+    extends /*<extends>*/NSObject/*</extends>*/ 
+    /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/
-    /*</ptr>*/
-    /*<bind>*/
-    /*</bind>*/
+    /*<ptr>*/public static class ALCMessagingServicePtr extends Ptr<ALCMessagingService, ALCMessagingServicePtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(ALCMessagingService.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
+    /*<constructors>*/
+    protected ALCMessagingService() {}
+    protected ALCMessagingService(Handle h, long handle) { super(h, handle); }
+    protected ALCMessagingService(SkipInit skipInit) { super(skipInit); }
+    /*</constructors>*/
     /*<properties>*/
     
     /*</properties>*/
+    /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "adService:didUpdateAd:")
-    void didUpdateAd(ALAdService adService, ALAd ad);
-    @Method(selector = "canAcceptUpdate")
-    boolean canAcceptUpdate();
+    @Method(selector = "publishMessage:")
+    public native void publishMessage(ALCMessage message);
     /*</methods>*/
-    /*<adapter>*/
-    /*</adapter>*/
 }
