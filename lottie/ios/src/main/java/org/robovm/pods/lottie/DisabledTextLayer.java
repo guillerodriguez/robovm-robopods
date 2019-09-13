@@ -51,7 +51,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithLayer:")
     public DisabledTextLayer(NSObject layer) { super((SkipInit) null); initObject(init(layer)); }
     @Method(selector = "initWithCoder:")
-    public DisabledTextLayer(NSCoder aDecoder) { super((SkipInit) null); initObject(init(aDecoder)); }
+    public DisabledTextLayer(NSCoder coder) { super((SkipInit) null); initObject(init(coder)); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -63,6 +63,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithLayer:")
     protected native @Pointer long init(NSObject layer);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long init(NSCoder aDecoder);
+    protected native @Pointer long init(NSCoder coder);
     /*</methods>*/
 }

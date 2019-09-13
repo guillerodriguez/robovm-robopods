@@ -51,7 +51,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithFrame:")
     public AnimationSubview(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public AnimationSubview(NSCoder aDecoder) { super((SkipInit) null); initObject(init(aDecoder)); }
+    public AnimationSubview(NSCoder coder) { super((SkipInit) null); initObject(init(coder)); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -61,6 +61,6 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithFrame:")
     protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long init(NSCoder aDecoder);
+    protected native @Pointer long init(NSCoder coder);
     /*</methods>*/
 }
