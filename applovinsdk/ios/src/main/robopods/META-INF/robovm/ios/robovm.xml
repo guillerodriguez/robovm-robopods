@@ -3,6 +3,7 @@
         <lib>z</lib>
     </libs>
     <frameworks>
+        <framework>AppLovinSDK</framework>
         <framework>AdSupport</framework>
         <framework>AVFoundation</framework>
         <framework>CoreGraphics</framework>
@@ -14,5 +15,6 @@
         <framework>UIKit</framework>
         <framework>WebKit</framework>
         <framework>CoreMedia</framework>
+        <framework>CFNetwork</framework>
     </frameworks>
 </config>
