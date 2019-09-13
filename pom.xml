@@ -36,6 +36,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <robovm.version>2.3.7</robovm.version>
         <robopods.version>${project.version}</robopods.version>
+        <skipTests>true</skipTests>
     </properties>
 
 
