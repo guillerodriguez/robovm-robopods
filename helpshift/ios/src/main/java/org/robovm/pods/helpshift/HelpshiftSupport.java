@@ -41,7 +41,16 @@ import org.robovm.apple.uikit.*;
 
     /*<ptr>*/public static class HelpshiftSupportPtr extends Ptr<HelpshiftSupport, HelpshiftSupportPtr> {}/*</ptr>*/
     /*<bind>*/static { ObjCRuntime.bind(HelpshiftSupport.class); }/*</bind>*/
-    /*<constants>*//*</constants>*/
+    /*<constants>*/
+    public static final String UserAcceptedTheSolution = "User accepted the solution";
+    public static final String UserRejectedTheSolution = "User rejected the solution";
+    public static final String UserSentScreenShot = "User sent a screenshot";
+    public static final String UserReviewedTheApp = "User reviewed the app";
+    public static final String ConversationFlow = "conversationFlow";
+    public static final String FAQsFlow = "faqsFlow";
+    public static final String FAQSectionFlow = "faqSectionFlow";
+    public static final String SingleFAQFlow = "singleFaqFlow";
+    /*</constants>*/
     /*<constructors>*/
     public HelpshiftSupport() {}
     protected HelpshiftSupport(Handle h, long handle) { super(h, handle); }

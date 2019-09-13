@@ -240,13 +240,16 @@ values:
         class: HelpshiftSupport
         name: getHelpshiftSupportTagsKey
 
-
     # Make sure we don't miss any values if new ones are introduced in a later version
     (.*):
         class: __FixMe
         name: 'Value_#{g[0]}'
 
 constants:
+    HelpshiftSupport(.*):
+        class: HelpshiftSupport
+        name: '#{g[0]}'
+
     # Make sure we don't miss any constants if new ones are introduced in a later version
     (.*):
         class: __FixMe
