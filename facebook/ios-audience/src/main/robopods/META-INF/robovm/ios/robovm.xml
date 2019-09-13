@@ -1,6 +1,12 @@
 <config>
+    <libs>
+        <lib>xml2</lib>
+    </libs>
     <frameworks>
         <framework>FBAudienceNetwork</framework>
+        <framework>SystemConfiguration</framework>
+        <framework>CoreMotion</framework>
+        <framework>VideoToolbox</framework>
         <framework>AVFoundation</framework>
         <framework>CoreGraphics</framework>
         <framework>CoreMedia</framework>
