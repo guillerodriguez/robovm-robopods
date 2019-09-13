@@ -24,15 +24,15 @@ typed_enums:
         type: NSString
         prefix: FBSDKAppEventName
     FBSDKAppEventParameterName:
-        enum: FBSDKAppEventParameterName
+        class: FBSDKAppEventParameterName # could be a dict but it would require to configure method for each key
         type: NSString
         prefix: FBSDKAppEventParameterName
     FBSDKAppEventParameterProduct:
-        enum: FBSDKAppEventParameterProduct
+        class: FBSDKAppEventParameterProduct  # as logProductItem uses it as NSDictionary<NSString, id>
         type: NSString
         prefix: FBSDKAppEventParameterProduct
     FBSDKAppEventParameterValue:
-        enum: FBSDKAppEventParameterValue
+        class: FBSDKAppEventParameterValue  # as used only as value to dict, not need to overcomplicate
         type: NSString
         prefix: FBSDKAppEventParameterValue
     FBSDKAppEventUserDataType:
