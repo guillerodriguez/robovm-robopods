@@ -15,11 +15,8 @@ This RoboPod requires you to add the native `OneSignal.framework`. Easiest way i
 <config>
     ...
     <frameworkPaths>
-        <path>libs</path>
+        <path>libs</path>  <!-- path where OneSignal.framework is located -->
     </frameworkPaths>
-    <frameworks>
-        <framework>OneSignal</framework>
-    </frameworks>
 </config>
 ```
 

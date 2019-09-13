@@ -15,11 +15,8 @@ This RoboPod requires you to add the native `Charts.framework`. Easiest way is t
 <config>
     ...
     <frameworkPaths>
-        <path>libs</path>
+        <path>libs</path>  <!-- path where Charts.framework is located -->
     </frameworkPaths>
-    <frameworks>
-        <framework>Charts</framework>
-    </frameworks>
 </config>
 ```
 

@@ -1,0 +1,8 @@
+<config>
+    <frameworks>
+        <framework>FBSDKShareKit</framework>
+        <framework>CoreGraphics</framework>
+        <framework>Photos</framework>
+        <framework>UIKit</framework>
+    </frameworks>
+</config>

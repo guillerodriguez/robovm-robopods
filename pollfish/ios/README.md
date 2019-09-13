@@ -11,11 +11,8 @@ This RoboPod requires you to add the native `pollfish.framework`.
 <config>
     ...
     <frameworkPaths>
-        <path>libs</path>
+        <path>libs</path>  <!-- path where pollfish.framework is located -->
     </frameworkPaths>
-    <frameworks>
-        <framework>pollfish</framework>
-    </frameworks>
 </config>
 ```
 

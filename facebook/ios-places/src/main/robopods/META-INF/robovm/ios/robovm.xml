@@ -1,0 +1,6 @@
+<config>
+    <frameworks>
+        <framework>FBSDKPlacesKit</framework>
+        <framework>CoreLocation</framework>
+    </frameworks>
+</config>

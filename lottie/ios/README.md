@@ -15,11 +15,8 @@ This RoboPod requires you to add the native `Lottie.framework`. Easiest way is t
 <config>
     ...
     <frameworkPaths>
-        <path>libs</path>
+        <path>libs</path>  <!-- path where Lottie.framework is located -->
     </frameworkPaths>
-    <frameworks>
-        <framework>Lottie</framework>
-    </frameworks>
 </config>
 ```
 

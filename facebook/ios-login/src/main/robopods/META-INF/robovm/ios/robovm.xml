@@ -1,0 +1,7 @@
+<config>
+    <frameworks>
+        <framework>FBSDKLoginKit</framework>
+        <framework>CoreGraphics</framework>
+        <framework>UIKit</framework>
+    </frameworks>
+</config>

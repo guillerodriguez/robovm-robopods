@@ -1,0 +1,5 @@
+<config>
+    <frameworks>
+        <framework>FirebaseAnalytics</framework>
+    </frameworks>
+</config>

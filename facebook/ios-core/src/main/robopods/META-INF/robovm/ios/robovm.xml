@@ -1,0 +1,8 @@
+<config>
+    <frameworks>
+        <framework>FBSDKCoreKit</framework>
+        <framework>CoreGraphics</framework>
+        <framework>UIKit</framework>
+        <framework>WebKit</framework>
+    </frameworks>
+</config>

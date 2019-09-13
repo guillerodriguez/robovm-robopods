@@ -1,0 +1,7 @@
+<config>
+    <frameworks>
+        <framework>OneSignal</framework>
+        <framework>UserNotifications</framework>
+        <framework>UIKit</framework>
+    </frameworks>
+</config>

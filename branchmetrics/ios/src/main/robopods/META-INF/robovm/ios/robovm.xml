@@ -1,0 +1,7 @@
+<config>
+    <frameworks>
+        <framework>Branch</framework>
+        <framework>CoreSpotlight</framework>
+        <framework>UIKit</framework>
+    </frameworks>
+</config>

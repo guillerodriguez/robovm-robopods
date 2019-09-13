@@ -18,11 +18,8 @@ carthage update
 <config>
     ...
     <frameworkPaths>
-        <path>libs</path>
+        <path>libs</path>  <!-- path where Branch.framework is located -->
     </frameworkPaths>
-    <frameworks>
-        <framework>Branch</framework>
-    </frameworks>
 </config>
 ```
 

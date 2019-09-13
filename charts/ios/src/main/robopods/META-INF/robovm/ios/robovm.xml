@@ -1,0 +1,8 @@
+<config>
+    <frameworks>
+        <framework>Charts</framework>
+        <framework>CoreGraphics</framework>
+        <framework>QuartzCore</framework>
+        <framework>UIKit</framework>
+    </frameworks>
+</config>

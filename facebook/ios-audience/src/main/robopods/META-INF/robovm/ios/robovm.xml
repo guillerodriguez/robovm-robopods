@@ -1,0 +1,10 @@
+<config>
+    <frameworks>
+        <framework>FBAudienceNetwork</framework>
+        <framework>AVFoundation</framework>
+        <framework>CoreGraphics</framework>
+        <framework>CoreMedia</framework>
+        <framework>StoreKit</framework>
+        <framework>UIKit</framework>
+    </frameworks>
+</config>

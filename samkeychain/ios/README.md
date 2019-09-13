@@ -19,11 +19,8 @@ carthage update
 <config>
     ...
     <frameworkPaths>
-        <path>libs</path>
+        <path>libs</path>  <!-- path where SAMKeychain.framework is located -->
     </frameworkPaths>
-    <frameworks>
-        <framework>SAMKeychain</framework>
-    </frameworks>
 </config>
 ```
 
