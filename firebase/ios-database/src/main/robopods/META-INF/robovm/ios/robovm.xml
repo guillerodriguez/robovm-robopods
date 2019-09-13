@@ -1,5 +1,6 @@
 <config>
     <frameworks>
         <framework>FirebaseDatabase</framework>
+        <framework>leveldb-library</framework>
     </frameworks>
 </config>

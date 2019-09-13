@@ -1,5 +1,12 @@
 # Firebase iOS Analytics framework
 
+### Frameworks required for this pod: 
+* GoogleUtilities.frßamework
+* FirebaseCore.framework
+* FirebaseAnalytics.framework
+* GoogleAppMeasurement.framework
+* nanopb.framework
+
 ### to use this pod configure your `robovm.xml`
 
 ```

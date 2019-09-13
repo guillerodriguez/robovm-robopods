@@ -1,5 +1,6 @@
 <config>
     <frameworks>
         <framework>FirebaseCore</framework>
+        <framework>GoogleUtilities</framework>
     </frameworks>
 </config>

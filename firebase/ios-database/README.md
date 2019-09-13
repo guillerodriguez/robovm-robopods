@@ -1,5 +1,11 @@
 # Firebase iOS Realtime Database framework
 
+### Frameworks required for this pod: 
+* GoogleUtilities.framework
+* FirebaseCore.framework
+* FirebaseDatabase.frameworkß
+* leveldb-library.framework
+
 ### to use this pod configure your `robovm.xml`
 
 ```
