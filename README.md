@@ -36,7 +36,7 @@ v1.3.0 -- in development
 | [Firebase](firebase/)              | 6.8.1  |
 | [HelpShift](helpshift/)            | 7.6.2  |
 | [Lottie](lottie/)                  | 3.1.2  |
-| [OneSignal](onesignal/)            | 2.10.0 |
+| [OneSignal](onesignal/)            | 2.11.0 |
 | [SAMKeychain](samkeychain/)        | 1.5.3  |
 
 v1.2.0
