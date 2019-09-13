@@ -135,8 +135,6 @@ import org.robovm.apple.uikit.*;
     public static native void IdsAvailable(@Block VoidBlock2<NSString, NSString> idsAvailableBlock);
     @Method(selector = "getPermissionSubscriptionState")
     public static native OSPermissionSubscriptionState getPermissionSubscriptionState();
-    @Method(selector = "setNotificationDisplayTypeDelegate:")
-    public static native void setNotificationDisplayTypeDelegate(OSNotificationDisplayTypeDelegate delegate);
     @Method(selector = "addPermissionObserver:")
     public static native void addPermissionObserver(OSPermissionObserver observer);
     @Method(selector = "removePermissionObserver:")
@@ -151,6 +149,10 @@ import org.robovm.apple.uikit.*;
     public static native void removeEmailSubscriptionObserver(OSEmailSubscriptionObserver observer);
     @Method(selector = "setSubscription:")
     public static native void setSubscription(boolean enable);
+    @Method(selector = "isInAppMessagingPaused")
+    public static native boolean isInAppMessagingPaused();
+    @Method(selector = "pauseInAppMessages:")
+    public static native void pauseInAppMessages(boolean pause);
     @Method(selector = "postNotification:")
     public static native void postNotification(NSDictionary<?, ?> jsonData);
     @Method(selector = "postNotification:onSuccess:onFailure:")
@@ -165,6 +167,8 @@ import org.robovm.apple.uikit.*;
     public static native void setLocationShared(boolean enable);
     @Method(selector = "setMSDKType:")
     public static native void setMSDKType(String type);
+    @Method(selector = "setInAppMessageClickHandler:")
+    public static native void setInAppMessageClickHandler(@Block VoidBlock1<OSInAppMessageAction> delegate);
     @Method(selector = "didReceiveNotificationExtensionRequest:withMutableNotificationContent:")
     public static native UNMutableNotificationContent didReceiveNotification(UNNotificationRequest request, UNMutableNotificationContent replacementContent);
     @Method(selector = "serviceExtensionTimeWillExpireRequest:withMutableNotificationContent:")
@@ -181,6 +185,18 @@ import org.robovm.apple.uikit.*;
     public static native void setEmail(String email);
     @Method(selector = "setEmail:withEmailAuthHashToken:")
     public static native void setEmail(String email, String hashToken);
+    @Method(selector = "addTrigger:withValue:")
+    public static native void addTrigger(String key, NSObject value);
+    @Method(selector = "addTriggers:")
+    public static native void addTriggers(NSDictionary<NSString, ?> triggers);
+    @Method(selector = "removeTriggerForKey:")
+    public static native void removeTriggerForKey(String key);
+    @Method(selector = "removeTriggersForKeys:")
+    public static native void removeTriggersForKeys(NSArray<NSString> keys);
+    @Method(selector = "getTriggers")
+    public static native NSDictionary<NSString, ?> getTriggers();
+    @Method(selector = "getTriggerValueForKey:")
+    public static native NSObject getTriggerValueForKey(String key);
     @Method(selector = "setExternalUserId:")
     public static native void setExternalUserId(String externalId);
     @Method(selector = "removeExternalUserId")

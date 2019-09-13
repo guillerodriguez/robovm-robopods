@@ -88,6 +88,7 @@ import org.robovm.apple.uikit.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    
+    @Method(selector = "parseWithApns:")
+    public static native OSNotificationPayload parse(NSDictionary<?, ?> message);
     /*</methods>*/
 }

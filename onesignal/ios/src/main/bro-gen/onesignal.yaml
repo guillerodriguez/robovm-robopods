@@ -19,7 +19,10 @@ classes:
     OSNotification: {}
     OSNotificationAction: {}
     OSNotificationOpenedResult: {}
-    OSNotificationPayload: {}
+    OSNotificationPayload:
+        methods:
+            '+parseWithApns:':
+                name: parse
     OSPermissionState: {}
     OSPermissionStateChanges: {}
     OSPermissionSubscriptionState: {}
@@ -81,8 +84,11 @@ classes:
                 name: logoutEmail
             '+setEmail:withEmailAuthHashToken:':
                 trim_after_first_colon: true
+            '+addTrigger:withValue:':
+                name: addTrigger
     OSEmailSubscriptionState: {}
     OSEmailSubscriptionStateChanges: {}
+    OSInAppMessageAction: {}
 
 protocols:
     OSPermissionObserver: {}
@@ -93,6 +99,7 @@ protocols:
         methods:
             '-willPresentInFocusNotificationWithPayload:withCompletion:':
                 name: willPresentInFocusNotification
+    OSInAppMessageDelegate: {}
 functions:
     # Make sure we don't miss any functions if new ones are introduced in a later version
     (.*):
