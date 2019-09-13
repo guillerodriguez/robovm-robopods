@@ -19,11 +19,27 @@ This is the list of currently available AltPods. Click them to get more informat
 | [OneSignal](onesignal/)            | OneSignal is a free push notification service for mobile apps                          |
 | [Pollfish](pollfish/)              | Simple Surveys |
 | [SAMKeychain](samkeychain/)        | SAMKeychain is a simple wrapper for accessing accounts, getting passwords, setting passwords, and deleting passwords using the system Keychain on Mac OS X and iOS|
+| [Facebook](facebook/)              | Used to integrate the Facebook Platform with your iOS & tvOS apps                       |
 
 
 ## Version of AltPods to framework version mapping
 
-v1.2.0 -- in development
+v1.3.0 -- in development
+
+| Name                               | 1.3.0  |
+|------------------------------------|--------|
+| [Facebook (new)](facebook/)        | 5.5.0  |
+| [AppLovinSDK](applovinsdk/)        | 6.7.1  |
+| [Pollfish](pollfish/)              | 5.0.0  |
+| [BranchMetrics](branchmetrics/)    | 0.27.1 |
+| [Charts](charts/)                  | 3.3.0  |
+| [Firebase](firebase/)              | 6.8.1 |
+| [HelpShift](helpshift/)            | 7.5.3  |
+| [Lottie](lottie/)                  | 3.1.1  |
+| [OneSignal](onesignal/)            | 2.10.0 |
+| [SAMKeychain](samkeychain/)        | 1.5.3  |
+
+v1.2.0
 
 | Name                               | 1.2.0  |
 |------------------------------------|--------|
