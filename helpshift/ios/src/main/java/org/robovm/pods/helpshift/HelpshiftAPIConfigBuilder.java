@@ -84,6 +84,10 @@ import org.robovm.apple.uikit.*;
     public native NSDictionary<?, ?> getExtraConfig();
     @Property(selector = "setExtraConfig:")
     public native void setExtraConfig(NSDictionary<?, ?> v);
+    @Property(selector = "conversationPrefillText")
+    public native String getConversationPrefillText();
+    @Property(selector = "setConversationPrefillText:")
+    public native void setConversationPrefillText(String v);
     /**
      * @deprecated This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.
      */
@@ -132,10 +136,6 @@ import org.robovm.apple.uikit.*;
     @Deprecated
     @Property(selector = "setShowSearchOnNewConversation:")
     public native void setShowSearchOnNewConversation(boolean v);
-    @Property(selector = "conversationPrefillText")
-    public native String getConversationPrefillText();
-    @Property(selector = "setConversationPrefillText:")
-    public native void setConversationPrefillText(String v);
     /**
      * @deprecated This config is now deprecated. Please turn On/Off this config from app settings (In App SDK configuration page on Admin dashboard)
      */

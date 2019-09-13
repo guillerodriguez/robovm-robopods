@@ -1,6 +1,6 @@
 /*
  *    HelpshiftCore.h
- *    SDK Version 7.5.3-withCampaigns
+ *    SDK Version 7.6.2-withCampaigns
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -84,7 +84,7 @@ typedef enum HsEnableContactUs
 @property (nonatomic, assign) BOOL enableInAppNotifications;
 @property (nonatomic, assign) BOOL enableLogging;
 @property (nonatomic, assign) HsAddFAQsToDeviceSearch addFaqsToDeviceSearch;
-@property (nonatomic, assign) BOOL disableAutomaticPushHandling;
+@property (nonatomic, assign) BOOL disableAutomaticPushHandling __deprecated_msg("This config is now deprecated. In following releases, the SDK will stop automatic push handling via swizzling. Please ensure that you are following the guide here: https://developers.helpshift.com/ios/notifications/#configure-helpshift-sdk");
 @property (nonatomic, strong) NSDictionary *extraConfig;
 
 - (HelpshiftInstallConfig *) build;
@@ -104,11 +104,11 @@ typedef enum HsEnableContactUs
 @property (strong, nonatomic) HelpshiftSupportMetaData *customMetaData;
 @property (strong, nonatomic) NSDictionary *customIssueFields;
 @property (strong, nonatomic) NSDictionary *extraConfig;
+@property (strong, nonatomic) NSString *conversationPrefillText;
 @property (nonatomic, assign) BOOL gotoConversationAfterContactUs __deprecated_msg("This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.");
 @property (nonatomic, assign) BOOL requireEmail __deprecated_msg("This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.");
 @property (nonatomic, assign) BOOL hideNameAndEmail __deprecated_msg("This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.");
 @property (nonatomic, assign) BOOL showSearchOnNewConversation __deprecated_msg("This config is applicable only for form based issue filing experience which is deprecated from SDK version 7.0.0.");
-@property (strong, nonatomic) NSString *conversationPrefillText;
 @property (nonatomic, assign) BOOL showConversationResolutionQuestion __deprecated_msg("This config is now deprecated. Please turn On/Off this config from app settings (In App SDK configuration page on Admin dashboard)");
 @property (nonatomic, assign) BOOL enableTypingIndicator __deprecated_msg("This config is now deprecated. Please turn On/Off this config from app settings (In App SDK configuration page on Admin dashboard)");
 

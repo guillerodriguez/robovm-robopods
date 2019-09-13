@@ -1,0 +1,6 @@
+<config>
+    <frameworks>
+        <framework>CoreLocation</framework>
+        <framework>UIKit</framework>
+    </frameworks>
+</config>

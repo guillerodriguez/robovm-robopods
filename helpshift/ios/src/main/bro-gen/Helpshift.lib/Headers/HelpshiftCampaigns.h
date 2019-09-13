@@ -1,14 +1,12 @@
 /*
  *    HelpshiftCampaigns.h
- *    SDK Version 7.5.3-withCampaigns
+ *    SDK Version 7.6.2-withCampaigns
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
  */
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
-
 #import "HelpshiftCore.h"
 #import "HelpshiftInbox.h"
 

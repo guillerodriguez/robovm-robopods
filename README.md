@@ -34,7 +34,7 @@ v1.3.0 -- in development
 | [BranchMetrics](branchmetrics/)    | 0.28.1 |
 | [Charts](charts/)                  | 3.3.0  |
 | [Firebase](firebase/)              | 6.8.1  |
-| [HelpShift](helpshift/)            | 7.5.3  |
+| [HelpShift](helpshift/)            | 7.6.2  |
 | [Lottie](lottie/)                  | 3.1.1  |
 | [OneSignal](onesignal/)            | 2.10.0 |
 | [SAMKeychain](samkeychain/)        | 1.5.3  |
