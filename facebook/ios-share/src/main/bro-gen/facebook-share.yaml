@@ -191,12 +191,21 @@ functions:
 
     NSStringFromFBSDKAppGroupPrivacy:
         class: FBSDKAppGroupPrivacy
+        static: true
+        visibility: protected
+        return_marshaler: NSString.AsStringMarshaler
         name: toString
     NSStringFromFBSDKLikeObjectType:
         class: FBSDKLikeObjectType
+        static: true
+        visibility: protected
+        return_marshaler: NSString.AsStringMarshaler
         name: toString
     NSStringFromFBSDKShareDialogMode:
         class: FBSDKShareDialogMode
+        static: true
+        visibility: protected
+        return_marshaler: NSString.AsStringMarshaler
         name: toString
 
 values:
