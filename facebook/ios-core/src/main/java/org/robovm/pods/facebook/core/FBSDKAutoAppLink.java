@@ -35,22 +35,24 @@ import org.robovm.apple.webkit.*;
 /*</imports>*/
 
 /*<javadoc>*/
+
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBSDKCore/*</name>*/ 
-    extends /*<extends>*/CocoaUtility/*</extends>*/ 
-    /*<implements>*//*</implements>*/ {
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/FBSDKAutoAppLink/*</name>*/ 
+    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
     /*<bind>*/
     /*</bind>*/
-    /*<constants>*/
-    public static final String Version = "5.11.0";
-    public static final String PlatformVersion = "v5.0";
-    /*</constants>*/
-    /*<constructors>*//*</constructors>*/
-    /*<properties>*//*</properties>*/
-    /*<members>*//*</members>*/
-    /*<methods>*//*</methods>*/
+    /*<constants>*//*</constants>*/
+    /*<properties>*/
+    
+    /*</properties>*/
+    /*<methods>*/
+    @Method(selector = "setAutoAppLinkData:")
+    void setAutoAppLinkData(NSDictionary<NSString, ?> data);
+    /*</methods>*/
+    /*<adapter>*/
+    /*</adapter>*/
 }

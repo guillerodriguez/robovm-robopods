@@ -5,4 +5,8 @@
         <framework>UIKit</framework>
         <framework>WebKit</framework>
     </frameworks>
+    <exportedSymbols>
+        <!-- required when static version of framework is used to keep symbols from being dropped by linker as unused -->
+        <symbol>FBSDK**</symbol>
+    </exportedSymbols>
 </config>

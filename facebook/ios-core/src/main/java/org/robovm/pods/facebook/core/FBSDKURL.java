@@ -67,6 +67,8 @@ import org.robovm.apple.webkit.*;
     public native NSURL getInputURL();
     @Property(selector = "inputQueryParameters")
     public native NSDictionary<NSString, ?> getInputQueryParameters();
+    @Property(selector = "isAutoAppLink")
+    public native boolean isAutoAppLink();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

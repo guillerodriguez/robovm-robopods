@@ -35,22 +35,32 @@ import org.robovm.apple.webkit.*;
 /*</imports>*/
 
 /*<javadoc>*/
-/*</javadoc>*/
-/*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBSDKCore/*</name>*/ 
-    extends /*<extends>*/CocoaUtility/*</extends>*/ 
-    /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/
-    /*</ptr>*/
+/*</javadoc>*/
+/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedUIntMarshaler.class)/*</annotations>*/
+public enum /*<name>*/FBSDKAutoAppLinkPresentationStyle/*</name>*/ implements ValuedEnum {
+    /*<values>*/
+    Auto(0L),
+    Present(1L),
+    Push(2L);
+    /*</values>*/
+
     /*<bind>*/
     /*</bind>*/
-    /*<constants>*/
-    public static final String Version = "5.11.0";
-    public static final String PlatformVersion = "v5.0";
-    /*</constants>*/
-    /*<constructors>*//*</constructors>*/
-    /*<properties>*//*</properties>*/
-    /*<members>*//*</members>*/
+    /*<constants>*//*</constants>*/
     /*<methods>*//*</methods>*/
+
+    private final long n;
+
+    private /*<name>*/FBSDKAutoAppLinkPresentationStyle/*</name>*/(long n) { this.n = n; }
+    public long value() { return n; }
+    public static /*<name>*/FBSDKAutoAppLinkPresentationStyle/*</name>*/ valueOf(long n) {
+        for (/*<name>*/FBSDKAutoAppLinkPresentationStyle/*</name>*/ v : values()) {
+            if (v.n == n) {
+                return v;
+            }
+        }
+        throw new IllegalArgumentException("No constant with value " + n + " found in " 
+            + /*<name>*/FBSDKAutoAppLinkPresentationStyle/*</name>*/.class.getName());
+    }
 }
