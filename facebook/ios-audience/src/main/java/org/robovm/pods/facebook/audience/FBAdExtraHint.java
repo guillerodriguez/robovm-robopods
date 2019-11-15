@@ -60,16 +60,40 @@ import org.robovm.pods.facebook.core.*;
     public FBAdExtraHint(NSArray<NSString> keywords) { super((SkipInit) null); initObject(init(keywords)); }
     /*</constructors>*/
     /*<properties>*/
+    /**
+     * @deprecated Extra hints are no longer used in Audience Network
+     */
+    @Deprecated
     @Property(selector = "contentURL")
     public native String getContentURL();
+    /**
+     * @deprecated Extra hints are no longer used in Audience Network
+     */
+    @Deprecated
     @Property(selector = "setContentURL:")
     public native void setContentURL(String v);
+    /**
+     * @deprecated Extra hints are no longer used in Audience Network
+     */
+    @Deprecated
     @Property(selector = "extraData")
     public native String getExtraData();
+    /**
+     * @deprecated Extra hints are no longer used in Audience Network
+     */
+    @Deprecated
     @Property(selector = "setExtraData:")
     public native void setExtraData(String v);
+    /**
+     * @deprecated Extra hints are no longer used in Audience Network
+     */
+    @Deprecated
     @Property(selector = "mediationData")
     public native String getMediationData();
+    /**
+     * @deprecated Extra hints are no longer used in Audience Network
+     */
+    @Deprecated
     @Property(selector = "setMediationData:")
     public native void setMediationData(String v);
     /*</properties>*/

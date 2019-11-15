@@ -73,6 +73,10 @@ classes:
                 name: convert
             '-convertWithPoint:toLayerAt:':
                 name: convert
+            '-setColorValue:forKeypath:':
+                name: setColorValue
+            '-getColorValueFor:atFrame:':
+                name: getColorValue
     CompositionLayer:
         methods:
             '-initWithLayer:':

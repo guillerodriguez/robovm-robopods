@@ -299,14 +299,8 @@ import org.robovm.apple.coreanimation.*;
     public native ChartTransformer getTransformerForAxis(AxisDependency axis);
     @Method(selector = "isInvertedWithAxis:")
     public native boolean isInverted(AxisDependency axis);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
     @Method(selector = "gestureRecognizer:shouldRequireFailureOfGestureRecognizer:")
     public native boolean shouldRequireFailure(UIGestureRecognizer gestureRecognizer, UIGestureRecognizer otherGestureRecognizer);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
     @Method(selector = "gestureRecognizer:shouldBeRequiredToFailByGestureRecognizer:")
     public native boolean shouldBeRequiredToFail(UIGestureRecognizer gestureRecognizer, UIGestureRecognizer otherGestureRecognizer);
     @Method(selector = "gestureRecognizer:shouldReceiveTouch:")

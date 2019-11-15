@@ -62,7 +62,7 @@ import org.robovm.apple.uikit.*;
     @NotImplemented("_setName:andEmail:")
     public void setNameAndEmail(String name, String email) {}
     @NotImplemented("_registerDeviceToken:")
-    public void registerDeviceToken(NSData deviceToken) {}
+    public void registerDeviceToken(String deviceToken) {}
     @NotImplemented("_handleRemoteNotification:withController:")
     public boolean handleRemoteNotification(NSDictionary<?, ?> notification, UIViewController viewController) { return false; }
     @NotImplemented("_handleRemoteNotification:isAppLaunch:withController:")
@@ -77,5 +77,9 @@ import org.robovm.apple.uikit.*;
     public void handleEventsForBackgroundURLSession(String identifier, @Block Runnable completionHandler) {}
     @NotImplemented("_setSDKLanguage:")
     public boolean setSDKLanguage(String langCode) { return false; }
+    @NotImplemented("_setTheme:")
+    public void setTheme(String themeName) {}
+    @NotImplemented("_setLightTheme:darkTheme:")
+    public void setThemes(String lightThemeName, String darkThemeName) {}
     /*</methods>*/
 }

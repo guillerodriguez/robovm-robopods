@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.robovm.pods.branchmetrics;
+package org.robovm.pods.facebook.audience;
 
 /*<imports>*/
 import java.io.*;
@@ -28,35 +28,37 @@ import org.robovm.rt.bro.*;
 import org.robovm.rt.bro.annotation.*;
 import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
+import org.robovm.apple.coregraphics.*;
+import org.robovm.apple.dispatch.*;
+import org.robovm.apple.coremedia.*;
 import org.robovm.apple.uikit.*;
-import org.robovm.apple.corespotlight.*;
+import org.robovm.apple.storekit.*;
+import org.robovm.apple.avfoundation.*;
+import org.robovm.pods.facebook.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
 /*</javadoc>*/
-/*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/BranchViewControllerDelegate/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<annotations>*/@Library(Library.INTERNAL)/*</annotations>*/
+/*<visibility>*/public final/*</visibility>*/ class /*<name>*/UIViewExtensions/*</name>*/ 
+    extends /*<extends>*/NSExtensions/*</extends>*/ 
+    /*<implements>*//*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
-    /*<bind>*/
-    /*</bind>*/
+    /*<bind>*/static { ObjCRuntime.bind(UIViewExtensions.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
+    /*<constructors>*/
+    private UIViewExtensions() {}
+    /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "nativeAdViewTag")
+    public static native FBNativeAdViewTag getNativeAdViewTag(UIView thiz);
+    @Property(selector = "setNativeAdViewTag:")
+    public static native void setNativeAdViewTag(UIView thiz, FBNativeAdViewTag v);
     /*</properties>*/
+    /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "branchViewVisible:withID:")
-    void branchViewVisible(String actionName, String branchViewID);
-    @Method(selector = "branchViewAccepted:withID:")
-    void branchViewAccepted(String actionName, String branchViewID);
-    @Method(selector = "branchViewCancelled:withID:")
-    void branchViewCancelled(String actionName, String branchViewID);
-    @Method(selector = "branchViewErrorCode:message:actionName:withID:")
-    void branchViewError(@MachineSizedSInt long errorCode, String errorMsg, String actionName, String branchViewID);
+    
     /*</methods>*/
-    /*<adapter>*/
-    /*</adapter>*/
 }

@@ -4,6 +4,7 @@
 
 | RoboPods Version  | Pollfish Version  |
 |-------------------|-------------------|
+| 1.4.0             | 5.1.0             |
 | 1.2.0             | 5.0.0             |
 
 ## Official website

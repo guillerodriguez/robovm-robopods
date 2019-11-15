@@ -36,9 +36,11 @@ import org.robovm.pods.facebook.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
+/**
+ * @deprecated Sharing to Messenger via the SDK is unsupported. https://developers.facebook.com/docs/messenger-platform/changelog/#20190610. Sharing should be performed by the native share sheet.
+ */
 /*</javadoc>*/
-/*<annotations>*//*</annotations>*/
+/*<annotations>*/@Deprecated/*</annotations>*/
 /*<visibility>*/public/*</visibility>*/ interface /*<name>*/FBSDKShareMessengerActionButton/*</name>*/ 
     /*<implements>*/extends FBSDKCopying, NSSecureCoding/*</implements>*/ {
 

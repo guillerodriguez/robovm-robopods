@@ -70,6 +70,10 @@ import org.robovm.pods.facebook.core.*;
     public static native String getBidderToken();
     @Property(selector = "routingToken")
     public static native String getRoutingToken();
+    @Property(selector = "isMixedAudience")
+    public static native boolean isMixedAudience();
+    @Property(selector = "setMixedAudience:")
+    public static native void setMixedAudience(boolean v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -85,6 +89,10 @@ import org.robovm.pods.facebook.core.*;
     public static native void clearTestDevices();
     @Method(selector = "clearTestDevice:")
     public static native void clearTestDevice(String deviceHash);
+    /**
+     * @deprecated isChildDirected method is no longer supported in Audience Network. Use +mixedAudience instead
+     */
+    @Deprecated
     @Method(selector = "setIsChildDirected:")
     public static native void setIsChildDirected(boolean isChildDirected);
     @Method(selector = "setMediationService:")
@@ -97,6 +105,10 @@ import org.robovm.pods.facebook.core.*;
     public static native FBAdLogLevel getLogLevel();
     @Method(selector = "setLogLevel:")
     public static native void setLogLevel(FBAdLogLevel level);
+    /**
+     * @deprecated Rendering method is no longer used in Audience Network
+     */
+    @Deprecated
     @Method(selector = "mediaViewRenderingMethod")
     public static native FBMediaViewRenderingMethod mediaViewRenderingMethod();
     /**

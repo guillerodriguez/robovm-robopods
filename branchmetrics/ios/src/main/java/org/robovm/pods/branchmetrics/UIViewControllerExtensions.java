@@ -33,32 +33,31 @@ import org.robovm.apple.corespotlight.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
 /*</javadoc>*/
-/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/BranchViewHandler/*</name>*/ 
-    extends /*<extends>*/NSObject/*</extends>*/ 
+/*<annotations>*/@Library(Library.INTERNAL)/*</annotations>*/
+/*<visibility>*/public final/*</visibility>*/ class /*<name>*/UIViewControllerExtensions/*</name>*/ 
+    extends /*<extends>*/NSExtensions/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class BranchViewHandlerPtr extends Ptr<BranchViewHandler, BranchViewHandlerPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(BranchViewHandler.class); }/*</bind>*/
+    /*<ptr>*/
+    /*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(UIViewControllerExtensions.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public BranchViewHandler() {}
-    protected BranchViewHandler(Handle h, long handle) { super(h, handle); }
-    protected BranchViewHandler(SkipInit skipInit) { super(skipInit); }
+    private UIViewControllerExtensions() {}
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "branchViewCallback")
-    public native BranchViewControllerDelegate getBranchViewCallback();
-    @Property(selector = "setBranchViewCallback:", strongRef = true)
-    public native void setBranchViewCallback(BranchViewControllerDelegate v);
+    
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "showBranchView:withBranchViewDictionary:andWithDelegate:")
-    public native boolean showBranchView(String actionName, NSDictionary<?, ?> branchViewDict, NSObject callback);
-    @Method(selector = "getInstance")
-    public static native BranchViewHandler getInstance();
+    @Method(selector = "bnc_currentViewController")
+    public static native UIViewController getBranchCurrentViewController(UIViewController thiz);
+    @Method(selector = "bnc_currentWindow")
+    protected static native UIWindow getBranchCurrentWindow(ObjCClass clazz);
+    public static UIWindow getBranchCurrentWindow() { return getBranchCurrentWindow(ObjCClass.getByType(UIViewController.class)); }
+    @Method(selector = "bnc_currentViewController")
+    protected static native UIViewController getBranchCurrentViewController(ObjCClass clazz);
+    public static UIViewController getBranchCurrentViewController() { return getBranchCurrentViewController(ObjCClass.getByType(UIViewController.class)); }
     /*</methods>*/
 }

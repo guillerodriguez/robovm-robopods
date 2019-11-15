@@ -35,7 +35,7 @@ import org.robovm.apple.corespotlight.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class) @Library(Library.INTERNAL)/*</annotations>*/
+/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
 public enum /*<name>*/BNCErrorCode/*</name>*/ implements NSErrorCode {
     /*<values>*/
     InitError(1000L),
@@ -54,16 +54,15 @@ public enum /*<name>*/BNCErrorCode/*</name>*/ implements NSErrorCode {
     SpotlightIdentifierError(1013L),
     SpotlightPublicIndexError(1014L),
     TrackingDisabledError(1015L),
-    HighestError(1016L);
+    GeneralError(1016L),
+    HighestError(1017L);
     /*</values>*/
 
-    /*<bind>*/static { Bro.bind(BNCErrorCode.class); }/*</bind>*/
+    /*<bind>*/
+    /*</bind>*/
     /*<constants>*//*</constants>*/
     /*<members>*//*</members>*/
-    /*<methods>*/
-    @GlobalValue(symbol="BNCErrorDomain", optional=true)
-    public static native String getClassDomain();
-    /*</methods>*/
+    /*<methods>*//*</methods>*/
 
     private final long n;
 
@@ -79,7 +78,12 @@ public enum /*<name>*/BNCErrorCode/*</name>*/ implements NSErrorCode {
             + /*<name>*/BNCErrorCode/*</name>*/.class.getName());
     }
 
-    // bind wrap to include it in compilation as long as nserror enum is used 
+    // dkimitsa: manually added code as  getClassDomain is moved to NSError extension
+    public static String getClassDomain() {
+        return NSErrorExtensions.getClassDomain();
+    }
+
+    // bind wrap to include it in compilation as long as nserror enum is used
     static { Bro.bind(NSErrorWrap.class); }
     @StronglyLinked
     public static class NSErrorWrap extends NSError {

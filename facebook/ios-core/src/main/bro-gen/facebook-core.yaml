@@ -17,6 +17,7 @@ enums:
     FBSDKAppLinkNavigationType: {}
     FBSDKIncludeStatusBarInSize: {}
     FBSDKProfilePictureMode: {}
+    FBSDKAutoAppLinkPresentationStyle: {}
 
 typed_enums:
     FBSDKAppEventName:
@@ -232,6 +233,8 @@ protocols:
             '-requestConnection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:':
                 name: didSendBodyData
     FBSDKMutableCopying:
+        skip_adapter: true
+    FBSDKAutoAppLink:
         skip_adapter: true
 
 functions:

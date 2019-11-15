@@ -88,9 +88,6 @@ import org.robovm.pods.facebook.core.*;
     public native void didStop(NSNetService sender);
     @Method(selector = "netService:didUpdateTXTRecordData:")
     public native void didUpdateTXTRecordData(NSNetService sender, NSData data);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
     @Method(selector = "netService:didAcceptConnectionWithInputStream:outputStream:")
     public native void didAcceptConnection(NSNetService sender, NSInputStream inputStream, NSOutputStream outputStream);
     /*</methods>*/

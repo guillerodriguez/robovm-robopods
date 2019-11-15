@@ -91,6 +91,10 @@ import org.robovm.apple.uikit.*;
     public static native boolean handleEventsForBackgroundURLSession(String identifier, @Block Runnable completionHandler);
     @Method(selector = "setLanguage:")
     public static native void setLanguage(String languageCode);
+    @Method(selector = "setTheme:")
+    public static native void setTheme(String themeName);
+    @Method(selector = "setLightTheme:darkTheme:")
+    public static native void setThemes(String lightThemeName, String darkThemeName);
     /**
      * @deprecated Use setLanguage: instead
      */

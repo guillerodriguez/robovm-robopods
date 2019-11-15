@@ -739,6 +739,10 @@ classes:
                 name: isInBounds
             '-translateWithPt:':
                 name: translate
+            '-isInBoundsWithPoint:':
+                name: isInBounds
+            '-isIntersectingLineFrom:to:':
+                name: isIntersectingLine
 
     ChartViewPortJob:
         methods:

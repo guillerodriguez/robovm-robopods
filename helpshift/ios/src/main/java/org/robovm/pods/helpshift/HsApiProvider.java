@@ -60,7 +60,7 @@ import org.robovm.apple.uikit.*;
     @Method(selector = "_setName:andEmail:")
     void setNameAndEmail(String name, String email);
     @Method(selector = "_registerDeviceToken:")
-    void registerDeviceToken(NSData deviceToken);
+    void registerDeviceToken(String deviceToken);
     @Method(selector = "_handleRemoteNotification:withController:")
     boolean handleRemoteNotification(NSDictionary<?, ?> notification, UIViewController viewController);
     @Method(selector = "_handleRemoteNotification:isAppLaunch:withController:")
@@ -75,6 +75,10 @@ import org.robovm.apple.uikit.*;
     void handleEventsForBackgroundURLSession(String identifier, @Block Runnable completionHandler);
     @Method(selector = "_setSDKLanguage:")
     boolean setSDKLanguage(String langCode);
+    @Method(selector = "_setTheme:")
+    void setTheme(String themeName);
+    @Method(selector = "_setLightTheme:darkTheme:")
+    void setThemes(String lightThemeName, String darkThemeName);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

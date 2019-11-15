@@ -2,12 +2,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.github.dkimitsa.robovm</groupId>
-        <version>1.3.0-SNAPSHOT</version>
+        <version>1.4.0-SNAPSHOT</version>
         <artifactId>robopods-applovinsdk-parent</artifactId>
     </parent>
 
     <artifactId>robopods-applovinsdk-ios</artifactId>
-    <name>RoboPods AppLovinSDK iOS bindings (v6.9.1)</name>
+    <name>RoboPods AppLovinSDK iOS bindings (v6.10.0)</name>
     <packaging>jar</packaging>
 
     <licenses>

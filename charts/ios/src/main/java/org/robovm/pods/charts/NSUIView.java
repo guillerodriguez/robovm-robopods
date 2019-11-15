@@ -51,7 +51,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithFrame:")
     public NSUIView(@ByVal CGRect frame) { super((SkipInit) null); initObject(init(frame)); }
     @Method(selector = "initWithCoder:")
-    public NSUIView(NSCoder decoder) { super((SkipInit) null); initObject(init(decoder)); }
+    public NSUIView(NSCoder coder) { super((SkipInit) null); initObject(init(coder)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "nsuiLayer")
@@ -82,7 +82,7 @@ import org.robovm.apple.coreanimation.*;
     @Method(selector = "initWithFrame:")
     protected native @Pointer long init(@ByVal CGRect frame);
     @Method(selector = "initWithCoder:")
-    protected native @Pointer long init(NSCoder decoder);
+    protected native @Pointer long init(NSCoder coder);
     @Method(selector = "accessibilityChildren")
     public native NSArray<?> accessibilityChildren();
     @Method(selector = "accessibilityElementCount")

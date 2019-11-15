@@ -19,6 +19,22 @@ enums:
     BranchCreditHistoryOrder: {prefix: Branch}
     BranchEventAdType: {}
 
+categories:
+    UIViewController:
+        methods:
+            '-bnc_currentViewController':
+                name: getBranchCurrentViewController
+            '+bnc_currentViewController':
+                name: getBranchCurrentViewController
+            '+bnc_currentWindow':
+                name: getBranchCurrentWindow
+    NSError:
+        methods:
+            '+bncErrorDomain':
+                name: getClassDomain
+            '+branchError.*':
+                name: createBranchError
+
 classes:
     BNCCommerceEvent: {}
     BNCLinkCache:
@@ -257,6 +273,10 @@ classes:
                 name: getBranchActivityItem
             '+getBranchActivityItemWithParams:feature:stage:tags:alias:delegate:':
                 name: getBranchActivityItem
+            '-crossPlatformIdDataWithCompletion:':
+                name: getCrossPlatformIdData
+            '-lastAttributedTouchDataWithAttributionWindow:completion:':
+                name: getLastAttributedTouchData
     BranchActivityItemProvider:
         methods:
             '-initWithParams:andTags:andFeature:andStage:andAlias:':
@@ -365,15 +385,22 @@ classes:
             '+objectWithDictionary:':
                 name: create
                 constructor: true
-    BranchView:
+    BranchCrossPlatformID:
         methods:
-            '-initWithBranchView:andActionName:':
-                name: init
-    BranchViewHandler:
+            '+buildFromJSON:':
+                constructor: true
+            '+requestCrossPlatformIdData:key:completion:':
+                name: requestCrossPlatformIdData
+    BranchProbabilisticCrossPlatformID:
         methods:
-            '-showBranchView:withBranchViewDictionary:andWithDelegate:':
-                trim_after_first_colon: true
-
+            '+buildFromJSON:':
+                constructor: true
+    BranchLastAttributedTouchData:
+        methods:
+            '+buildFromJSON:':
+                constructor: true
+            '+requestLastTouchAttributedData:key:attributionWindow:completion:':
+                name: requestLastTouchAttributedData
 protocols:
     BNCNetworkOperationProtocol: {}
     BNCNetworkServiceProtocol:
@@ -398,16 +425,6 @@ protocols:
         methods:
             '-branchShareLink:didComplete:withError:':
                 name: branchShareLink
-    BranchViewControllerDelegate:
-        methods:
-            '-branchViewVisible:withID:':
-                name: branchViewVisible
-            '-branchViewAccepted:withID:':
-                name: branchViewAccepted
-            '-branchViewCancelled:withID:':
-                name: branchViewCancelled
-            '-branchViewErrorCode:message:actionName:withID:':
-                name: branchViewError
 
 functions:
     # move all functions to one class
@@ -422,9 +439,6 @@ functions:
         name: 'Function_#{g[0]}'
 
 values:
-    BNCErrorDomain:
-        class: BNCErrorCode
-        name: getClassDomain
 
     BNCProductCategory(.*):
         class: BNCProductCategories

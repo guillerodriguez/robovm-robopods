@@ -165,6 +165,8 @@ import org.robovm.apple.uikit.*;
     public static native void promptLocation();
     @Method(selector = "setLocationShared:")
     public static native void setLocationShared(boolean enable);
+    @Method(selector = "isLocationShared")
+    public static native boolean isLocationShared();
     @Method(selector = "setMSDKType:")
     public static native void setMSDKType(String type);
     @Method(selector = "setInAppMessageClickHandler:")

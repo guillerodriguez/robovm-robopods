@@ -48,10 +48,10 @@ import org.robovm.apple.coreanimation.*;
     public BubbleChartDataSet() {}
     protected BubbleChartDataSet(Handle h, long handle) { super(h, handle); }
     protected BubbleChartDataSet(SkipInit skipInit) { super(skipInit); }
-    @Method(selector = "initWithLabel:")
-    public BubbleChartDataSet(String label) { super((SkipInit) null); initObject(init(label)); }
     @Method(selector = "initWithEntries:label:")
     public BubbleChartDataSet(NSArray<ChartDataEntry> entries, String label) { super((SkipInit) null); initObject(init(entries, label)); }
+    @Method(selector = "initWithLabel:")
+    public BubbleChartDataSet(String label) { super(label); }
     @Method(selector = "initWithEntries:")
     public BubbleChartDataSet(NSArray<ChartDataEntry> entries) { super(entries); }
     /*</constructors>*/
@@ -73,8 +73,6 @@ import org.robovm.apple.coreanimation.*;
     /*<methods>*/
     @Method(selector = "copyWithZone:")
     public native NSObject copy(NSZone zone);
-    @Method(selector = "initWithLabel:")
-    protected native @Pointer long init(String label);
     @Method(selector = "initWithEntries:label:")
     protected native @Pointer long init(NSArray<ChartDataEntry> entries, String label);
     /*</methods>*/

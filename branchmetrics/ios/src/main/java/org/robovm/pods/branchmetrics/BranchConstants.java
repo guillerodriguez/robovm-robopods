@@ -181,6 +181,10 @@ import org.robovm.apple.corespotlight.*;
     public static native String getRequestEndpointInstall();
     @GlobalValue(symbol="BRANCH_REQUEST_ENDPOINT_REGISTER_VIEW", optional=true)
     public static native String getRequestEndpointRegisterView();
+    @GlobalValue(symbol="BRANCH_REQUEST_ENDPOINT_CPID", optional=true)
+    public static native String getRequestEndpointCpid();
+    @GlobalValue(symbol="BRANCH_REQUEST_ENDPOINT_LATD", optional=true)
+    public static native String getRequestEndpointLatd();
     @GlobalValue(symbol="BRANCH_RESPONSE_KEY_BRANCH_IDENTITY", optional=true)
     public static native String getResponseKeyBranchIdentity();
     @GlobalValue(symbol="BRANCH_RESPONSE_KEY_SESSION_ID", optional=true)

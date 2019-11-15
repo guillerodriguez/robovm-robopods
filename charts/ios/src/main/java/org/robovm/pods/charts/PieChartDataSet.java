@@ -50,6 +50,8 @@ import org.robovm.apple.coreanimation.*;
     protected PieChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithEntries:label:")
     public PieChartDataSet(NSArray<ChartDataEntry> entries, String label) { super((SkipInit) null); initObject(init(entries, label)); }
+    @Method(selector = "initWithLabel:")
+    public PieChartDataSet(String label) { super(label); }
     @Method(selector = "initWithEntries:")
     public PieChartDataSet(NSArray<ChartDataEntry> entries) { super(entries); }
     /*</constructors>*/

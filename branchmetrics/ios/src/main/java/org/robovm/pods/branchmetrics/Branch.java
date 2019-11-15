@@ -124,12 +124,20 @@ import org.robovm.apple.corespotlight.*;
     public native void registerFacebookDeepLinkingClass(NSObject FBSDKAppLinkUtility);
     @Method(selector = "delayInitToCheckForSearchAds")
     public native void delayInitToCheckForSearchAds();
+    @Method(selector = "useLongerWaitForAppleSearchAds")
+    public native void useLongerWaitForAppleSearchAds();
+    @Method(selector = "ignoreAppleSearchAdsTestData")
+    public native void ignoreAppleSearchAdsTestData();
     @Method(selector = "setRetryInterval:")
     public native void setRetryInterval(double retryInterval);
     @Method(selector = "setMaxRetries:")
     public native void setMaxRetries(@MachineSizedSInt long maxRetries);
     @Method(selector = "setNetworkTimeout:")
     public native void setNetworkTimeout(double timeout);
+    /**
+     * @deprecated Feature removed.  Did not work on iOS 11+
+     */
+    @Deprecated
     @Method(selector = "disableCookieBasedMatching")
     public native void disableCookieBasedMatching();
     /**
@@ -142,14 +150,34 @@ import org.robovm.apple.corespotlight.*;
     public native void suppressWarningLogs();
     @Method(selector = "setRequestMetadataKey:value:")
     public native void setRequestMetadata(String key, NSObject value);
+    /**
+     * @deprecated No longer valid with new init process
+     */
+    @Deprecated
     @Method(selector = "enableDelayedInit")
     public native void enableDelayedInit();
+    /**
+     * @deprecated No longer valid with new init process
+     */
+    @Deprecated
     @Method(selector = "disableDelayedInit")
     public native void disableDelayedInit();
+    /**
+     * @deprecated Feature removed.  Did not work on iOS 11+
+     */
+    @Deprecated
     @Method(selector = "getUrlForOnboardingWithRedirectUrl:")
     public native NSURL getUrl(String redirectUrl);
+    /**
+     * @deprecated Feature removed.  Did not work on iOS 11+
+     */
+    @Deprecated
     @Method(selector = "resumeInit")
     public native void resumeInit();
+    /**
+     * @deprecated No longer valid with new init process
+     */
+    @Deprecated
     @Method(selector = "setInstallRequestDelay:")
     public native void setInstallRequestDelay(@MachineSizedSInt long installRequestDelay);
     @Method(selector = "getFirstReferringBranchUniversalObject")
@@ -216,6 +244,10 @@ import org.robovm.apple.corespotlight.*;
     @Deprecated
     @Method(selector = "sendCommerceEvent:metadata:withCompletion:")
     public native void sendCommerceEvent(BNCCommerceEvent commerceEvent, NSDictionary<NSString, ?> metadata, @Block VoidBlock2<NSDictionary<?, ?>, NSError> completion);
+    @Method(selector = "crossPlatformIdDataWithCompletion:")
+    public native void getCrossPlatformIdData(@Block VoidBlock1<BranchCrossPlatformID> completion);
+    @Method(selector = "lastAttributedTouchDataWithAttributionWindow:completion:")
+    public native void getLastAttributedTouchData(@MachineSizedSInt long window, @Block VoidBlock1<BranchLastAttributedTouchData> completion);
     @Method(selector = "getShortURL")
     public native String getShortURL();
     @Method(selector = "getShortURLWithParams:")

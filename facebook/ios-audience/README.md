@@ -11,6 +11,13 @@
 </config>
 ```
 
+## Versions
+
+| RoboPods Version  | FBAudience Version  |
+|-------------------|---------------------|
+| 1.4.0             | 5.6.0               |
+| 1.3.0             | 5.5.0               |
+
 ### Gradle
 
 Add the following dependency to your `build.gradle`:
