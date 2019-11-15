@@ -96,8 +96,6 @@ import org.robovm.apple.coregraphics.*;
     public native void show(ALAdRewardDelegate adRewardDelegate);
     @Method(selector = "showAd:andNotify:")
     public native void showAd(ALAd ad, ALAdRewardDelegate adRewardDelegate);
-    @Method(selector = "dismiss")
-    public native void dismiss();
     @Method(selector = "shared")
     public static native ALIncentivizedInterstitialAd shared();
     @Method(selector = "preloadAndNotify:")
@@ -108,6 +106,12 @@ import org.robovm.apple.coregraphics.*;
     public static native void Show();
     @Method(selector = "showAndNotify:")
     public static native void Show(ALAdRewardDelegate adRewardDelegate);
+    /**
+     * @deprecated Explicitly dismissing an ad has been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Method(selector = "dismiss")
+    public native void dismiss();
     /**
      * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
      */

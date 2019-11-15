@@ -49,10 +49,6 @@ import org.robovm.apple.coregraphics.*;
     protected ALSdkSettings(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "isTestAdsEnabled")
-    public native boolean isTestAdsEnabled();
-    @Property(selector = "setIsTestAdsEnabled:")
-    public native void setIsTestAdsEnabled(boolean v);
     @Property(selector = "isVerboseLogging")
     public native boolean isVerboseLogging();
     @Property(selector = "setIsVerboseLogging:")
