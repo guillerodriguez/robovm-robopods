@@ -105,10 +105,6 @@ import org.robovm.apple.corespotlight.*;
     public native boolean isDebug();
     @Property(selector = "setIsDebug:")
     public native void setIsDebug(boolean v);
-    @Property(selector = "shouldWaitForInit")
-    public native boolean shouldWaitForInit();
-    @Property(selector = "setShouldWaitForInit:")
-    public native void setShouldWaitForInit(boolean v);
     @Property(selector = "checkedFacebookAppLinks")
     public native boolean isCheckedFacebookAppLinks();
     @Property(selector = "setCheckedFacebookAppLinks:")
@@ -137,10 +133,6 @@ import org.robovm.apple.corespotlight.*;
     public native NSMutableDictionary<?, ?> getSavedAnalyticsData();
     @Property(selector = "setSavedAnalyticsData:")
     public native void setSavedAnalyticsData(NSMutableDictionary<?, ?> v);
-    @Property(selector = "installRequestDelay")
-    public native @MachineSizedSInt long getInstallRequestDelay();
-    @Property(selector = "setInstallRequestDelay:")
-    public native void setInstallRequestDelay(@MachineSizedSInt long v);
     @Property(selector = "appleSearchAdDetails")
     public native NSDictionary<?, ?> getAppleSearchAdDetails();
     @Property(selector = "setAppleSearchAdDetails:")
@@ -165,6 +157,10 @@ import org.robovm.apple.corespotlight.*;
     public native String getBranchAPIURL();
     @Property(selector = "setBranchAPIURL:")
     public native void setBranchAPIURL(String v);
+    @Property(selector = "branchBlacklistURL")
+    public native String getBranchBlacklistURL();
+    @Property(selector = "setBranchBlacklistURL:")
+    public native void setBranchBlacklistURL(String v);
     @Property(selector = "limitFacebookTracking")
     public native boolean isLimitFacebookTracking();
     @Property(selector = "setLimitFacebookTracking:")
@@ -173,6 +169,10 @@ import org.robovm.apple.corespotlight.*;
     public native NSDate getPreviousAppBuildDate();
     @Property(selector = "setPreviousAppBuildDate:")
     public native void setPreviousAppBuildDate(NSDate v);
+    @Property(selector = "faceBookAppLink")
+    public native NSURL getFaceBookAppLink();
+    @Property(selector = "setFaceBookAppLink:")
+    public native void setFaceBookAppLink(NSURL v);
     @Property(selector = "URLBlackList")
     public native NSArray<NSString> getURLBlackList();
     @Property(selector = "setURLBlackList:")

@@ -34,29 +34,30 @@ import org.robovm.apple.corespotlight.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-/*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/BranchViewControllerDelegateAdapter/*</name>*/ 
-    extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*/implements BranchViewControllerDelegate/*</implements>*/ {
+/*<annotations>*/@Library(Library.INTERNAL)/*</annotations>*/
+/*<visibility>*/public final/*</visibility>*/ class /*<name>*/UIViewControllerExtensions/*</name>*/ 
+    extends /*<extends>*/NSExtensions/*</extends>*/ 
+    /*<implements>*//*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
-    /*<bind>*/
-    /*</bind>*/
+    /*<bind>*/static { ObjCRuntime.bind(UIViewControllerExtensions.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
-    /*<constructors>*//*</constructors>*/
+    /*<constructors>*/
+    private UIViewControllerExtensions() {}
+    /*</constructors>*/
     /*<properties>*/
     
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @NotImplemented("branchViewVisible:withID:")
-    public void branchViewVisible(String actionName, String branchViewID) {}
-    @NotImplemented("branchViewAccepted:withID:")
-    public void branchViewAccepted(String actionName, String branchViewID) {}
-    @NotImplemented("branchViewCancelled:withID:")
-    public void branchViewCancelled(String actionName, String branchViewID) {}
-    @NotImplemented("branchViewErrorCode:message:actionName:withID:")
-    public void branchViewError(@MachineSizedSInt long errorCode, String errorMsg, String actionName, String branchViewID) {}
+    @Method(selector = "bnc_currentViewController")
+    public static native UIViewController getBranchCurrentViewController(UIViewController thiz);
+    @Method(selector = "bnc_currentWindow")
+    protected static native UIWindow getBranchCurrentWindow(ObjCClass clazz);
+    public static UIWindow getBranchCurrentWindow() { return getBranchCurrentWindow(ObjCClass.getByType(UIViewController.class)); }
+    @Method(selector = "bnc_currentViewController")
+    protected static native UIViewController getBranchCurrentViewController(ObjCClass clazz);
+    public static UIViewController getBranchCurrentViewController() { return getBranchCurrentViewController(ObjCClass.getByType(UIViewController.class)); }
     /*</methods>*/
 }

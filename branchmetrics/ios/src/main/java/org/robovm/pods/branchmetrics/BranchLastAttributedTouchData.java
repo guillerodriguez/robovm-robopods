@@ -36,29 +36,30 @@ import org.robovm.apple.corespotlight.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/BranchViewHandler/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/BranchLastAttributedTouchData/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class BranchViewHandlerPtr extends Ptr<BranchViewHandler, BranchViewHandlerPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(BranchViewHandler.class); }/*</bind>*/
+    /*<ptr>*/public static class BranchLastAttributedTouchDataPtr extends Ptr<BranchLastAttributedTouchData, BranchLastAttributedTouchDataPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(BranchLastAttributedTouchData.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public BranchViewHandler() {}
-    protected BranchViewHandler(Handle h, long handle) { super(h, handle); }
-    protected BranchViewHandler(SkipInit skipInit) { super(skipInit); }
+    public BranchLastAttributedTouchData() {}
+    protected BranchLastAttributedTouchData(Handle h, long handle) { super(h, handle); }
+    protected BranchLastAttributedTouchData(SkipInit skipInit) { super(skipInit); }
+    public BranchLastAttributedTouchData(NSDictionary<?, ?> json) { super((Handle) null, buildFromJSON(json)); retain(getHandle()); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "branchViewCallback")
-    public native BranchViewControllerDelegate getBranchViewCallback();
-    @Property(selector = "setBranchViewCallback:", strongRef = true)
-    public native void setBranchViewCallback(BranchViewControllerDelegate v);
+    @Property(selector = "lastAttributedTouchJSON")
+    public native NSDictionary<?, ?> getLastAttributedTouchJSON();
+    @Property(selector = "attributionWindow")
+    public native NSNumber getAttributionWindow();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "showBranchView:withBranchViewDictionary:andWithDelegate:")
-    public native boolean showBranchView(String actionName, NSDictionary<?, ?> branchViewDict, NSObject callback);
-    @Method(selector = "getInstance")
-    public static native BranchViewHandler getInstance();
+    @Method(selector = "buildFromJSON:")
+    protected static native @Pointer long buildFromJSON(NSDictionary<?, ?> json);
+    @Method(selector = "requestLastTouchAttributedData:key:attributionWindow:completion:")
+    public static native void requestLastTouchAttributedData(BNCServerInterface serverInterface, String key, @MachineSizedSInt long window, @Block VoidBlock1<BranchLastAttributedTouchData> completion);
     /*</methods>*/
 }
