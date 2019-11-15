@@ -50,6 +50,8 @@ import org.robovm.apple.coreanimation.*;
     protected LineChartDataSet(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithEntries:label:")
     public LineChartDataSet(NSArray<ChartDataEntry> entries, String label) { super((SkipInit) null); initObject(init(entries, label)); }
+    @Method(selector = "initWithLabel:")
+    public LineChartDataSet(String label) { super(label); }
     @Method(selector = "initWithEntries:")
     public LineChartDataSet(NSArray<ChartDataEntry> entries) { super(entries); }
     /*</constructors>*/

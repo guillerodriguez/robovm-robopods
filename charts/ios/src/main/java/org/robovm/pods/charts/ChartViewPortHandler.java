@@ -163,6 +163,8 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isInBoundsX(@MachineSizedFloat double x);
     @Method(selector = "isInBoundsY:")
     public native boolean isInBoundsY(@MachineSizedFloat double y);
+    @Method(selector = "isInBoundsWithPoint:")
+    public native boolean isInBounds(@ByVal CGPoint point);
     @Method(selector = "isInBoundsWithX:y:")
     public native boolean isInBounds(@MachineSizedFloat double x, @MachineSizedFloat double y);
     @Method(selector = "isInBoundsLeft:")
@@ -173,6 +175,8 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isInBoundsTop(@MachineSizedFloat double y);
     @Method(selector = "isInBoundsBottom:")
     public native boolean isInBoundsBottom(@MachineSizedFloat double y);
+    @Method(selector = "isIntersectingLineFrom:to:")
+    public native boolean isIntersectingLine(@ByVal CGPoint startPoint, @ByVal CGPoint endPoint);
     @Method(selector = "setDragOffsetX:")
     public native void setDragOffsetX(@MachineSizedFloat double offset);
     @Method(selector = "setDragOffsetY:")
