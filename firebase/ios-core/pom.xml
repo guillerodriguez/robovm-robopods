@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-firebase-core-ios</artifactId>
-    <name>RoboPods FireBase Core iOS (v6.8.1)</name>
+    <name>RoboPods FireBase Core iOS (v6.13.0)</name>
     <packaging>jar</packaging>
 
     <licenses>

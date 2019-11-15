@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-firebase-analytics-ios</artifactId>
-    <name>RoboPods FireBase Analytics iOS (v6.8.1)</name>
+    <name>RoboPods FireBase Analytics iOS (v6.13.0)</name>
     <packaging>jar</packaging>
 
     <dependencies>
