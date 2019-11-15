@@ -1,6 +1,6 @@
 /*
  *    HelpshiftCore.h
- *    SDK Version 7.6.2-withCampaigns
+ *    SDK Version 7.6.3-withCampaigns
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -84,6 +84,7 @@ typedef enum HsEnableContactUs
 @property (nonatomic, assign) BOOL enableInAppNotifications;
 @property (nonatomic, assign) BOOL enableLogging;
 @property (nonatomic, assign) HsAddFAQsToDeviceSearch addFaqsToDeviceSearch;
+@property (nonatomic, assign) BOOL enableAutomaticThemeSwitching;
 @property (nonatomic, assign) BOOL disableAutomaticPushHandling __deprecated_msg("This config is now deprecated. In following releases, the SDK will stop automatic push handling via swizzling. Please ensure that you are following the guide here: https://developers.helpshift.com/ios/notifications/#configure-helpshift-sdk");
 @property (nonatomic, strong) NSDictionary *extraConfig;
 
@@ -271,6 +272,21 @@ typedef enum HsEnableContactUs
 
 + (void) setLanguage:(NSString *)languageCode;
 
+/** Changes the SDK theme. Using this API will reset the behaviour of setLightTheme:darkTheme API.
+ *  @param themeName the string representing the name of the plist file. For example, use 'HelpshiftConfig'.
+ *  @available Available in SDK version 7.6.3 or later
+ */
+
++ (void) setTheme:(NSString *)themeName;
+
+/** Changes the SDK theme for light and dark appearances. Using this API will reset the behaviour of setTheme API.
+ *  @param lightThemeName the string representing the name of the plist file to be set for light appearance. For example, use 'HelpshiftConfig'.
+ *  @param darkThemeName the string representing the name of the plist file to be set for dark appearance. For example, use 'HelpshiftConfigDark'.
+ *  @available Available in SDK version 7.6.3 or later
+ */
+
++ (void) setLightTheme:(NSString *)lightThemeName darkTheme:(NSString *)darkThemeName;
+
 #pragma mark - Deprecated APIs
 
 /** Change the SDK language. By default, the device's prefered language is used.
@@ -360,7 +376,7 @@ typedef enum HsEnableContactUs
 - (BOOL) _logout;
 - (BOOL) _clearAnonymousUser;
 - (void) _setName:(NSString *)name andEmail:(NSString *)email;
-- (void) _registerDeviceToken:(NSData *)deviceToken;
+- (void) _registerDeviceToken:(NSString *)deviceToken;
 - (BOOL) _handleRemoteNotification:(NSDictionary *)notification withController:(UIViewController *)viewController;
 - (BOOL) _handleRemoteNotification:(NSDictionary *)notification isAppLaunch:(BOOL)isAppLaunch withController:(UIViewController *)viewController;
 - (BOOL) _handleLocalNotificationWithUserInfoDictionary:(NSDictionary *)userInfo withController:(UIViewController *)viewController;
@@ -368,6 +384,7 @@ typedef enum HsEnableContactUs
 - (void) _handleInteractiveLocalNotification:(NSDictionary *)notification forAction:(NSString *)actionIdentifier completionHandler:(void (^)(void))completionHandler;
 - (void) _handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler;
 - (BOOL) _setSDKLanguage:(NSString *)langCode;
-
+- (void) _setTheme:(NSString *)themeName;
+- (void) _setLightTheme:(NSString *)lightThemeName darkTheme:(NSString *)darkThemeName;
 @end
 

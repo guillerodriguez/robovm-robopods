@@ -55,6 +55,9 @@ classes:
                 trim_after_first_colon: true
             '+handleInteractiveLocalNotificationWithUserInfoDictionary:forAction:completionHandler:':
                 name: handleInteractiveLocalNotification
+            '+setLightTheme:darkTheme:':
+                name: setThemes
+
     HelpshiftFAQFilter:
         methods:
             '-initWithFilterOperator:andTags:':
@@ -196,6 +199,10 @@ protocols:
                 name: registerDeviceToken
             '-_setSDKLanguage:':
                 name: setSDKLanguage
+            '-_setTheme:':
+                name: setTheme
+            '-_setLightTheme:darkTheme:':
+                name: setThemes
     HelpshiftCampaignsDelegate: {}
     HelpshiftInboxDelegate:
         methods:
