@@ -38,34 +38,27 @@ import org.robovm.pods.facebook.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
 /*</javadoc>*/
-/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBAudienceNetworkAds/*</name>*/ 
-    extends /*<extends>*/NSObject/*</extends>*/ 
+/*<annotations>*/@Library(Library.INTERNAL)/*</annotations>*/
+/*<visibility>*/public final/*</visibility>*/ class /*<name>*/UIViewExtensions/*</name>*/ 
+    extends /*<extends>*/NSExtensions/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class FBAudienceNetworkAdsPtr extends Ptr<FBAudienceNetworkAds, FBAudienceNetworkAdsPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(FBAudienceNetworkAds.class); }/*</bind>*/
-    /*<constants>*/
-    public static final String getVersion = "5.6.0";
-    /*</constants>*/
+    /*<ptr>*/
+    /*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(UIViewExtensions.class); }/*</bind>*/
+    /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public FBAudienceNetworkAds() {}
-    protected FBAudienceNetworkAds(Handle h, long handle) { super(h, handle); }
-    protected FBAudienceNetworkAds(SkipInit skipInit) { super(skipInit); }
+    private UIViewExtensions() {}
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "nativeAdViewTag")
+    public static native FBNativeAdViewTag getNativeAdViewTag(UIView thiz);
+    @Property(selector = "setNativeAdViewTag:")
+    public static native void setNativeAdViewTag(UIView thiz, FBNativeAdViewTag v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @GlobalValue(symbol="FBAudienceNetworkErrorDomain", optional=true)
-    public static native String getErrorDomain();
     
-    @Method(selector = "initializeWithSettings:completionHandler:")
-    public static native void initialize(FBAdInitSettings settings, @Block VoidBlock1<FBAdInitResults> completionHandler);
-    @Method(selector = "adFormatTypeNameForPlacementId:")
-    public static native FBAdFormatTypeName adFormatTypeNameForPlacementId(String placementId);
     /*</methods>*/
 }

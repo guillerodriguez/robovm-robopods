@@ -15,12 +15,18 @@ enums:
     FBNativeAdsCachePolicy: {}
     FBNativeAdViewType: {}
     FBNativeBannerAdViewType: {}
+    FBGLViewController: {exclude: true} # bridge for Audience Network Unity SDK
+    FBAdViewBridgeSize: {exclude: true} # bridge for Audience Network Unity SDK
 
 typed_enums:
     FBAdExtraHintKeyword:
         enum: FBAdExtraHintKeyword
         type: NSString
         prefix: FBAdExtraHintKeyword
+
+categories:
+    UIView: {}
+
 classes:
     FBAdSize: {} # struct
     FBAdChoicesView:
@@ -219,6 +225,12 @@ classes:
             '-showAdFromRootViewController:animated:':
                 name: showAdFromRootViewController
 
+    # exclude for now Unity related containers
+    FBAdBridgeContainer: {exclude: true}
+    FBAdViewBridgeContainer: {exclude: true}
+    FBInterstitialAdBridgeContainer: {exclude: true}
+    FBRewardedVideoAdBridgeContainer: {exclude: true}
+
 protocols:
     FBAdLoggingDelegate:
         methods:
@@ -257,8 +269,15 @@ protocols:
             '-rewardedVideoAd:didFailWithError:':
                 name: didFail
 
-
 functions:
+    # exclude Audience Network Unity SDK bridge
+    FB(.*)Bridge.*:
+        exclude: true
+    Unity.*:
+        exclude: true
+    fbad_.*:
+        exclude: true
+
     # Make sure we don't miss any functions if new ones are introduced in a later version
     (.*):
         class: __FixMe
