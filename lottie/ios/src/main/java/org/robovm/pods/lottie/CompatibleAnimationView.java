@@ -127,6 +127,10 @@ import org.robovm.apple.coreanimation.*;
     public native NSObject getValue(CompatibleAnimationKeypath keypath, @MachineSizedFloat double atFrame);
     @Method(selector = "logHierarchyKeypaths")
     public native void logHierarchyKeypaths();
+    @Method(selector = "setColorValue:forKeypath:")
+    public native void setColorValue(UIColor color, CompatibleAnimationKeypath keypath);
+    @Method(selector = "getColorValueFor:atFrame:")
+    public native UIColor getColorValue(CompatibleAnimationKeypath keypath, @MachineSizedFloat double atFrame);
     @Method(selector = "addSubview:forLayerAt:")
     public native void addSubview(AnimationSubview subview, CompatibleAnimationKeypath keypath);
     @Method(selector = "convertWithRect:toLayerAt:")

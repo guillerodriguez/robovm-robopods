@@ -7,7 +7,11 @@
 ## Install Instructions
 
 ### 3rd party native framework
-This RoboPod requires you to add the native `Lottie.framework`. Easiest way is to use [Carthage](https://github.com/Carthage/Carthage#installing-carthage). Refer sample application above for [fetch-natives.sh] script which does this.
+This RoboPod requires you to add the native `Lottie.framework`. Easiest way is to use [Carthage](https://github.com/Carthage/Carthage#installing-carthage):  
+```
+echo 'github "airbnb/lottie-ios"' > Cartfile
+carthage update
+```
 
 ### to use this pod configure your `robovm.xml`
 
