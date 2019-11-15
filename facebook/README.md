@@ -12,8 +12,9 @@
 
 ## Versions
 
-| RoboPods Version  | Firebase Version    |
+| RoboPods Version  | Facebook Version    |
 |-------------------|---------------------|
+| 1.4.0             | 5.11.0              |
 | 1.3.0             | 5.5.0               |
 
 ## Official website
