@@ -59,5 +59,7 @@ import org.robovm.apple.webkit.*;
     public static native void fetchDeferredAppLink(@Block VoidBlock2<NSURL, NSError> handler);
     @Method(selector = "appInvitePromotionCodeFromURL:")
     public static native String appInvitePromotionCodeFromURL(NSURL url);
+    @Method(selector = "isMatchURLScheme:")
+    public static native boolean isMatchURLScheme(String scheme);
     /*</methods>*/
 }

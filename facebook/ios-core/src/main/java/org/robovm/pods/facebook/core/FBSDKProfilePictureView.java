@@ -49,6 +49,10 @@ import org.robovm.apple.webkit.*;
     public FBSDKProfilePictureView() {}
     protected FBSDKProfilePictureView(Handle h, long handle) { super(h, handle); }
     protected FBSDKProfilePictureView(SkipInit skipInit) { super(skipInit); }
+    @Method(selector = "initWithFrame:profile:")
+    public FBSDKProfilePictureView(@ByVal CGRect frame, FBSDKProfile profile) { super((SkipInit) null); initObject(init(frame, profile)); }
+    @Method(selector = "initWithProfile:")
+    public FBSDKProfilePictureView(FBSDKProfile profile) { super((SkipInit) null); initObject(init(profile)); }
     @Method(selector = "initWithFrame:")
     public FBSDKProfilePictureView(@ByVal CGRect frame) { super(frame); }
     @Method(selector = "initWithCoder:")
@@ -66,6 +70,10 @@ import org.robovm.apple.webkit.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Method(selector = "initWithFrame:profile:")
+    protected native @Pointer long init(@ByVal CGRect frame, FBSDKProfile profile);
+    @Method(selector = "initWithProfile:")
+    protected native @Pointer long init(FBSDKProfile profile);
     @Method(selector = "setNeedsImageUpdate")
     public native void setNeedsImageUpdate();
     /*</methods>*/

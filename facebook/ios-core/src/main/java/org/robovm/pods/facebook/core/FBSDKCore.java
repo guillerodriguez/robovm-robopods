@@ -46,8 +46,8 @@ import org.robovm.apple.webkit.*;
     /*<bind>*/
     /*</bind>*/
     /*<constants>*/
-    public static final String Version = "5.11.0";
-    public static final String PlatformVersion = "v5.0";
+    public static final String Version = "6.0.0";
+    public static final String PlatformVersion = "v6.0";
     /*</constants>*/
     /*<constructors>*//*</constructors>*/
     /*<properties>*//*</properties>*/

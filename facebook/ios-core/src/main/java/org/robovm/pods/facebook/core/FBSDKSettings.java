@@ -63,18 +63,6 @@ import org.robovm.apple.webkit.*;
     public static native boolean isAutoInitEnabled();
     @Property(selector = "setAutoInitEnabled:")
     public static native void setAutoInitEnabled(boolean v);
-    /**
-     * @deprecated This attribute is no longer used, use autoLogAppEventsEnabled instead.
-     */
-    @Deprecated
-    @Property(selector = "isInstrumentEnabled")
-    public static native boolean isInstrumentEnabled();
-    /**
-     * @deprecated This attribute is no longer used, use autoLogAppEventsEnabled instead.
-     */
-    @Deprecated
-    @Property(selector = "setInstrumentEnabled:")
-    public static native void setInstrumentEnabled(boolean v);
     @Property(selector = "isAutoLogAppEventsEnabled")
     public static native boolean isAutoLogAppEventsEnabled();
     @Property(selector = "setAutoLogAppEventsEnabled:")

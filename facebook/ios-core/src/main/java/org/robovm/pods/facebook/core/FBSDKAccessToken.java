@@ -51,6 +51,8 @@ import org.robovm.apple.webkit.*;
     protected FBSDKAccessToken(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithTokenString:permissions:declinedPermissions:expiredPermissions:appID:userID:expirationDate:refreshDate:dataAccessExpirationDate:")
     public FBSDKAccessToken(String tokenString, NSArray<NSString> permissions, NSArray<NSString> declinedPermissions, NSArray<NSString> expiredPermissions, String appID, String userID, NSDate expirationDate, NSDate refreshDate, NSDate dataAccessExpirationDate) { super((SkipInit) null); initObject(init(tokenString, permissions, declinedPermissions, expiredPermissions, appID, userID, expirationDate, refreshDate, dataAccessExpirationDate)); }
+    @Method(selector = "initWithTokenString:permissions:declinedPermissions:expiredPermissions:appID:userID:expirationDate:refreshDate:dataAccessExpirationDate:graphDomain:")
+    public FBSDKAccessToken(String tokenString, NSArray<NSString> permissions, NSArray<NSString> declinedPermissions, NSArray<NSString> expiredPermissions, String appID, String userID, NSDate expirationDate, NSDate refreshDate, NSDate dataAccessExpirationDate, String graphDomain) { super((SkipInit) null); initObject(init(tokenString, permissions, declinedPermissions, expiredPermissions, appID, userID, expirationDate, refreshDate, dataAccessExpirationDate, graphDomain)); }
     @Method(selector = "initWithCoder:")
     public FBSDKAccessToken(NSCoder coder) { super((SkipInit) null); initObject(init(coder)); }
     /*</constructors>*/
@@ -79,6 +81,8 @@ import org.robovm.apple.webkit.*;
     public native String getTokenString();
     @Property(selector = "userID")
     public native String getUserID();
+    @Property(selector = "graphDomain")
+    public native String getGraphDomain();
     @Property(selector = "isExpired")
     public native boolean isExpired();
     @Property(selector = "isDataAccessExpired")
@@ -112,6 +116,8 @@ import org.robovm.apple.webkit.*;
     
     @Method(selector = "initWithTokenString:permissions:declinedPermissions:expiredPermissions:appID:userID:expirationDate:refreshDate:dataAccessExpirationDate:")
     protected native @Pointer long init(String tokenString, NSArray<NSString> permissions, NSArray<NSString> declinedPermissions, NSArray<NSString> expiredPermissions, String appID, String userID, NSDate expirationDate, NSDate refreshDate, NSDate dataAccessExpirationDate);
+    @Method(selector = "initWithTokenString:permissions:declinedPermissions:expiredPermissions:appID:userID:expirationDate:refreshDate:dataAccessExpirationDate:graphDomain:")
+    protected native @Pointer long init(String tokenString, NSArray<NSString> permissions, NSArray<NSString> declinedPermissions, NSArray<NSString> expiredPermissions, String appID, String userID, NSDate expirationDate, NSDate refreshDate, NSDate dataAccessExpirationDate, String graphDomain);
     @Method(selector = "hasGranted:")
     public native boolean hasGranted(String permission);
     @Method(selector = "isEqualToAccessToken:")

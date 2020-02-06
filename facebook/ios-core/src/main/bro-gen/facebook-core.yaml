@@ -54,6 +54,8 @@ classes:
         methods:
             '-initWithTokenString:permissions:declinedPermissions:expiredPermissions:appID:userID:expirationDate:refreshDate:dataAccessExpirationDate:':
                 name: init
+            '-initWithTokenString:permissions:declinedPermissions:expiredPermissions:appID:userID:expirationDate:refreshDate:dataAccessExpirationDate:graphDomain:':
+                name: init
     FBSDKAppEvents:
         methods:
             '+logEvent:valueToSum:':
@@ -167,7 +169,12 @@ classes:
                 name: getImageURL
             '+loadCurrentProfileWithCompletion:':
                 name: loadCurrentProfile
-    FBSDKProfilePictureView: {}
+    FBSDKProfilePictureView:
+        methods:
+            '-initWithFrame:profile:':
+                name: init
+            '-initWithProfile:':
+                name: init
     FBSDKSettings: {}
     FBSDKTestUsersManager:
         methods:

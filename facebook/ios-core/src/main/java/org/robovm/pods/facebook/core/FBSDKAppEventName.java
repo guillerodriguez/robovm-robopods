@@ -109,11 +109,6 @@ import org.robovm.apple.webkit.*;
     public static final FBSDKAppEventName Donate = new FBSDKAppEventName("Donate");
     public static final FBSDKAppEventName FindLocation = new FBSDKAppEventName("FindLocation");
     public static final FBSDKAppEventName Schedule = new FBSDKAppEventName("Schedule");
-    /**
-     * @deprecated This attribute is no longer used.
-     */
-    @Deprecated
-    public static final FBSDKAppEventName SubscriptionHeartbeat = new FBSDKAppEventName("SubscriptionHeartbeat");
     public static final FBSDKAppEventName StartTrial = new FBSDKAppEventName("StartTrial");
     public static final FBSDKAppEventName SubmitApplication = new FBSDKAppEventName("SubmitApplication");
     public static final FBSDKAppEventName Subscribe = new FBSDKAppEventName("Subscribe");
@@ -121,7 +116,7 @@ import org.robovm.apple.webkit.*;
     public static final FBSDKAppEventName AdClick = new FBSDKAppEventName("AdClick");
     /*</constants>*/
     
-    private static /*<name>*/FBSDKAppEventName/*</name>*/[] values = new /*<name>*/FBSDKAppEventName/*</name>*/[] {/*<value_list>*/AchievedLevel, AddedPaymentInfo, AddedToCart, AddedToWishlist, CompletedRegistration, CompletedTutorial, InitiatedCheckout, Purchased, Rated, Searched, SpentCredits, UnlockedAchievement, ViewedContent, Contact, CustomizeProduct, Donate, FindLocation, Schedule, SubscriptionHeartbeat, StartTrial, SubmitApplication, Subscribe, AdImpression, AdClick/*</value_list>*/};
+    private static /*<name>*/FBSDKAppEventName/*</name>*/[] values = new /*<name>*/FBSDKAppEventName/*</name>*/[] {/*<value_list>*/AchievedLevel, AddedPaymentInfo, AddedToCart, AddedToWishlist, CompletedRegistration, CompletedTutorial, InitiatedCheckout, Purchased, Rated, Searched, SpentCredits, UnlockedAchievement, ViewedContent, Contact, CustomizeProduct, Donate, FindLocation, Schedule, StartTrial, SubmitApplication, Subscribe, AdImpression, AdClick/*</value_list>*/};
     
     /*<name>*/FBSDKAppEventName/*</name>*/ (String getterName) {
         super(Values.class, getterName);
@@ -180,12 +175,6 @@ import org.robovm.apple.webkit.*;
         public static native NSString FindLocation();
         @GlobalValue(symbol="FBSDKAppEventNameSchedule", optional=true)
         public static native NSString Schedule();
-        /**
-         * @deprecated This attribute is no longer used.
-         */
-        @Deprecated
-        @GlobalValue(symbol="FBSDKAppEventNameSubscriptionHeartbeat", optional=true)
-        public static native NSString SubscriptionHeartbeat();
         @GlobalValue(symbol="FBSDKAppEventNameStartTrial", optional=true)
         public static native NSString StartTrial();
         @GlobalValue(symbol="FBSDKAppEventNameSubmitApplication", optional=true)
