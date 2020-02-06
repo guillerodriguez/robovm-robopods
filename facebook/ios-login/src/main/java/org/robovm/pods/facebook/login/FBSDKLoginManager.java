@@ -59,18 +59,6 @@ import org.robovm.pods.facebook.core.*;
     public native FBSDKDefaultAudience getDefaultAudience();
     @Property(selector = "setDefaultAudience:")
     public native void setDefaultAudience(FBSDKDefaultAudience v);
-    /**
-     * @deprecated All login flows utilize the browser. This will be removed in the next major release
-     */
-    @Deprecated
-    @Property(selector = "loginBehavior")
-    public native FBSDKLoginBehavior getLoginBehavior();
-    /**
-     * @deprecated All login flows utilize the browser. This will be removed in the next major release
-     */
-    @Deprecated
-    @Property(selector = "setLoginBehavior:")
-    public native void setLoginBehavior(FBSDKLoginBehavior v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

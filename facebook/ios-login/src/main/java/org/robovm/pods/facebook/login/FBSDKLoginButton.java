@@ -63,18 +63,6 @@ import org.robovm.pods.facebook.core.*;
     public native FBSDKLoginButtonDelegate getDelegate();
     @Property(selector = "setDelegate:", strongRef = true)
     public native void setDelegate(FBSDKLoginButtonDelegate v);
-    /**
-     * @deprecated All login flows utilize the browser. This will be removed in the next major release
-     */
-    @Deprecated
-    @Property(selector = "loginBehavior")
-    public native FBSDKLoginBehavior getLoginBehavior();
-    /**
-     * @deprecated All login flows utilize the browser. This will be removed in the next major release
-     */
-    @Deprecated
-    @Property(selector = "setLoginBehavior:")
-    public native void setLoginBehavior(FBSDKLoginBehavior v);
     @Property(selector = "permissions")
     public native NSArray<NSString> getPermissions();
     @Property(selector = "setPermissions:")
