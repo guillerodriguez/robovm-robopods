@@ -61,5 +61,9 @@ import org.robovm.apple.coregraphics.*;
     public static native void setIsAgeRestrictedUser(boolean isAgeRestrictedUser);
     @Method(selector = "isAgeRestrictedUser")
     public static native boolean isAgeRestrictedUser();
+    @Method(selector = "setDoNotSell:")
+    public static native void setDoNotSell(boolean doNotSell);
+    @Method(selector = "isDoNotSell")
+    public static native boolean isDoNotSell();
     /*</methods>*/
 }
