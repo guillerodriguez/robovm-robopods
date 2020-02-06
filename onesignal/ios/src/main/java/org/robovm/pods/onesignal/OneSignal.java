@@ -175,18 +175,22 @@ import org.robovm.apple.uikit.*;
     public static native UNMutableNotificationContent didReceiveNotification(UNNotificationRequest request, UNMutableNotificationContent replacementContent);
     @Method(selector = "serviceExtensionTimeWillExpireRequest:withMutableNotificationContent:")
     public static native UNMutableNotificationContent serviceExtensionTimeWillExpire(UNNotificationRequest request, UNMutableNotificationContent replacementContent);
-    @Method(selector = "setEmail:withEmailAuthHashToken:withSuccess:withFailure:")
-    public static native void setEmail(String email, String hashToken, @Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
-    @Method(selector = "setEmail:withSuccess:withFailure:")
-    public static native void setEmail(String email, @Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
-    @Method(selector = "logoutEmailWithSuccess:withFailure:")
-    public static native void logoutEmail(@Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
-    @Method(selector = "logoutEmail")
-    public static native void logoutEmail();
-    @Method(selector = "setEmail:")
-    public static native void setEmail(String email);
     @Method(selector = "setEmail:withEmailAuthHashToken:")
     public static native void setEmail(String email, String hashToken);
+    @Method(selector = "setEmail:withEmailAuthHashToken:withSuccess:withFailure:")
+    public static native void setEmail(String email, String hashToken, @Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
+    @Method(selector = "setEmail:")
+    public static native void setEmail(String email);
+    @Method(selector = "setEmail:withSuccess:withFailure:")
+    public static native void setEmail(String email, @Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
+    @Method(selector = "logoutEmail")
+    public static native void logoutEmail();
+    @Method(selector = "logoutEmailWithSuccess:withFailure:")
+    public static native void logoutEmail(@Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
+    @Method(selector = "setExternalUserId:")
+    public static native void setExternalUserId(String externalId);
+    @Method(selector = "removeExternalUserId")
+    public static native void removeExternalUserId();
     @Method(selector = "addTrigger:withValue:")
     public static native void addTrigger(String key, NSObject value);
     @Method(selector = "addTriggers:")
@@ -199,9 +203,17 @@ import org.robovm.apple.uikit.*;
     public static native NSDictionary<NSString, ?> getTriggers();
     @Method(selector = "getTriggerValueForKey:")
     public static native NSObject getTriggerValueForKey(String key);
-    @Method(selector = "setExternalUserId:")
-    public static native void setExternalUserId(String externalId);
-    @Method(selector = "removeExternalUserId")
-    public static native void removeExternalUserId();
+    @Method(selector = "sendOutcome:")
+    public static native void sendOutcome(String name);
+    @Method(selector = "sendOutcome:onSuccess:")
+    public static native void sendOutcome(String name, @Block VoidBlock1<OSOutcomeEvent> success);
+    @Method(selector = "sendUniqueOutcome:")
+    public static native void sendUniqueOutcome(String name);
+    @Method(selector = "sendUniqueOutcome:onSuccess:")
+    public static native void sendUniqueOutcome(String name, @Block VoidBlock1<OSOutcomeEvent> success);
+    @Method(selector = "sendOutcomeWithValue:value:")
+    public static native void sendOutcome(String name, NSNumber value);
+    @Method(selector = "sendOutcomeWithValue:value:onSuccess:")
+    public static native void sendOutcome(String name, NSNumber value, @Block VoidBlock1<OSOutcomeEvent> success);
     /*</methods>*/
 }

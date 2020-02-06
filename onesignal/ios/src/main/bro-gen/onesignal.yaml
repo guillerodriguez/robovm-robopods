@@ -14,6 +14,7 @@ enums:
     OSNotificationDisplayType: {}
     OSNotificationPermission: {}
     ONE_S_LOG_LEVEL: {name: OSLogLevel, prefix: ONE_S_LL_}
+    Session: {name: OSSession}
 
 classes:
     OSNotification: {}
@@ -86,9 +87,18 @@ classes:
                 trim_after_first_colon: true
             '+addTrigger:withValue:':
                 name: addTrigger
+            '+sendOutcome:onSuccess:':
+                name: sendOutcome
+            '+sendUniqueOutcome:onSuccess:':
+                name: sendUniqueOutcome
+            '+sendOutcomeWithValue:value:':
+                name: sendOutcome
+            '+sendOutcomeWithValue:value:onSuccess:':
+                name: sendOutcome
     OSEmailSubscriptionState: {}
     OSEmailSubscriptionStateChanges: {}
     OSInAppMessageAction: {}
+    OSOutcomeEvent: {}
 
 protocols:
     OSPermissionObserver: {}
