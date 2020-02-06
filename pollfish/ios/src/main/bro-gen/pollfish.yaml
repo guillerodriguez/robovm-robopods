@@ -19,6 +19,9 @@ enums:
     CAREER_VALUE: {name: Career}
     RACE_VALUE: {name: Race}
     INCOME_VALUE: {name: Income}
+    SPOKEN_LANGUAGE_VALUE: {name: SpokenLanguage}
+    ORGANIZATION_ROLE_VALUE: {name: OrganizationRole}
+    NUMBER_OF_EMPLOYEES_VALUE: {name: NumberOfEmployees}
     PollfishPosition: {prefix: PollFishPosition}
     SurveyFormat: {}
 
@@ -49,7 +52,7 @@ classes:
             '-initWithObjects:forKeys:count:':
                 name: init
             # customize method to accept enums directly, corresponding method (to NSString) will be called in marshaller
-            '-set(Gender|YearOfBirth|MaritalStatus|ParentalStatus|Education|Employment|Career|Race|Income):':
+            '-set(Gender|YearOfBirth|MaritalStatus|ParentalStatus|Education|Employment|Career|Race|Income|SpokenLanguage|OrganizationRole|NumberOfEmployees):':
                 name: 'set#{g[0]}0'
                 visibility: private
                 parameters:
@@ -127,7 +130,24 @@ functions:
         name: asString0
         visibility: protected
         return_type: NSString
-
+    "SPOKEN_LANGUAGE":
+        static: true
+        class: SpokenLanguage
+        name: asString0
+        visibility: protected
+        return_type: NSString
+    "ORGANIZATION_ROLE":
+        static: true
+        class: OrganizationRole
+        name: asString0
+        visibility: protected
+        return_type: NSString
+    "NUMBER_OF_EMPLOYEES":
+        static: true
+        class: NumberOfEmployees
+        name: asString0
+        visibility: protected
+        return_type: NSString
     # Make sure we don't miss any functions if new ones are introduced in a later version
     (.*):
         class: __FixMe

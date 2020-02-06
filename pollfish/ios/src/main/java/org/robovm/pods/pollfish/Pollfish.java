@@ -60,6 +60,8 @@ import org.robovm.apple.corelocation.*;
     public static native void hide();
     @Method(selector = "isPollfishPresent")
     public static native boolean isPollfishPresent();
+    @Method(selector = "isPollfishPanelOpen")
+    public static native boolean isPollfishPanelOpen();
     @Method(selector = "destroy")
     public static native void destroy();
     @Method(selector = "updateLocationWithLatitude:andLongitude:andHorizontalAccuracy:")

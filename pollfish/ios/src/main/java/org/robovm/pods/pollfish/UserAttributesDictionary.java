@@ -1,12 +1,12 @@
 /*
  * Copyright (C) 2013-2015 RoboVM AB
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -36,8 +36,8 @@ import org.robovm.apple.corelocation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/UserAttributesDictionary/*</name>*/
-    extends /*<extends>*/NSMutableDictionary/*</extends>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/UserAttributesDictionary/*</name>*/ 
+    extends /*<extends>*/NSMutableDictionary/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
     /*<ptr>*/public static class UserAttributesDictionaryPtr extends Ptr<UserAttributesDictionary, UserAttributesDictionaryPtr> {}/*</ptr>*/
@@ -73,6 +73,12 @@ import org.robovm.apple.corelocation.*;
     private native UserAttributesDictionary setEmployment0(NSString employment_status);
     @Method(selector = "setCareer:")
     private native UserAttributesDictionary setCareer0(NSString career_status);
+    @Method(selector = "setSpokenLanguage:")
+    private native UserAttributesDictionary setSpokenLanguage0(NSString spoken_language);
+    @Method(selector = "setOrganizationRole:")
+    private native UserAttributesDictionary setOrganizationRole0(NSString organization_role);
+    @Method(selector = "setNumberOfEmployees:")
+    private native UserAttributesDictionary setNumberOfEmployees0(NSString number_of_employees);
     @Method(selector = "setRace:")
     private native UserAttributesDictionary setRace0(NSString race);
     @Method(selector = "setIncome:")
@@ -135,4 +141,17 @@ import org.robovm.apple.corelocation.*;
     public UserAttributesDictionary setIncome(Income income) {
         return setIncome0(income.asString());
     }
+
+    public UserAttributesDictionary setSpokenLanguage(SpokenLanguage spoken_language) {
+        return setSpokenLanguage0(spoken_language.asString());
+    }
+
+    public  UserAttributesDictionary setOrganizationRole(OrganizationRole organization_role) {
+        return setOrganizationRole0(organization_role.asString());
+    }
+
+    public UserAttributesDictionary setNumberOfEmployees(NumberOfEmployees number_of_employees) {
+        return setNumberOfEmployees0(number_of_employees.asString());
+    }
+
 }
