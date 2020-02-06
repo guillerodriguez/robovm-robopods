@@ -55,6 +55,10 @@ import org.robovm.apple.corespotlight.*;
     public native String getTitle();
     @Property(selector = "setTitle:")
     public native void setTitle(String v);
+    @Property(selector = "placeholderURL")
+    public native NSURL getPlaceholderURL();
+    @Property(selector = "setPlaceholderURL:")
+    public native void setPlaceholderURL(NSURL v);
     @Property(selector = "shareText")
     public native String getShareText();
     @Property(selector = "setShareText:")

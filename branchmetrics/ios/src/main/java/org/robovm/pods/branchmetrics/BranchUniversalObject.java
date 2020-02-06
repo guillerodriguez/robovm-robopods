@@ -232,7 +232,7 @@ import org.robovm.apple.corespotlight.*;
     @Method(selector = "listOnSpotlightWithCallback:")
     public native void listOnSpotlight(@Block VoidBlock2<NSString, NSError> callback);
     /**
-     * @deprecated Please see https://dev.branch.io/features/spotlight-indexing/overview/ for instructions on migration.
+     * @deprecated iOS 10 has changed how Spotlight indexing works and we’ve updated the SDK to reflect this. Please see https://dev.branch.io/features/spotlight-indexing/overview/ for instructions on migration.
      */
     @Deprecated
     @Method(selector = "listOnSpotlightWithIdentifierCallback:")

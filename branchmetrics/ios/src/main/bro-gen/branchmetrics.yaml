@@ -277,6 +277,8 @@ classes:
                 name: getCrossPlatformIdData
             '-lastAttributedTouchDataWithAttributionWindow:completion:':
                 name: getLastAttributedTouchData
+            '-registerPluginName:version:':
+                name: registerPlugin
     BranchActivityItemProvider:
         methods:
             '-initWithParams:andTags:andFeature:andStage:andAlias:':

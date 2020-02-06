@@ -100,6 +100,8 @@ import org.robovm.apple.corespotlight.*;
     public native boolean openURL(UIApplication application, NSURL url, String sourceApplication, NSObject annotation);
     @Method(selector = "application:openURL:options:")
     public native boolean openURL(UIApplication application, NSURL url, NSDictionary<NSString, ?> options);
+    @Method(selector = "dispatchToIsolationQueue:")
+    public native void dispatchToIsolationQueue(@Block Runnable initBlock);
     @Method(selector = "handlePushNotification:")
     public native void handlePushNotification(NSDictionary<?, ?> userInfo);
     /**
@@ -148,6 +150,8 @@ import org.robovm.apple.corespotlight.*;
     public native void accountForFacebookSDKPreventingAppLaunch();
     @Method(selector = "suppressWarningLogs")
     public native void suppressWarningLogs();
+    @Method(selector = "registerPluginName:version:")
+    public native void registerPlugin(String name, String version);
     @Method(selector = "setRequestMetadataKey:value:")
     public native void setRequestMetadata(String key, NSObject value);
     /**
@@ -368,6 +372,10 @@ import org.robovm.apple.corespotlight.*;
     public native void registerView(NSDictionary<?, ?> params, @Block VoidBlock2<NSDictionary<?, ?>, NSError> callback);
     @Method(selector = "sendServerRequest:")
     public native void sendServerRequest(BNCServerRequest request);
+    /**
+     * @deprecated This API is deprecated. Please use sendServerRequest instead.
+     */
+    @Deprecated
     @Method(selector = "sendServerRequestWithoutSession:")
     public native void sendServerRequestWithoutSession(BNCServerRequest request);
     @Method(selector = "clearNetworkQueue")

@@ -97,13 +97,13 @@ import org.robovm.apple.corespotlight.*;
     @Property(selector = "setAdType:")
     public native void setAdType(BranchEventAdType v);
     @Property(selector = "contentItems")
-    public native NSMutableArray<BranchUniversalObject> getContentItems();
+    public native NSArray<BranchUniversalObject> getContentItems();
     @Property(selector = "setContentItems:")
-    public native void setContentItems(NSMutableArray<BranchUniversalObject> v);
+    public native void setContentItems(NSArray<BranchUniversalObject> v);
     @Property(selector = "customData")
-    public native NSMutableDictionary<NSString, NSString> getCustomData();
+    public native NSDictionary<NSString, NSString> getCustomData();
     @Property(selector = "setCustomData:")
-    public native void setCustomData(NSMutableDictionary<NSString, NSString> v);
+    public native void setCustomData(NSDictionary<NSString, NSString> v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

@@ -31,7 +31,7 @@ v1.4.0 -- in development
 | [Facebook (new)](facebook/)        | 5.11.0 |
 | [AppLovinSDK](applovinsdk/)        | 6.10.0 |
 | [Pollfish](pollfish/)              | 5.1.0  |
-| [BranchMetrics](branchmetrics/)    | 0.30.0 |
+| [BranchMetrics](branchmetrics/)    | 0.34.0 |
 | [Charts](charts/)                  | 3.4.0  |
 | [Firebase](firebase/)              | 6.13.0 |
 | [HelpShift](helpshift/)            | 7.6.3  |
