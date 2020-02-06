@@ -8,9 +8,6 @@ headers:
 enums:
     FBSDKShareBridgeOptions: {}
     FBSDKShareError: {}
-    FBSDKShareMessengerGenericTemplateImageAspectRatio: {}
-    FBSDKShareMessengerMediaTemplateMediaType: {}
-    FBSDKShareMessengerURLActionButtonWebviewHeightRatio: {}
     FBSDKAppGroupPrivacy: {}
     FBSDKAppInviteDestination: {}
     FBSDKGameRequestActionType: {}
@@ -19,6 +16,9 @@ enums:
     FBSDKShareDialogMode: {}
 
 typed_enums:
+
+categories:
+    PHAsset: {}
 
 classes:
     FBSDKAppGroupContent: {}
@@ -74,36 +74,6 @@ classes:
                 name: show
     FBSDKShareLinkContent: {}
     FBSDKShareMediaContent: {}
-    FBSDKShareMessengerGenericTemplateContent: {}
-    FBSDKShareMessengerGenericTemplateElement: {}
-    FBSDKShareMessengerMediaTemplateContent:
-        methods:
-            '-initWithAttachmentID:':
-                name: init
-            '-initWithMediaURL:':
-                name: init
-    FBSDKShareMessengerOpenGraphMusicTemplateContent: {}
-    FBSDKShareMessengerURLActionButton: {}
-    FBSDKShareOpenGraphAction:
-        methods:
-            '-initWithActionType:':
-                name: init
-            '+actionWithType:object:key:':
-                constructor: true
-                name: create
-            '+actionWithType:objectID:key:':
-                constructor: true
-                name: create
-            '+actionWithType:objectURL:key:':
-                constructor: true
-                name: create
-    FBSDKShareOpenGraphContent: {}
-    FBSDKShareOpenGraphObject:
-        methods:
-            '+objectWithProperties:':
-                constructor: true
-                name: create
-    FBSDKShareOpenGraphValueContainer: {}
     FBSDKSharePhoto:
         methods:
             '+photoWithImage:userGenerated:':
@@ -148,20 +118,6 @@ protocols:
     FBSDKLiking: {}
     FBSDKShareMedia: {}
     FBSDKShareMessengerActionButton: {}
-    FBSDKShareOpenGraphValueContaining:
-        methods:
-            '-setArray:forKey:':
-                name: setArray
-            '-setNumber:forKey:':
-                name: setNumber
-            '-setObject:forKey:':
-                name: setObject
-            '-setPhoto:forKey:':
-                name: setPhoto
-            '-setString:forKey:':
-                name: setString
-            '-setURL:forKey:':
-                name: setURL
     FBSDKSharing:
         methods:
             '-validateWithError:':

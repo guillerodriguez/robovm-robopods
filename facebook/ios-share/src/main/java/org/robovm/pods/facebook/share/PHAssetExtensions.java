@@ -36,31 +36,25 @@ import org.robovm.pods.facebook.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
 /*</javadoc>*/
-/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedUIntMarshaler.class)/*</annotations>*/
-public enum /*<name>*/FBSDKShareMessengerGenericTemplateImageAspectRatio/*</name>*/ implements ValuedEnum {
-    /*<values>*/
-    Horizontal(0L),
-    Square(1L);
-    /*</values>*/
+/*<annotations>*/@Library(Library.INTERNAL)/*</annotations>*/
+/*<visibility>*/public final/*</visibility>*/ class /*<name>*/PHAssetExtensions/*</name>*/ 
+    extends /*<extends>*/NSExtensions/*</extends>*/ 
+    /*<implements>*//*</implements>*/ {
 
-    /*<bind>*/
-    /*</bind>*/
+    /*<ptr>*/
+    /*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(PHAssetExtensions.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
-    /*<methods>*//*</methods>*/
-
-    private final long n;
-
-    private /*<name>*/FBSDKShareMessengerGenericTemplateImageAspectRatio/*</name>*/(long n) { this.n = n; }
-    public long value() { return n; }
-    public static /*<name>*/FBSDKShareMessengerGenericTemplateImageAspectRatio/*</name>*/ valueOf(long n) {
-        for (/*<name>*/FBSDKShareMessengerGenericTemplateImageAspectRatio/*</name>*/ v : values()) {
-            if (v.n == n) {
-                return v;
-            }
-        }
-        throw new IllegalArgumentException("No constant with value " + n + " found in " 
-            + /*<name>*/FBSDKShareMessengerGenericTemplateImageAspectRatio/*</name>*/.class.getName());
-    }
+    /*<constructors>*/
+    private PHAssetExtensions() {}
+    /*</constructors>*/
+    /*<properties>*/
+    @Property(selector = "videoURL")
+    public static native NSURL getVideoURL(PHAsset thiz);
+    /*</properties>*/
+    /*<members>*//*</members>*/
+    /*<methods>*/
+    
+    /*</methods>*/
 }
