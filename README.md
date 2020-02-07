@@ -1,5 +1,7 @@
-## RoboVM altpods by Demyan Kimitsa
-
+# RoboVM altpods by Demyan Kimitsa
+[**bro-gen**](https://github.com/dkimitsa/robovm-bro-gen) -
+[**bro-gen tutorial**](https://dkimitsa.github.io/2017/10/19/bro-gen-tutorial/) -
+[**dkimitsa's dev blog**](https://dkimitsa.github.io/)
 
 ### Altpods are the Robopods that are not part of official repository yet
 
