@@ -23,5 +23,6 @@
         <module>ios-core</module>
         <module>ios-analytics</module>
         <module>ios-database</module>
+        <module>ios-google-mobile-ads</module>
     </modules>
 </project>
