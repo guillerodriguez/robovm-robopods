@@ -4,11 +4,11 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 
 ## Available RoboPods
 
-| RoboPod                               | Description                         |
-|---------------------------------------|-------------------------------------|
-| [ios-analytics](ios-analytics/)       | Firebase iOS Analytics              |
-| [ios-database](ios-database/)         | Firebase iOS DataBase               |
-| [ios-database](ios-google-mobile-ads/)| Firebase iOS Google Mobile Ads      |
+| RoboPod                                  | Description                         |
+|------------------------------------------|-------------------------------------|
+| [ios-analytics](ios-analytics/)          | Firebase iOS Analytics              |
+| [ios-database](ios-database/)            | Firebase iOS DataBase               |
+| [ios-mobile adds](ios-google-mobile-ads/)| Firebase iOS Google Mobile Ads      |
 
 ## Versions
 

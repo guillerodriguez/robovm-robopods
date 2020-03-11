@@ -15,7 +15,7 @@ This is the list of currently available AltPods. Click them to get more informat
 | [AppLovinSDK](applovinsdk/)        | An advertisement mediator SDK |
 | [BranchMetrics](branchmetrics/)    | The Branch Metrics iOS SDK for deferred and contextual mobile deep linking|
 | [Charts](charts/)                  | Beautiful charts for iOS/tvOS/OSX! The Apple side of the crossplatform MPAndroidChart. |
-| [Firebase](firebase/)              | Firebase (analytics, databases) |
+| [Firebase](firebase/)              | Firebase (analytics, databases, mobile ads) |
 | [HelpShift](helpshift/)            | Deliver a superior customer service experience at a lower cost with Helpshift’s AI-powered messaging platform.|
 | [Lottie](lottie/)                  | An iOS library to natively render After Effects vector animations                      |
 | [OneSignal](onesignal/)            | OneSignal is a free push notification service for mobile apps                          |
