@@ -1,7 +1,7 @@
 # Firebase iOS Analytics framework
 
 ### Frameworks required for this pod: 
-* GoogleUtilities.frßamework
+* GoogleUtilities.framework
 * FirebaseCore.framework
 * FirebaseAnalytics.framework
 * GoogleAppMeasurement.framework
