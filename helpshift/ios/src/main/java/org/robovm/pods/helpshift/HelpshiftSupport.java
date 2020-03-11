@@ -45,6 +45,7 @@ import org.robovm.apple.uikit.*;
     public static final String UserAcceptedTheSolution = "User accepted the solution";
     public static final String UserRejectedTheSolution = "User rejected the solution";
     public static final String UserSentScreenShot = "User sent a screenshot";
+    public static final String UserSentAttachment = "User sent an attachment";
     public static final String UserReviewedTheApp = "User reviewed the app";
     public static final String ConversationFlow = "conversationFlow";
     public static final String FAQsFlow = "faqsFlow";

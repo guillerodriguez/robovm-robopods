@@ -1,6 +1,6 @@
 /*
  *    HelpshiftCore.h
- *    SDK Version 7.6.3-withCampaigns
+ *    SDK Version 7.7.0-withCampaigns
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -12,9 +12,8 @@
 
 typedef enum HsAddFAQsToDeviceSearch
 {
-    HsAddFaqsToDeviceSearchOnInstall __attribute__((deprecated)) = 0,
-    HsAddFaqsToDeviceSearchAfterViewingFAQs,
-    HsAddFaqsToDeviceSearchNever
+    HsAddFaqsToDeviceSearchAfterViewingFAQs = 1,
+    HsAddFaqsToDeviceSearchNever            = 2
 } HsAddFAQsToDeviceSearch;
 
 typedef enum HsOperator
@@ -83,9 +82,9 @@ typedef enum HsEnableContactUs
 @property (nonatomic, assign) BOOL enableInboxPolling;
 @property (nonatomic, assign) BOOL enableInAppNotifications;
 @property (nonatomic, assign) BOOL enableLogging;
+@property (nonatomic, assign) BOOL disableErrorReporting;
 @property (nonatomic, assign) HsAddFAQsToDeviceSearch addFaqsToDeviceSearch;
 @property (nonatomic, assign) BOOL enableAutomaticThemeSwitching;
-@property (nonatomic, assign) BOOL disableAutomaticPushHandling __deprecated_msg("This config is now deprecated. In following releases, the SDK will stop automatic push handling via swizzling. Please ensure that you are following the guide here: https://developers.helpshift.com/ios/notifications/#configure-helpshift-sdk");
 @property (nonatomic, strong) NSDictionary *extraConfig;
 
 - (HelpshiftInstallConfig *) build;

@@ -1,6 +1,6 @@
 /*
  *    HelpshiftSupport.h
- *    SDK Version 7.6.3-withCampaigns
+ *    SDK Version 7.7.0-withCampaigns
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -86,6 +86,7 @@ extern NSString *const HelpshiftSupportTagsKey;
 static NSString *HelpshiftSupportUserAcceptedTheSolution = @"User accepted the solution";
 static NSString *HelpshiftSupportUserRejectedTheSolution = @"User rejected the solution";
 static NSString *HelpshiftSupportUserSentScreenShot = @"User sent a screenshot";
+static NSString *HelpshiftSupportUserSentAttachment = @"User sent an attachment";
 static NSString *HelpshiftSupportUserReviewedTheApp = @"User reviewed the app";
 
 

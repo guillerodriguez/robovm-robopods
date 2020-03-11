@@ -68,6 +68,10 @@ import org.robovm.apple.uikit.*;
     public native boolean isEnableLogging();
     @Property(selector = "setEnableLogging:")
     public native void setEnableLogging(boolean v);
+    @Property(selector = "disableErrorReporting")
+    public native boolean isDisableErrorReporting();
+    @Property(selector = "setDisableErrorReporting:")
+    public native void setDisableErrorReporting(boolean v);
     @Property(selector = "addFaqsToDeviceSearch")
     public native HsAddFAQsToDeviceSearch getAddFaqsToDeviceSearch();
     @Property(selector = "setAddFaqsToDeviceSearch:")
@@ -76,18 +80,6 @@ import org.robovm.apple.uikit.*;
     public native boolean isEnableAutomaticThemeSwitching();
     @Property(selector = "setEnableAutomaticThemeSwitching:")
     public native void setEnableAutomaticThemeSwitching(boolean v);
-    /**
-     * @deprecated This config is now deprecated. In following releases, the SDK will stop automatic push handling via swizzling. Please ensure that you are following the guide here: https://developers.helpshift.com/ios/notifications/#configure-helpshift-sdk
-     */
-    @Deprecated
-    @Property(selector = "disableAutomaticPushHandling")
-    public native boolean isDisableAutomaticPushHandling();
-    /**
-     * @deprecated This config is now deprecated. In following releases, the SDK will stop automatic push handling via swizzling. Please ensure that you are following the guide here: https://developers.helpshift.com/ios/notifications/#configure-helpshift-sdk
-     */
-    @Deprecated
-    @Property(selector = "setDisableAutomaticPushHandling:")
-    public native void setDisableAutomaticPushHandling(boolean v);
     @Property(selector = "extraConfig")
     public native NSDictionary<?, ?> getExtraConfig();
     @Property(selector = "setExtraConfig:")
