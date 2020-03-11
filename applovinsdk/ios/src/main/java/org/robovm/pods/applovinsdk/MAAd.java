@@ -53,6 +53,8 @@ import org.robovm.apple.coregraphics.*;
     public native MAAdFormat getFormat();
     @Property(selector = "adUnitIdentifier")
     public native String getAdUnitIdentifier();
+    @Property(selector = "networkName")
+    public native String getNetworkName();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
