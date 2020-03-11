@@ -79,6 +79,8 @@ import org.robovm.pods.facebook.core.*;
     public native String getPromotedTranslation();
     @Property(selector = "adChoicesIcon")
     public native FBAdImage getAdChoicesIcon();
+    @Property(selector = "iconImage")
+    public native UIImage getIconImage();
     @Property(selector = "aspectRatio")
     public native @MachineSizedFloat double getAspectRatio();
     @Property(selector = "adChoicesLinkURL")
