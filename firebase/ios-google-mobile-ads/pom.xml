@@ -6,9 +6,17 @@
         <artifactId>robopods-firebase-parent</artifactId>
     </parent>
 
-    <artifactId>rrobopods-firebase-google-mobile-ads-ios</artifactId>
+    <artifactId>robopods-firebase-google-mobile-ads-ios</artifactId>
     <name>RoboPods Google Mobile Ads iOS bindings (firebase v6.18.0)</name>
     <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.dkimitsa.robovm</groupId>
+            <artifactId>robopods-firebase-core-ios</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
     <licenses>
         <license>

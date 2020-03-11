@@ -1,0 +1,13 @@
+<config>
+    <frameworks>
+        <framework>GoogleMobileAds</framework>
+        <framework>GoogleAppMeasurement</framework>
+        <framework>nanopb</framework>
+    </frameworks>
+    <exportedSymbols>
+        <!-- workaround: these will keep symbols from being stripped -->
+        <symbol>*GAD*</symbol>
+        <symbol>*DFP*</symbol>
+    </exportedSymbols>
+
+</config>
