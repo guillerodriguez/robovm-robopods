@@ -16,7 +16,4 @@
         <framework>WebKit</framework>
         <framework>CFNetwork</framework>
     </frameworks>
-    <libs>
-        <lib>z</lib>
-    </libs>>
 </config>
