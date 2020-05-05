@@ -1,7 +1,8 @@
+
 package: org.robovm.pods.charts
 include: [foundation, uikit, coregraphics, coreanimation]
 framework: Charts
-clang_args: ['-x', 'objective-c']
+clang_args: ['-x', 'objective-c', "-DSWIFT_EXTENSION(M)=M"]
 headers:
     - Charts.h
 
@@ -29,6 +30,20 @@ enums:
     YAxisLabelPosition: {}
     AxisDependency: {}
 
+categories:
+    UIPanGestureRecognizer:
+        methods:
+            '-nsuiLocationOfTouch:inView:':
+                name: getNsuiLocationOfTouch
+    UIPinchGestureRecognizer:
+        methods:
+            '-nsuiLocationOfTouch:inView:':
+                name: getNsuiLocationOfTouch
+    UIRotationGestureRecognizer: {}
+    UIScreen: {}
+    UIScrollView: {}
+    UITapGestureRecognizer: {}
+    UIView: {}
 classes:
     AnimatedMoveViewJob:
         methods:
@@ -188,6 +203,8 @@ classes:
                 name: getDataSetByTouchPoint
             '-isInvertedWithAxis:':
                 name: isInverted
+            '-gestureRecognizer:shouldReceiveEvent:':
+                name: shouldReceiveEvent
     BarLineScatterCandleBubbleChartData: {}
     BarLineScatterCandleBubbleChartDataSet:
         methods:
@@ -295,6 +312,8 @@ classes:
                 getter: forceLabelsEnabled
             'centerAxisLabelsEnabled':
                 getter: centerAxisLabelsEnabled
+            'isDrawGridLinesBehindDataEnabled':
+                getter: _isDrawGridLinesBehindDataEnabled # duplicate ?
         methods:
             '-setLabelCount:force:':
                 name: setLabelCount

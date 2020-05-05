@@ -116,6 +116,10 @@ import org.robovm.apple.coreanimation.*;
     public native boolean drawLimitLinesBehindDataEnabled();
     @Property(selector = "setDrawLimitLinesBehindDataEnabled:")
     public native void setDrawLimitLinesBehindDataEnabled(boolean v);
+    @Property(selector = "drawGridLinesBehindDataEnabled")
+    public native boolean isDrawGridLinesBehindDataEnabled();
+    @Property(selector = "setDrawGridLinesBehindDataEnabled:")
+    public native void setDrawGridLinesBehindDataEnabled(boolean v);
     @Property(selector = "gridAntialiasEnabled")
     public native boolean isGridAntialiasEnabled();
     @Property(selector = "setGridAntialiasEnabled:")
@@ -160,6 +164,8 @@ import org.robovm.apple.coreanimation.*;
     public native boolean isDrawLabelsEnabled();
     @Property(selector = "isDrawLimitLinesBehindDataEnabled")
     public native boolean isDrawLimitLinesBehindDataEnabled();
+    @Property(selector = "isDrawGridLinesBehindDataEnabled")
+    public native boolean _isDrawGridLinesBehindDataEnabled();
     @Property(selector = "spaceMin")
     public native double getSpaceMin();
     @Property(selector = "setSpaceMin:")

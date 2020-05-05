@@ -63,6 +63,18 @@ import org.robovm.apple.coreanimation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Method(selector = "initWithFrame:")
+    protected native @Pointer long init(@ByVal CGRect frame);
+    @Method(selector = "initWithCoder:")
+    protected native @Pointer long init(NSCoder coder);
+    @Method(selector = "accessibilityChildren")
+    public native NSArray<?> accessibilityChildren();
+    @Method(selector = "accessibilityElementCount")
+    public native @MachineSizedSInt long accessibilityElementCount();
+    @Method(selector = "accessibilityElementAtIndex:")
+    public native NSObject accessibilityElementAtIndex(@MachineSizedSInt long index);
+    @Method(selector = "indexOfAccessibilityElement:")
+    public native @MachineSizedSInt long indexOfAccessibilityElement(NSObject element);
     @Method(selector = "touchesBegan:withEvent:")
     public native void touchesBegan(NSSet<UITouch> touches, UIEvent event);
     @Method(selector = "touchesMoved:withEvent:")
@@ -79,17 +91,5 @@ import org.robovm.apple.coreanimation.*;
     public native void nsuiTouchesEnded(NSSet<UITouch> touches, UIEvent event);
     @Method(selector = "nsuiTouchesCancelled:withEvent:")
     public native void nsuiTouchesCancelled(NSSet<UITouch> touches, UIEvent event);
-    @Method(selector = "initWithFrame:")
-    protected native @Pointer long init(@ByVal CGRect frame);
-    @Method(selector = "initWithCoder:")
-    protected native @Pointer long init(NSCoder coder);
-    @Method(selector = "accessibilityChildren")
-    public native NSArray<?> accessibilityChildren();
-    @Method(selector = "accessibilityElementCount")
-    public native @MachineSizedSInt long accessibilityElementCount();
-    @Method(selector = "accessibilityElementAtIndex:")
-    public native NSObject accessibilityElementAtIndex(@MachineSizedSInt long index);
-    @Method(selector = "indexOfAccessibilityElement:")
-    public native @MachineSizedSInt long indexOfAccessibilityElement(NSObject element);
     /*</methods>*/
 }

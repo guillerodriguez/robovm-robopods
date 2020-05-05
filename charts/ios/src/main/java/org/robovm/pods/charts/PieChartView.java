@@ -149,6 +149,10 @@ import org.robovm.apple.coreanimation.*;
     protected native @Pointer long init(NSCoder decoder);
     @Method(selector = "drawRect:")
     public native void draw(@ByVal CGRect rect);
+    @Method(selector = "angleForPointWithX:y:")
+    public native @MachineSizedFloat double getAngleForPoint(@MachineSizedFloat double x, @MachineSizedFloat double y);
+    @Method(selector = "distanceToCenterWithX:y:")
+    public native @MachineSizedFloat double getDistanceToCenter(@MachineSizedFloat double x, @MachineSizedFloat double y);
     @Method(selector = "getMarkerPositionWithHighlight:")
     public native @ByVal CGPoint getMarkerPosition(ChartHighlight highlight);
     @Method(selector = "needsHighlightWithIndex:")
