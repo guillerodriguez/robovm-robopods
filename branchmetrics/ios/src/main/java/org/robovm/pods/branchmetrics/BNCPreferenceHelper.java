@@ -169,6 +169,10 @@ import org.robovm.apple.corespotlight.*;
     public native NSDate getPreviousAppBuildDate();
     @Property(selector = "setPreviousAppBuildDate:")
     public native void setPreviousAppBuildDate(NSDate v);
+    @Property(selector = "disableAdNetworkCallouts")
+    public native boolean isDisableAdNetworkCallouts();
+    @Property(selector = "setDisableAdNetworkCallouts:")
+    public native void setDisableAdNetworkCallouts(boolean v);
     @Property(selector = "faceBookAppLink")
     public native NSURL getFaceBookAppLink();
     @Property(selector = "setFaceBookAppLink:")

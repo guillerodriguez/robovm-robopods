@@ -51,8 +51,6 @@ import org.robovm.apple.corespotlight.*;
     public static native String getSdkVersion();
     @GlobalValue(symbol="BNC_API_BASE_URL", optional=true)
     public static native String getApiBaseUrl();
-    @GlobalValue(symbol="BNC_API_PINNED", optional=true)
-    public static native boolean getApiPinned();
     @GlobalValue(symbol="BNC_API_VERSION", optional=true)
     public static native String getApiVersion();
     @GlobalValue(symbol="BNC_LINK_URL", optional=true)

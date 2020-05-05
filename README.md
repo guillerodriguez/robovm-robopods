@@ -31,7 +31,7 @@ v1.7.0 -- in development
 | Name                               | 1.7.0  |
 |------------------------------------|--------|
 | [AppLovinSDK](applovinsdk/)        | 6.12.4*|
-| [BranchMetrics](branchmetrics/)    | 0.31.4 |
+| [BranchMetrics](branchmetrics/)    | 0.33.1*|
 | [Charts](charts/)                  | 3.4.0  |
 | [Facebook](facebook/)              | 6.2.0  |
 | [Firebase](firebase/)              | 6.18.0 |

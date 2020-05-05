@@ -59,12 +59,16 @@ import org.robovm.apple.corespotlight.*;
     public native NSArray<NSString> getBlackListURLRegex();
     @Property(selector = "setBlackListURLRegex:")
     public native void setBlackListURLRegex(NSArray<NSString> v);
+    @Deprecated
     @Property(selector = "sessionInitWithParamsCallback")
     public native @Block VoidBlock2<NSDictionary<?, ?>, NSError> getSessionInitWithParamsCallback();
+    @Deprecated
     @Property(selector = "setSessionInitWithParamsCallback:")
     public native void setSessionInitWithParamsCallback(@Block VoidBlock2<NSDictionary<?, ?>, NSError> v);
+    @Deprecated
     @Property(selector = "sessionInitWithBranchUniversalObjectCallback")
     public native @Block VoidBlock3<BranchUniversalObject, BranchLinkProperties, NSError> getSessionInitWithBranchUniversalObjectCallback();
+    @Deprecated
     @Property(selector = "setSessionInitWithBranchUniversalObjectCallback:")
     public native void setSessionInitWithBranchUniversalObjectCallback(@Block VoidBlock3<BranchUniversalObject, BranchLinkProperties, NSError> v);
     @Property(selector = "serverInterface")
@@ -90,14 +94,22 @@ import org.robovm.apple.corespotlight.*;
     public native void initWithAutomaticallyDisplayDeepLinkControllerAndHandler(NSDictionary<?, ?> options, boolean automaticallyDisplayController, @Block VoidBlock2<NSDictionary<?, ?>, NSError> callback);
     @Method(selector = "initSessionWithLaunchOptions:automaticallyDisplayDeepLinkController:isReferrable:deepLinkHandler:")
     public native void init(NSDictionary<?, ?> options, boolean automaticallyDisplayController, boolean isReferrable, @Block VoidBlock2<NSDictionary<?, ?>, NSError> callback);
+    @Method(selector = "initSceneSessionWithLaunchOptions:isReferrable:explicitlyRequestedReferrable:automaticallyDisplayController:registerDeepLinkHandler:")
+    public native void init(NSDictionary<?, ?> options, boolean isReferrable, boolean explicitlyRequestedReferrable, boolean automaticallyDisplayController, @Block VoidBlock2<BNCInitSessionResponse, NSError> callback);
     @Method(selector = "handleDeepLink:")
     public native boolean handleDeepLink(NSURL url);
+    @Method(selector = "handleDeepLink:sceneIdentifier:")
+    public native boolean handleDeepLink(NSURL url, String sceneIdentifier);
     @Method(selector = "handleDeepLinkWithNewSession:")
     public native boolean handleDeepLinkWithNewSession(NSURL url);
     @Method(selector = "continueUserActivity:")
     public native boolean continueUserActivity(NSUserActivity userActivity);
+    @Method(selector = "continueUserActivity:sceneIdentifier:")
+    public native boolean continueUserActivity(NSUserActivity userActivity, String sceneIdentifier);
     @Method(selector = "application:openURL:sourceApplication:annotation:")
     public native boolean openURL(UIApplication application, NSURL url, String sourceApplication, NSObject annotation);
+    @Method(selector = "sceneIdentifier:openURL:sourceApplication:annotation:")
+    public native boolean openURL(String sceneIdentifier, NSURL url, String sourceApplication, NSObject annotation);
     @Method(selector = "application:openURL:options:")
     public native boolean openURL(UIApplication application, NSURL url, NSDictionary<NSString, ?> options);
     @Method(selector = "dispatchToIsolationQueue:")
@@ -112,6 +124,12 @@ import org.robovm.apple.corespotlight.*;
     public native void registerDeepLinkController(UIViewController controller, String key);
     @Method(selector = "registerDeepLinkController:forKey:withPresentation:")
     public native void registerDeepLinkController(UIViewController controller, String key, BNCViewControllerPresentationOption option);
+    @Method(selector = "enableLogging")
+    public native void enableLogging();
+    /**
+     * @deprecated setDebug is replaced by enableLogging and test devices. https://help.branch.io/using-branch/docs/adding-test-devices
+     */
+    @Deprecated
     @Method(selector = "setDebug")
     public native void setDebug();
     @Method(selector = "validateSDKIntegration")
@@ -136,6 +154,8 @@ import org.robovm.apple.corespotlight.*;
     public native void setMaxRetries(@MachineSizedSInt long maxRetries);
     @Method(selector = "setNetworkTimeout:")
     public native void setNetworkTimeout(double timeout);
+    @Method(selector = "disableAdNetworkCallouts:")
+    public native void disableAdNetworkCallouts(boolean disableCallouts);
     /**
      * @deprecated Feature removed.  Did not work on iOS 11+
      */
@@ -148,6 +168,10 @@ import org.robovm.apple.corespotlight.*;
     @Deprecated
     @Method(selector = "accountForFacebookSDKPreventingAppLaunch")
     public native void accountForFacebookSDKPreventingAppLaunch();
+    /**
+     * @deprecated suppressWarningLogs is deprecated and all functionality has been disabled. If you wish to turn off all logging, please invoke BNCLogSetDisplayLevel(BNCLogLevelNone).
+     */
+    @Deprecated
     @Method(selector = "suppressWarningLogs")
     public native void suppressWarningLogs();
     @Method(selector = "registerPluginName:version:")

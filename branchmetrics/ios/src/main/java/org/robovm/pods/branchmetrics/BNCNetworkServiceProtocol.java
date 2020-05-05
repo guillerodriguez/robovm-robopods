@@ -55,6 +55,7 @@ import org.robovm.apple.corespotlight.*;
     void cancelAllOperations();
     @Method(selector = "networkOperationWithURLRequest:completion:")
     BNCNetworkOperationProtocol networkOperation(NSMutableURLRequest request, @Block VoidBlock1<BNCNetworkOperationProtocol> completion);
+    @Deprecated
     @Method(selector = "pinSessionToPublicSecKeyRefs:")
     NSError pinSessionToPublicSecKeyRefs(NSArray<?> publicKeys);
     /*</methods>*/

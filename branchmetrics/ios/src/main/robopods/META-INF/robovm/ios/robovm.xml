@@ -1,7 +1,11 @@
 <config>
     <frameworks>
         <framework>Branch</framework>
+        <framework>AdSupport</framework>
+        <framework>SafariServices</framework>
+        <framework>MobileCoreServices</framework>
         <framework>CoreSpotlight</framework>
-        <framework>UIKit</framework>
+        <framework>Webkit</framework>
+        <framework>iAd</framework>
     </frameworks>
 </config>

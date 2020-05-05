@@ -96,8 +96,9 @@ classes:
                 # to static constructor as conflicts with '-initSessionWithLaunchOptions:isReferrable:andRegisterDeepLinkHandler:'
                 name: initWithAutomaticallyDisplayDeepLinkControllerAndHandler
                 static_constructor_name: createWithAutomaticallyDisplayDeepLinkControllerAndHandler
-
             '-initSessionWithLaunchOptions:automaticallyDisplayDeepLinkController:isReferrable:deepLinkHandler:':
+                name: init
+            '-initSceneSessionWithLaunchOptions:isReferrable:explicitlyRequestedReferrable:automaticallyDisplayController:registerDeepLinkHandler:':
                 name: init
             '-handleDeepLinkWithNewSession:':
                 name: handleDeepLinkWithNewSession
@@ -279,6 +280,12 @@ classes:
                 name: getLastAttributedTouchData
             '-registerPluginName:version:':
                 name: registerPlugin
+            '-handleDeepLink:sceneIdentifier:':
+                name: handleDeepLink
+            '-continueUserActivity:sceneIdentifier:':
+                name: continueUserActivity
+            '-sceneIdentifier:openURL:sourceApplication:annotation:':
+                name: openURL
     BranchActivityItemProvider:
         methods:
             '-initWithParams:andTags:andFeature:andStage:andAlias:':
@@ -319,6 +326,8 @@ classes:
                 name: createCustomEvent # returns autorelease object
             '+customEventWithName:contentItem:':
                 name: createCustomEvent # returns autorelease object
+            '-logEventWithCompletion:':
+                name: logEvent
     BranchEventRequest:
         methods:
             '-initWithServerURL:eventDictionary:completion:':
@@ -403,6 +412,15 @@ classes:
                 constructor: true
             '+requestLastTouchAttributedData:key:attributionWindow:completion:':
                 name: requestLastTouchAttributedData
+    BNCInitSessionResponse: {}
+    BranchScene: #since 13.0
+        methods:
+            '-initSessionWithLaunchOptions:registerDeepLinkHandler:':
+                name: init
+            '-scene:continueUserActivity:':
+                name: continueUserActivity
+            '-scene:openURLContexts:':
+                name: openURLContexts
 protocols:
     BNCNetworkOperationProtocol: {}
     BNCNetworkServiceProtocol:

@@ -109,6 +109,8 @@ import org.robovm.apple.corespotlight.*;
     /*<methods>*/
     @Method(selector = "initWithName:")
     protected native @Pointer long init(String name);
+    @Method(selector = "logEventWithCompletion:")
+    public native void logEvent(@Block VoidBlock2<Boolean, NSError> completion);
     @Method(selector = "logEvent")
     public native void logEvent();
     @Method(selector = "dictionary")
