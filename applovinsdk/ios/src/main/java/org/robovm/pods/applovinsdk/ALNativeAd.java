@@ -75,18 +75,6 @@ import org.robovm.apple.coregraphics.*;
     public native boolean isImagePrecached();
     @Property(selector = "isVideoPrecached")
     public native boolean isVideoPrecached();
-    /**
-     * @deprecated Invoke method -launchClickTarget rather than opening this URL yourself.
-     */
-    @Deprecated
-    @Property(selector = "clickURL")
-    public native NSURL getClickURL();
-    /**
-     * @deprecated Invoke method -trackImpression or -trackImpressionAndNotify: rather than firing this URL yourself.
-     */
-    @Deprecated
-    @Property(selector = "impressionTrackingURL")
-    public native NSURL getImpressionTrackingURL();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

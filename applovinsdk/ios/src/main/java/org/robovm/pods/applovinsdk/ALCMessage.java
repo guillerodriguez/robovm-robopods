@@ -48,6 +48,8 @@ import org.robovm.apple.coregraphics.*;
     protected ALCMessage(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithData:topic:fromPublisher:")
     public ALCMessage(NSDictionary<NSString, ?> data, String topic, ALCPublisher publisher) { super((SkipInit) null); initObject(init(data, topic, publisher)); }
+    @Method(selector = "initWithData:topic:fromPublisher:sticky:")
+    public ALCMessage(NSDictionary<NSString, ?> data, String topic, ALCPublisher publisher, boolean sticky) { super((SkipInit) null); initObject(init(data, topic, publisher, sticky)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "data")
@@ -61,5 +63,7 @@ import org.robovm.apple.coregraphics.*;
     /*<methods>*/
     @Method(selector = "initWithData:topic:fromPublisher:")
     protected native @Pointer long init(NSDictionary<NSString, ?> data, String topic, ALCPublisher publisher);
+    @Method(selector = "initWithData:topic:fromPublisher:sticky:")
+    protected native @Pointer long init(NSDictionary<NSString, ?> data, String topic, ALCPublisher publisher, boolean sticky);
     /*</methods>*/
 }

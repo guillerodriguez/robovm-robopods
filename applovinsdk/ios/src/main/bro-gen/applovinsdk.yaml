@@ -179,6 +179,10 @@ classes:
                 name: init
             '-initWithAdUnitIdentifier:sdk:':
                 name: init
+            '-initWithAdUnitIdentifier:adFormat:':
+                name: init
+            '-initWithAdUnitIdentifier:adFormat:sdk:':
+                name: init
             '-setExtraParameterForKey:value:':
                 name: setExtraParameter
     MAInterstitialAd:
@@ -373,9 +377,11 @@ values:
 constants:
     kALErrorCode(.*):
         class: ALErrorCodes
+        name: '#{g[0]}'
 
     kMAErrorCode(.*):
         class: MAErrorCodes
+        name: '#{g[0]}'
 
     # Make sure we don't miss any constants if new ones are introduced in a later version
     (.*):

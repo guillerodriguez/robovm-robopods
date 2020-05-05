@@ -58,28 +58,10 @@ import org.robovm.apple.coregraphics.*;
     @Method(selector = "precacheResourcesForNativeAd:andNotify:")
     public native void precacheResourcesForNativeAd(ALNativeAd ad, ALNativeAdPrecacheDelegate delegate);
     /**
-     * @deprecated Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use loadNextAdAndNotify: to load ads.
-     */
-    @Deprecated
-    @Method(selector = "preloadAdForZoneIdentifier:")
-    public native void preloadAdForZoneIdentifier(String zoneIdentifier);
-    /**
-     * @deprecated Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use loadNextAdAndNotify: to load ads.
-     */
-    @Deprecated
-    @Method(selector = "hasPreloadedAdForZoneIdentifier:")
-    public native boolean hasPreloadedAdForZoneIdentifier(String zoneIdentifier);
-    /**
      * @deprecated Loading multiple native ads has been deprecated and will be removed in a future SDK version. Please use loadNextAdAndNotify: instead.
      */
     @Deprecated
     @Method(selector = "loadNativeAdGroupOfCount:andNotify:")
     public native void loadNativeAdGroupOfCount(@MachineSizedUInt long numberOfAdsToLoad, ALNativeAdLoadDelegate delegate);
-    /**
-     * @deprecated Loading multiple native ads has been deprecated and will be removed in a future SDK version. Please use loadNextAdAndNotify: instead.
-     */
-    @Deprecated
-    @Method(selector = "loadNativeAdGroupOfCount:forZoneIdentifier:andNotify:")
-    public native void loadNativeAdGroupOfCount(@MachineSizedUInt long numberOfAdsToLoad, String zoneIdentifier, ALNativeAdLoadDelegate delegate);
     /*</methods>*/
 }

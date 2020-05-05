@@ -51,6 +51,10 @@ import org.robovm.apple.coregraphics.*;
     public MAAdView(String adUnitIdentifier) { super((SkipInit) null); initObject(init(adUnitIdentifier)); }
     @Method(selector = "initWithAdUnitIdentifier:sdk:")
     public MAAdView(String adUnitIdentifier, ALSdk sdk) { super((SkipInit) null); initObject(init(adUnitIdentifier, sdk)); }
+    @Method(selector = "initWithAdUnitIdentifier:adFormat:")
+    public MAAdView(String adUnitIdentifier, MAAdFormat adFormat) { super((SkipInit) null); initObject(init(adUnitIdentifier, adFormat)); }
+    @Method(selector = "initWithAdUnitIdentifier:adFormat:sdk:")
+    public MAAdView(String adUnitIdentifier, MAAdFormat adFormat, ALSdk sdk) { super((SkipInit) null); initObject(init(adUnitIdentifier, adFormat, sdk)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "delegate")
@@ -68,6 +72,10 @@ import org.robovm.apple.coregraphics.*;
     protected native @Pointer long init(String adUnitIdentifier);
     @Method(selector = "initWithAdUnitIdentifier:sdk:")
     protected native @Pointer long init(String adUnitIdentifier, ALSdk sdk);
+    @Method(selector = "initWithAdUnitIdentifier:adFormat:")
+    protected native @Pointer long init(String adUnitIdentifier, MAAdFormat adFormat);
+    @Method(selector = "initWithAdUnitIdentifier:adFormat:sdk:")
+    protected native @Pointer long init(String adUnitIdentifier, MAAdFormat adFormat, ALSdk sdk);
     @Method(selector = "setExtraParameterForKey:value:")
     public native void setExtraParameter(String key, String value);
     @Method(selector = "loadAd")

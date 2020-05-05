@@ -5,6 +5,7 @@
     <frameworks>
         <framework>AppLovinSDK</framework>
         <framework>AdSupport</framework>
+        <framework>Audiotoolbox</framework>
         <framework>AVFoundation</framework>
         <framework>CoreGraphics</framework>
         <framework>CoreMedia</framework>
@@ -14,6 +15,5 @@
         <framework>SystemConfiguration</framework>
         <framework>UIKit</framework>
         <framework>WebKit</framework>
-        <framework>CFNetwork</framework>
     </frameworks>
 </config>

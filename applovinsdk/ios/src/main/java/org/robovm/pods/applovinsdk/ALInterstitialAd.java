@@ -83,18 +83,6 @@ import org.robovm.apple.coregraphics.*;
     @Method(selector = "shared")
     public static native ALInterstitialAd shared();
     /**
-     * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
-     */
-    @Deprecated
-    @Method(selector = "showOverPlacement:")
-    public native void showOverPlacement(String placement);
-    /**
-     * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
-     */
-    @Deprecated
-    @Method(selector = "showOver:placement:andRender:")
-    public native void showOver(UIWindow window, String placement, ALAd ad);
-    /**
      * @deprecated Dismissing an interstitial while playing negatively affects CPM and is highy discouraged. It is now deprecated and will be removed in a future SDK version.
      */
     @Deprecated
@@ -112,18 +100,6 @@ import org.robovm.apple.coregraphics.*;
     @Deprecated
     @Method(selector = "showOver:andRender:")
     public native void showOver(UIWindow window, ALAd ad);
-    /**
-     * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
-     */
-    @Deprecated
-    @Method(selector = "showOverPlacement:")
-    public static native ALInterstitialAd ShowOverPlacement(String placement);
-    /**
-     * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
-     */
-    @Deprecated
-    @Method(selector = "showOver:placement:")
-    public static native ALInterstitialAd ShowOver(UIWindow window, String placement);
     /**
      * @deprecated Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `show`, `showOver:` or `showOver:andRender:` to display an ad.
      */

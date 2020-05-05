@@ -44,26 +44,26 @@ import org.robovm.apple.coregraphics.*;
     /*<bind>*/
     /*</bind>*/
     /*<constants>*/
-    public static final int kALErrorCodeSdkDisabled = -22;
-    public static final int kALErrorCodeNoFill = 204;
-    public static final int kALErrorCodeAdRequestNetworkTimeout = -1001;
-    public static final int kALErrorCodeNotConnectedToInternet = -1009;
-    public static final int kALErrorCodeAdRequestUnspecifiedError = -1;
-    public static final int kALErrorCodeUnableToRenderAd = -6;
-    public static final int kALErrorCodeInvalidZone = -7;
-    public static final int kALErrorCodeInvalidAdToken = -8;
-    public static final int kALErrorCodeUnableToPrecacheResources = -200;
-    public static final int kALErrorCodeUnableToPrecacheImageResources = -201;
-    public static final int kALErrorCodeUnableToPrecacheVideoResources = -202;
-    public static final int kALErrorCodeInvalidResponse = -800;
-    public static final int kALErrorCodeUnableToRenderNativeAd = -700;
-    public static final int kALErrorCodeUnableToPreloadNativeAd = -701;
-    public static final int kALErrorCodeNativeAdImpressionAlreadyTracked = -702;
-    public static final int kALErrorCodeIncentiviziedAdNotPreloaded = -300;
-    public static final int kALErrorCodeIncentivizedUnknownServerError = -400;
-    public static final int kALErrorCodeIncentivizedValidationNetworkTimeout = -500;
-    public static final int kALErrorCodeIncentivizedUserClosedVideo = -600;
-    public static final int kALErrorCodeInvalidURL = -900;
+    public static final int SdkDisabled = -22;
+    public static final int NoFill = 204;
+    public static final int AdRequestNetworkTimeout = -1001;
+    public static final int NotConnectedToInternet = -1009;
+    public static final int AdRequestUnspecifiedError = -1;
+    public static final int UnableToRenderAd = -6;
+    public static final int InvalidZone = -7;
+    public static final int InvalidAdToken = -8;
+    public static final int UnableToPrecacheResources = -200;
+    public static final int UnableToPrecacheImageResources = -201;
+    public static final int UnableToPrecacheVideoResources = -202;
+    public static final int InvalidResponse = -800;
+    public static final int UnableToRenderNativeAd = -700;
+    public static final int UnableToPreloadNativeAd = -701;
+    public static final int NativeAdImpressionAlreadyTracked = -702;
+    public static final int IncentiviziedAdNotPreloaded = -300;
+    public static final int IncentivizedUnknownServerError = -400;
+    public static final int IncentivizedValidationNetworkTimeout = -500;
+    public static final int IncentivizedUserClosedVideo = -600;
+    public static final int InvalidURL = -900;
     /*</constants>*/
     /*<constructors>*//*</constructors>*/
     /*<properties>*//*</properties>*/

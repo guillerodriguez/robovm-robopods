@@ -44,18 +44,11 @@ import org.robovm.apple.coregraphics.*;
     /*<bind>*/
     /*</bind>*/
     /*<constants>*/
-    public static final int kMAErrorCodeUnspecifiedError = -1;
-    public static final int kMAErrorCodeNoFill = 204;
-    public static final int kMAErrorCodeInvalidResponse = -800;
-    public static final int kMAErrorCodeFullscreenAdAlreadyShowing = -23;
-    public static final int kMAErrorCodeMediationAdapterLoadFailed = -5001;
-    public static final int kMAErrorCodeMediationAdapterAdNotReady = -5002;
-    public static final int kMAErrorCodeMediationAdapterTimeout = -5101;
-    public static final int kMAErrorCodeMediationAdapterImmediateTimeout = -5102;
-    public static final int kMAErrorCodeMediationAdapterDisabled = -5103;
-    public static final int kMAErrorCodeMediationAdapterWrongType = -5104;
-    public static final int kMAErrorCodeInvalidInternalState = -5201;
-    public static final int kMAErrorCodeFormatTypeNotSupported = -5501;
+    public static final int NoFill = 204;
+    public static final int UnspecifiedError = -1;
+    public static final int InvalidInternalState = -5201;
+    public static final int MediationAdapterLoadFailed = -5001;
+    public static final int FullscreenAdAlreadyShowing = -23;
     /*</constants>*/
     /*<constructors>*//*</constructors>*/
     /*<properties>*//*</properties>*/

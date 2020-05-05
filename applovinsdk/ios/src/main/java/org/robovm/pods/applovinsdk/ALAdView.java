@@ -75,10 +75,6 @@ import org.robovm.apple.coregraphics.*;
     public native ALAdViewEventDelegate getAdEventDelegate();
     @Property(selector = "setAdEventDelegate:")
     public native void setAdEventDelegate(ALAdViewEventDelegate v);
-    @Property(selector = "adVideoPlaybackDelegate")
-    public native ALAdVideoPlaybackDelegate getAdVideoPlaybackDelegate();
-    @Property(selector = "setAdVideoPlaybackDelegate:")
-    public native void setAdVideoPlaybackDelegate(ALAdVideoPlaybackDelegate v);
     @Property(selector = "adSize")
     public native ALAdSize getAdSize();
     @Property(selector = "setAdSize:")
