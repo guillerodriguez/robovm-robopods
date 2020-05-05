@@ -63,6 +63,8 @@ import org.robovm.apple.webkit.*;
     public static native String getUserID();
     @Property(selector = "setUserID:")
     public static native void setUserID(String v);
+    @Property(selector = "anonymousID")
+    public static native String getAnonymousID();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
