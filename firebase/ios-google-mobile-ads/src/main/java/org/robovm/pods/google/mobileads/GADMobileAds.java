@@ -80,17 +80,29 @@ import org.robovm.apple.uikit.*;
     public native void disableAutomatedInAppPurchaseReporting();
     @Method(selector = "enableAutomatedInAppPurchaseReporting")
     public native void enableAutomatedInAppPurchaseReporting();
+    @Method(selector = "disableSDKCrashReporting")
+    public native void disableSDKCrashReporting();
+    @Method(selector = "disableMediationInitialization")
+    public native void disableMediationInitialization();
     @Method(selector = "sharedInstance")
     public static native GADMobileAds sharedInstance();
-    @Method(selector = "disableSDKCrashReporting")
-    public static native void disableSDKCrashReporting();
-    @Method(selector = "disableAutomatedInAppPurchaseReporting")
-    public static native void DisableAutomatedInAppPurchaseReporting();
     /**
-     * @deprecated Use -[GADMobileAds.sharedInstance startWithCompletionHandler:]
+     * @deprecated Use [GADMobileAds.sharedInstance startWithCompletionHandler:]
      */
     @Deprecated
     @Method(selector = "configureWithApplicationID:")
     public static native void configure(String applicationID);
+    /**
+     * @deprecated Use [GADMobileAds.sharedInstance disableAutomatedInAppPurchaseReporting]
+     */
+    @Deprecated
+    @Method(selector = "disableAutomatedInAppPurchaseReporting")
+    public static native void DisableAutomatedInAppPurchaseReporting();
+    /**
+     * @deprecated Use [GADMobileAds.sharedInstance disableSDKCrashReporting]
+     */
+    @Deprecated
+    @Method(selector = "disableSDKCrashReporting")
+    public static native void DisableSDKCrashReporting();
     /*</methods>*/
 }

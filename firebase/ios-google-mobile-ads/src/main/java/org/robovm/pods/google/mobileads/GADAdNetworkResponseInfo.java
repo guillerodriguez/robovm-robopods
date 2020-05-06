@@ -37,35 +37,30 @@ import org.robovm.apple.uikit.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/GADResponseInfo/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/GADAdNetworkResponseInfo/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class GADResponseInfoPtr extends Ptr<GADResponseInfo, GADResponseInfoPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(GADResponseInfo.class); }/*</bind>*/
+    /*<ptr>*/public static class GADAdNetworkResponseInfoPtr extends Ptr<GADAdNetworkResponseInfo, GADAdNetworkResponseInfoPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(GADAdNetworkResponseInfo.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public GADResponseInfo() {}
-    protected GADResponseInfo(Handle h, long handle) { super(h, handle); }
-    protected GADResponseInfo(SkipInit skipInit) { super(skipInit); }
+    public GADAdNetworkResponseInfo() {}
+    protected GADAdNetworkResponseInfo(Handle h, long handle) { super(h, handle); }
+    protected GADAdNetworkResponseInfo(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "responseIdentifier")
-    public native String getResponseIdentifier();
     @Property(selector = "adNetworkClassName")
     public native String getAdNetworkClassName();
-    @Property(selector = "adNetworkInfoArray")
-    public native NSArray<GADAdNetworkResponseInfo> getAdNetworkInfoArray();
+    @Property(selector = "credentials")
+    public native NSDictionary<NSString, ?> getCredentials();
+    @Property(selector = "error")
+    public native NSError getError();
+    @Property(selector = "latency")
+    public native double getLatency();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @GlobalValue(symbol="GADGoogleAdNetworkClassName", optional=true)
-    public static native String GoogleAdNetworkClassName();
-    @GlobalValue(symbol="GADCustomEventAdNetworkClassName", optional=true)
-    public static native String CustomEventAdNetworkClassName();
-    @GlobalValue(symbol="GADErrorUserInfoKeyResponseInfo", optional=true)
-    public static native String getErrorUserInfoKey();
-    
     
     /*</methods>*/
 }

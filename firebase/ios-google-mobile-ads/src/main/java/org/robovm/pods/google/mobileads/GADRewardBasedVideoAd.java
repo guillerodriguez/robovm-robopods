@@ -34,9 +34,11 @@ import org.robovm.apple.uikit.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
+/**
+ * @deprecated Use GADRewardedAd instead. Google AdMob publishers, follow instructions here: https://googlemobileadssdk.page.link/admob-ios-rewarded-migration. Google Ad Manager publishers, follow instructions here: https://googlemobileadssdk.page.link/admanager-ios-rewarded-migration.
+ */
 /*</javadoc>*/
-/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass @Deprecated/*</annotations>*/
 /*<visibility>*/public/*</visibility>*/ class /*<name>*/GADRewardBasedVideoAd/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
