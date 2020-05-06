@@ -54,5 +54,7 @@ import org.robovm.apple.dispatch.*;
     /*<methods>*/
     @Method(selector = "timestamp")
     public static native NSDictionary<?, ?> timestamp();
+    @Method(selector = "increment:")
+    public static native NSDictionary<?, ?> increment(NSNumber delta);
     /*</methods>*/
 }
