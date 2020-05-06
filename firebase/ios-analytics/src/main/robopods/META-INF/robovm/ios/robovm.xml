@@ -2,6 +2,7 @@
     <frameworks>
         <framework>FirebaseAnalytics</framework>
         <framework>GoogleAppMeasurement</framework>
+        <framework>FirebaseInstallations</framework>
         <framework>nanopb</framework>
         <framework>StoreKit</framework>
     </frameworks>

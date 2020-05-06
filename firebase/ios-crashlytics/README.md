@@ -2,11 +2,14 @@
 
 ### Frameworks required for this pod: 
 * FirebaseCrashlytics.framework
+* FirebaseInstallations.framework
+* framework>nanopb.framework
+* GoogleDataTransport.framework
+
+Plus ones required for ios-core module:
 * GoogleUtilities.framework
 * FirebaseCore.framework
 * PromisesObjC.framework
-* FirebaseInstanceID.framework
-* FirebaseInstallations.framework
 
 ### to use this pod configure your `robovm.xml`
 

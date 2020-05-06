@@ -2,5 +2,6 @@
     <frameworks>
         <framework>FirebaseCore</framework>
         <framework>GoogleUtilities</framework>
+        <framework>PromisesObjC</framework>
     </frameworks>
 </config>

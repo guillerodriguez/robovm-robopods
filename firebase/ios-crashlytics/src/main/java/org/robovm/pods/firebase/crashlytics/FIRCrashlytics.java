@@ -76,8 +76,4 @@ import org.robovm.apple.foundation.*;
     @Method(selector = "crashlytics")
     public static native FIRCrashlytics crashlytics();
     /*</methods>*/
-
-    // dkimitsa: manually added code
-    @Method(selector = "logWithFormat:")
-    public native void log(NSString msg);
 }
