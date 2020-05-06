@@ -21,7 +21,7 @@ enums:
 
 typed_enums:
     FBSDKAppEventName:
-        enum: FBSDKAppEventName
+        class: FBSDKAppEventName
         type: NSString
         prefix: FBSDKAppEventName
     FBSDKAppEventParameterName:
@@ -37,7 +37,7 @@ typed_enums:
         type: NSString
         prefix: FBSDKAppEventParameterValue
     FBSDKAppEventUserDataType:
-        enum: FBSDKAppEventUserDataType
+        class: FBSDKAppEventUserDataType
         type: NSString
         prefix: FBSDKApp
     FBSDKLoggingBehavior:

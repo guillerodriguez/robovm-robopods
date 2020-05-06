@@ -79,15 +79,15 @@ import org.robovm.apple.webkit.*;
     }
     
     @Method(selector = "logEvent:")
-    public static native void logEvent(FBSDKAppEventName eventName);
+    public static native void logEvent(NSString eventName);
     @Method(selector = "logEvent:valueToSum:")
-    public static native void logEvent(FBSDKAppEventName eventName, double valueToSum);
+    public static native void logEvent(NSString eventName, double valueToSum);
     @Method(selector = "logEvent:parameters:")
-    public static native void logEvent(FBSDKAppEventName eventName, NSDictionary<NSString, ?> parameters);
+    public static native void logEvent(NSString eventName, NSDictionary<NSString, ?> parameters);
     @Method(selector = "logEvent:valueToSum:parameters:")
-    public static native void logEvent(FBSDKAppEventName eventName, double valueToSum, NSDictionary<NSString, ?> parameters);
+    public static native void logEvent(NSString eventName, double valueToSum, NSDictionary<NSString, ?> parameters);
     @Method(selector = "logEvent:valueToSum:parameters:accessToken:")
-    public static native void logEvent(FBSDKAppEventName eventName, NSNumber valueToSum, NSDictionary<NSString, ?> parameters, FBSDKAccessToken accessToken);
+    public static native void logEvent(NSString eventName, NSNumber valueToSum, NSDictionary<NSString, ?> parameters, FBSDKAccessToken accessToken);
     @Method(selector = "logPurchase:currency:")
     public static native void logPurchase(double purchaseAmount, String currency);
     @Method(selector = "logPurchase:currency:parameters:")
@@ -119,9 +119,9 @@ import org.robovm.apple.webkit.*;
     @Method(selector = "clearUserData")
     public static native void clearUserData();
     @Method(selector = "setUserData:forType:")
-    public static native void setUserData(String data, FBSDKAppEventUserDataType type);
+    public static native void setUserData(String data, NSString type);
     @Method(selector = "clearUserDataForType:")
-    public static native void clearUserDataForType(FBSDKAppEventUserDataType type);
+    public static native void clearUserDataForType(NSString type);
     @Method(selector = "updateUserProperties:handler:")
     public static native void updateUserProperties(NSDictionary<NSString, ?> properties, @Block VoidBlock3<FBSDKGraphRequestConnection, NSObject, NSError> handler);
     @Method(selector = "augmentHybridWKWebView:")
