@@ -1,0 +1,11 @@
+<config>
+    <frameworks>
+        <framework>FirebaseCrashlytics</framework>
+        <framework>PromisesObjC</framework>
+        <framework>FirebaseInstanceID</framework>
+        <framework>FirebaseInstallations</framework>
+    </frameworks>
+    <exportedSymbols>
+        <symbol>_mh_execute_header</symbol> <!-- check https://github.com/dkimitsa/robovm-robopods/issues/1 -->
+    </exportedSymbols>
+</config>

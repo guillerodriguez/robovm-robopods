@@ -1,0 +1,54 @@
+package: org.robovm.pods.firebase.crashlytics
+framework: FirebaseCrashlytics
+include: [foundation]
+clang_args: ['-x', 'objective-c']
+headers: 
+    - FirebaseCrashlytics.h
+
+enums: {}
+
+
+classes:
+    FIRCrashlytics:
+        methods:
+            '-logWithFormat:':
+                # FIXME: variadic, manually implemented as having no argument
+                name: log
+            '-logWithFormat:arguments:':
+                exclude: true # variadic and duplicate logWithFormat
+            '-setCustomValue:forKey:':
+                name: setCustomValue
+            '-checkForUnsentReportsWithCompletion:':
+                name: checkForUnsentReports
+    FIRExceptionModel:
+        methods:
+            '-initWithName:reason:':
+                name: init
+            '+exceptionModelWithName:reason:':
+                exclude: true # as duplicate constructor
+    FIRStackFrame:
+        methods:
+            '-initWithSymbol:file:line:':
+                name: init
+            '+stackFrameWithSymbol:file:line:':
+                exclude: true # as duplicate constructor
+
+protocols: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'

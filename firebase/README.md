@@ -9,6 +9,7 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 | [ios-analytics](ios-analytics/)          | Firebase iOS Analytics              |
 | [ios-database](ios-database/)            | Firebase iOS DataBase               |
 | [ios-mobile adds](ios-google-mobile-ads/)| Firebase iOS Google Mobile Ads      |
+| [ios-crashlytics](ios-crashlytics/)      | Firebase iOS Crashlytics            |
 
 ## Versions
 
