@@ -93,6 +93,19 @@ import org.robovm.apple.foundation.*;
     public static final String LevelName = "level_name";
     public static final String Success = "success";
     public static final String ExtendSession = "extend_session";
+    public static final String Discount = "discount";
+    public static final String ItemCategory2 = "item_category2";
+    public static final String ItemCategory3 = "item_category3";
+    public static final String ItemCategory4 = "item_category4";
+    public static final String ItemCategory5 = "item_category5";
+    public static final String ItemListID = "item_list_id";
+    public static final String ItemListName = "item_list_name";
+    public static final String Items = "items";
+    public static final String LocationID = "location_id";
+    public static final String PaymentType = "payment_type";
+    public static final String PromotionID = "promotion_id";
+    public static final String PromotionName = "promotion_name";
+    public static final String ShippingTier = "shipping_tier";
     /*</constants>*/
     /*<constructors>*//*</constructors>*/
     /*<properties>*//*</properties>*/

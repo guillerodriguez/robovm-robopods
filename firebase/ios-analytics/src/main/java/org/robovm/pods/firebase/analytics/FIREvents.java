@@ -53,6 +53,8 @@ import org.robovm.apple.foundation.*;
     public static final String EcommercePurchase = "ecommerce_purchase";
     public static final String GenerateLead = "generate_lead";
     public static final String JoinGroup = "join_group";
+    public static final String LevelEnd = "level_end";
+    public static final String LevelStart = "level_start";
     public static final String LevelUp = "level_up";
     public static final String Login = "login";
     public static final String PostScore = "post_score";
@@ -71,8 +73,13 @@ import org.robovm.apple.foundation.*;
     public static final String ViewItem = "view_item";
     public static final String ViewItemList = "view_item_list";
     public static final String ViewSearchResults = "view_search_results";
-    public static final String LevelStart = "level_start";
-    public static final String LevelEnd = "level_end";
+    public static final String AddShippingInfo = "add_shipping_info";
+    public static final String Purchase = "purchase";
+    public static final String Refund = "refund";
+    public static final String SelectItem = "select_item";
+    public static final String SelectPromotion = "select_promotion";
+    public static final String ViewCart = "view_cart";
+    public static final String ViewPromotion = "view_promotion";
     /*</constants>*/
     /*<constructors>*//*</constructors>*/
     /*<properties>*//*</properties>*/
