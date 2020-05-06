@@ -55,12 +55,5 @@ Any other place to use GAD:
     GADRewardBasedVideoAd.sharedInstance().loadRequest(new GADRequest(), "ca-app-pub-3940256099942544/1712485313" );
 ```
 
-
-## Available RoboPods
-
-| RoboPods Version  | Pollfish Version  |
-|-------------------|-------------------|
-| 1.6.0             | 6.18.0 (firebase) |
-
 ## Official website
 https://firebase.google.com/docs/admob/ios/quick-start
