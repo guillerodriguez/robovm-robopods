@@ -8,7 +8,7 @@
 | [ios-login](ios-login/)           | Facebook iOS Login Kit                    |
 | [ios-places](ios-places/)         | Facebook iOS Places Kit (v5.15.1)         |
 | [ios-share](ios-share/)           | Facebook iOS Share Kit                    |
-| [ios-audience](ios-audience/)     | Facebook iOS Audience Ad Network (v5.7.1) |
+| [ios-audience](ios-audience/)     | Facebook iOS Audience Ad Network (v5.8.0) |
 
 ## Versions
 

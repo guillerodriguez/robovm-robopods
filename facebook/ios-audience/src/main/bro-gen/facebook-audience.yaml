@@ -23,7 +23,10 @@ typed_enums:
         enum: FBAdExtraHintKeyword
         type: NSString
         prefix: FBAdExtraHintKeyword
-
+    FBAdExperienceType:
+        enum: FBAdExperienceType
+        type: NSString
+        prefix: FBAdExperienceType
 categories:
     UIView: {}
 
@@ -224,6 +227,10 @@ classes:
                 name: setRewardData
             '-showAdFromRootViewController:animated:':
                 name: showAdFromRootViewController
+    FBAdExperienceConfig:
+        methods:
+            '-initWithAdExperienceType:':
+                name: init
 
     # exclude for now Unity related containers
     FBAdBridgeContainer: {exclude: true}
@@ -268,7 +275,6 @@ protocols:
         methods:
             '-rewardedVideoAd:didFailWithError:':
                 name: didFail
-
 functions:
     # exclude Audience Network Unity SDK bridge
     FB(.*)Bridge.*:

@@ -38,35 +38,32 @@ import org.robovm.pods.facebook.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
-/**
- * @deprecated Rendering method is no longer used in Audience Network
- */
+
 /*</javadoc>*/
-/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class) @Deprecated/*</annotations>*/
-public enum /*<name>*/FBMediaViewRenderingMethod/*</name>*/ implements ValuedEnum {
-    /*<values>*/
-    Default(0L),
-    Metal(1L),
-    OpenGL(2L),
-    Software(3L);
-    /*</values>*/
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBAdExperienceConfig/*</name>*/ 
+    extends /*<extends>*/NSObject/*</extends>*/ 
+    /*<implements>*//*</implements>*/ {
 
-    /*<bind>*/
-    /*</bind>*/
+    /*<ptr>*/public static class FBAdExperienceConfigPtr extends Ptr<FBAdExperienceConfig, FBAdExperienceConfigPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(FBAdExperienceConfig.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
-    /*<methods>*//*</methods>*/
-
-    private final long n;
-
-    private /*<name>*/FBMediaViewRenderingMethod/*</name>*/(long n) { this.n = n; }
-    public long value() { return n; }
-    public static /*<name>*/FBMediaViewRenderingMethod/*</name>*/ valueOf(long n) {
-        for (/*<name>*/FBMediaViewRenderingMethod/*</name>*/ v : values()) {
-            if (v.n == n) {
-                return v;
-            }
-        }
-        throw new IllegalArgumentException("No constant with value " + n + " found in " 
-            + /*<name>*/FBMediaViewRenderingMethod/*</name>*/.class.getName());
-    }
+    /*<constructors>*/
+    protected FBAdExperienceConfig() {}
+    protected FBAdExperienceConfig(Handle h, long handle) { super(h, handle); }
+    protected FBAdExperienceConfig(SkipInit skipInit) { super(skipInit); }
+    @Method(selector = "initWithAdExperienceType:")
+    public FBAdExperienceConfig(FBAdExperienceType adExperienceType) { super((SkipInit) null); initObject(init(adExperienceType)); }
+    /*</constructors>*/
+    /*<properties>*/
+    @Property(selector = "adExperienceType")
+    public native FBAdExperienceType getAdExperienceType();
+    @Property(selector = "setAdExperienceType:")
+    public native void setAdExperienceType(FBAdExperienceType v);
+    /*</properties>*/
+    /*<members>*//*</members>*/
+    /*<methods>*/
+    @Method(selector = "initWithAdExperienceType:")
+    protected native @Pointer long init(FBAdExperienceType adExperienceType);
+    /*</methods>*/
 }

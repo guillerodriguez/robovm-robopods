@@ -4,13 +4,24 @@
     </libs>
     <frameworks>
         <framework>FBAudienceNetwork</framework>
-        <framework>SystemConfiguration</framework>
-        <framework>CoreMotion</framework>
-        <framework>VideoToolbox</framework>
         <framework>AVFoundation</framework>
+        <framework>AdSupport</framework>
+        <framework>AudioToolbox</framework>
+        <framework>CFNetwork</framework>
         <framework>CoreGraphics</framework>
         <framework>CoreMedia</framework>
+        <framework>CoreMotion</framework>
+        <framework>CoreVideo</framework>
+        <framework>CoreVideo</framework>
+        <framework>LocalAuthentication</framework>
+        <framework>OpenGLES</framework>
+        <framework>Photos</framework>
+        <framework>QuartzCore</framework>
+        <framework>SafariServices</framework>
+        <framework>Security</framework>
         <framework>StoreKit</framework>
-        <framework>UIKit</framework>
+        <framework>SystemConfiguration</framework>
+        <framework>VideoToolbox</framework>
+        <framework>WebKit</framework>
     </frameworks>
 </config>

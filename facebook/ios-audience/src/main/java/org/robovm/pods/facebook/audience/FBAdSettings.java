@@ -105,17 +105,5 @@ import org.robovm.pods.facebook.core.*;
     public static native FBAdLogLevel getLogLevel();
     @Method(selector = "setLogLevel:")
     public static native void setLogLevel(FBAdLogLevel level);
-    /**
-     * @deprecated Rendering method is no longer used in Audience Network
-     */
-    @Deprecated
-    @Method(selector = "mediaViewRenderingMethod")
-    public static native FBMediaViewRenderingMethod mediaViewRenderingMethod();
-    /**
-     * @deprecated Rendering method is no longer used in Audience Network
-     */
-    @Deprecated
-    @Method(selector = "setMediaViewRenderingMethod:")
-    public static native void setMediaViewRenderingMethod(FBMediaViewRenderingMethod mediaViewRenderingMethod);
     /*</methods>*/
 }

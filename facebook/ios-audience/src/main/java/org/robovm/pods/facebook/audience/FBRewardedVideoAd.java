@@ -72,6 +72,10 @@ import org.robovm.pods.facebook.core.*;
     public native FBAdExtraHint getExtraHint();
     @Property(selector = "setExtraHint:")
     public native void setExtraHint(FBAdExtraHint v);
+    @Property(selector = "adExperienceConfig")
+    public native FBAdExperienceConfig getAdExperienceConfig();
+    @Property(selector = "setAdExperienceConfig:")
+    public native void setAdExperienceConfig(FBAdExperienceConfig v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
