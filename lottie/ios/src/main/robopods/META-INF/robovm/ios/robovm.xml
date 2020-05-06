@@ -2,6 +2,7 @@
     <frameworks>
         <framework>Lottie</framework>
         <framework>CoreGraphics</framework>
+        <framework>CoreText</framework>
         <framework>QuartzCore</framework>
         <framework>UIKit</framework>
     </frameworks>
