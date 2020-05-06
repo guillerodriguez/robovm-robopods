@@ -1,6 +1,9 @@
 <config>
     <frameworks>
         <framework>OneSignal</framework>
+        <framework>CoreGraphics</framework>
+        <framework>WebKit</framework>
+        <framework>SystemConfiguration</framework>
         <framework>UserNotifications</framework>
         <framework>UIKit</framework>
     </frameworks>
