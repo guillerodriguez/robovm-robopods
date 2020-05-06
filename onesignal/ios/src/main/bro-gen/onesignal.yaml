@@ -95,6 +95,8 @@ classes:
                 name: sendOutcome
             '+sendOutcomeWithValue:value:onSuccess:':
                 name: sendOutcome
+            '+setExternalUserId:withCompletion:':
+                name: setExternalUserId
     OSEmailSubscriptionState: {}
     OSEmailSubscriptionStateChanges: {}
     OSInAppMessageAction: {}

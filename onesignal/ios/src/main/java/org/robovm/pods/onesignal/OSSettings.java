@@ -107,7 +107,7 @@ import org.robovm.apple.uikit.*;
         return this;
     }
     /*</methods>*/
-
+    
     // manually added methods
     public OSSettings setAutoPrompt(boolean v) {
         this.set(Keys.AutoPrompt(), NSNumber.valueOf(v));

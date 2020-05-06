@@ -189,8 +189,12 @@ import org.robovm.apple.uikit.*;
     public static native void logoutEmail(@Block Runnable successBlock, @Block VoidBlock1<NSError> failureBlock);
     @Method(selector = "setExternalUserId:")
     public static native void setExternalUserId(String externalId);
+    @Method(selector = "setExternalUserId:withCompletion:")
+    public static native void setExternalUserId(String externalId, @Block VoidBlock1<NSDictionary<?, ?>> completionBlock);
     @Method(selector = "removeExternalUserId")
     public static native void removeExternalUserId();
+    @Method(selector = "removeExternalUserId:")
+    public static native void removeExternalUserId(@Block VoidBlock1<NSDictionary<?, ?>> completionBlock);
     @Method(selector = "addTrigger:withValue:")
     public static native void addTrigger(String key, NSObject value);
     @Method(selector = "addTriggers:")
