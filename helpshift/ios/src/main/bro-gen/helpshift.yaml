@@ -168,6 +168,8 @@ classes:
                 exclude: true # outdated and conflicts
             '+closeHelpshiftSupportSessionWithCompletionHandler:':
                 name: closeHelpshiftSupportSession
+            '+log:':
+                exclude: true # variadic and deprecated, use addLog
 protocols:
     HsApiProvider:
         methods:
