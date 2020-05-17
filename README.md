@@ -26,9 +26,9 @@ This is the list of currently available AltPods. Click them to get more informat
 
 ## Version of AltPods to framework version mapping
 
-v1.7.0 -- in development
+v1.7.1 -- in development
 
-| Name                               | 1.7.0  |
+| Name                               | 1.7.1  |
 |------------------------------------|--------|
 | [AppLovinSDK](applovinsdk/)        | 6.12.4*|
 | [BranchMetrics](branchmetrics/)    | 0.33.1*|
