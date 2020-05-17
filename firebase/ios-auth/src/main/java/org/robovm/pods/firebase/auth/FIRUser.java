@@ -55,7 +55,7 @@ import org.robovm.apple.uikit.*;
     @Property(selector = "refreshToken")
     public native String getRefreshToken();
     @Property(selector = "providerData")
-    public native NSArray<?> getProviderData();
+    public native @org.robovm.rt.bro.annotation.Marshaler(FIRUserInfo.AsListMarshaller.class) List<FIRUserInfo> getProviderData();
     @Property(selector = "metadata")
     public native FIRUserMetadata getMetadata();
     @Property(selector = "multiFactor")

@@ -1,0 +1,40 @@
+<config>
+    <frameworks>
+        <framework>FirebaseAuth</framework>
+        <framework>GTMSessionFetcher</framework>
+
+        <framework>AVFoundation</framework>
+        <framework>AudioToolbox</framework>
+        <framework>CFNetwork</framework>
+        <framework>CoreAudio</framework>
+        <framework>CoreFoundation</framework>
+        <framework>CoreGraphics</framework>
+        <framework>CoreImage</framework>
+        <framework>CoreMIDI</framework>
+        <framework>CoreMedia</framework>
+        <framework>CoreText</framework>
+        <framework>CoreVideo</framework>
+        <framework>FileProvider</framework>
+        <framework>Foundation</framework>
+        <framework>GLKit</framework>
+        <framework>GameController</framework>
+        <framework>GameKit</framework>
+        <framework>GameplayKit</framework>
+        <framework>IOSurface</framework>
+        <framework>ImageIO</framework>
+        <framework>MediaToolbox</framework>
+        <framework>Metal</framework>
+        <framework>MetalKit</framework>
+        <framework>ModelIO</framework>
+        <framework>OpenGLES</framework>
+        <framework>QuartzCore</framework>
+        <framework>ReplayKit</framework>
+        <framework>SafariServices</framework>
+        <framework>SceneKit</framework>
+        <framework>Security</framework>
+        <framework>SpriteKit</framework>
+        <framework>UIKit</framework>
+        <framework>UserNotifications</framework>
+        <framework>WebKit</framework>
+    </frameworks>
+</config>

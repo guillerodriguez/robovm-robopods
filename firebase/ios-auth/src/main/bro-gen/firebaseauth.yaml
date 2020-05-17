@@ -161,6 +161,9 @@ classes:
             '+credentialWithToken:secret:':
                 name: createCredential
     FIRUser:
+        properties:
+            'providerData':
+                type: '@org.robovm.rt.bro.annotation.Marshaler(FIRUserInfo.AsListMarshaller.class) List<FIRUserInfo>'
         methods:
             '-updateEmail:completion:':
                 name: updateEmail
