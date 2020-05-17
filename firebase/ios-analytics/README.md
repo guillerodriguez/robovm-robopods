@@ -29,6 +29,6 @@ Add the following dependency to your `build.gradle`:
 ```
 dependencies {
    ... other dependencies ...
-   compile "io.github.dkimitsa.robovm:robopods-farebase-analytics-ios:$altpodsVersion"
+   compile "io.github.dkimitsa.robovm:robopods-firebase-analytics-ios:$altpodsVersion"
 }
 ```
