@@ -1,0 +1,295 @@
+package: org.robovm.pods.firebase.auth
+include: [foundation, uikit]
+framework: FirebaseAuth
+clang_args: ['-x', 'objective-c']
+headers:
+    - FirebaseAuth.h
+
+private_typedefs:
+    "FIRApp *": org.robovm.pods.firebase.core.FIRApp
+
+typedefs: {}
+
+enums:
+    FIRAuthErrorCode: {nserror: true}
+    FIRAuthAPNSTokenType: {}
+    FIRActionDataKey: {prefix: FIRActionCode}
+    FIRActionCodeOperation: {}
+
+classes:
+    FIRActionCodeInfo: {}
+    FIRActionCodeSettings:
+        methods:
+            '-setAndroidPackageName:installIfNotAvailable:minimumVersion:':
+                name: setAndroidPackageName
+    FIRActionCodeURL:
+        methods:
+            '+actionCodeURLWithLink:':
+                constructor: true
+                name: create
+    FIRAdditionalUserInfo: {}
+    FIRAuth:
+        methods:
+            '-updateCurrentUser:completion:':
+                trim_after_first_colon: true
+            '-fetchProvidersForEmail:completion:':
+                name: fetchProviders
+            '-fetchSignInMethodsForEmail:completion:':
+                name: fetchSignInMethods
+            '-signInWithEmail:password:completion:':
+                name: signInUsingEmailPassword
+            '-signInWithEmail:link:completion:':
+                name: signInUsingEmailLink
+            '-signInWithProvider:UIDelegate:completion:':
+                name: signInUsingProvider
+            '-signInAndRetrieveDataWithCredential:completion:':
+                name: signInAndRetrieveData
+            '-signInWithCredential:completion:':
+                name: signInUsingCredential
+            '-signInAnonymouslyWithCompletion:':
+                name: signInAnonymously
+            '-signInWithCustomToken:completion:':
+                name: signInUsingCustomToken
+            '-createUserWithEmail:password:completion:':
+                name: createUser
+            '-confirmPasswordResetWithCode:newPassword:completion:':
+                name: confirmPasswordReset
+            '-checkActionCode:completion:':
+                name: checkActionCode
+            '-verifyPasswordResetCode:completion:':
+                name: verifyPasswordResetCode
+            '-applyActionCode:completion:':
+                name: applyActionCode
+            '-sendPasswordResetWithEmail:completion:':
+                name: sendPasswordReset
+            '-sendPasswordResetWithEmail:actionCodeSettings:completion:':
+                name: sendPasswordReset
+            '-sendSignInLinkToEmail:actionCodeSettings:completion:':
+                name: sendSignInLink
+            '-isSignInWithEmailLink:':
+                name: isSignInWithEmailLink
+            '-setAPNSToken:type:':
+                name: setAPNSToken
+            '-useUserAccessGroup:error:':
+                name: useUserAccessGroup
+            '-getStoredUserForAccessGroup:error:':
+                name: getStoredUser
+            '+authWithApp:':
+                name: auth
+    FIRAuthCredential: {}
+    FIRAuthDataResult: {}
+    FIRAuthErrors: {exclude: true} # empty used only for aggregation
+    FIRAuthSettings: {}
+    FIRAuthTokenResult: {}
+    FIREmailAuthProvider:
+        methods:
+            '+credentialWithEmail:password:':
+                name: createCredentialUsingEmailPassword
+            '+credentialWithEmail:link:':
+                name: createCredentialUsingEmailLink
+    FIRFacebookAuthProvider:
+        methods:
+            '+credentialWithAccessToken:':
+                name: createCredential
+    FIRGameCenterAuthProvider:
+        methods:
+            '+getCredentialWithCompletion:':
+                name: getCredential
+    FIRGitHubAuthProvider:
+        methods:
+            '+credentialWithToken:':
+                name: createCredential
+    FIRGoogleAuthProvider:
+        methods:
+            '+credentialWithIDToken:accessToken:':
+                name: createCredentialUsingIDToken
+    FIRMultiFactor:
+        methods:
+            '-getSessionWithCompletion:':
+                name: getSession
+            '-enrollWithAssertion:displayName:completion:':
+                name: enroll
+            '-unenrollWithInfo:completion:':
+                name: unenroll
+            '-unenrollWithFactorUID:completion:':
+                name: unenroll
+    FIRMultiFactorAssertion: {}
+    FIRMultiFactorInfo: {}
+    FIRMultiFactorResolver:
+        methods:
+            '-resolveSignInWithAssertion:completion:':
+                name: resolveSignIn
+    FIRMultiFactorSession: {}
+    FIROAuthCredential: {}
+    FIROAuthProvider:
+        methods:
+            '+providerWithProviderID:':
+                name: create
+            '+providerWithProviderID:auth:':
+                name: create
+            '+credentialWithProviderID:IDToken:accessToken:':
+                name: createUsingIDTokenAccessToken
+            '+credentialWithProviderID:accessToken:':
+                name: createUsingAccessToken
+            '+credentialWithProviderID:IDToken:rawNonce:accessToken:':
+                name: createUsingIDToken
+            '+credentialWithProviderID:IDToken:rawNonce:':
+                name: createUsingIDToken
+    FIRPhoneAuthCredential: {}
+    FIRPhoneAuthProvider:
+        methods:
+            '-verifyPhoneNumber:UIDelegate:completion:':
+                name: verifyPhoneNumber
+            '-verifyPhoneNumber:UIDelegate:multiFactorSession:completion:':
+                name: verifyPhoneNumber
+            '-verifyPhoneNumberWithMultiFactorInfo:UIDelegate:multiFactorSession:completion:':
+                name: verifyPhoneNumber
+            '-credentialWithVerificationID:verificationCode:':
+                name: getCredential
+            '+provider':
+                name: create
+            '+providerWithAuth:':
+                name: create
+    FIRPhoneMultiFactorAssertion: {}
+    FIRPhoneMultiFactorGenerator:
+        methods:
+            '+assertionWithCredential:':
+                name: createAssertion
+    FIRPhoneMultiFactorInfo: {}
+    FIRTwitterAuthProvider:
+        methods:
+            '+credentialWithToken:secret:':
+                name: createCredential
+    FIRUser:
+        methods:
+            '-updateEmail:completion:':
+                name: updateEmail
+            '-updatePassword:completion:':
+                name: updatePassword
+            '-updatePhoneNumberCredential:completion:':
+                name: updatePhoneNumberCredential
+            '-reloadWithCompletion:':
+                name: reload
+            '-reauthenticateWithCredential:completion:':
+                name: reauthenticate
+            '-reauthenticateAndRetrieveDataWithCredential:completion:':
+                name: reauthenticateAndRetrieveData
+            '-reauthenticateWithProvider:UIDelegate:completion:':
+                name: reauthenticate
+            '-getIDTokenResultWithCompletion:':
+                name: getIDTokenResult
+            '-getIDTokenResultForcingRefresh:completion:':
+                name: getIDTokenResultForcingRefresh
+            '-getIDTokenWithCompletion:':
+                name: getIDToken
+            '-getIDTokenForcingRefresh:completion:':
+                name: getIDTokenForcingRefresh
+            '-linkAndRetrieveDataWithCredential:completion:':
+                name: linkAndRetrieveData
+            '-linkWithCredential:completion:':
+                name: link
+            '-linkWithProvider:UIDelegate:completion:':
+                name: link
+            '-unlinkFromProvider:completion:':
+                name: unlink
+            '-sendEmailVerificationWithCompletion:':
+                name: sendEmailVerification
+            '-sendEmailVerificationWithActionCodeSettings:completion:':
+                name: sendEmailVerificationUsingActionCode
+            '-deleteWithCompletion:':
+                name: delete
+            '-sendEmailVerificationBeforeUpdatingEmail:completion:':
+                name: sendEmailVerificationBeforeUpdatingEmail
+            '-sendEmailVerificationBeforeUpdatingEmail:actionCodeSettings:completion:':
+                name: sendEmailVerificationBeforeUpdatingEmail
+    FIRUserMetadata: {}
+    FIRUserProfileChangeRequest:
+        methods:
+            '-commitChangesWithCompletion:':
+                name: commitChanges
+
+protocols:
+    FIRAuthUIDelegate:
+        methods:
+            '-presentViewController:animated:completion:':
+                name: presentViewController
+            '-dismissViewControllerAnimated:completion:':
+                name: dismissViewController
+    FIRFederatedAuthProvider:
+        methods:
+            '-getCredentialWithUIDelegate:completion:':
+                name: getCredential
+    FIRUserInfo: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    FIRAuthErrorDomain:
+        class: FIRAuthErrorCode
+        name: getClassDomain
+    FIRAuthError(.*):
+        class: FIRAuthErrors
+        name: '#{g[0]}'
+
+    FIRFacebookAuthProviderID:
+        class: FIRFacebookAuthProvider
+        type: NSString
+        name: getProviderID
+    FIREmailAuthProviderID:
+        class: FIREmailAuthProvider
+        type: NSString
+        name: getProviderID
+    FIRGameCenterAuthProviderID:
+        class: FIRGameCenterAuthProvider
+        type: NSString
+        name: getProviderID
+    FIRGitHubAuthProviderID:
+        class: FIRGitHubAuthProvider
+        type: NSString
+        name: getProviderID
+    FIRGoogleAuthProviderID:
+        class: FIRGoogleAuthProvider
+        type: NSString
+        name: getProviderID
+    FIRTwitterAuthProviderID:
+        class: FIRTwitterAuthProvider
+        type: NSString
+        name: getProviderID
+    FIRPhoneAuthProviderID:
+        class: FIRPhoneAuthProvider
+        type: NSString
+        name: getProviderID
+    FIRAuthStateDidChangeNotification:
+        class: FIRAuth
+        type: NSString
+        static_class: Notifications
+        name: AuthStateDidChange
+    FIR(.*)AuthSignInMethod: # gather constants to single place
+        class: FIRAuthSignInMethods
+        name: '#{g[0]}'
+
+    FirebaseAuthVersionNum:
+        class: FIRAuth
+        name: getVersionNum
+    FirebaseAuthVersionStr:
+        class: FIRAuth
+        name: getVersionStr
+
+    FIRPhoneMultiFactorID:
+        class: FIRMultiFactor
+        name: getPhoneFactorID
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'

@@ -10,12 +10,13 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 | [ios-database](ios-database/)            | Firebase iOS DataBase               |
 | [ios-mobile adds](ios-google-mobile-ads/)| Firebase iOS Google Mobile Ads      |
 | [ios-crashlytics](ios-crashlytics/)      | Firebase iOS Crashlytics            |
+| [ios-auth](ios-auth/)                    | Firebase iOS Authentication         |
 
 ## Versions
 
 | RoboPods Version  | Firebase Version    |
 |-------------------|---------------------|
-| 1.7.0             | 6.24.0              |
+| 1.7.1             | 6.24.0              |
 | 1.6.1             | 6.18.0              |
 | 1.5.0             | 6.16.0              |
 | 1.4.0             | 6.13.0              |
