@@ -5,7 +5,8 @@
 
 ### Frameworks required for dependencies
 * FirebaseCore.framework
-
+* GoogleUtilities.framework
+* PromisesObjC.framework
 ### to use this pod configure your `robovm.xml`
 
 ```
