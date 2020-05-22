@@ -10,7 +10,6 @@
         <framework>CoreVideo</framework>
         <framework>FileProvider</framework>
         <framework>Foundation</framework>
-        <framework>IOSurface</framework>
         <framework>ImageIO</framework>
         <framework>Metal</framework>
         <framework>OpenGLES</framework>
@@ -20,4 +19,7 @@
         <framework>UserNotifications</framework>
         <framework>WebKit</framework>
     </frameworks>
+    <weakFrameworks>
+        <framework>IOSurface</framework>
+    </weakFrameworks>
 </config>

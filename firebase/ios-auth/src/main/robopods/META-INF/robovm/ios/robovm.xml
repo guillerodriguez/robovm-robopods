@@ -20,7 +20,6 @@
         <framework>GameController</framework>
         <framework>GameKit</framework>
         <framework>GameplayKit</framework>
-        <framework>IOSurface</framework>
         <framework>ImageIO</framework>
         <framework>MediaToolbox</framework>
         <framework>Metal</framework>
@@ -37,4 +36,7 @@
         <framework>UserNotifications</framework>
         <framework>WebKit</framework>
     </frameworks>
+    <weakFrameworks>
+        <framework>IOSurface</framework>
+    </weakFrameworks>
 </config>
