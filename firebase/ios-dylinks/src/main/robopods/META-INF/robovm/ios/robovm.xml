@@ -1,25 +1,5 @@
 <config>
     <frameworks>
         <framework>FirebaseDynamicLinks</framework>
-
-        <framework>CFNetwork</framework>
-        <framework>CoreFoundation</framework>
-        <framework>CoreGraphics</framework>
-        <framework>CoreImage</framework>
-        <framework>CoreText</framework>
-        <framework>CoreVideo</framework>
-        <framework>FileProvider</framework>
-        <framework>Foundation</framework>
-        <framework>ImageIO</framework>
-        <framework>Metal</framework>
-        <framework>OpenGLES</framework>
-        <framework>QuartzCore</framework>
-        <framework>Security</framework>
-        <framework>UIKit</framework>
-        <framework>UserNotifications</framework>
-        <framework>WebKit</framework>
     </frameworks>
-    <weakFrameworks>
-        <framework>IOSurface</framework>
-    </weakFrameworks>
 </config>
