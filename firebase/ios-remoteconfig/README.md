@@ -1,10 +1,10 @@
-# Firebase iOS Crashlytics framework
+# Firebase iOS RemoteConfig framework
 
 ### Frameworks required for this pod: 
-* FirebaseCrashlytics.framework
+* FirebaseRemoteConfig.framework
+* FirebaseABTesting.framework
 * FirebaseInstallations.framework
-* framework>nanopb.framework
-* GoogleDataTransport.framework
+* Protobuf.framework
 
 Plus ones required for ios-core module:
 * GoogleUtilities.framework
@@ -17,7 +17,7 @@ Plus ones required for ios-core module:
 <config>
     ...
     <frameworkPaths>
-        <path>libs</path>  <!-- path where FirebaseCrashlytics.framework (and other) are located -->
+        <path>libs</path>  <!-- path where FirebaseRemoteConfig.framework (and other) are located -->
     </frameworkPaths>
 </config>
 ```
@@ -29,6 +29,6 @@ Add the following dependency to your `build.gradle`:
 ```
 dependencies {
    ... other dependencies ...
-   compile "io.github.dkimitsa.robovm:robopods-firebase-crashlytics-ios:$altpodsVersion"
+   compile "io.github.dkimitsa.robovm:robopods-firebase-remote-config-ios:$altpodsVersion"
 }
 ```
