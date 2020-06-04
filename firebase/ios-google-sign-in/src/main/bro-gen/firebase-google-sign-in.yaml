@@ -1,0 +1,57 @@
+package: org.robovm.pods.firebase.googlesignin
+framework: GoogleSignIn
+include: [foundation, uikit, coregraphics]
+clang_args: ['-x', 'objective-c']
+headers: 
+    - GoogleSignIn.h
+
+enums:
+    GIDSignInErrorCode: {nserror: true, prefix: kGIDSignInErrorCode}
+    GIDSignInButtonStyle: {prefix: kGIDSignInButtonStyle}
+    GIDSignInButtonColorScheme: {prefix: kGIDSignInButtonColorScheme}
+
+classes:
+    GIDAuthentication:
+        methods:
+            '-getTokensWithHandler:':
+                name: getTokens
+            '-refreshTokensWithHandler:':
+                name: refreshTokens
+            '-fetcherAuthorizer':
+                exclude: true # for now, as requires GTMSessionFetcher
+    GIDGoogleUser: {}
+    GIDProfileData:
+        methods:
+            '-imageURLWithDimension:':
+                name: getImageURL
+    GIDSignIn: {}
+    GIDSignInButton: {}
+
+protocols:
+    GIDSignInDelegate:
+        methods:
+            '-signIn:didSignInForUser:withError:':
+                name: didSignIn
+            '-signIn:didDisconnectWithUser:withError:':
+                name: didDisconnect
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    kGIDSignInErrorDomain:
+        class: GIDSignInErrorCode
+        name: getClassDomain
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'

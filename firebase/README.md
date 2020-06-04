@@ -12,6 +12,8 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 | [ios-crashlytics](ios-crashlytics/)      | Firebase iOS Crashlytics            |
 | [ios-auth](ios-auth/)                    | Firebase iOS Authentication         |
 | [ios-dylinks](ios-dylinks/)              | Firebase iOS Dynamic Links          |
+| [ios-remoteconfig](ios-remoteconfig/)    | Firebase iOS Remote Config          |
+| [ios-google-sign-in](ios-google-sign-in/)| Firebase iOS Google Sign In         |
 
 ## Versions
 
