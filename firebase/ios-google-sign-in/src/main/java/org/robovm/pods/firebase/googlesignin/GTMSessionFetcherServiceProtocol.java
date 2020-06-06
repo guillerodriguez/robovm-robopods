@@ -37,7 +37,7 @@ import org.robovm.apple.dispatch.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GIDSignInDelegate/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GTMSessionFetcherServiceProtocol/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
@@ -46,13 +46,38 @@ import org.robovm.apple.dispatch.*;
     /*</bind>*/
     /*<constants>*//*</constants>*/
     /*<properties>*/
-    
+    @Property(selector = "callbackQueue")
+    DispatchQueue getCallbackQueue();
+    @Property(selector = "setCallbackQueue:")
+    void setCallbackQueue(DispatchQueue v);
+    @Property(selector = "reuseSession")
+    boolean isReuseSession();
+    @Property(selector = "setReuseSession:")
+    void setReuseSession(boolean v);
+    @Property(selector = "delegateQueue")
+    NSOperationQueue getDelegateQueue();
     /*</properties>*/
     /*<methods>*/
-    @Method(selector = "signIn:didSignInForUser:withError:")
-    void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error);
-    @Method(selector = "signIn:didDisconnectWithUser:withError:")
-    void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error);
+    @Method(selector = "fetcherShouldBeginFetching:")
+    boolean fetcherShouldBeginFetching(GTMSessionFetcher fetcher);
+    @Method(selector = "fetcherDidCreateSession:")
+    void fetcherDidCreateSession(GTMSessionFetcher fetcher);
+    @Method(selector = "fetcherDidBeginFetching:")
+    void fetcherDidBeginFetching(GTMSessionFetcher fetcher);
+    @Method(selector = "fetcherDidStop:")
+    void fetcherDidStop(GTMSessionFetcher fetcher);
+    @Method(selector = "fetcherWithRequest:")
+    GTMSessionFetcher getFetcher(NSURLRequest request);
+    @Method(selector = "isDelayingFetcher:")
+    boolean isDelayingFetcher(GTMSessionFetcher fetcher);
+    @Method(selector = "session")
+    NSURLSession session();
+    @Method(selector = "sessionForFetcherCreation")
+    NSURLSession sessionForFetcherCreation();
+    @Method(selector = "sessionDelegate")
+    NSURLSessionDelegate sessionDelegate();
+    @Method(selector = "stoppedAllFetchersDate")
+    NSDate stoppedAllFetchersDate();
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

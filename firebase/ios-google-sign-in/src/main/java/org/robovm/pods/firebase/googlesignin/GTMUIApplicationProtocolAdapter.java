@@ -34,26 +34,26 @@ import org.robovm.apple.dispatch.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GIDSignInDelegate/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/GTMUIApplicationProtocolAdapter/*</name>*/ 
+    extends /*<extends>*/NSObject/*</extends>*/ 
+    /*<implements>*/implements GTMUIApplicationProtocol/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
     /*<bind>*/
     /*</bind>*/
     /*<constants>*//*</constants>*/
+    /*<constructors>*//*</constructors>*/
     /*<properties>*/
     
     /*</properties>*/
+    /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "signIn:didSignInForUser:withError:")
-    void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error);
-    @Method(selector = "signIn:didDisconnectWithUser:withError:")
-    void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error);
+    @NotImplemented("beginBackgroundTaskWithName:expirationHandler:")
+    public @MachineSizedUInt long beginBackgroundTask(String taskName, @Block Runnable handler) { return 0; }
+    @NotImplemented("endBackgroundTask:")
+    public void endBackgroundTask(@MachineSizedUInt long identifier) {}
     /*</methods>*/
-    /*<adapter>*/
-    /*</adapter>*/
 }

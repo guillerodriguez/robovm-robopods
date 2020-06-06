@@ -36,24 +36,25 @@ import org.robovm.apple.dispatch.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GIDSignInDelegate/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/GTMSessionFetcherUserDefaultsFactory/*</name>*/ 
+    extends /*<extends>*/NSObject/*</extends>*/ 
+    /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/
-    /*</ptr>*/
-    /*<bind>*/
-    /*</bind>*/
+    /*<ptr>*/public static class GTMSessionFetcherUserDefaultsFactoryPtr extends Ptr<GTMSessionFetcherUserDefaultsFactory, GTMSessionFetcherUserDefaultsFactoryPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(GTMSessionFetcherUserDefaultsFactory.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
+    /*<constructors>*/
+    public GTMSessionFetcherUserDefaultsFactory() {}
+    protected GTMSessionFetcherUserDefaultsFactory(Handle h, long handle) { super(h, handle); }
+    protected GTMSessionFetcherUserDefaultsFactory(SkipInit skipInit) { super(skipInit); }
+    /*</constructors>*/
     /*<properties>*/
     
     /*</properties>*/
+    /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "signIn:didSignInForUser:withError:")
-    void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error);
-    @Method(selector = "signIn:didDisconnectWithUser:withError:")
-    void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error);
+    @Method(selector = "fetcherUserDefaults")
+    public static native NSUserDefaults fetcherUserDefaults();
     /*</methods>*/
-    /*<adapter>*/
-    /*</adapter>*/
 }

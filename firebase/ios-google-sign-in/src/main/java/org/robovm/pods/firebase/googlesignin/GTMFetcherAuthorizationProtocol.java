@@ -37,7 +37,7 @@ import org.robovm.apple.dispatch.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GIDSignInDelegate/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GTMFetcherAuthorizationProtocol/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
@@ -46,13 +46,34 @@ import org.robovm.apple.dispatch.*;
     /*</bind>*/
     /*<constants>*//*</constants>*/
     /*<properties>*/
-    
+    @Property(selector = "userEmail")
+    String getUserEmail();
+    @Property(selector = "canAuthorize")
+    boolean canAuthorize();
+    @Property(selector = "shouldAuthorizeAllRequests")
+    boolean shouldAuthorizeAllRequests();
+    @Property(selector = "setShouldAuthorizeAllRequests:")
+    void setShouldAuthorizeAllRequests(boolean v);
+    @Property(selector = "fetcherService")
+    GTMSessionFetcherServiceProtocol getFetcherService();
+    @Property(selector = "setFetcherService:", strongRef = true)
+    void setFetcherService(GTMSessionFetcherServiceProtocol v);
     /*</properties>*/
     /*<methods>*/
-    @Method(selector = "signIn:didSignInForUser:withError:")
-    void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error);
-    @Method(selector = "signIn:didDisconnectWithUser:withError:")
-    void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error);
+    @Method(selector = "authorizeRequest:delegate:didFinishSelector:")
+    void authorizeRequest(NSMutableURLRequest request, NSObject delegate, Selector sel);
+    @Method(selector = "stopAuthorization")
+    void stopAuthorization();
+    @Method(selector = "stopAuthorizationForRequest:")
+    void stopAuthorizationForRequest(NSURLRequest request);
+    @Method(selector = "isAuthorizingRequest:")
+    boolean isAuthorizingRequest(NSURLRequest request);
+    @Method(selector = "isAuthorizedRequest:")
+    boolean isAuthorizedRequest(NSURLRequest request);
+    @Method(selector = "authorizeRequest:completionHandler:")
+    void authorizeRequest(NSMutableURLRequest request, @Block VoidBlock1<NSError> handler);
+    @Method(selector = "primeForRefresh")
+    boolean primeForRefresh();
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

@@ -36,24 +36,27 @@ import org.robovm.apple.dispatch.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GIDSignInDelegate/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/GTMSessionCookieStorage/*</name>*/ 
+    extends /*<extends>*/NSHTTPCookieStorage/*</extends>*/ 
+    /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/
-    /*</ptr>*/
-    /*<bind>*/
-    /*</bind>*/
+    /*<ptr>*/public static class GTMSessionCookieStoragePtr extends Ptr<GTMSessionCookieStorage, GTMSessionCookieStoragePtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(GTMSessionCookieStorage.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
+    /*<constructors>*/
+    public GTMSessionCookieStorage() {}
+    protected GTMSessionCookieStorage(Handle h, long handle) { super(h, handle); }
+    protected GTMSessionCookieStorage(SkipInit skipInit) { super(skipInit); }
+    /*</constructors>*/
     /*<properties>*/
     
     /*</properties>*/
+    /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "signIn:didSignInForUser:withError:")
-    void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error);
-    @Method(selector = "signIn:didDisconnectWithUser:withError:")
-    void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error);
+    @Method(selector = "setCookies:")
+    public native void setCookies(NSArray<NSHTTPCookie> cookies);
+    @Method(selector = "removeAllCookies")
+    public native void removeAllCookies();
     /*</methods>*/
-    /*<adapter>*/
-    /*</adapter>*/
 }

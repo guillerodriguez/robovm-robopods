@@ -36,24 +36,32 @@ import org.robovm.apple.dispatch.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GIDSignInDelegate/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
+/*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
+public enum /*<name>*/GTMSessionFetcherStatus/*</name>*/ implements ValuedEnum {
+    /*<values>*/
+    NotModified(304L),
+    BadRequest(400L),
+    Unauthorized(401L),
+    Forbidden(403L),
+    PreconditionFailed(412L);
+    /*</values>*/
 
-    /*<ptr>*/
-    /*</ptr>*/
     /*<bind>*/
     /*</bind>*/
     /*<constants>*//*</constants>*/
-    /*<properties>*/
-    
-    /*</properties>*/
-    /*<methods>*/
-    @Method(selector = "signIn:didSignInForUser:withError:")
-    void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error);
-    @Method(selector = "signIn:didDisconnectWithUser:withError:")
-    void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error);
-    /*</methods>*/
-    /*<adapter>*/
-    /*</adapter>*/
+    /*<methods>*//*</methods>*/
+
+    private final long n;
+
+    private /*<name>*/GTMSessionFetcherStatus/*</name>*/(long n) { this.n = n; }
+    public long value() { return n; }
+    public static /*<name>*/GTMSessionFetcherStatus/*</name>*/ valueOf(long n) {
+        for (/*<name>*/GTMSessionFetcherStatus/*</name>*/ v : values()) {
+            if (v.n == n) {
+                return v;
+            }
+        }
+        throw new IllegalArgumentException("No constant with value " + n + " found in " 
+            + /*<name>*/GTMSessionFetcherStatus/*</name>*/.class.getName());
+    }
 }

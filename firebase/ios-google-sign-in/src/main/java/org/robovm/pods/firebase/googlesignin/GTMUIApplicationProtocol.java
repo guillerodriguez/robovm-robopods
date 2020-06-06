@@ -37,7 +37,7 @@ import org.robovm.apple.dispatch.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GIDSignInDelegate/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/GTMUIApplicationProtocol/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
@@ -49,10 +49,10 @@ import org.robovm.apple.dispatch.*;
     
     /*</properties>*/
     /*<methods>*/
-    @Method(selector = "signIn:didSignInForUser:withError:")
-    void didSignIn(GIDSignIn signIn, GIDGoogleUser user, NSError error);
-    @Method(selector = "signIn:didDisconnectWithUser:withError:")
-    void didDisconnect(GIDSignIn signIn, GIDGoogleUser user, NSError error);
+    @Method(selector = "beginBackgroundTaskWithName:expirationHandler:")
+    @MachineSizedUInt long beginBackgroundTask(String taskName, @Block Runnable handler);
+    @Method(selector = "endBackgroundTask:")
+    void endBackgroundTask(@MachineSizedUInt long identifier);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

@@ -37,35 +37,36 @@ import org.robovm.apple.dispatch.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class) @Library(Library.INTERNAL)/*</annotations>*/
-public enum /*<name>*/GIDSignInErrorCode/*</name>*/ implements NSErrorCode {
+public enum /*<name>*/GTMSessionFetcherError/*</name>*/ implements NSErrorCode {
     /*<values>*/
-    Unknown(-1L),
-    Keychain(-2L),
-    HasNoAuthInKeychain(-4L),
-    Canceled(-5L),
-    EMM(-6L);
+    DownloadFailed(-1L),
+    UploadChunkUnavailable(-2L),
+    BackgroundExpiration(-3L),
+    BackgroundFetchFailed(-4L),
+    InsecureRequest(-5L),
+    TaskCreationFailed(-6L);
     /*</values>*/
 
-    /*<bind>*/static { Bro.bind(GIDSignInErrorCode.class); }/*</bind>*/
+    /*<bind>*/static { Bro.bind(GTMSessionFetcherError.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @GlobalValue(symbol="kGIDSignInErrorDomain", optional=true)
+    @GlobalValue(symbol="kGTMSessionFetcherErrorDomain", optional=true)
     public static native String getClassDomain();
     /*</methods>*/
 
     private final long n;
 
-    private /*<name>*/GIDSignInErrorCode/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/GTMSessionFetcherError/*</name>*/(long n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/GIDSignInErrorCode/*</name>*/ valueOf(long n) {
-        for (/*<name>*/GIDSignInErrorCode/*</name>*/ v : values()) {
+    public static /*<name>*/GTMSessionFetcherError/*</name>*/ valueOf(long n) {
+        for (/*<name>*/GTMSessionFetcherError/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
             }
         }
         throw new IllegalArgumentException("No constant with value " + n + " found in "
-            + /*<name>*/GIDSignInErrorCode/*</name>*/.class.getName());
+            + /*<name>*/GTMSessionFetcherError/*</name>*/.class.getName());
     }
 
     // bind wrap to include it in compilation as long as nserror enum is used 
@@ -76,7 +77,7 @@ public enum /*<name>*/GIDSignInErrorCode/*</name>*/ implements NSErrorCode {
 
         @Override public NSErrorCode getErrorCode() {
              try {
-                 return  /*<name>*/GIDSignInErrorCode/*</name>*/.valueOf(getCode());
+                 return  /*<name>*/GTMSessionFetcherError/*</name>*/.valueOf(getCode());
              } catch (IllegalArgumentException e) {
                  return null;
              }
@@ -84,7 +85,7 @@ public enum /*<name>*/GIDSignInErrorCode/*</name>*/ implements NSErrorCode {
 
         public static String getClassDomain() {
             /** must be incerted in value section */
-            return /*<name>*/GIDSignInErrorCode/*</name>*/.getClassDomain();
+            return /*<name>*/GTMSessionFetcherError/*</name>*/.getClassDomain();
         }
     }
 }
