@@ -48,6 +48,8 @@ classes:
             '+remoteConfigWithApp:':
                 name: create
                 constructor: true
+            '-activateWithCompletion:':
+                name: activate
     FIRRemoteConfigSettings:
         methods:
             '-initWithDeveloperModeEnabled:':

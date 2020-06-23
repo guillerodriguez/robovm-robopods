@@ -57,6 +57,8 @@ import org.robovm.apple.uikit.*;
     void loadNativeAd(GADMediationNativeAdConfiguration adConfiguration, @Block Block2<GADMediationNativeAd, NSError, GADMediationNativeAdEventDelegate> completionHandler);
     @Method(selector = "loadRewardedAdForAdConfiguration:completionHandler:")
     void loadRewardedAd(GADMediationRewardedAdConfiguration adConfiguration, @Block Block2<GADMediationRewardedAd, NSError, GADMediationRewardedAdEventDelegate> completionHandler);
+    @Method(selector = "loadRewardedInterstitialAdForAdConfiguration:completionHandler:")
+    void loadRewardedInterstitialAd(GADMediationRewardedAdConfiguration adConfiguration, @Block Block2<GADMediationRewardedAd, NSError, GADMediationRewardedAdEventDelegate> completionHandler);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

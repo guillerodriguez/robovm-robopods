@@ -198,6 +198,16 @@ import org.robovm.apple.dispatch.*;
     public native @Block("(,,@Block)") VoidBlock3<Boolean, NSError, VoidBooleanBlock> getRetryBlock();
     @Property(selector = "setRetryBlock:")
     public native void setRetryBlock(@Block("(,,@Block)") VoidBlock3<Boolean, NSError, VoidBooleanBlock> v);
+    /**
+     * @since Available in iOS 10.0 and later.
+     */
+    @Property(selector = "metricsCollectionBlock")
+    public native @Block VoidBlock1<NSURLSessionTaskMetrics> getMetricsCollectionBlock();
+    /**
+     * @since Available in iOS 10.0 and later.
+     */
+    @Property(selector = "setMetricsCollectionBlock:")
+    public native void setMetricsCollectionBlock(@Block VoidBlock1<NSURLSessionTaskMetrics> v);
     @Property(selector = "maxRetryInterval")
     public native double getMaxRetryInterval();
     @Property(selector = "setMaxRetryInterval:")

@@ -77,6 +77,12 @@ import org.robovm.apple.foundation.*;
     public native void fetch(double expirationDuration, @Block VoidBlock2<FIRRemoteConfigFetchStatus, NSError> completionHandler);
     @Method(selector = "fetchAndActivateWithCompletionHandler:")
     public native void fetchAndActivate(@Block VoidBlock2<FIRRemoteConfigFetchAndActivateStatus, NSError> completionHandler);
+    @Method(selector = "activateWithCompletion:")
+    public native void activate(@Block VoidBlock2<Boolean, NSError> completion);
+    /**
+     * @deprecated Use -[FIRRemoteConfig activateWithCompletion:] instead.
+     */
+    @Deprecated
     @Method(selector = "activateWithCompletionHandler:")
     public native void activate(@Block VoidBlock1<NSError> completionHandler);
     /**

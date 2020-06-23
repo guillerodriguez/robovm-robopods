@@ -61,10 +61,6 @@ public enum /*<name>*/GADErrorCode/*</name>*/ implements NSErrorCode {
      */
     @Deprecated
     RewardedAdAlreadyUsed(14L),
-    /**
-     * @deprecated Use kGADErrorNoFill.
-     */
-    @Deprecated
     MediationNoFill(9L),
     AdAlreadyUsed(19L),
     ApplicationIdentifierMissing(20L);

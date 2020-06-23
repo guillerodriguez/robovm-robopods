@@ -448,6 +448,8 @@ protocols:
                 name: loadRewardedAd
             '+setUpWithConfiguration:completionHandler:':
                 name: setUp
+            '-loadRewardedInterstitialAdForAdConfiguration:completionHandler:':
+                name: loadRewardedInterstitialAd
     GADMediationBannerAd: {}
     GADMediationBannerAdEventDelegate:
         skip_adapter: true
