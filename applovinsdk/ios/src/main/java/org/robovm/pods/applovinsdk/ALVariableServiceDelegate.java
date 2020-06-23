@@ -35,7 +35,7 @@ import org.robovm.apple.coregraphics.*;
 /*<javadoc>*/
 
 /*</javadoc>*/
-/*<annotations>*//*</annotations>*/
+/*<annotations>*/@Deprecated/*</annotations>*/
 /*<visibility>*/public/*</visibility>*/ interface /*<name>*/ALVariableServiceDelegate/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
@@ -48,6 +48,10 @@ import org.robovm.apple.coregraphics.*;
     
     /*</properties>*/
     /*<methods>*/
+    /**
+     * @deprecated This API has been deprecated. Please use our SDK's initialization callback to retrieve variables instead.
+     */
+    @Deprecated
     @Method(selector = "variableService:didUpdateVariables:")
     void didUpdateVariables(ALVariableService variableService, NSDictionary<NSString, ?> variables);
     /*</methods>*/
