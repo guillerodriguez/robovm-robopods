@@ -50,6 +50,10 @@ import org.robovm.apple.coregraphics.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    /**
+     * @deprecated This API has been deprecated. Please use our SDK's initialization callback to retrieve variables instead.
+     */
+    @Deprecated
     @NotImplemented("variableService:didUpdateVariables:")
     public void didUpdateVariables(ALVariableService variableService, NSDictionary<NSString, ?> variables) {}
     /*</methods>*/

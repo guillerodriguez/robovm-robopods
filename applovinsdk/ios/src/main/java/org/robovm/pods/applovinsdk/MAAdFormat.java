@@ -61,6 +61,8 @@ import org.robovm.apple.coregraphics.*;
     public static native MAAdFormat getRewarded();
     @Property(selector = "native")
     public static native MAAdFormat getNative();
+    @Property(selector = "size")
+    public native @ByVal CGSize getSize();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

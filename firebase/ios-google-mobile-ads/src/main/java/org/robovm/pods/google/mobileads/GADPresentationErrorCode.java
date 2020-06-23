@@ -39,10 +39,12 @@ import org.robovm.apple.uikit.*;
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
 public enum /*<name>*/GADPresentationErrorCode/*</name>*/ implements ValuedEnum {
     /*<values>*/
-    AdNotReady(15L),
-    AdTooLarge(16L),
-    Internal(17L),
-    AdAlreadyUsed(18L);
+    CodeAdNotReady(15L),
+    CodeAdTooLarge(16L),
+    CodeInternal(17L),
+    CodeAdAlreadyUsed(18L),
+    NotMainThread(21L),
+    Mediation(22L);
     /*</values>*/
 
     /*<bind>*/

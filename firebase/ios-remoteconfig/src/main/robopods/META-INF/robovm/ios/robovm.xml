@@ -1,0 +1,8 @@
+<config>
+    <frameworks>
+        <framework>FirebaseRemoteConfig</framework>
+        <framework>FirebaseABTesting</framework>
+        <framework>FirebaseInstallations</framework>
+        <framework>Protobuf</framework>
+    </frameworks>
+</config>

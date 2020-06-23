@@ -49,15 +49,21 @@ import org.robovm.apple.coregraphics.*;
     protected ALVariableService(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
+    /**
+     * @deprecated This API has been deprecated. Please use our SDK's initialization callback to retrieve variables instead.
+     */
+    @Deprecated
     @Property(selector = "delegate")
     public native ALVariableServiceDelegate getDelegate();
+    /**
+     * @deprecated This API has been deprecated. Please use our SDK's initialization callback to retrieve variables instead.
+     */
+    @Deprecated
     @Property(selector = "setDelegate:", strongRef = true)
     public native void setDelegate(ALVariableServiceDelegate v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "loadVariables")
-    public native void loadVariables();
     @Method(selector = "boolForKey:")
     public native boolean boolForKey(String key);
     @Method(selector = "boolForKey:defaultValue:")
@@ -66,5 +72,11 @@ import org.robovm.apple.coregraphics.*;
     public native String stringForKey(String key);
     @Method(selector = "stringForKey:defaultValue:")
     public native String getString(String key, String defaultValue);
+    /**
+     * @deprecated This API has been deprecated. Please use our SDK's initialization callback to retrieve variables instead.
+     */
+    @Deprecated
+    @Method(selector = "loadVariables")
+    public native void loadVariables();
     /*</methods>*/
 }

@@ -2,12 +2,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.github.dkimitsa.robovm</groupId>
-        <version>1.7.1-SNAPSHOT</version>
+        <version>1.8.0-SNAPSHOT</version>
         <artifactId>robopods-firebase-parent</artifactId>
     </parent>
 
     <artifactId>robopods-firebase-database-ios</artifactId>
-    <name>RoboPods FireBase Realtime Database iOS (v6.24.0)</name>
+    <name>RoboPods FireBase Realtime Database iOS (v6.27.0)</name>
     <packaging>jar</packaging>
 
     <licenses>

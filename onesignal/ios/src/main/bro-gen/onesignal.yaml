@@ -15,7 +15,7 @@ enums:
     OSNotificationPermission: {}
     ONE_S_LOG_LEVEL: {name: OSLogLevel, prefix: ONE_S_LL_}
     Session: {name: OSSession}
-
+    OSInfluenceChannel: {}
 classes:
     OSNotification: {}
     OSNotificationAction: {}

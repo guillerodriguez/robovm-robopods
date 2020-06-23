@@ -108,27 +108,6 @@ import org.robovm.apple.uikit.*;
     }
     /*</methods>*/
     
-    // manually added methods
-    public OSSettings setAutoPrompt(boolean v) {
-        this.set(Keys.AutoPrompt(), NSNumber.valueOf(v));
-        return this;
-    }
-
-    public OSSettings setInAppAlerts(boolean v) {
-        this.set(Keys.InAppAlerts(), NSNumber.valueOf(v));
-        return this;
-    }
-
-    public OSSettings setInAppLaunchURL(boolean v) {
-        this.set(Keys.InAppLaunchURL(), NSNumber.valueOf(v));
-        return this;
-    }
-
-    public OSSettings setInFocusDisplayOption(OSNotificationDisplayType v) {
-        this.set(Keys.InFocusDisplayOption(), NSNumber.valueOf(v.value()));
-        return this;
-    }
-
     /*<keys>*/
     @Library(Library.INTERNAL)
     public static class Keys {

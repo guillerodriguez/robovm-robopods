@@ -26,7 +26,22 @@ This is the list of currently available AltPods. Click them to get more informat
 
 ## Version of AltPods to framework version mapping
 
-v1.7.1 -- in development
+v1.8.0 -- in development
+
+| Name                               | 1.8.0  |
+|------------------------------------|--------|
+| [AppLovinSDK](applovinsdk/)        | 6.12.8*|
+| [BranchMetrics](branchmetrics/)    | 0.34.0*|
+| [Charts](charts/)                  | 3.5.0  |
+| [Facebook](facebook/)              | 7.0.1* |
+| [Firebase](firebase/)              | 6.27.0*|
+| [HelpShift](helpshift/)            | 7.7.1  |
+| [Lottie](lottie/)                  | 3.1.8  |
+| [OneSignal](onesignal/)            | 2.14.2*|
+| [Pollfish](pollfish/)              | 5.2.5  |
+| [SAMKeychain](samkeychain/)        | 1.5.3  |
+
+v1.7.1
 
 | Name                               | 1.7.1  |
 |------------------------------------|--------|
@@ -37,7 +52,7 @@ v1.7.1 -- in development
 | [Firebase](firebase/)              | 6.24.0*|
 | [HelpShift](helpshift/)            | 7.7.1* |
 | [Lottie](lottie/)                  | 3.1.8* |
-| [OneSignal](onesignal/)            | 2.31.1*|
+| [OneSignal](onesignal/)            | 2.13.1*|
 | [Pollfish](pollfish/)              | 5.2.5  |
 | [SAMKeychain](samkeychain/)        | 1.5.3  |
 

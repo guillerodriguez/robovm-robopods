@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.github.dkimitsa.robovm</groupId>
-        <version>1.7.1-SNAPSHOT</version>
+        <version>1.8.0-SNAPSHOT</version>
         <artifactId>robopods-parent</artifactId>
     </parent>
 
@@ -27,5 +27,7 @@
         <module>ios-crashlytics</module>
         <module>ios-auth</module>
         <module>ios-dylinks</module>
+        <module>ios-remoteconfig</module>
+        <module>ios-google-sign-in</module>
     </modules>
 </project>

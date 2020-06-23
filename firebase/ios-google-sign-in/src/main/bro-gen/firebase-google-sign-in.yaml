@@ -1,0 +1,166 @@
+package: org.robovm.pods.firebase.googlesignin
+framework: GoogleSignIn
+internal_frameworks: [GTMSessionFetcher]
+header_root: '.'
+include: [foundation, uikit, coregraphics, dispatch]
+clang_args: ['-x', 'objective-c']
+headers: 
+    - GoogleSignIn.framework/headers/GoogleSignIn.h
+    - GTMSessionFetcher.framework/headers/GTMSessionFetcher.h
+
+enums:
+    GIDSignInErrorCode: {nserror: true, prefix: kGIDSignInErrorCode}
+    GIDSignInButtonStyle: {prefix: kGIDSignInButtonStyle}
+    GIDSignInButtonColorScheme: {prefix: kGIDSignInButtonColorScheme}
+
+    # GTMSessionFetcher
+    GTMSessionFetcherError: {nserror: true}
+    GTMSessionFetcherStatus: {}
+classes:
+    GIDAuthentication:
+        methods:
+            '-getTokensWithHandler:':
+                name: getTokens
+            '-refreshTokensWithHandler:':
+                name: refreshTokens
+            '-fetcherAuthorizer':
+                exclude: true # for now, as requires GTMSessionFetcher
+    GIDGoogleUser: {}
+    GIDProfileData:
+        methods:
+            '-imageURLWithDimension:':
+                name: getImageURL
+    GIDSignIn: {}
+    GIDSignInButton: {}
+
+    # GTMSessionFetcher
+    GTMSessionCookieStorage: {}
+    GTMSessionFetcher:
+        methods:
+            '-initWithRequest:configuration:':
+                name: init
+            '-setRequestValue:forHTTPHeaderField:':
+                name: setRequestValue
+            '-beginFetchWithDelegate:didFinishSelector:':
+                name: beginFetch
+            '-beginFetchWithCompletionHandler:':
+                name: beginFetch
+            '-setProperty:forKey:':
+                name: setProperty
+            '-setCommentWithFormat:':
+                name: setComment
+            '-waitForCompletionWithTimeout:':
+                name: waitForCompletion
+            '+fetcherWithRequest:':
+                name: create
+                constructor: true
+            '+fetcherWithURL:':
+                name: create
+                constructor: true
+            '+fetcherWithURLString:':
+                name: createFetcherUsingURLString
+            '+fetcherWithDownloadResumeData:':
+                name: create
+                constructor: true
+            '+fetcherWithSessionIdentifier:':
+                name: create
+                constructor: true
+            '+application:handleEventsForBackgroundURLSession:completionHandler:':
+                name: handleEventsForBackgroundURLSession
+    GTMSessionFetcherUserDefaultsFactory: {}
+
+protocols:
+    GIDSignInDelegate:
+        methods:
+            '-signIn:didSignInForUser:withError:':
+                name: didSignIn
+            '-signIn:didDisconnectWithUser:withError:':
+                name: didDisconnect
+
+    # GTMSessionFetcher
+    GTMFetcherAuthorizationProtocol:
+        methods:
+            '-authorizeRequest:delegate:didFinishSelector:':
+                name: authorizeRequest
+            '-authorizeRequest:completionHandler:':
+                name: authorizeRequest
+    GTMSessionFetcherServiceProtocol:
+        methods:
+            '-fetcherWithRequest:':
+                name: getFetcher
+    GTMUIApplicationProtocol:
+        methods:
+            '-beginBackgroundTaskWithName:expirationHandler:':
+                name: beginBackgroundTask
+functions:
+
+
+    # GTMSessionFetcher
+    GTMFetcherStandardUserAgentString:
+        class: GTMSessionFetcher
+        name: getStandardUserAgentString
+    GTMFetcherApplicationIdentifier:
+        class: GTMSessionFetcher
+        name: getApplicationIdentifier
+    GTMFetcherSystemVersionString:
+        class: GTMSessionFetcher
+        name: getSystemVersionString
+    GTMFetcherCleanedUserAgentString:
+        class: GTMSessionFetcher
+        name: getCleanedUserAgentString
+    GTMDataFromInputStream:
+        class: GTMSessionFetcher
+        name: getDataFromInputStream
+
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    kGIDSignInErrorDomain:
+        class: GIDSignInErrorCode
+        name: getClassDomain
+
+    # GTMSessionFetcher
+    kGTMSessionFetcherErrorDomain:
+        class: GTMSessionFetcherError
+        name: getClassDomain
+
+    kGTMSessionFetcher(.*)Notification:
+        class: GTMSessionFetcher
+        static_class: Notifications
+        name: '#{g[0]}'
+
+    kGTMSessionFetcher(.*):
+        class: GTMSessionFetcher
+        static_class: Consts
+        name: '#{g[0]}'
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # GTMSessionFetcher
+    # exclude macro
+    STRIP_GTM_FETCH_LOGGING:
+        exclude: true
+    GTM_LOG_SESSION_DELEGATE:
+        exclude: true
+    GTM_DECLARE_GENERICS:
+        exclude: true
+    GTM_BACKGROUND_TASK_FETCHING:
+        exclude: true
+    GTM_USE_SESSION_FETCHER:
+        exclude: true
+    GTMSESSION_RECONNECT_BACKGROUND_SESSIONS_ON_LAUNCH:
+        exclude: true
+    GTM_FETCHER_AUTHORIZATION_PROTOCOL:
+        exclude: true
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'

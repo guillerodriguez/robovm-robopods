@@ -1,0 +1,89 @@
+package: org.robovm.pods.firebase.remoteconfig
+framework: FirebaseRemoteConfig
+include: [foundation]
+clang_args: ['-x', 'objective-c']
+headers: 
+    - FirebaseRemoteConfig.h
+
+private_typedefs:
+    "FIRApp *": org.robovm.pods.firebase.core.FIRApp
+
+enums:
+    FIRRemoteConfigFetchStatus: {}
+    FIRRemoteConfigFetchAndActivateStatus: {}
+    FIRRemoteConfigError: {nserror: true}
+    FIRRemoteConfigSource: {}
+
+classes:
+    FIRRemoteConfig:
+        methods:
+            '-ensureInitializedWithCompletionHandler:':
+                name: ensureInitialized
+            '-fetchWithCompletionHandler:':
+                name: fetch
+            '-fetchWithExpirationDuration:completionHandler:':
+                name: fetch
+            '-fetchAndActivateWithCompletionHandler:':
+                name: fetchAndActivate
+            '-activateWithCompletionHandler:':
+                name: activate
+            '-configValueForKey:namespace:':
+                name: getConfigValue
+            '-configValueForKey:source:':
+                name: getConfigValue
+            '-configValueForKey:namespace:source:':
+                name: getConfigValue
+            '-allKeysFromSource:namespace:':
+                name: getAllKeys
+            '-keysWithPrefix:':
+                name: getKeys
+            '-keysWithPrefix:namespace:':
+                name: getKeys
+            '-setDefaults:namespace:':
+                name: setDefaults
+            '-setDefaultsFromPlistFileName:namespace:':
+                name: setDefaults
+            '-defaultValueForKey:namespace:':
+                name: getDefaultValue
+            '+remoteConfigWithApp:':
+                name: create
+                constructor: true
+            '-activateWithCompletion:':
+                name: activate
+    FIRRemoteConfigSettings:
+        methods:
+            '-initWithDeveloperModeEnabled:':
+                name: init
+    FIRRemoteConfigValue: {}
+
+protocols:
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    FIRRemoteConfigErrorDomain:
+        class: FIRRemoteConfigError
+        name: getClassDomain
+    FIRRemoteConfigThrottledEndTimeInSecondsKey:
+        class: FIRRemoteConfigError
+        static_class: UserInfoKeys
+        name: RemoteConfigThrottledEndTimeInSeconds
+    FIRNamespaceGoogleMobilePlatform:
+        class: FIRRemoteConfig
+        static_class: Namespace
+        name: GoogleMobilePlatform
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
