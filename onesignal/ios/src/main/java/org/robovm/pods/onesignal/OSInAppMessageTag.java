@@ -36,43 +36,27 @@ import org.robovm.apple.uikit.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/OSInAppMessageAction/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/OSInAppMessageTag/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class OSInAppMessageActionPtr extends Ptr<OSInAppMessageAction, OSInAppMessageActionPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(OSInAppMessageAction.class); }/*</bind>*/
+    /*<ptr>*/public static class OSInAppMessageTagPtr extends Ptr<OSInAppMessageTag, OSInAppMessageTagPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(OSInAppMessageTag.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public OSInAppMessageAction() {}
-    protected OSInAppMessageAction(Handle h, long handle) { super(h, handle); }
-    protected OSInAppMessageAction(SkipInit skipInit) { super(skipInit); }
+    public OSInAppMessageTag() {}
+    protected OSInAppMessageTag(Handle h, long handle) { super(h, handle); }
+    protected OSInAppMessageTag(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    @Property(selector = "clickName")
-    public native String getClickName();
-    @Property(selector = "setClickName:")
-    public native void setClickName(String v);
-    @Property(selector = "clickUrl")
-    public native NSURL getClickUrl();
-    @Property(selector = "setClickUrl:")
-    public native void setClickUrl(NSURL v);
-    @Property(selector = "firstClick")
-    public native boolean isFirstClick();
-    @Property(selector = "setFirstClick:")
-    public native void setFirstClick(boolean v);
-    @Property(selector = "closesMessage")
-    public native boolean isClosesMessage();
-    @Property(selector = "setClosesMessage:")
-    public native void setClosesMessage(boolean v);
-    @Property(selector = "outcomes")
-    public native NSArray<OSInAppMessageOutcome> getOutcomes();
-    @Property(selector = "setOutcomes:")
-    public native void setOutcomes(NSArray<OSInAppMessageOutcome> v);
-    @Property(selector = "tags")
-    public native OSInAppMessageTag getTags();
-    @Property(selector = "setTags:")
-    public native void setTags(OSInAppMessageTag v);
+    @Property(selector = "tagsToAdd")
+    public native NSDictionary<?, ?> getTagsToAdd();
+    @Property(selector = "setTagsToAdd:")
+    public native void setTagsToAdd(NSDictionary<?, ?> v);
+    @Property(selector = "tagsToRemove")
+    public native NSArray<?> getTagsToRemove();
+    @Property(selector = "setTagsToRemove:")
+    public native void setTagsToRemove(NSArray<?> v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

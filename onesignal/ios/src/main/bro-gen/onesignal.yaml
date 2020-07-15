@@ -101,7 +101,9 @@ classes:
     OSEmailSubscriptionStateChanges: {}
     OSInAppMessageAction: {}
     OSOutcomeEvent: {}
-
+    OSDevice: {}
+    OSInAppMessageOutcome: {}
+    OSInAppMessageTag: {}
 protocols:
     OSPermissionObserver: {}
     OSSubscriptionObserver: {}

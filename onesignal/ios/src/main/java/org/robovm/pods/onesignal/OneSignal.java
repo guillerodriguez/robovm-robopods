@@ -135,6 +135,8 @@ import org.robovm.apple.uikit.*;
     public static native void IdsAvailable(@Block VoidBlock2<NSString, NSString> idsAvailableBlock);
     @Method(selector = "getPermissionSubscriptionState")
     public static native OSPermissionSubscriptionState getPermissionSubscriptionState();
+    @Method(selector = "getUserDevice")
+    public static native OSDevice getUserDevice();
     @Method(selector = "addPermissionObserver:")
     public static native void addPermissionObserver(OSPermissionObserver observer);
     @Method(selector = "removePermissionObserver:")
