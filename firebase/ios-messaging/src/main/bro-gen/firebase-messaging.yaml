@@ -1,0 +1,64 @@
+package: org.robovm.pods.firebase.messaging
+framework: FirebaseMessaging
+include: [foundation, usernotifications]
+clang_args: ['-x', 'objective-c']
+headers: 
+    - FirebaseMessaging.h
+
+enums:
+    FIRMessagingError: {}
+    FIRMessagingMessageStatus: {}
+    FIRMessagingAPNSTokenType: {}
+
+classes:
+    FIRMessaging:
+        methods:
+            '-setAPNSToken:type:':
+                name: setAPNSToken
+            '-retrieveFCMTokenForSenderID:completion:':
+                name: retrieveFCMToken
+            '-deleteFCMTokenForSenderID:completion:':
+                name: deleteFCMToken
+            '-subscribeToTopic:completion:':
+                name: subscribeToTopic
+            '-unsubscribeFromTopic:completion:':
+                name: unsubscribeFromTopic
+            '-sendMessage:to:withMessageID:timeToLive:':
+                name: sendMessage
+    FIRMessagingExtensionHelper: #since 10.0
+        methods:
+            '-populateNotificationContent:withContentHandler:':
+                name: populateNotificationContent
+    FIRMessagingMessageInfo: {}
+    FIRMessagingRemoteMessage: {}
+
+protocols:
+    FIRMessagingDelegate:
+        methods:
+            '-messaging:didReceiveRegistrationToken:':
+                name: didReceiveRegistrationToken
+            '-messaging:didReceiveMessage:':
+                name: didReceiveMessage
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    FIRMessaging(.*)Notification:
+        class: FIRMessaging
+        static_class: Notifications
+        name: '#{g[0]}'
+        type: NSString
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'

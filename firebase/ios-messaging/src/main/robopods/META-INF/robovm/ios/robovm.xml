@@ -1,0 +1,7 @@
+<config>
+    <frameworks>
+        <framework>FirebaseMessaging</framework>
+        <framework>FirebaseInstanceID</framework>
+        <framework>Protobuf</framework>
+    </frameworks>
+</config>
