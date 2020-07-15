@@ -175,7 +175,10 @@ classes:
                 name: init
             '-initWithProfile:':
                 name: init
-    FBSDKSettings: {}
+    FBSDKSettings:
+        methods:
+            '+setDataProcessingOptions:country:state:':
+                name: setDataProcessingOptions
     FBSDKTestUsersManager:
         methods:
             '-requestTestAccountTokensWithArraysOfPermissions:createIfNotFound:completionHandler:':

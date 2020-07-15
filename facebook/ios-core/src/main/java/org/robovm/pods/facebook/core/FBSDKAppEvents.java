@@ -122,6 +122,10 @@ import org.robovm.apple.webkit.*;
     public static native void setUserData(String data, NSString type);
     @Method(selector = "clearUserDataForType:")
     public static native void clearUserDataForType(NSString type);
+    /**
+     * @deprecated updateUserProperties is deprecated
+     */
+    @Deprecated
     @Method(selector = "updateUserProperties:handler:")
     public static native void updateUserProperties(NSDictionary<NSString, ?> properties, @Block VoidBlock3<FBSDKGraphRequestConnection, NSObject, NSError> handler);
     @Method(selector = "augmentHybridWKWebView:")

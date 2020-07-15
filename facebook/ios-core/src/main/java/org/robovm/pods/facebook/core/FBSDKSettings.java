@@ -114,6 +114,10 @@ import org.robovm.apple.webkit.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Method(selector = "setDataProcessingOptions:")
+    public static native void setDataProcessingOptions(NSArray<NSString> options);
+    @Method(selector = "setDataProcessingOptions:country:state:")
+    public static native void setDataProcessingOptions(NSArray<NSString> options, int country, int state);
     @Method(selector = "enableLoggingBehavior:")
     public static native void enableLoggingBehavior(FBSDKLoggingBehavior loggingBehavior);
     @Method(selector = "disableLoggingBehavior:")

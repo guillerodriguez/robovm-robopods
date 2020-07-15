@@ -105,5 +105,9 @@ import org.robovm.pods.facebook.core.*;
     public static native FBAdLogLevel getLogLevel();
     @Method(selector = "setLogLevel:")
     public static native void setLogLevel(FBAdLogLevel level);
+    @Method(selector = "setDataProcessingOptions:country:state:")
+    public static native void setDataProcessingOptions(NSArray<NSString> options, @MachineSizedSInt long country, @MachineSizedSInt long state);
+    @Method(selector = "setDataProcessingOptions:")
+    public static native void setDataProcessingOptions(NSArray<NSString> options);
     /*</methods>*/
 }

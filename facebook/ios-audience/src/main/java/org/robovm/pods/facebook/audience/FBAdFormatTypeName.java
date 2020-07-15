@@ -46,10 +46,9 @@ public enum /*<name>*/FBAdFormatTypeName/*</name>*/ implements ValuedEnum {
     Unknown(0L),
     Banner(1L),
     Interstitial(2L),
-    Instream(3L),
-    Native(4L),
-    NativeBanner(5L),
-    RewardedVideo(6L);
+    Native(3L),
+    NativeBanner(4L),
+    RewardedVideo(5L);
     /*</values>*/
 
     /*<bind>*/

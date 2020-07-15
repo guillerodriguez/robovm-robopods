@@ -38,9 +38,11 @@ import org.robovm.pods.facebook.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
+/**
+ * @deprecated Instream ads have been deprecated.
+ */
 /*</javadoc>*/
-/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass @Deprecated/*</annotations>*/
 /*<visibility>*/public/*</visibility>*/ class /*<name>*/FBInstreamAdView/*</name>*/ 
     extends /*<extends>*/UIView/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
@@ -52,6 +54,10 @@ import org.robovm.pods.facebook.core.*;
     public FBInstreamAdView() {}
     protected FBInstreamAdView(Handle h, long handle) { super(h, handle); }
     protected FBInstreamAdView(SkipInit skipInit) { super(skipInit); }
+    /**
+     * @deprecated Instream ads have been deprecated. Initialiser will return nil.
+     */
+    @Deprecated
     @Method(selector = "initWithPlacementID:")
     public FBInstreamAdView(String placementID) { super((SkipInit) null); initObject(init(placementID)); }
     @Method(selector = "initWithFrame:")
@@ -75,12 +81,28 @@ import org.robovm.pods.facebook.core.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    /**
+     * @deprecated Instream ads have been deprecated. Initialiser will return nil.
+     */
+    @Deprecated
     @Method(selector = "initWithPlacementID:")
     protected native @Pointer long init(String placementID);
+    /**
+     * @deprecated Instream ads have been deprecated. Calling this method will have no effect.
+     */
+    @Deprecated
     @Method(selector = "loadAd")
     public native void loadAd();
+    /**
+     * @deprecated Instream ads have been deprecated. Calling this method will have no effect.
+     */
+    @Deprecated
     @Method(selector = "loadAdWithBidPayload:")
     public native void loadAd(String bidPayload);
+    /**
+     * @deprecated Instream ads have been deprecated. Calling this method will have no effect.
+     */
+    @Deprecated
     @Method(selector = "showAdFromRootViewController:")
     public native boolean showAdFromRootViewController(UIViewController rootViewController);
     /*</methods>*/

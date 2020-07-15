@@ -8,12 +8,13 @@
 | [ios-login](ios-login/)           | Facebook iOS Login Kit                    |
 | [ios-places](ios-places/)         | Facebook iOS Places Kit (v5.15.1)         |
 | [ios-share](ios-share/)           | Facebook iOS Share Kit                    |
-| [ios-audience](ios-audience/)     | Facebook iOS Audience Ad Network (v5.9.0) |
+| [ios-audience](ios-audience/)     | Facebook iOS Audience Ad Network (v5.10.0)|
 
 ## Versions
 
 | RoboPods Version  | Facebook Version    |
 |-------------------|---------------------|
+| 1.9.0             | 7.1.1               |
 | 1.8.0             | 7.0.1               |
 | 1.7.1             | 7.0.0               |
 | 1.6.1             | 6.2.0               |

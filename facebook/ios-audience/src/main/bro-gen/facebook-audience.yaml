@@ -59,7 +59,10 @@ classes:
             '-initWithPlacementIDs:mediationService:':
                 name: init
     FBAdOptionsView: {}
-    FBAdSettings: {}
+    FBAdSettings:
+        methods:
+            '+setDataProcessingOptions:country:state:':
+                name: setDataProcessingOptions
     FBAdView:
         methods:
             '-initWithPlacementID:adSize:rootViewController:':
