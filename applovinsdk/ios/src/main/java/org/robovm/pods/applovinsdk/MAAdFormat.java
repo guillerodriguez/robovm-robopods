@@ -59,6 +59,8 @@ import org.robovm.apple.coregraphics.*;
     public static native MAAdFormat getInterstitial();
     @Property(selector = "rewarded")
     public static native MAAdFormat getRewarded();
+    @Property(selector = "rewardedInterstitial")
+    public static native MAAdFormat getRewardedInterstitial();
     @Property(selector = "native")
     public static native MAAdFormat getNative();
     @Property(selector = "size")

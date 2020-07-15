@@ -86,17 +86,5 @@ import org.robovm.apple.coregraphics.*;
     @Deprecated
     @Method(selector = "hasPreloadedAdForZoneIdentifier:")
     public native boolean hasPreloadedAdForZoneIdentifier(String zoneIdentifier);
-    /**
-     * @deprecated Listening to ad updates has been deprecated. The `ALAdView` class for banners, leaderboards, and mrecs no longer automatically refresh contents by itself. You must explicitly call `[ALAdView loadNextAd]` or `[ALAdView renderAd: ...]`. This method will be removed in a future SDK version.
-     */
-    @Deprecated
-    @Method(selector = "addAdUpdateObserver:ofSize:")
-    public native void addAdUpdateObserver(ALAdUpdateObserver adListener, ALAdSize adSize);
-    /**
-     * @deprecated Listening to ad updates has been deprecated. The `ALAdView` class for banners, leaderboards, and mrecs no longer automatically refresh contents by itself. You must explicitly call `[ALAdView loadNextAd]` or `[ALAdView renderAd: ...]`. This method will be removed in a future SDK version.
-     */
-    @Deprecated
-    @Method(selector = "removeAdUpdateObserver:ofSize:")
-    public native void removeAdUpdateObserver(ALAdUpdateObserver adListener, ALAdSize adSize);
     /*</methods>*/
 }

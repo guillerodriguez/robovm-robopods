@@ -107,12 +107,6 @@ import org.robovm.apple.coregraphics.*;
     @Method(selector = "showAndNotify:")
     public static native void Show(ALAdRewardDelegate adRewardDelegate);
     /**
-     * @deprecated Explicitly dismissing an ad has been deprecated and will be removed in a future SDK version.
-     */
-    @Deprecated
-    @Method(selector = "dismiss")
-    public native void dismiss();
-    /**
      * @deprecated Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.
      */
     @Deprecated

@@ -31,7 +31,7 @@ v1.9.0 -- in development
 
 | Name                               | 1.9.0  |
 |------------------------------------|--------|
-| [AppLovinSDK](applovinsdk/)        | 6.12.8 |
+| [AppLovinSDK](applovinsdk/)        | 6.13.1*|
 | [BranchMetrics](branchmetrics/)    | 0.34.0 |
 | [Charts](charts/)                  | 3.5.0  |
 | [Facebook](facebook/)              | 7.0.1  |

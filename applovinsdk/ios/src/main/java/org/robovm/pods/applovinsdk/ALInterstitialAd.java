@@ -44,7 +44,7 @@ import org.robovm.apple.coregraphics.*;
     /*<bind>*/static { ObjCRuntime.bind(ALInterstitialAd.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public ALInterstitialAd() {}
+    protected ALInterstitialAd() {}
     protected ALInterstitialAd(Handle h, long handle) { super(h, handle); }
     protected ALInterstitialAd(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithSdk:")
@@ -63,12 +63,6 @@ import org.robovm.apple.coregraphics.*;
     public native ALAdVideoPlaybackDelegate getAdVideoPlaybackDelegate();
     @Property(selector = "setAdVideoPlaybackDelegate:")
     public native void setAdVideoPlaybackDelegate(ALAdVideoPlaybackDelegate v);
-    /**
-     * @deprecated Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `show`, `showOver:` or `showOver:andRender:` to display an ad.
-     */
-    @Deprecated
-    @Property(selector = "isReadyForDisplay")
-    public native boolean isReadyForDisplay();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -82,35 +76,5 @@ import org.robovm.apple.coregraphics.*;
     public static native ALInterstitialAd Show();
     @Method(selector = "shared")
     public static native ALInterstitialAd shared();
-    /**
-     * @deprecated Dismissing an interstitial while playing negatively affects CPM and is highy discouraged. It is now deprecated and will be removed in a future SDK version.
-     */
-    @Deprecated
-    @Method(selector = "dismiss")
-    public native void dismiss();
-    /**
-     * @deprecated Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use show instead.
-     */
-    @Deprecated
-    @Method(selector = "showOver:")
-    public native void showOver(UIWindow window);
-    /**
-     * @deprecated Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use showAd: instead.
-     */
-    @Deprecated
-    @Method(selector = "showOver:andRender:")
-    public native void showOver(UIWindow window, ALAd ad);
-    /**
-     * @deprecated Checking whether an ad is ready for display has been deprecated and will be removed in a future SDK version. Please use `show`, `showOver:` or `showOver:andRender:` to display an ad.
-     */
-    @Deprecated
-    @Method(selector = "isReadyForDisplay")
-    public static native boolean IsReadyForDisplay();
-    /**
-     * @deprecated Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use show instead.
-     */
-    @Deprecated
-    @Method(selector = "showOver:")
-    public static native ALInterstitialAd ShowOver(UIWindow window);
     /*</methods>*/
 }

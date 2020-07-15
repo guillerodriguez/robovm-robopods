@@ -53,6 +53,8 @@ import org.robovm.apple.coregraphics.*;
     public static native ALAdType getRegular();
     @Property(selector = "incentivized")
     public static native ALAdType getIncentivized();
+    @Property(selector = "autoIncentivized")
+    public static native ALAdType getAutoIncentivized();
     /**
      * @deprecated Retrieval of underlying string is deprecated and will be removed in a future SDK version.
      */

@@ -222,7 +222,14 @@ classes:
             '-initWithData:topic:fromPublisher:':
                 name: init
     ALCMessagingService: {}
-
+    MARewardedInterstitialAd:
+        methods:
+            '-initWithAdUnitIdentifier:':
+                name: init
+            '-initWithAdUnitIdentifier:sdk:':
+                name: init
+            '-setExtraParameterForKey:value:':
+                name: setExtraParameter
 protocols:
     ALAdDisplayDelegate:
         methods:
@@ -292,10 +299,6 @@ protocols:
         methods:
             '-variableService:didUpdateVariables:':
                 name: didUpdateVariables
-    ALAdUpdateObserver:
-        methods:
-            '-adService:didUpdateAd:':
-                name: didUpdateAd
     MAAdDelegate:
         methods:
             '-didFailToLoadAdForAdUnitIdentifier:withErrorCode:':
