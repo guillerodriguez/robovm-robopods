@@ -47,7 +47,6 @@ classes:
             '-setValidAdSizesWithSizes:':
                 exclude: true # as variadic and deprecated
     DFPBannerViewOptions: {}
-    DFPCustomRenderedAd: {}
     DFPInterstitial: {}
     DFPRequest: {}
     GADAdChoicesView: {}
@@ -207,14 +206,6 @@ protocols:
                 name: didReceiveDFPBannerView
             '-validBannerSizesForAdLoader:':
                 name: getValidBannerSizes
-    DFPCustomRenderedBannerViewDelegate:
-        methods:
-            '-bannerView:didReceiveCustomRenderedAd:':
-                name: didReceiveCustomRenderedAd
-    DFPCustomRenderedInterstitialDelegate:
-        methods:
-            '-interstitial:didReceiveCustomRenderedAd:':
-                name: didReceiveCustomRenderedAd
     GADAdLoaderDelegate:
         methods:
             '-adLoaderDidFinishLoading:':

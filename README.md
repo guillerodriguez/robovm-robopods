@@ -35,7 +35,7 @@ v1.9.0 -- in development
 | [BranchMetrics](branchmetrics/)    | 0.34.0 |
 | [Charts](charts/)                  | 3.5.0  |
 | [Facebook](facebook/)              | 7.1.1* |
-| [Firebase](firebase/)              | 6.27.0 |
+| [Firebase](firebase/)              | 6.28.0*|
 | [Flurry](flurry/)                  | 10.3.3*|
 | [HelpShift](helpshift/)            | 7.7.1  |
 | [Lottie](lottie/)                  | 3.1.8  |

@@ -78,10 +78,6 @@ import org.robovm.apple.uikit.*;
     public native boolean isEnableManualImpressions();
     @Property(selector = "setEnableManualImpressions:")
     public native void setEnableManualImpressions(boolean v);
-    @Property(selector = "customRenderedBannerViewDelegate")
-    public native DFPCustomRenderedBannerViewDelegate getCustomRenderedBannerViewDelegate();
-    @Property(selector = "setCustomRenderedBannerViewDelegate:", strongRef = true)
-    public native void setCustomRenderedBannerViewDelegate(DFPCustomRenderedBannerViewDelegate v);
     @Property(selector = "videoController")
     public native GADVideoController getVideoController();
     /*</properties>*/

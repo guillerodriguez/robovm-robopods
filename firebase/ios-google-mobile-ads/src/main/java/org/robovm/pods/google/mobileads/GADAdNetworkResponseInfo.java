@@ -58,6 +58,8 @@ import org.robovm.apple.uikit.*;
     public native NSError getError();
     @Property(selector = "latency")
     public native double getLatency();
+    @Property(selector = "dictionaryRepresentation")
+    public native NSDictionary<NSString, ?> getDictionaryRepresentation();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

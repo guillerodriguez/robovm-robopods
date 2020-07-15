@@ -11,14 +11,15 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 | [ios-crashlytics](ios-crashlytics/)      | Firebase iOS Crashlytics              |
 | [ios-database](ios-database/)            | Firebase iOS DataBase                 |
 | [ios-dylinks](ios-dylinks/)              | Firebase iOS Dynamic Links            |
-| [ios-mobile adds](ios-google-mobile-ads/)| Firebase iOS Google Mobile Ads v7.6.0 |
+| [ios-mobile adds](ios-google-mobile-ads/)| Firebase iOS Google Mobile Ads v7.62.0|
 | [ios-google-sign-in](ios-google-sign-in/)| Firebase iOS Google Sign In v5.0.2    |
-| [ios-remoteconfig](ios-remoteconfig/)    | Firebase iOS Remote Config            |
+| [ios-remoteconfig](ios-remoteconfig/)    | Firebase iOS Remote Config v4.7.0     |
 
 ## Versions
 
 | RoboPods Version  | Firebase Version    |
 |-------------------|---------------------|
+| 1.9.0             | 6.28.0              |
 | 1.8.0             | 6.27.0              |
 | 1.7.1             | 6.24.0              |
 | 1.6.1             | 6.18.0              |

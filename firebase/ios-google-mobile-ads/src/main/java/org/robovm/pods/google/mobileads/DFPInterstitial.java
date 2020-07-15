@@ -56,10 +56,6 @@ import org.robovm.apple.uikit.*;
     public native GADAppEventDelegate getAppEventDelegate();
     @Property(selector = "setAppEventDelegate:", strongRef = true)
     public native void setAppEventDelegate(GADAppEventDelegate v);
-    @Property(selector = "customRenderedInterstitialDelegate")
-    public native DFPCustomRenderedInterstitialDelegate getCustomRenderedInterstitialDelegate();
-    @Property(selector = "setCustomRenderedInterstitialDelegate:", strongRef = true)
-    public native void setCustomRenderedInterstitialDelegate(DFPCustomRenderedInterstitialDelegate v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

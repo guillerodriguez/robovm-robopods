@@ -56,6 +56,8 @@ import org.robovm.apple.uikit.*;
     public native String getAdNetworkClassName();
     @Property(selector = "adNetworkInfoArray")
     public native NSArray<GADAdNetworkResponseInfo> getAdNetworkInfoArray();
+    @Property(selector = "dictionaryRepresentation")
+    public native NSDictionary<NSString, ?> getDictionaryRepresentation();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
