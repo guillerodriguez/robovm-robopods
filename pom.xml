@@ -201,5 +201,6 @@
         <module>pollfish</module>
         <module>applovinsdk</module>
         <module>facebook</module>
+        <module>flurry</module>
     </modules>
 </project>

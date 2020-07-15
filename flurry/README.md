@@ -1,0 +1,21 @@
+# RoboPods for Flurry
+
+## Available RoboPods
+
+| RoboPod                                  | Description                           |
+|------------------------------------------|---------------------------------------|
+| [ios-analytics](ios-analytics/)          | Flurry iOS Analytics/Crash            |
+| [ios-ads](ios-ads/)                      | Flurry iOS Ads                        |
+| [ios-config](ios-config/)                | Flurry iOS Remote Config              |
+| [ios-messaging](ios-messaging/)          | Flurry iOS Push                       |
+
+## Versions
+
+| RoboPods Version  | Flurry Version      |
+|-------------------|---------------------|
+| 1.9.0             | 10.3.3              |
+
+## Official website
+
+https://dev.flurry.com
+
