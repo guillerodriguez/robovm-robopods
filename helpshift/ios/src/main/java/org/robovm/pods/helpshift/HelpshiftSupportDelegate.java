@@ -76,6 +76,8 @@ import org.robovm.apple.uikit.*;
     void didCreateDynamicForm(UINavigationController form);
     @Method(selector = "authenticationFailedForUser:withReason:")
     void authenticationFailed(HelpshiftUser user, HelpshiftAuthenticationFailureReason reason);
+    @Method(selector = "userDidClickOnActionWithType:withData:")
+    void userDidClickOnAction(HelpshiftActionType helpshiftAction, String actionData);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

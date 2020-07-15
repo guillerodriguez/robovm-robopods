@@ -78,5 +78,7 @@ import org.robovm.apple.uikit.*;
     public void didCreateDynamicForm(UINavigationController form) {}
     @NotImplemented("authenticationFailedForUser:withReason:")
     public void authenticationFailed(HelpshiftUser user, HelpshiftAuthenticationFailureReason reason) {}
+    @NotImplemented("userDidClickOnActionWithType:withData:")
+    public void userDidClickOnAction(HelpshiftActionType helpshiftAction, String actionData) {}
     /*</methods>*/
 }

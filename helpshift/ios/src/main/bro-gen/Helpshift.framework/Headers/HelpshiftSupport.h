@@ -1,6 +1,6 @@
 /*
  *    HelpshiftSupport.h
- *    SDK Version 7.7.1-withCampaigns
+ *    SDK Version 7.8.0-withCampaigns
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -23,6 +23,12 @@ typedef enum HelpshiftAuthenticationFailureReason
     AuthTokenNotProvided = 0,
     InvalidAuthToken
 } HelpshiftAuthenticationFailureReason;
+
+typedef enum HelpshiftActionType
+{
+    HelpshiftActionTypeLink,
+    HelpshiftActionTypeCall
+} HelpshiftActionType;
 
 /**
  * Block which accepts zero arguments and returns an instance of Dictionary.
@@ -517,7 +523,7 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *
  *  @deprecated Deprecated in SDK version 6.1.0
  */
-+ (UINavigationController *) dynamicFormWithTitle:(NSString *)title andFlows:(NSArray *) flows __deprecated_msg("Use requestDynamicFormWithTitle:andFlows: instead");
++ (nullable UINavigationController *) dynamicFormWithTitle:(NSString *)title andFlows:(NSArray *) flows __deprecated_msg("Use requestDynamicFormWithTitle:andFlows: instead");
 
 /**
  *  Requests a Dynamic Form navigation controller to be returned in
@@ -540,9 +546,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param displayText   Text to be displayed in the row.
  *  @param configOptions The config options to be passed to showConversation: method.
  *
- *  @return a flow object to be used for creating a dynamic form.
+ *  @return a flow object to be used for creating a dynamic form. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToShowConversationWithDisplayText:(NSString *)displayText
++ (nullable id) flowToShowConversationWithDisplayText:(NSString *)displayText
     andConfigOptions:(NSDictionary *)configOptions __deprecated;
 
 /**
@@ -551,9 +557,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param displayText   Text to be displayed in the row.
  *  @param configObject  The API config object to be passed to showConversation: method.
  *
- *  @return a flow object to be used for creating a dynamic form.
+ *  @return a flow object to be used for creating a dynamic form. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToShowConversationWithDisplayText:(NSString *)displayText
++ (nullable id) flowToShowConversationWithDisplayText:(NSString *)displayText
     andConfig:(HelpshiftAPIConfig *)configObject;
 
 /**
@@ -562,9 +568,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param displayText      Text to be displayed in the row.
  *  @param configOptions    The config options to be passed to showFAQSection: method.
  *
- *  @return a flow object to be used for creating a dynamic form.
+ *  @return a flow object to be used for creating a dynamic form. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToShowFAQsWithDisplayText:(NSString *)displayText
++ (nullable id) flowToShowFAQsWithDisplayText:(NSString *)displayText
     andConfigOptions:(NSDictionary *)configOptions __deprecated;
 
 /**
@@ -573,9 +579,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param displayText      Text to be displayed in the row.
  *  @param configObject     The API config object to be passed to showFAQSection: method.
  *
- *  @return a flow object to be used for creating a dynamic form.
+ *  @return a flow object to be used for creating a dynamic form. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToShowFAQsWithDisplayText:(NSString *)displayText
++ (nullable id) flowToShowFAQsWithDisplayText:(NSString *)displayText
     andConfig:(HelpshiftAPIConfig *)configObject;
 
 /**
@@ -585,9 +591,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param displayText      Text to be displayed in the row.
  *  @param configOptions    The config options to be passed to showFAQSection: method.
  *
- *  @return a flow object to be used for creating a dynamic form.
+ *  @return a flow object to be used for creating a dynamic form. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToShowFAQSectionForPublishId:(NSString *)sectionPublishId
++ (nullable id) flowToShowFAQSectionForPublishId:(NSString *)sectionPublishId
     withDisplayText:(NSString *)displayText
     andConfigOptions:(NSDictionary *)configOptions __deprecated;
 
@@ -598,9 +604,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param displayText      Text to be displayed in the row.
  *  @param configObject     The config API object to be passed to showFAQSection: method.
  *
- *  @return a flow object to be used for creating a dynamic form.
+ *  @return a flow object to be used for creating a dynamic form. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToShowFAQSectionForPublishId:(NSString *)sectionPublishId
++ (nullable id) flowToShowFAQSectionForPublishId:(NSString *)sectionPublishId
     withDisplayText:(NSString *)displayText
     andConfig:(HelpshiftAPIConfig *)configObject;
 
@@ -611,9 +617,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param displayText      Text to be displayed in the row.
  *  @param configOptions    The config options to be passed to showSingleFAQ: method.
  *
- *  @return a flow object to be used for creating a dynamic form.
+ *  @return a flow object to be used for creating a dynamic form. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToShowSingleFAQForPublishId:(NSString *)FAQPublishId
++ (nullable id) flowToShowSingleFAQForPublishId:(NSString *)FAQPublishId
     withDisplayText:(NSString *)displayText
     andConfigOptions:(NSDictionary *)configOptions __deprecated;
 
@@ -624,9 +630,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param displayText      Text to be displayed in the row.
  *  @param configObject     The config options to be passed to showSingleFAQ: method.
  *
- *  @return a flow object to be used for creating a dynamic form.
+ *  @return a flow object to be used for creating a dynamic form. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToShowSingleFAQForPublishId:(NSString *)FAQPublishId
++ (nullable id) flowToShowSingleFAQForPublishId:(NSString *)FAQPublishId
     withDisplayText:(NSString *)displayText
     andConfig:(HelpshiftAPIConfig *)configObject;
 
@@ -636,9 +642,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param nextDynamicFormFlows A list of 'flow' objects that will show up as the next dynamic form when this flow is tapped.
  *  @param displayText      Text to be displayed in the row.
  *
- *  @return a flow object to be used for creating a dynamic form.
+ *  @return a flow object to be used for creating a dynamic form. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToShowNestedDynamicFormWithFlows:(NSArray *)nextDynamicFormFlows
++ (nullable id) flowToShowNestedDynamicFormWithFlows:(NSArray *)nextDynamicFormFlows
     withDisplayText:(NSString *)displayText;
 
 /**
@@ -649,9 +655,9 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  @param optionalObject      An optional object that needs to be passed to the selector.
  *  @param displayText Text to be displayed in the row.
  *
- *  @return a flow object.
+ *  @return a flow object. Returns nil if the SDK is not initialied.
  */
-+ (id) flowToPerformCustomActionOnTarget:(id)target
++ (nullable id) flowToPerformCustomActionOnTarget:(id)target
     andSelector:(SEL)selector
     withOptionalObject:(id)optionalObject
     withDisplayText:(NSString *)displayText;
@@ -840,4 +846,11 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  */
 - (void) authenticationFailedForUser:(HelpshiftUser *)user withReason:(HelpshiftAuthenticationFailureReason)reason;
 
+/**
+ *  Optional Delegate method which is called when user clicks on action card
+ *
+ * @param helpshiftAction action type(call/link)
+ * @param actionData can be url/phoneNumber based on ActionType
+ */
+- (void) userDidClickOnActionWithType:(HelpshiftActionType)helpshiftAction withData:(NSString *)actionData;
 @end

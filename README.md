@@ -37,7 +37,7 @@ v1.9.0 -- in development
 | [Facebook](facebook/)              | 7.1.1* |
 | [Firebase](firebase/)              | 6.28.0*|
 | [Flurry](flurry/)                  | 10.3.3*|
-| [HelpShift](helpshift/)            | 7.7.1  |
+| [HelpShift](helpshift/)            | 7.8.0* |
 | [Lottie](lottie/)                  | 3.1.8  |
 | [OneSignal](onesignal/)            | 2.14.2 |
 | [Pollfish](pollfish/)              | 5.2.5  |

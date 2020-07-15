@@ -3,10 +3,8 @@ include: [foundation, uikit]
 clang_args: ['-x', 'objective-c']
 framework: Helpshift
 headers:
-    - HelpshiftAll.h
-    - HelpshiftCampaigns.h
-    - HelpshiftInbox.h
-    - HelpshiftSupport.h
+    - Helpshift.h
+
 private_typedefs: {}
 
 typedefs: {}
@@ -18,7 +16,7 @@ enums:
     HelpshiftInboxMessageActionType: {}
     HelpshiftSupportAlertToRateAppAction: {}
     HelpshiftAuthenticationFailureReason: {}    
-
+    HelpshiftActionType: {}
 classes:
     HelpshiftAPIConfig: {}
     HelpshiftAPIConfigBuilder: {}
@@ -229,7 +227,8 @@ protocols:
                 name: displayAttachmentFile
             '-authenticationFailedForUser:withReason:':
                 name: authenticationFailed
-
+            '-userDidClickOnActionWithType:withData:':
+                name: userDidClickOnAction
 functions: 
     # Make sure we don't miss any functions if new ones are introduced in a later version
     (.*):
@@ -248,6 +247,15 @@ values:
     HelpshiftSupportTagsKey:
         class: HelpshiftSupport
         name: getHelpshiftSupportTagsKey
+
+    HelpshiftVersionString:
+        class: HelpshiftSupport
+        name: getVersionString
+        return_type: String
+        return_marshaler: StringMarshalers.AsAsciiZMarshaler
+
+    HelpshiftVersionNumber:
+        exclude: true
 
     # Make sure we don't miss any values if new ones are introduced in a later version
     (.*):

@@ -65,6 +65,8 @@ import org.robovm.apple.uikit.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @GlobalValue(symbol="HelpshiftVersionString", optional=true)
+    public static native BytePtr getVersionString();
     @GlobalValue(symbol="HelpshiftSupportCustomMetadataKey", optional=true)
     public static native String getHelpshiftSupportCustomMetadata();
     @GlobalValue(symbol="HelpshiftSupportTagsKey", optional=true)
