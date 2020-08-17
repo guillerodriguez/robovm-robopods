@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-flurry-messaging-ios</artifactId>
-    <name>RoboPods Flurry Messaging iOS (v10.3.3)</name>
+    <name>RoboPods Flurry Messaging iOS (v10.3.4)</name>
     <packaging>jar</packaging>
 
     <licenses>

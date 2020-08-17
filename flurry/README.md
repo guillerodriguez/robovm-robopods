@@ -13,6 +13,7 @@
 
 | RoboPods Version  | Flurry Version      |
 |-------------------|---------------------|
+| 1.10.0            | 10.3.4              |
 | 1.9.0             | 10.3.3              |
 
 ## Official website

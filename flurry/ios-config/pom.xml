@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-flurry-config-ios</artifactId>
-    <name>RoboPods Flurry Config iOS (v10.3.3)</name>
+    <name>RoboPods Flurry Config iOS (v10.3.4)</name>
     <packaging>jar</packaging>
 
     <licenses>

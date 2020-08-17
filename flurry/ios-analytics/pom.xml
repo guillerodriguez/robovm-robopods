@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-flurry-ios</artifactId>
-    <name>RoboPods Flurry Analytics iOS (v10.3.3)</name>
+    <name>RoboPods Flurry Analytics iOS (v10.3.4)</name>
     <packaging>jar</packaging>
 
     <licenses>
