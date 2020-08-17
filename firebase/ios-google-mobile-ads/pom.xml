@@ -10,14 +10,6 @@
     <name>RoboPods Google Mobile Ads iOS bindings v 7.63.0(firebase v6.30.0)</name>
     <packaging>jar</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>io.github.dkimitsa.robovm</groupId>
-            <artifactId>robopods-firebase-core-ios</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
-
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>

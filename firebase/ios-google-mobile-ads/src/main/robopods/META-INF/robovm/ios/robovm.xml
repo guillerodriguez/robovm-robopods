@@ -2,7 +2,10 @@
     <frameworks>
         <framework>GoogleMobileAds</framework>
         <framework>GoogleAppMeasurement</framework>
+        <framework>GoogleUtilities</framework>
         <framework>nanopb</framework>
+        <framework>PromisesObjC</framework>
+        <framework>JavaScriptCore</framework>
     </frameworks>
     <exportedSymbols>
         <!-- workaround: these will keep symbols from being stripped -->
