@@ -1,8 +1,12 @@
 <config>
     <frameworks>
         <framework>FirebaseAnalytics</framework>
-        <framework>GoogleAppMeasurement</framework>
         <framework>FirebaseInstallations</framework>
+        <framework>FirebaseInstanceID</framework>
+        <framework>GoogleAppMeasurement</framework>
+        <framework>Protobuf</framework>
         <framework>nanopb</framework>
+
+        <framework>storekit</framework>
     </frameworks>
 </config>

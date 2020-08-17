@@ -2,6 +2,7 @@
     <frameworks>
         <framework>FirebaseMessaging</framework>
         <framework>FirebaseInstanceID</framework>
+        <framework>FirebaseInstallations</framework>
         <framework>Protobuf</framework>
     </frameworks>
 </config>
