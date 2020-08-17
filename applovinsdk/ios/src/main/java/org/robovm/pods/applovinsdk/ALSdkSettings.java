@@ -61,6 +61,10 @@ import org.robovm.apple.coregraphics.*;
     public native NSArray<NSString> getTestDeviceAdvertisingIdentifiers();
     @Property(selector = "setTestDeviceAdvertisingIdentifiers:")
     public native void setTestDeviceAdvertisingIdentifiers(NSArray<NSString> v);
+    @Property(selector = "initializationAdUnitIdentifiers")
+    public native NSArray<NSString> getInitializationAdUnitIdentifiers();
+    @Property(selector = "setInitializationAdUnitIdentifiers:")
+    public native void setInitializationAdUnitIdentifiers(NSArray<NSString> v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

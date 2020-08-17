@@ -96,9 +96,11 @@ import org.robovm.apple.coregraphics.*;
     public static native void InitializeSdk(@Block VoidBlock1<ALSdkConfiguration> completionHandler);
     @Method(selector = "shared")
     public static native ALSdk shared();
+    @Method(selector = "sharedWithSettings:")
+    public static native ALSdk getShared(ALSdkSettings settings);
     @Method(selector = "sharedWithKey:")
-    public static native ALSdk getShared(String sdkKey);
+    public static native ALSdk getShared(String key);
     @Method(selector = "sharedWithKey:settings:")
-    public static native ALSdk getShared(String sdkKey, ALSdkSettings settings);
+    public static native ALSdk getShared(String key, ALSdkSettings settings);
     /*</methods>*/
 }

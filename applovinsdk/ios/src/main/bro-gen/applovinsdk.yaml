@@ -159,6 +159,8 @@ classes:
                 name: getShared
             '+sharedWithKey:settings:':
                 name: getShared
+            '+sharedWithSettings:':
+                name: getShared
     ALSdkConfiguration: {}
     ALSdkSettings: {}
     ALUserService:
