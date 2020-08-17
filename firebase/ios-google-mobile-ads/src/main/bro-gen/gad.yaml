@@ -65,6 +65,8 @@ classes:
         methods:
             '+loadWithAdUnitID:request:orientation:completionHandler:':
                 name: load
+            '-canPresentFromRootViewController:error:':
+                name: canPresentFromRootViewController
     GADAppOpenAdView: {}
     GADAudioVideoManager: {}
     GADBannerView:
@@ -566,7 +568,11 @@ protocols:
                 name: didMuteVideo
             '-videoControllerDidUnmuteVideo:':
                 name: didUnmuteVideo
-
+    GADFullScreenContentDelegate:
+        methods:
+            '-ad:didFailToPresentFullScreenContentWithError:':
+                name: didFailToPresentFullScreenContent
+    GADFullScreenPresentingAd: {}
 functions:
     # GADAdSize
     GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth:

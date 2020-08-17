@@ -34,37 +34,28 @@ import org.robovm.apple.uikit.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
 /*</javadoc>*/
-/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/GADAppOpenAdView/*</name>*/ 
-    extends /*<extends>*/UIView/*</extends>*/ 
-    /*<implements>*//*</implements>*/ {
+/*<annotations>*//*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/GADFullScreenContentDelegateAdapter/*</name>*/ 
+    extends /*<extends>*/NSObject/*</extends>*/ 
+    /*<implements>*/implements GADFullScreenContentDelegate/*</implements>*/ {
 
-    /*<ptr>*/public static class GADAppOpenAdViewPtr extends Ptr<GADAppOpenAdView, GADAppOpenAdViewPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(GADAppOpenAdView.class); }/*</bind>*/
+    /*<ptr>*/
+    /*</ptr>*/
+    /*<bind>*/
+    /*</bind>*/
     /*<constants>*//*</constants>*/
-    /*<constructors>*/
-    public GADAppOpenAdView() {}
-    protected GADAppOpenAdView(Handle h, long handle) { super(h, handle); }
-    protected GADAppOpenAdView(SkipInit skipInit) { super(skipInit); }
-    @Method(selector = "initWithFrame:")
-    public GADAppOpenAdView(@ByVal CGRect frame) { super(frame); }
-    @Method(selector = "initWithCoder:")
-    public GADAppOpenAdView(NSCoder coder) { super(coder); }
-    /*</constructors>*/
+    /*<constructors>*//*</constructors>*/
     /*<properties>*/
-    @Property(selector = "appOpenAd")
-    public native GADAppOpenAd getAppOpenAd();
-    @Property(selector = "setAppOpenAd:")
-    public native void setAppOpenAd(GADAppOpenAd v);
-    @Property(selector = "adCloseHandler")
-    public native @Block Runnable getAdCloseHandler();
-    @Property(selector = "setAdCloseHandler:")
-    public native void setAdCloseHandler(@Block Runnable v);
+    
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    
+    @NotImplemented("ad:didFailToPresentFullScreenContentWithError:")
+    public void didFailToPresentFullScreenContent(GADFullScreenPresentingAd ad, NSError error) {}
+    @NotImplemented("adDidPresentFullScreenContent:")
+    public void adDidPresentFullScreenContent(GADFullScreenPresentingAd ad) {}
+    @NotImplemented("adDidDismissFullScreenContent:")
+    public void adDidDismissFullScreenContent(GADFullScreenPresentingAd ad) {}
     /*</methods>*/
 }

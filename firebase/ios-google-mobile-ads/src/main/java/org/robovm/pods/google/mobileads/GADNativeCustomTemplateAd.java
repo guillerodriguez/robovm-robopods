@@ -54,8 +54,6 @@ import org.robovm.apple.uikit.*;
     public native String getTemplateID();
     @Property(selector = "availableAssetKeys")
     public native NSArray<NSString> getAvailableAssetKeys();
-    @Property(selector = "videoController")
-    public native GADVideoController getVideoController();
     @Property(selector = "mediaView")
     public native GADMediaView getMediaView();
     @Property(selector = "customClickHandler")
@@ -64,6 +62,14 @@ import org.robovm.apple.uikit.*;
     public native void setCustomClickHandler(@Block VoidBlock1<NSString> v);
     @Property(selector = "displayAdMeasurement")
     public native GADDisplayAdMeasurement getDisplayAdMeasurement();
+    @Property(selector = "mediaContent")
+    public native GADMediaContent getMediaContent();
+    /**
+     * @deprecated Use the videoController property from the ad's mediaContent instead.
+     */
+    @Deprecated
+    @Property(selector = "videoController")
+    public native GADVideoController getVideoController();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

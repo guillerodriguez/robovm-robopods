@@ -39,7 +39,7 @@ import org.robovm.apple.uikit.*;
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
 /*<visibility>*/public/*</visibility>*/ class /*<name>*/GADAppOpenAd/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*//*</implements>*/ {
+    /*<implements>*/implements GADFullScreenPresentingAd/*</implements>*/ {
 
     /*<ptr>*/public static class GADAppOpenAdPtr extends Ptr<GADAppOpenAd, GADAppOpenAdPtr> {}/*</ptr>*/
     /*<bind>*/static { ObjCRuntime.bind(GADAppOpenAd.class); }/*</bind>*/
@@ -50,6 +50,10 @@ import org.robovm.apple.uikit.*;
     protected GADAppOpenAd(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
+    @Property(selector = "fullScreenContentDelegate")
+    public native GADFullScreenContentDelegate getFullScreenContentDelegate();
+    @Property(selector = "setFullScreenContentDelegate:", strongRef = true)
+    public native void setFullScreenContentDelegate(GADFullScreenContentDelegate v);
     @Property(selector = "responseInfo")
     public native GADResponseInfo getResponseInfo();
     @Property(selector = "paidEventHandler")
@@ -59,6 +63,10 @@ import org.robovm.apple.uikit.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Method(selector = "canPresentFromRootViewController:error:")
+    public native boolean canPresentFromRootViewController(UIViewController rootViewController, NSError.NSErrorPtr error);
+    @Method(selector = "presentFromRootViewController:")
+    public native void presentFromRootViewController(UIViewController rootViewController);
     @Method(selector = "loadWithAdUnitID:request:orientation:completionHandler:")
     public static native void load(String adUnitID, GADRequest request, UIInterfaceOrientation orientation, @Block VoidBlock2<GADAppOpenAd, NSError> completionHandler);
     /*</methods>*/
