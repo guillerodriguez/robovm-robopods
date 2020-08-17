@@ -61,6 +61,7 @@ import org.robovm.apple.foundation.*;
     public static final String PresentOffer = "present_offer";
     public static final String PurchaseRefund = "purchase_refund";
     public static final String RemoveFromCart = "remove_from_cart";
+    public static final String ScreenView = "screen_view";
     public static final String Search = "search";
     public static final String SelectContent = "select_content";
     public static final String SetCheckoutOption = "set_checkout_option";

@@ -78,6 +78,8 @@ import org.robovm.apple.foundation.*;
     public static final String Price = "price";
     public static final String Quantity = "quantity";
     public static final String Score = "score";
+    public static final String ScreenClass = "screen_class";
+    public static final String ScreenName = "screen_name";
     public static final String SearchTerm = "search_term";
     public static final String Shipping = "shipping";
     public static final String SignUpMethod = "sign_up_method";

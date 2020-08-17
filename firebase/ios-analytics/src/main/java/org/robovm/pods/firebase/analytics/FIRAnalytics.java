@@ -57,6 +57,10 @@ import org.robovm.apple.foundation.*;
     public static native void setUserPropertyString(String value, String name);
     @Method(selector = "setUserID:")
     public static native void setUserID(String userID);
+    /**
+     * @deprecated Use +[FIRAnalytics logEventWithName:kFIREventScreenView parameters:] instead.
+     */
+    @Deprecated
     @Method(selector = "setScreenName:screenClass:")
     public static native void setScreenName(String screenName, String screenClassOverride);
     @Method(selector = "setAnalyticsCollectionEnabled:")
@@ -67,6 +71,8 @@ import org.robovm.apple.foundation.*;
     public static native String appInstanceID();
     @Method(selector = "resetAnalyticsData")
     public static native void resetAnalyticsData();
+    @Method(selector = "setDefaultEventParameters:")
+    public static native void setDefaultEventParameters(NSDictionary<NSString, ?> parameters);
     @Method(selector = "handleEventsForBackgroundURLSession:completionHandler:")
     public static native void handleEventsForBackgroundURLSession(String identifier, @Block Runnable completionHandler);
     @Method(selector = "handleOpenURL:")
