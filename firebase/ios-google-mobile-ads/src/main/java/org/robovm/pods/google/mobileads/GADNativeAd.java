@@ -60,6 +60,12 @@ import org.robovm.apple.uikit.*;
     public native void setRootViewController(UIViewController v);
     @Property(selector = "extraAssets")
     public native NSDictionary<?, ?> getExtraAssets();
+    @Property(selector = "responseInfo")
+    public native GADResponseInfo getResponseInfo();
+    /**
+     * @deprecated Use responseInfo.adNetworkClassName.
+     */
+    @Deprecated
     @Property(selector = "adNetworkClassName")
     public native String getAdNetworkClassName();
     /*</properties>*/

@@ -103,7 +103,7 @@ public enum /*<name>*/GADErrorCode/*</name>*/ implements NSErrorCode {
          }
 
         public static String getClassDomain() {
-            /** must be incerted in value section */
+            /** must be inserted in value section */
             return /*<name>*/GADErrorCode/*</name>*/.getClassDomain();
         }
     }

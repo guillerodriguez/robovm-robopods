@@ -85,7 +85,7 @@ public enum /*<name>*/FIRRemoteConfigError/*</name>*/ implements NSErrorCode {
          }
 
         public static String getClassDomain() {
-            /** must be incerted in value section */
+            /** must be inserted in value section */
             return /*<name>*/FIRRemoteConfigError/*</name>*/.getClassDomain();
         }
     }

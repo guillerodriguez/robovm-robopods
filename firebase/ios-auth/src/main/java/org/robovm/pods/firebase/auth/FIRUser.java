@@ -58,6 +58,8 @@ import org.robovm.apple.uikit.*;
     public native @org.robovm.rt.bro.annotation.Marshaler(FIRUserInfo.AsListMarshaller.class) List<FIRUserInfo> getProviderData();
     @Property(selector = "metadata")
     public native FIRUserMetadata getMetadata();
+    @Property(selector = "tenantID")
+    public native String getTenantID();
     @Property(selector = "multiFactor")
     public native FIRMultiFactor getMultiFactor();
     @Property(selector = "providerID")

@@ -62,6 +62,10 @@ import org.robovm.apple.uikit.*;
     public native void setSettings(FIRAuthSettings v);
     @Property(selector = "userAccessGroup")
     public native String getUserAccessGroup();
+    @Property(selector = "tenantID")
+    public native String getTenantID();
+    @Property(selector = "setTenantID:")
+    public native void setTenantID(String v);
     @Property(selector = "APNSToken")
     public native NSData getAPNSToken();
     @Property(selector = "setAPNSToken:")

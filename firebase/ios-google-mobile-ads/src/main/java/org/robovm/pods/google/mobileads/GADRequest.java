@@ -127,6 +127,10 @@ import org.robovm.apple.uikit.*;
     public native void tagForChildDirectedTreatment(boolean childDirectedTreatment);
     @Method(selector = "request")
     public static native GADRequest request();
+    /**
+     * @deprecated Use GADMobileAds.sharedInstance.sdkVersion
+     */
+    @Deprecated
     @Method(selector = "sdkVersion")
     public static native String sdkVersion();
     /*</methods>*/

@@ -50,6 +50,8 @@ import org.robovm.apple.uikit.*;
     protected GADMobileAds(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
+    @Property(selector = "sdkVersion")
+    public native String getSdkVersion();
     @Property(selector = "applicationVolume")
     public native float getApplicationVolume();
     @Property(selector = "setApplicationVolume:")

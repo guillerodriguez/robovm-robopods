@@ -95,6 +95,8 @@ public enum /*<name>*/FIRAuthErrorCode/*</name>*/ implements NSErrorCode {
     NullUser(17067L),
     DynamicLinkNotActivated(17068L),
     InvalidProviderID(17071L),
+    TenantIDMismatch(17072L),
+    UnsupportedTenantOperation(17073L),
     InvalidDynamicLinkDomain(17074L),
     RejectedCredential(17075L),
     GameKitNotLinked(17076L),
@@ -153,7 +155,7 @@ public enum /*<name>*/FIRAuthErrorCode/*</name>*/ implements NSErrorCode {
          }
 
         public static String getClassDomain() {
-            /** must be incerted in value section */
+            /** must be inserted in value section */
             return /*<name>*/FIRAuthErrorCode/*</name>*/.getClassDomain();
         }
     }
