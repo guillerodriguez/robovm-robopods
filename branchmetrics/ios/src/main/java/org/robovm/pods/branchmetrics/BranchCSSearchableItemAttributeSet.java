@@ -30,6 +30,7 @@ import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
 import org.robovm.apple.uikit.*;
 import org.robovm.apple.corespotlight.*;
+import org.robovm.apple.uniformtypeid.*;
 /*</imports>*/
 
 /*<javadoc>*/
@@ -47,14 +48,17 @@ import org.robovm.apple.corespotlight.*;
     public BranchCSSearchableItemAttributeSet() {}
     protected BranchCSSearchableItemAttributeSet(Handle h, long handle) { super(h, handle); }
     protected BranchCSSearchableItemAttributeSet(SkipInit skipInit) { super(skipInit); }
+    /**
+     * @since Available in iOS 14.0 and later.
+     */
     @Method(selector = "initWithContentType:")
-    public static  BranchCSSearchableItemAttributeSet createWithContentType(String type) {
+    public static  BranchCSSearchableItemAttributeSet createWithContentType(UTType contentType) {
        BranchCSSearchableItemAttributeSet res = new BranchCSSearchableItemAttributeSet((SkipInit) null);
-       res.initObject(res.initWithContentType(type));
+       res.initObject(res.initWithContentType(contentType));
        return res;
     }
     @Method(selector = "initWithItemContentType:")
-    public BranchCSSearchableItemAttributeSet(String itemContentType) { super(itemContentType); }
+    public BranchCSSearchableItemAttributeSet(String type) { super((SkipInit) null); initObject(init(type)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "params")
@@ -72,8 +76,13 @@ import org.robovm.apple.corespotlight.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    /**
+     * @since Available in iOS 14.0 and later.
+     */
     @Method(selector = "initWithContentType:")
-    protected native @Pointer long initWithContentType(String type);
+    protected native @Pointer long initWithContentType(UTType contentType);
+    @Method(selector = "initWithItemContentType:")
+    protected native @Pointer long init(String type);
     @Method(selector = "indexWithCallback:")
     public native void index(@Block VoidBlock3<NSString, NSString, NSError> callback);
     /*</methods>*/

@@ -30,6 +30,7 @@ import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
 import org.robovm.apple.uikit.*;
 import org.robovm.apple.corespotlight.*;
+import org.robovm.apple.uniformtypeid.*;
 /*</imports>*/
 
 /*<javadoc>*/
@@ -213,6 +214,10 @@ import org.robovm.apple.corespotlight.*;
     public static native String getResponseKeyBranchViewData();
     @GlobalValue(symbol="BRANCH_RESPONSE_KEY_BRANCH_REFERRING_LINK", optional=true)
     public static native String getResponseKeyBranchReferringLink();
+    @GlobalValue(symbol="BRANCH_RESPONSE_KEY_INVOKE_REGISTER_APP", optional=true)
+    public static native String getResponseKeyInvokeRegisterApp();
+    @GlobalValue(symbol="BRANCH_RESPONSE_KEY_UPDATE_CONVERSION_VALUE", optional=true)
+    public static native String getResponseKeyUpdateConversionValue();
     @GlobalValue(symbol="BRANCH_LINK_DATA_KEY_OG_TITLE", optional=true)
     public static native String getLinkDataKeyOgTitle();
     @GlobalValue(symbol="BRANCH_LINK_DATA_KEY_OG_DESCRIPTION", optional=true)

@@ -30,6 +30,7 @@ import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
 import org.robovm.apple.uikit.*;
 import org.robovm.apple.corespotlight.*;
+import org.robovm.apple.uniformtypeid.*;
 /*</imports>*/
 
 /*<javadoc>*/
@@ -98,7 +99,7 @@ public enum /*<name>*/BNCErrorCode/*</name>*/ implements NSErrorCode {
          }
 
         public static String getClassDomain() {
-            /** must be incerted in value section */
+            /** must be inserted in value section */
             return /*<name>*/BNCErrorCode/*</name>*/.getClassDomain();
         }
     }

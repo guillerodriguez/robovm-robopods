@@ -30,6 +30,7 @@ import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
 import org.robovm.apple.uikit.*;
 import org.robovm.apple.corespotlight.*;
+import org.robovm.apple.uniformtypeid.*;
 /*</imports>*/
 
 /*<javadoc>*/
@@ -148,6 +149,8 @@ import org.robovm.apple.corespotlight.*;
     public native void useLongerWaitForAppleSearchAds();
     @Method(selector = "ignoreAppleSearchAdsTestData")
     public native void ignoreAppleSearchAdsTestData();
+    @Method(selector = "setSKAdNetworkCalloutMaxTimeSinceInstall:")
+    public native void setSKAdNetworkCalloutMaxTimeSinceInstall(double maxTimeInterval);
     @Method(selector = "setRetryInterval:")
     public native void setRetryInterval(double retryInterval);
     @Method(selector = "setMaxRetries:")

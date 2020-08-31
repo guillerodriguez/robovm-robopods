@@ -1,5 +1,5 @@
 package: org.robovm.pods.branchmetrics
-include: [foundation, uikit, corespotlight]
+include: [foundation, uikit, corespotlight, uniformtypeid]
 framework: Branch
 clang_args: ['-x', 'objective-c']
 headers:
