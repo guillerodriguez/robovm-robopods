@@ -1,0 +1,8 @@
+<config>
+    <libs>
+        <lib>xml2.2</lib>
+    </libs>
+    <frameworks>
+        <framework>IASDKCore</framework>
+    </frameworks>
+</config>
