@@ -56,7 +56,7 @@ import org.robovm.apple.coregraphics.*;
     @GlobalValue(symbol="InMobiSDKVersionNumber", optional=true)
     public static native void InMobiSDKVersionNumber(double v);
     @GlobalValue(symbol="InMobiSDKVersionString", optional=true)
-    public static native BytePtr VersionString();
+    public static native @org.robovm.rt.bro.annotation.Marshaler(StringMarshalers.AsAsciiZMarshaler.class) String VersionString();
     @GlobalValue(symbol="kUnifiedAuctionEndPointUrl", optional=true)
     public static native String AuctionEndPointUrl();
     @GlobalValue(symbol="kASIMInterstitialBaseVCCloseButtonDelay", optional=true)

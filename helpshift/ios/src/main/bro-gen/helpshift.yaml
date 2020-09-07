@@ -251,8 +251,8 @@ values:
     HelpshiftVersionString:
         class: HelpshiftSupport
         name: getVersionString
-        return_type: String
-        return_marshaler: StringMarshalers.AsAsciiZMarshaler
+        type: String
+        marshaler: StringMarshalers.AsAsciiZMarshaler
 
     HelpshiftVersionNumber:
         exclude: true

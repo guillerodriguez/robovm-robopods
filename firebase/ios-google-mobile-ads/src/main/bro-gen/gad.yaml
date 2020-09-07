@@ -659,6 +659,8 @@ values:
         name: CustomEventParametersServer
 
     GoogleMobileAdsVersionString:
+        marshaler: StringMarshalers.AsAsciiZMarshaler
+        type: String
         class: GADMobileAds
         name: getVersion
 

@@ -279,6 +279,8 @@ values:
         class: FIRAuth
         name: getVersionNum
     FirebaseAuthVersionStr:
+        marshaler: StringMarshalers.AsAsciiZMarshaler
+        type: String
         class: FIRAuth
         name: getVersionStr
 

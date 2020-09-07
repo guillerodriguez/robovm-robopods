@@ -76,7 +76,7 @@ import org.robovm.apple.uikit.*;
     @GlobalValue(symbol="FirebaseAuthVersionNum", optional=true)
     public static native double getVersionNum();
     @GlobalValue(symbol="FirebaseAuthVersionStr", optional=true)
-    public static native BytePtr getVersionStr();
+    public static native @org.robovm.rt.bro.annotation.Marshaler(StringMarshalers.AsAsciiZMarshaler.class) String getVersionStr();
     @Library(Library.INTERNAL)
     public static class Notifications {
         static { Bro.bind(Notifications.class); }
