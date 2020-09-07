@@ -20,6 +20,7 @@ This is the list of currently available AltPods. Click them to get more informat
 | [Flurry](flurry/)                  | Flurry analytics, ads, remote config and push                                          |
 | [Fyber](fyber/)                    | Fyber Markertplace                                                                     |
 | [HelpShift](helpshift/)            | Deliver a superior customer service experience at a lower cost with Helpshift’s AI-powered messaging platform.|
+| [InMobi](inmobi/)                  | Monetization SDK for iOS                                                               |
 | [Lottie](lottie/)                  | An iOS library to natively render After Effects vector animations                      |
 | [OneSignal](onesignal/)            | OneSignal is a free push notification service for mobile apps                          |
 | [Pollfish](pollfish/)              | Simple Surveys                                                                         |
@@ -38,8 +39,9 @@ v1.11.0 -- in development
 | [Facebook](facebook/)              | 7.1.1  |
 | [Firebase](firebase/)              | 6.31.0*|
 | [Flurry](flurry/)                  | 10.3.4 |
-| [Fyber](fyber/)                    | 7.6.4  |
+| [Fyber](fyber/)                    | 7.6.4* |
 | [HelpShift](helpshift/)            | 7.8.2  |
+| [InMobi](inmobi/)                  | 9.0.6* |
 | [Lottie](lottie/)                  | 3.1.8  |
 | [OneSignal](onesignal/)            | 2.15.3*|
 | [Pollfish](pollfish/)              | 5.3.1* |
