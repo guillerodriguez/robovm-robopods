@@ -1,0 +1,5 @@
+<config>
+    <frameworks>
+        <framework>UserMessagingPlatform</framework>
+    </frameworks>
+</config>

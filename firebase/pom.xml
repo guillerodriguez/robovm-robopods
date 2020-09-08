@@ -30,5 +30,6 @@
         <module>ios-remoteconfig</module>
         <module>ios-google-sign-in</module>
         <module>ios-messaging</module>
+        <module>ios-google-ump</module>
     </modules>
 </project>

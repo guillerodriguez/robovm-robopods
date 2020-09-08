@@ -3,7 +3,8 @@
 ### Frameworks required for this pod: 
 * FirebaseMessaging.framework
 * FirebaseInstanceID.framework
-* Protobuf>nanopb.framework
+* Protobuf.framework
+* nanopb.framework
 
 Plus ones required for ios-core module:
 * GoogleUtilities.framework
