@@ -112,7 +112,8 @@ values:
         class: IMConstants
 
     InMobiSDK(VersionString):
-        return_marshaller:
+        marshaler: StringMarshalers.AsAsciiZMarshaler
+        type: String
         class: IMConstants
         name: '#{g[0]}'
 

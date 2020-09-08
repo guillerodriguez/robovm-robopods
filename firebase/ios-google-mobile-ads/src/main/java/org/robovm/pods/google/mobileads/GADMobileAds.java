@@ -70,7 +70,7 @@ import org.robovm.apple.uikit.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @GlobalValue(symbol="GoogleMobileAdsVersionString", optional=true)
-    public static native BytePtr getVersion();
+    public static native @org.robovm.rt.bro.annotation.Marshaler(StringMarshalers.AsAsciiZMarshaler.class) String getVersion();
     @GlobalValue(symbol="GADCustomEventParametersServer", optional=true)
     public static native String CustomEventParametersServer();
     

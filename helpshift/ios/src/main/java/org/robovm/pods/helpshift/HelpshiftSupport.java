@@ -66,7 +66,7 @@ import org.robovm.apple.uikit.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @GlobalValue(symbol="HelpshiftVersionString", optional=true)
-    public static native BytePtr getVersionString();
+    public static native @org.robovm.rt.bro.annotation.Marshaler(StringMarshalers.AsAsciiZMarshaler.class) String getVersionString();
     @GlobalValue(symbol="HelpshiftSupportCustomMetadataKey", optional=true)
     public static native String getHelpshiftSupportCustomMetadata();
     @GlobalValue(symbol="HelpshiftSupportTagsKey", optional=true)
