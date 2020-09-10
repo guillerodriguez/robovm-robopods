@@ -12,7 +12,8 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 | [ios-crashlytics](ios-crashlytics/)      | Firebase iOS Crashlytics      | 4.5.0*  |
 | [ios-database](ios-database/)            | Firebase iOS DataBase         | 6.5.0   |
 | [ios-dylinks](ios-dylinks/)              | Firebase iOS Dynamic Links    | 4.3.0*  |
-| [ios-mobile adds](ios-google-mobile-ads/)| Firebase iOS Google Mobile Ads| 7.64.0* |
+| [ios-mobile ads](ios-google-mobile-ads/) | Firebase iOS Google Mobile Ads| 7.64.0* |
+| [ios-mobile ads-adapters](ios-google-mobile-ads-adapters/)| Firebase iOS AdMob Adapters|   |
 | [ios-google-sign-in](ios-google-sign-in/)| Firebase iOS Google Sign In   | 5.0.2   |
 | [ios-google-ump](ios-google-ump/)        | Firebase iOS Google UMP       | 1.1.0*  |
 | [ios-messaging](ios-messaging/)          | Firebase iOS Messaging        | 4.6.2*  |
