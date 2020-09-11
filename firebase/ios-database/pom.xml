@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-firebase-database-ios</artifactId>
-    <name>RoboPods FireBase Realtime Database iOS v6.5.0 (Firebase v6.30.0)</name>
+    <name>RoboPods FireBase Realtime Database iOS v6.6.0 (Firebase v6.32.0)</name>
     <packaging>jar</packaging>
 
     <licenses>

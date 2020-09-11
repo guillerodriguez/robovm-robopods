@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.robovm.pods.firebase.crashlytics;
+package org.robovm.pods.firebase.messaging;
 
 /*<imports>*/
 import java.io.*;
@@ -28,35 +28,33 @@ import org.robovm.rt.bro.*;
 import org.robovm.rt.bro.annotation.*;
 import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
+import org.robovm.apple.usernotifications.*;
 /*</imports>*/
 
 /*<javadoc>*/
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/FIRStackFrame/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/FIRInstanceIDResult/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class FIRStackFramePtr extends Ptr<FIRStackFrame, FIRStackFramePtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(FIRStackFrame.class); }/*</bind>*/
+    /*<ptr>*/public static class FIRInstanceIDResultPtr extends Ptr<FIRInstanceIDResult, FIRInstanceIDResultPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(FIRInstanceIDResult.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    protected FIRStackFrame() {}
-    protected FIRStackFrame(Handle h, long handle) { super(h, handle); }
-    protected FIRStackFrame(SkipInit skipInit) { super(skipInit); }
-    @Method(selector = "initWithSymbol:file:line:")
-    public FIRStackFrame(String symbol, String file, @MachineSizedSInt long line) { super((SkipInit) null); initObject(init(symbol, file, line)); }
-    public FIRStackFrame(@MachineSizedUInt long address) { super((Handle) null, create(address)); retain(getHandle()); }
+    public FIRInstanceIDResult() {}
+    protected FIRInstanceIDResult(Handle h, long handle) { super(h, handle); }
+    protected FIRInstanceIDResult(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "instanceID")
+    public native String getInstanceID();
+    @Property(selector = "token")
+    public native String getToken();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "initWithSymbol:file:line:")
-    protected native @Pointer long init(String symbol, String file, @MachineSizedSInt long line);
-    @Method(selector = "stackFrameWithAddress:")
-    protected static native @Pointer long create(@MachineSizedUInt long address);
+    
     /*</methods>*/
 }

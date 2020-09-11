@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-firebase-dynamic-links-ios</artifactId>
-    <name>RoboPods FireBase Dynamic Links iOS v4.3.0 (Firebase v6.31.0)</name>
+    <name>RoboPods FireBase Dynamic Links iOS v4.3.0 (Firebase v6.32.0)</name>
     <packaging>jar</packaging>
 
     <licenses>

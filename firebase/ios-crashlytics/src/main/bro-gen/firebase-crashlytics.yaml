@@ -32,7 +32,9 @@ classes:
                 name: init
             '+stackFrameWithSymbol:file:line:':
                 exclude: true # as duplicate constructor
-
+            '+stackFrameWithAddress:':
+                constructor: true
+                name: create
 protocols: {}
 
 functions:

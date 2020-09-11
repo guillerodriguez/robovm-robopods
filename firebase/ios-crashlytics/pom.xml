@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-firebase-crashlytics-ios</artifactId>
-    <name>RoboPods FireBase Crashlytics iOS v4.5.0 (Firebase v6.31.0)</name>
+    <name>RoboPods FireBase Crashlytics iOS v4.6.0 (Firebase v6.32.0)</name>
     <packaging>jar</packaging>
 
     <dependencies>

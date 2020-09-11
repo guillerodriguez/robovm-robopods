@@ -6,11 +6,11 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 
 | RoboPod                                  | Description                   | Version |
 |------------------------------------------|-------------------------------|---------|
-| [ios-analytics](ios-analytics/)          | Firebase iOS Analytics        | 6.8.0*  |
-| [ios-auth](ios-auth/)                    | Firebase iOS Authentication   | 6.9.0*  |
-| [ios-core](ios-core/)                    | Firebase iOS Core             | 6.10.1* |
-| [ios-crashlytics](ios-crashlytics/)      | Firebase iOS Crashlytics      | 4.5.0*  |
-| [ios-database](ios-database/)            | Firebase iOS DataBase         | 6.5.0   |
+| [ios-analytics](ios-analytics/)          | Firebase iOS Analytics        | 6.8.1*  |
+| [ios-auth](ios-auth/)                    | Firebase iOS Authentication   | 6.9.1*  |
+| [ios-core](ios-core/)                    | Firebase iOS Core             | 6.10.2* |
+| [ios-crashlytics](ios-crashlytics/)      | Firebase iOS Crashlytics      | 4.6.0*  |
+| [ios-database](ios-database/)            | Firebase iOS DataBase         | 6.6.0   |
 | [ios-dylinks](ios-dylinks/)              | Firebase iOS Dynamic Links    | 4.3.0*  |
 | [ios-mobile ads](ios-google-mobile-ads/) | Firebase iOS Google Mobile Ads| 7.64.0* |
 | [ios-mobile ads-adapters](ios-google-mobile-ads-adapters/)| Firebase iOS AdMob Adapters|   |
@@ -23,7 +23,7 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 
 | RoboPods Version  | Firebase Version    |
 |-------------------|---------------------|
-| 1.11.0            | 6.31.0              |
+| 1.11.0            | 6.32.0              |
 | 1.10.0            | 6.30.0              |
 | 1.9.0             | 6.28.0              |
 | 1.8.0             | 6.27.0              |
