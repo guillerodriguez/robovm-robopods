@@ -33,15 +33,15 @@ v1.11.0 -- in development
 
 | Name                               | 1.11.0 |
 |------------------------------------|--------|
-| [AppLovinSDK](applovinsdk/)        | 6.13.4 |
+| [AppLovinSDK](applovinsdk/)        | 6.14.2*|
 | [BranchMetrics](branchmetrics/)    | 0.35.0*|
 | [Charts](charts/)                  | 3.5.0  |
 | [Facebook](facebook/)              | 7.1.1  |
 | [Firebase](firebase/)              | 6.32.0*|
-| [Flurry](flurry/)                  | 10.3.4 |
+| [Flurry](flurry/)                  | 11.0.0* |
 | [Fyber](fyber/)                    | 7.6.4* |
 | [HelpShift](helpshift/)            | 7.8.2  |
-| [InMobi](inmobi/)                  | 9.0.6* |
+| [InMobi](inmobi/)                  | 9.0.7* |
 | [Lottie](lottie/)                  | 3.1.8  |
 | [OneSignal](onesignal/)            | 2.15.3*|
 | [Pollfish](pollfish/)              | 5.3.1* |
