@@ -5,16 +5,18 @@ AdMob Mediation is a feature that lets you serve ads to your apps from multiple 
 
 | Adapters                         | Description                   | Version |
 |----------------------------------|-------------------------------|---------|
-| [InMobi](ios-inmobi/)            | InMobi Ads Mediation Adapter  | 9.0.7.2 |
 | [AppLovin](ios-applovin/)        | AppLovin Mediation Adapter    | 6.13.4.0|
+| [InMobi](ios-inmobi/)            | InMobi Ads Mediation Adapter  | 9.0.7.2 |
+| [Facebook](ios-facebook/)        | Facebook Mediation Adapter    | 6.13.4.0|
 
 ## Versions
 
 v 1.11.0 
 | Adapter                  | Version             | 
 |--------------------------|---------------------|
-| [InMobi](ios-inmobi/)    | 9.0.7.2             |
 | [AppLovin](ios-applovin/)| 6.13.4.0            |
+| [InMobi](ios-inmobi/)    | 9.0.7.2             |
+| [Facebook](ios-facebook/)| 5.10.1.0            |
 
 ## Official website
 
