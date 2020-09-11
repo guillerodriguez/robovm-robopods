@@ -137,8 +137,14 @@ import org.robovm.apple.storekit.*;
     public static native FlurryEventRecordStatus logEvent(FlurrySyndicationEvent syndicationEvent, String syndicationID, NSDictionary<?, ?> parameters);
     @Method(selector = "logPaymentTransaction:statusCallback:")
     public static native void logPaymentTransaction(SKPaymentTransaction transaction, @Block VoidBlock1<FlurryTransactionRecordStatus> statusCallback);
+    /**
+     * @deprecated use +logFlurryPaymentTransactionParamsWithTransactionId:productId:quantity:price:currency:productName:transactionState:userDefinedParams:statusCallback:
+     */
+    @Deprecated
     @Method(selector = "logPaymentTransactionParamsWithTransactionId:productId:quantity:price:currency:productName:transactionState:userDefinedParams:statusCallback:")
     public static native void logPaymentTransactionParams(String transactionId, String productId, String quantity, String price, String currency, String productName, String transactionState, NSDictionary<?, ?> transactionParams, @Block VoidBlock1<FlurryTransactionRecordStatus> statusCallback);
+    @Method(selector = "logFlurryPaymentTransactionParamsWithTransactionId:productId:quantity:price:currency:productName:transactionState:userDefinedParams:statusCallback:")
+    public static native void logFlurryPaymentTransactionParams(String transactionId, String productId, MachineSizedUIntPtr quantity, NSDecimalNumber price, String currency, String productName, FlurryPaymentTransactionState transactionState, NSDictionary<?, ?> transactionParams, @Block VoidBlock1<FlurryTransactionRecordStatus> statusCallback);
     @Method(selector = "logEvent:timed:")
     public static native FlurryEventRecordStatus logEvent(String eventName, boolean timed);
     @Method(selector = "logEvent:withParameters:timed:")
@@ -155,15 +161,6 @@ import org.robovm.apple.storekit.*;
     public static native void logError(String errorID, String message, NSError error, NSDictionary<?, ?> parameters);
     @Method(selector = "leaveBreadcrumb:")
     public static native void leaveBreadcrumb(String breadcrumb);
-    @Deprecated
-    @Method(selector = "logAllPageViewsForTarget:")
-    public static native void logAllPageViewsForTarget(NSObject target);
-    @Deprecated
-    @Method(selector = "stopLogPageViewsForTarget:")
-    public static native void stopLogPageViewsForTarget(NSObject target);
-    @Deprecated
-    @Method(selector = "logPageView")
-    public static native void logPageView();
     @Method(selector = "openPrivacyDashboard:")
     public static native void openPrivacyDashboard(@Block VoidBooleanBlock completionHandler);
     /*</methods>*/

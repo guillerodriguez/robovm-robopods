@@ -9,12 +9,14 @@ headers:
     - FlurryConsent.h
     - FlurrySessionBuilder.h
     - FlurryUserProperties.h
+    - FlurrySKAdNetwork.h
 enums:
     FlurryLogLevel: {}
     FlurryEventRecordStatus: {prefix: FlurryEvent}
     FlurrySyndicationEvent: {prefix: FlurrySyndication}
     FlurryTransactionRecordStatus: {prefix: FlurryTransaction}
-
+    FlurryPaymentTransactionState: {}
+    FlurryConversionValueEventType: {}
 classes:
     Flurry:
         methods:
@@ -40,6 +42,8 @@ classes:
                 name: logPaymentTransaction
             '+logPaymentTransactionParamsWithTransactionId:productId:quantity:price:currency:productName:transactionState:userDefinedParams:statusCallback:':
                 name: logPaymentTransactionParams
+            '+logFlurryPaymentTransactionParamsWithTransactionId:productId:quantity:price:currency:productName:transactionState:userDefinedParams:statusCallback:':
+                name: logFlurryPaymentTransactionParams
             '+logEvent:timed:':
                 name: logEvent
             '+logEvent:withParameters:timed:':
@@ -74,7 +78,10 @@ classes:
                 name: remove
             '+remove:value:':
                 name: remove
-
+    FlurrySKAdNetwork:
+        methods:
+            '+flurryUpdateConversionValueWithEvent:':
+                name: flurryUpdateConversionValue
 protocols:
     FlurryDelegate:
         methods:
