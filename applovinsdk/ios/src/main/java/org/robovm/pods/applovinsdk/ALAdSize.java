@@ -56,8 +56,6 @@ import org.robovm.apple.coregraphics.*;
     /*<properties>*/
     @Property(selector = "banner")
     public static native ALAdSize getBanner();
-    @Property(selector = "mrec")
-    public static native ALAdSize getMrec();
     @Property(selector = "leader")
     public static native ALAdSize getLeader();
     @Property(selector = "interstitial")
@@ -68,15 +66,24 @@ import org.robovm.apple.coregraphics.*;
     @Deprecated
     @Property(selector = "height")
     public native @MachineSizedFloat double getHeight();
-    @Deprecated
-    @Property(selector = "sizeNative")
-    public static native ALAdSize getSizeNative();
     /**
      * @deprecated Retrieval of underlying string is deprecated and will be removed in a future SDK version.
      */
     @Deprecated
     @Property(selector = "label")
     public native String getLabel();
+    /**
+     * @deprecated MRECs have been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "mrec")
+    public static native ALAdSize getMrec();
+    /**
+     * @deprecated Native ads have been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "sizeNative")
+    public static native ALAdSize getSizeNative();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

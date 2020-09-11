@@ -44,7 +44,7 @@ import org.robovm.apple.coregraphics.*;
     /*<bind>*/static { ObjCRuntime.bind(ALAdType.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public ALAdType() {}
+    protected ALAdType() {}
     protected ALAdType(Handle h, long handle) { super(h, handle); }
     protected ALAdType(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
