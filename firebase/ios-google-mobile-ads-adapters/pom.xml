@@ -21,5 +21,6 @@
 
     <modules>
         <module>ios-inmobi</module>
+        <module>ios-applovin</module>
     </modules>
 </project>
