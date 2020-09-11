@@ -10,9 +10,9 @@
 
 ## Versions
 
-| RoboPods Version  | Facebook Version    |
-|-------------------|---------------------|
-| 1.11.0            | 7.6.4               |
+| RoboPods Version  | Fyber Marketplace Version |
+|-------------------|---------------------------|
+| 1.11.0            | 7.6.4                     |
 
 ## Official website
 
