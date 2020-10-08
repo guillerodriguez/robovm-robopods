@@ -12,6 +12,7 @@
 
 | RoboPods Version  | Fyber Marketplace Version |
 |-------------------|---------------------------|
+| 1.12.0            | 7.7.1                     |
 | 1.11.0            | 7.6.4                     |
 
 ## Official website

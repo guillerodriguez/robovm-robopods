@@ -55,6 +55,10 @@ import org.robovm.apple.coregraphics.*;
     public native String getAppID();
     @Property(selector = "isInitialised")
     public native boolean isInitialised();
+    @Property(selector = "publisherAppStoreID")
+    public native String getPublisherAppStoreID();
+    @Property(selector = "setPublisherAppStoreID:")
+    public native void setPublisherAppStoreID(String v);
     @Property(selector = "globalAdDelegate")
     public native IAGlobalAdDelegate getGlobalAdDelegate();
     @Property(selector = "setGlobalAdDelegate:", strongRef = true)
