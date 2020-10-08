@@ -32,6 +32,8 @@ classes:
         methods:
             '-logInWithPermissions:fromViewController:handler:':
                 name: logIn
+            '-logInWithURL:handler:':
+                name: logIn
             '-reauthorizeDataAccess:handler:':
                 name: reauthorizeDataAccess
     FBSDKLoginManagerLoginResult:
@@ -45,7 +47,21 @@ classes:
                 name: init
             '-presentInView:withArrowPosition:direction:':
                 name: presentInView
-
+    FBSDKReferralCode:
+        methods:
+            '+initWithString:':
+                name: initWithString$
+    FBSDKReferralManager:
+        methods:
+            '-initWithViewController:':
+                name: initWithViewController$
+            '-startReferralWithCompletionHandler:':
+                name: startReferralWithCompletionHandler$
+    FBSDKReferralManagerResult:
+        methods:
+            '-initWithReferralCodes:isCancelled:':
+                #trim_after_first_colon: true
+                name: initWithReferralCodes$isCancelled$
 protocols:
     FBSDKDeviceLoginManagerDelegate:
         methods:

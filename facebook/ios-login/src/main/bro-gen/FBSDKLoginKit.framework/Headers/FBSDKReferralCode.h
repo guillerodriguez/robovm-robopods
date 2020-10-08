@@ -16,19 +16,37 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-
-#import "FBSDKCoreKitImport.h"
-#import "FBSDKDeviceLoginCodeInfo.h"
-#import "FBSDKDeviceLoginManager.h"
-#import "FBSDKDeviceLoginManagerResult.h"
-#import "FBSDKLoginConstants.h"
+#import "TargetConditionals.h"
 
 #if !TARGET_OS_TV
- #import "FBSDKLoginButton.h"
- #import "FBSDKLoginManager.h"
- #import "FBSDKLoginManagerLoginResult.h"
- #import "FBSDKLoginTooltipView.h"
- #import "FBSDKReferralManager.h"
- #import "FBSDKReferralManagerResult.h"
+
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+/**
+ Represent a referral code used in the referral process
+*/
+NS_SWIFT_NAME(ReferralCode)
+@interface FBSDKReferralCode : NSObject
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+/**
+ The string value of the referral code
+*/
+@property NSString *value;
+
+/**
+ Initializes a new instance if the referral code is valid. Otherwise returns nil.
+ A code is valid if it is non-empty and contains only alphanumeric characters.
+ @param string the raw string referral code
+*/
++ (instancetype)initWithString:(NSString *)string;
+
+@end
+
+NS_ASSUME_NONNULL_END
+
 #endif

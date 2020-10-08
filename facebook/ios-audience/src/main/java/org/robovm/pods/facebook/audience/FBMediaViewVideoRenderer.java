@@ -84,7 +84,7 @@ import org.robovm.pods.facebook.core.*;
     @Method(selector = "seekVideoToTime:")
     public native void seekVideoToTime(@ByVal CMTime time);
     @Method(selector = "addPeriodicTimeObserverForInterval:queue:usingBlock:")
-    public native NSObject addPeriodicTimeObserver(@ByVal CMTime interval, DispatchQueue queue, @Block VoidBlock1<CMTime> block);
+    public native NSObject addPeriodicTimeObserver(@ByVal CMTime interval, DispatchQueue queue, @Block("(@ByVal)") VoidBlock1<CMTime> block);
     @Method(selector = "removeTimeObserver:")
     public native void removeTimeObserver(NSObject observer);
     @Method(selector = "videoDidChangeVolume")

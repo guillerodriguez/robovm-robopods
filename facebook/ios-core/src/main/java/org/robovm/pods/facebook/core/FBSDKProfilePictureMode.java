@@ -41,7 +41,10 @@ import org.robovm.apple.webkit.*;
 public enum /*<name>*/FBSDKProfilePictureMode/*</name>*/ implements ValuedEnum {
     /*<values>*/
     Square(0L),
-    Normal(1L);
+    Normal(1L),
+    Album(2L),
+    Small(3L),
+    Large(4L);
     /*</values>*/
 
     /*<bind>*/

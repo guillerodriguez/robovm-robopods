@@ -54,6 +54,11 @@ import org.robovm.pods.facebook.core.*;
     public FBSDKSendButton(@ByVal CGRect frame) { super(frame); }
     @Method(selector = "initWithCoder:")
     public FBSDKSendButton(NSCoder coder) { super(coder); }
+    /**
+     * @since Available in iOS 14.0 and later.
+     */
+    @Method(selector = "initWithFrame:primaryAction:")
+    public FBSDKSendButton(@ByVal CGRect frame, UIAction primaryAction) { super(frame, primaryAction); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "shareContent")

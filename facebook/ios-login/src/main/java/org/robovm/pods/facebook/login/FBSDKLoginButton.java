@@ -53,6 +53,11 @@ import org.robovm.pods.facebook.core.*;
     public FBSDKLoginButton(@ByVal CGRect frame) { super(frame); }
     @Method(selector = "initWithCoder:")
     public FBSDKLoginButton(NSCoder coder) { super(coder); }
+    /**
+     * @since Available in iOS 14.0 and later.
+     */
+    @Method(selector = "initWithFrame:primaryAction:")
+    public FBSDKLoginButton(@ByVal CGRect frame, UIAction primaryAction) { super(frame, primaryAction); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "defaultAudience")

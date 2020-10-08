@@ -77,6 +77,8 @@ import org.robovm.pods.facebook.core.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Method(selector = "setAdvertiserTrackingEnabled:")
+    public static native void setAdvertiserTrackingEnabled(boolean advertiserTrackingEnabled);
     @Method(selector = "isTestMode")
     public static native boolean isTestMode();
     @Method(selector = "testDeviceHash")

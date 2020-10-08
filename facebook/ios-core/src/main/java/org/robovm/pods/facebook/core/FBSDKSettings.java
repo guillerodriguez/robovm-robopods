@@ -59,8 +59,16 @@ import org.robovm.apple.webkit.*;
     public static native @MachineSizedFloat double getJPEGCompressionQuality();
     @Property(selector = "setJPEGCompressionQuality:")
     public static native void setJPEGCompressionQuality(@MachineSizedFloat double v);
+    /**
+     * @deprecated Auto-initialization will be removed in the next major version release.
+     */
+    @Deprecated
     @Property(selector = "isAutoInitEnabled")
     public static native boolean isAutoInitEnabled();
+    /**
+     * @deprecated Auto-initialization will be removed in the next major version release.
+     */
+    @Deprecated
     @Property(selector = "setAutoInitEnabled:")
     public static native void setAutoInitEnabled(boolean v);
     @Property(selector = "isAutoLogAppEventsEnabled")
@@ -114,6 +122,10 @@ import org.robovm.apple.webkit.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Method(selector = "isAdvertiserTrackingEnabled")
+    public static native boolean isAdvertiserTrackingEnabled();
+    @Method(selector = "setAdvertiserTrackingEnabled:")
+    public static native boolean setAdvertiserTrackingEnabled(boolean advertiserTrackingEnabled);
     @Method(selector = "setDataProcessingOptions:")
     public static native void setDataProcessingOptions(NSArray<NSString> options);
     @Method(selector = "setDataProcessingOptions:country:state:")

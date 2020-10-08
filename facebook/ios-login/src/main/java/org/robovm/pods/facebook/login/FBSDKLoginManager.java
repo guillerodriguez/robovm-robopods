@@ -64,6 +64,8 @@ import org.robovm.pods.facebook.core.*;
     /*<methods>*/
     @Method(selector = "logInWithPermissions:fromViewController:handler:")
     public native void logIn(NSArray<NSString> permissions, UIViewController fromViewController, @Block VoidBlock2<FBSDKLoginManagerLoginResult, NSError> handler);
+    @Method(selector = "logInWithURL:handler:")
+    public native void logIn(NSURL url, @Block VoidBlock2<FBSDKLoginManagerLoginResult, NSError> handler);
     @Method(selector = "reauthorizeDataAccess:handler:")
     public native void reauthorizeDataAccess(UIViewController fromViewController, @Block VoidBlock2<FBSDKLoginManagerLoginResult, NSError> handler);
     @Method(selector = "logOut")

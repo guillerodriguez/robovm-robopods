@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.robovm.pods.facebook.core;
+package org.robovm.pods.facebook.login;
 
 /*<imports>*/
 import java.io.*;
@@ -31,39 +31,34 @@ import org.robovm.apple.foundation.*;
 import org.robovm.apple.dispatch.*;
 import org.robovm.apple.coregraphics.*;
 import org.robovm.apple.uikit.*;
-import org.robovm.apple.webkit.*;
+import org.robovm.pods.facebook.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBSDKButton/*</name>*/ 
-    extends /*<extends>*/UIButton/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBSDKReferralCode/*</name>*/ 
+    extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class FBSDKButtonPtr extends Ptr<FBSDKButton, FBSDKButtonPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(FBSDKButton.class); }/*</bind>*/
+    /*<ptr>*/public static class FBSDKReferralCodePtr extends Ptr<FBSDKReferralCode, FBSDKReferralCodePtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(FBSDKReferralCode.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public FBSDKButton() {}
-    protected FBSDKButton(Handle h, long handle) { super(h, handle); }
-    protected FBSDKButton(SkipInit skipInit) { super(skipInit); }
-    @Method(selector = "initWithFrame:")
-    public FBSDKButton(@ByVal CGRect frame) { super(frame); }
-    @Method(selector = "initWithCoder:")
-    public FBSDKButton(NSCoder coder) { super(coder); }
-    /**
-     * @since Available in iOS 14.0 and later.
-     */
-    @Method(selector = "initWithFrame:primaryAction:")
-    public FBSDKButton(@ByVal CGRect frame, UIAction primaryAction) { super(frame, primaryAction); }
+    protected FBSDKReferralCode() {}
+    protected FBSDKReferralCode(Handle h, long handle) { super(h, handle); }
+    protected FBSDKReferralCode(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "value")
+    public native String getValue();
+    @Property(selector = "setValue:")
+    public native void setValue(String v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    
+    @Method(selector = "initWithString:")
+    public static native FBSDKReferralCode initWithString$(String string);
     /*</methods>*/
 }

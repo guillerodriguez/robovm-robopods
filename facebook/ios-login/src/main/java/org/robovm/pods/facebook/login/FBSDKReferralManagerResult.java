@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.robovm.pods.facebook.audience;
+package org.robovm.pods.facebook.login;
 
 /*<imports>*/
 import java.io.*;
@@ -28,12 +28,9 @@ import org.robovm.rt.bro.*;
 import org.robovm.rt.bro.annotation.*;
 import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
-import org.robovm.apple.coregraphics.*;
 import org.robovm.apple.dispatch.*;
-import org.robovm.apple.coremedia.*;
+import org.robovm.apple.coregraphics.*;
 import org.robovm.apple.uikit.*;
-import org.robovm.apple.storekit.*;
-import org.robovm.apple.avfoundation.*;
 import org.robovm.pods.facebook.core.*;
 /*</imports>*/
 
@@ -41,29 +38,31 @@ import org.robovm.pods.facebook.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBAudienceNetworkAds/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBSDKReferralManagerResult/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class FBAudienceNetworkAdsPtr extends Ptr<FBAudienceNetworkAds, FBAudienceNetworkAdsPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(FBAudienceNetworkAds.class); }/*</bind>*/
-    /*<constants>*/
-    public static final String getVersion = "6.0.0";
-    /*</constants>*/
+    /*<ptr>*/public static class FBSDKReferralManagerResultPtr extends Ptr<FBSDKReferralManagerResult, FBSDKReferralManagerResultPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(FBSDKReferralManagerResult.class); }/*</bind>*/
+    /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public FBAudienceNetworkAds() {}
-    protected FBAudienceNetworkAds(Handle h, long handle) { super(h, handle); }
-    protected FBAudienceNetworkAds(SkipInit skipInit) { super(skipInit); }
+    protected FBSDKReferralManagerResult() {}
+    protected FBSDKReferralManagerResult(Handle h, long handle) { super(h, handle); }
+    protected FBSDKReferralManagerResult(SkipInit skipInit) { super(skipInit); }
+    @Method(selector = "initWithReferralCodes:isCancelled:")
+    public FBSDKReferralManagerResult(NSArray<FBSDKReferralCode> referralCodes, boolean isCancelled) { super((SkipInit) null); initObject(initWithReferralCodes$isCancelled$(referralCodes, isCancelled)); }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "isCancelled")
+    public native boolean isCancelled();
+    @Property(selector = "referralCodes")
+    public native NSArray<FBSDKReferralCode> getReferralCodes();
+    @Property(selector = "setReferralCodes:")
+    public native void setReferralCodes(NSArray<FBSDKReferralCode> v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @GlobalValue(symbol="FBAudienceNetworkErrorDomain", optional=true)
-    public static native String getErrorDomain();
-    
-    @Method(selector = "initializeWithSettings:completionHandler:")
-    public static native void initialize(FBAdInitSettings settings, @Block VoidBlock1<FBAdInitResults> completionHandler);
+    @Method(selector = "initWithReferralCodes:isCancelled:")
+    protected native @Pointer long initWithReferralCodes$isCancelled$(NSArray<FBSDKReferralCode> referralCodes, boolean isCancelled);
     /*</methods>*/
 }
