@@ -29,6 +29,12 @@ classes:
                 name: unsubscribeFromTopic
             '-sendMessage:to:withMessageID:timeToLive:':
                 name: sendMessage
+            '-tokenWithCompletion:':
+                name: getToken
+            '-deleteTokenWithCompletion:':
+                name: deleteToken
+            '-deleteDataWithCompletion:':
+                name: deleteData
     FIRMessagingExtensionHelper: #since 10.0
         methods:
             '-populateNotificationContent:withContentHandler:':

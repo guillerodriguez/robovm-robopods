@@ -55,6 +55,8 @@ import org.robovm.apple.uikit.*;
     public void didReceiveAd(GADBannerView bannerView) {}
     @NotImplemented("adView:didFailToReceiveAdWithError:")
     public void didFailToReceiveAd(GADBannerView bannerView, GADRequestError error) {}
+    @NotImplemented("adViewDidRecordImpression:")
+    public void didRecordImpression(GADBannerView bannerView) {}
     @NotImplemented("adViewWillPresentScreen:")
     public void willPresentScreen(GADBannerView bannerView) {}
     @NotImplemented("adViewWillDismissScreen:")

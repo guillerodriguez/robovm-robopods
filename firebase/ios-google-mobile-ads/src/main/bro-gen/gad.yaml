@@ -251,6 +251,8 @@ protocols:
                 name: willLeaveApplication
             '-adView:didFailToReceiveAdWithError:':
                 name: didFailToReceiveAd
+            '-adViewDidRecordImpression:':
+                name: didRecordImpression
     GADCustomEventBanner:
         skip_adapter: true
         methods:

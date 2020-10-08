@@ -105,6 +105,10 @@ import org.robovm.apple.usernotifications.*;
     
     @Method(selector = "setAPNSToken:type:")
     public native void setAPNSToken(NSData apnsToken, FIRMessagingAPNSTokenType type);
+    @Method(selector = "tokenWithCompletion:")
+    public native void getToken(@Block VoidBlock2<NSString, NSError> completion);
+    @Method(selector = "deleteTokenWithCompletion:")
+    public native void deleteToken(@Block VoidBlock1<NSError> completion);
     @Method(selector = "retrieveFCMTokenForSenderID:completion:")
     public native void retrieveFCMToken(String senderID, @Block VoidBlock2<NSString, NSError> completion);
     @Method(selector = "deleteFCMTokenForSenderID:completion:")
@@ -125,6 +129,8 @@ import org.robovm.apple.usernotifications.*;
     public native void sendMessage(NSDictionary<?, ?> message, String receiver, String messageID, long ttl);
     @Method(selector = "appDidReceiveMessage:")
     public native FIRMessagingMessageInfo appDidReceiveMessage(NSDictionary<?, ?> message);
+    @Method(selector = "deleteDataWithCompletion:")
+    public native void deleteData(@Block VoidBlock1<NSError> completion);
     @Method(selector = "messaging")
     public static native FIRMessaging messaging();
     /**

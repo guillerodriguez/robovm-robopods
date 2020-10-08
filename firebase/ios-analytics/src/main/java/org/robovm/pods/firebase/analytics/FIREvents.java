@@ -45,6 +45,7 @@ import org.robovm.apple.foundation.*;
     public static final String AddPaymentInfo = "add_payment_info";
     public static final String AddToCart = "add_to_cart";
     public static final String AddToWishlist = "add_to_wishlist";
+    public static final String AdImpression = "ad_impression";
     public static final String AppOpen = "app_open";
     public static final String BeginCheckout = "begin_checkout";
     public static final String CampaignDetails = "campaign_details";

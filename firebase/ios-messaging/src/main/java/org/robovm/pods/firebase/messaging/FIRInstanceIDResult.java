@@ -32,9 +32,11 @@ import org.robovm.apple.usernotifications.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
+/**
+ * @deprecated FIRInstanceIDResult is deprecated, please use FIRInstallations for app instance identifier handling and use FIRMessaging for FCM registration token handling.
+ */
 /*</javadoc>*/
-/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass @Deprecated/*</annotations>*/
 /*<visibility>*/public/*</visibility>*/ class /*<name>*/FIRInstanceIDResult/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {

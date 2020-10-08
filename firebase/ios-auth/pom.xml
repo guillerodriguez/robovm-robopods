@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-firebase-auth-ios</artifactId>
-    <name>RoboPods FireBase Auth iOS v6.9.1 (Firebase v6.32.0)</name>
+    <name>RoboPods FireBase Auth iOS v6.9.2 (Firebase v6.34.0)</name>
     <packaging>jar</packaging>
 
     <licenses>

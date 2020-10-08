@@ -32,9 +32,11 @@ import org.robovm.apple.usernotifications.*;
 /*</imports>*/
 
 /*<javadoc>*/
-
+/**
+ * @deprecated FIRInstanceID is deprecated, please use FIRInstallations for installation identifier handling and use FIRMessaging for FCM registration token handling.
+ */
 /*</javadoc>*/
-/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass @Deprecated/*</annotations>*/
 /*<visibility>*/public/*</visibility>*/ class /*<name>*/FIRInstanceID/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
@@ -52,19 +54,41 @@ import org.robovm.apple.usernotifications.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Deprecated
     @GlobalValue(symbol="kFIRInstanceIDScopeFirebaseMessaging", optional=true)
     public static native String ScopeFirebaseMessaging();
+    @Deprecated
     @GlobalValue(symbol="kFIRInstanceIDTokenRefreshNotification", optional=true)
     public static native String TokenRefreshNotification();
     
+    /**
+     * @deprecated Use `Installations.installationID(completion:)` to get the app instance identifier instead. Use `Messaging.token(completion:)` to get FCM registration token instead.
+     */
+    @Deprecated
     @Method(selector = "instanceIDWithHandler:")
     public native void instanceID(@Block VoidBlock2<FIRInstanceIDResult, NSError> handler);
+    /**
+     * @deprecated Use Messaging.token(completion:) instead.
+     */
+    @Deprecated
     @Method(selector = "tokenWithAuthorizedEntity:scope:options:handler:")
     public native void token(String authorizedEntity, String scope, NSDictionary<?, ?> options, @Block VoidBlock2<NSString, NSError> handler);
+    /**
+     * @deprecated Use `Messaging.deleteToken(completion:)` instead.
+     */
+    @Deprecated
     @Method(selector = "deleteTokenWithAuthorizedEntity:scope:handler:")
     public native void deleteToken(String authorizedEntity, String scope, @Block VoidBlock1<NSError> handler);
+    /**
+     * @deprecated Use `Installations.installationID(completion:)` instead.
+     */
+    @Deprecated
     @Method(selector = "getIDWithHandler:")
     public native void getID(@Block VoidBlock2<NSString, NSError> handler);
+    /**
+     * @deprecated Use `Installations.delete(completion:)` instead. Also check `Messaging.deleteData(completion:)`if you want to delete FCM registration token.
+     */
+    @Deprecated
     @Method(selector = "deleteIDWithHandler:")
     public native void deleteID(@Block VoidBlock1<NSError> handler);
     @Method(selector = "instanceID")

@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-firebase-remote-config-ios</artifactId>
-    <name>RoboPods FireBase RemoteConfig iOS v4.9.0 (v6.30.0)</name>
+    <name>RoboPods FireBase RemoteConfig iOS v4.9.1 (v6.34.0)</name>
     <packaging>jar</packaging>
 
     <dependencies>

@@ -43,7 +43,11 @@ import org.robovm.apple.foundation.*;
     /*</bind>*/
     /*<constants>*/
     public static final String AchievementID = "achievement_id";
+    public static final String AdFormat = "ad_format";
     public static final String AdNetworkClickID = "aclid";
+    public static final String AdPlatform = "ad_platform";
+    public static final String AdSource = "ad_source";
+    public static final String AdUnitName = "ad_unit_name";
     public static final String Affiliation = "affiliation";
     public static final String Campaign = "campaign";
     public static final String Character = "character";
