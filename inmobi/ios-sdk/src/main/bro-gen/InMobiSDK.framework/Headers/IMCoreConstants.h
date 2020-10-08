@@ -71,7 +71,6 @@ typedef NS_ENUM(NSInteger, IMUnifiedTimeout) {
 // SDK Meta Info
 extern NSString* const kASIMUnifiedMediationNetworkName;
 extern NSString* const kASIMUnifiedSDKName;
-extern NSString* const kASIMUnifiedSDKVersion;
 
 // Unified SDK Timeouts
 extern NSTimeInterval const kASIMUnifiedStep0_Preinit_TimeoutDefaultVal;
@@ -138,7 +137,6 @@ extern NSString* const kASIMCodingHasRewardsKey;
 extern NSString* const kASIMCodingIsDebugKey;
 extern NSString* const kASIMCodingPubKeysKey;
 extern NSString* const kASIMCodingUserIdKey;
-extern NSString* const kASIMCodingDTBAdResponsesKey;
 extern NSString* const kASIMCodingSecureOnlyKey;
 extern NSString* const kASIMCodingKeywordsKey;
 extern NSString* const kASIMCodingExtKey;

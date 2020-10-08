@@ -139,8 +139,6 @@ import org.robovm.apple.coregraphics.*;
         public static native NSString MediationNetworkName();
         @GlobalValue(symbol="kASIMUnifiedSDKName", optional=true)
         public static native NSString SDKName();
-        @GlobalValue(symbol="kASIMUnifiedSDKVersion", optional=true)
-        public static native NSString SDKVersion();
     }
 
     @Library(Library.INTERNAL)
@@ -199,8 +197,6 @@ import org.robovm.apple.coregraphics.*;
         public static native NSString PubKeys();
         @GlobalValue(symbol="kASIMCodingUserIdKey", optional=true)
         public static native NSString UserId();
-        @GlobalValue(symbol="kASIMCodingDTBAdResponsesKey", optional=true)
-        public static native NSString DTBAdResponses();
         @GlobalValue(symbol="kASIMCodingSecureOnlyKey", optional=true)
         public static native NSString SecureOnly();
         @GlobalValue(symbol="kASIMCodingKeywordsKey", optional=true)
