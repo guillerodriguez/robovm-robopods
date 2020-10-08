@@ -57,6 +57,10 @@ import org.robovm.apple.coregraphics.*;
     public native boolean isMuted();
     @Property(selector = "setMuted:")
     public native void setMuted(boolean v);
+    @Property(selector = "adInfoButtonEnabled")
+    public native boolean isAdInfoButtonEnabled();
+    @Property(selector = "setAdInfoButtonEnabled:")
+    public native void setAdInfoButtonEnabled(boolean v);
     @Property(selector = "testDeviceAdvertisingIdentifiers")
     public native NSArray<NSString> getTestDeviceAdvertisingIdentifiers();
     @Property(selector = "setTestDeviceAdvertisingIdentifiers:")

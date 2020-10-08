@@ -28,6 +28,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL muted;
 
 /**
+ * Determines whether the ad info button will be displayed on fullscreen ads (debug and TestFlight builds only).
+ */
+@property (nonatomic, assign) BOOL adInfoButtonEnabled;
+
+/**
  * Enable devices to receive test ads, by passing in the advertising identifier (IDFA) of each test device.
  * Refer to AppLovin logs for the IDFA of your current device.
  */
