@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-flurry-ads-ios</artifactId>
-    <name>RoboPods Flurry Ads iOS (v11.0.0)</name>
+    <name>RoboPods Flurry Ads iOS (v11.1.0)</name>
     <packaging>jar</packaging>
 
     <licenses>
