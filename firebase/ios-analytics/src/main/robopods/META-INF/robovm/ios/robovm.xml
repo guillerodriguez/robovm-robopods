@@ -1,10 +1,11 @@
 <config>
     <frameworks>
+        <framework>FIRAnalyticsConnector</framework>
         <framework>FirebaseAnalytics</framework>
+        <framework>FirebaseCoreDiagnostics</framework>
         <framework>FirebaseInstallations</framework>
-        <framework>FirebaseInstanceID</framework>
         <framework>GoogleAppMeasurement</framework>
-        <framework>Protobuf</framework>
+        <framework>GoogleDataTransport</framework>
         <framework>nanopb</framework>
 
         <framework>storekit</framework>
