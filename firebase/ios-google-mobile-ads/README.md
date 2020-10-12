@@ -1,11 +1,7 @@
 # RoboPods for Firebase Google Mobile Ads 
 
 ### Frameworks required for this pod: 
-* GoogleMobileAds.framework
-* FirebaseCore.framework
-* GoogleAppMeasurement.framework
-* GoogleUtilities.framework
-* nanopb.framework
+* Firebase.zip/Google-Mobile-Ads-SDK/GoogleMobileAds.framework
 
 ### to use this pod configure your `robovm.xml`
 

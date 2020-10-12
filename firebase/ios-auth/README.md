@@ -1,11 +1,13 @@
 # Firebase iOS Authentication framework
 
 ### Frameworks required for this pod: 
-* FirebaseAuth.framework
-* GTMSessionFetcher.framework
+* FirebaseAuth.framework (from Firebase.zip/FirebaseAuth/FirebaseAuth.xcframework)
+* GTMSessionFetcher.framework (from Firebase.zip/FirebaseAuth/GTMSessionFetcher.xcframework)
 
-### Frameworks required for dependencies
-* FirebaseCore.framework
+Plus ones required for ios-core module:
+* FirebaseCore.framework (from Firebase.zip/FirebaseAnalytics/FirebaseCore.xcframework)
+* GoogleUtilities.framework (from Firebase.zip/FirebaseAnalytics/GoogleUtilities.xcframework)
+* PromisesObjC.framework (from Firebase.zip/FirebaseAnalytics/PromisesObjC.xcframework)
 
 ### to use this pod configure your `robovm.xml`
 

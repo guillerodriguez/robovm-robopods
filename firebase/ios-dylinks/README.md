@@ -1,12 +1,13 @@
 # Firebase iOS Dynamic Links framework
 
 ### Frameworks required for this pod: 
-* FirebaseDynamicLinks.framework
+* FirebaseDynamicLinks.framework (from Firebase.zip/FirebaseDynamicLinks/FirebaseDynamicLinks.xcframework)
 
-### Frameworks required for dependencies
-* FirebaseCore.framework
-* GoogleUtilities.framework
-* PromisesObjC.framework
+Plus ones required for ios-core module:
+* FirebaseCore.framework (from Firebase.zip/FirebaseAnalytics/FirebaseCore.xcframework)
+* GoogleUtilities.framework (from Firebase.zip/FirebaseAnalytics/GoogleUtilities.xcframework)
+* PromisesObjC.framework (from Firebase.zip/FirebaseAnalytics/PromisesObjC.xcframework)
+
 ### to use this pod configure your `robovm.xml`
 
 ```

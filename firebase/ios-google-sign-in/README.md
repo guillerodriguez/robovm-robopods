@@ -1,10 +1,10 @@
 # Firebase iOS Google SignIn framework
 
 ### Frameworks required for this pod: 
-* GoogleSignIn.framework
-* AppAuth.framework
-* GTMAppAuth.framework
-* GTMSessionFetcher.framework
+* Firebase.zip/GoogleSignIn/GoogleSignIn.framework
+* AppAuth.framework (from Firebase.zip/GoogleSignIn/AppAuth.xcframework)
+* GTMAppAuth.framework (from Firebase.zip/GoogleSignIn/GTMAppAuth.xcframework)
+* GTMSessionFetcher.framework (from Firebase.zip/GoogleSignIn/GTMSessionFetcher.xcframework)
 
 ### to use this pod configure your `robovm.xml`
 

@@ -1,15 +1,15 @@
 # Firebase iOS Messaging framework
 
 ### Frameworks required for this pod: 
-* FirebaseMessaging.framework
-* FirebaseInstanceID.framework
-* Protobuf.framework
-* nanopb.framework
+* FirebaseMessaging.framework (from Firebase.zip/FirebaseMessaging/FirebaseMessaging.xcframework)
+* FirebaseInstanceID.framework (from Firebase.zip/FirebaseMessaging/FirebaseInstanceID.xcframework)
+* FirebaseInstallations.framework (from Firebase.zip/FirebaseAnalytics/FirebaseInstallations.xcframework)
+* Protobuf.framework (from Firebase.zip/FirebaseMessaging/Protobuf.xcframework)
 
 Plus ones required for ios-core module:
-* GoogleUtilities.framework
-* FirebaseCore.framework
-* PromisesObjC.framework
+* FirebaseCore.framework (from Firebase.zip/FirebaseAnalytics/FirebaseCore.xcframework)
+* GoogleUtilities.framework (from Firebase.zip/FirebaseAnalytics/GoogleUtilities.xcframework)
+* PromisesObjC.framework (from Firebase.zip/FirebaseAnalytics/PromisesObjC.xcframework)
 
 ### to use this pod configure your `robovm.xml`
 [the official guide](https://firebase.google.com/docs/cloud-messaging/ios/client).

@@ -1,15 +1,15 @@
 # Firebase iOS Crashlytics framework
 
 ### Frameworks required for this pod: 
-* FirebaseCrashlytics.framework
-* FirebaseInstallations.framework
-* framework>nanopb.framework
-* GoogleDataTransport.framework
+* FirebaseCrashlytics.framework (from Firebase.zip/FirebaseCrashlytics/FirebaseCrashlytics.xcframework)
+* FirebaseInstallations.framework (from Firebase.zip/FirebaseAnalytics/FirebaseInstallations.xcframework)
+* GoogleDataTransport.framework (from Firebase.zip/FirebaseAnalytics/GoogleDataTransport.xcframework)
+* nanopb.framework (from Firebase.zip/FirebaseAnalytics/nanopb.xcframework)
 
 Plus ones required for ios-core module:
-* GoogleUtilities.framework
-* FirebaseCore.framework
-* PromisesObjC.framework
+* FirebaseCore.framework (from Firebase.zip/FirebaseAnalytics/FirebaseCore.xcframework)
+* GoogleUtilities.framework (from Firebase.zip/FirebaseAnalytics/GoogleUtilities.xcframework)
+* PromisesObjC.framework (from Firebase.zip/FirebaseAnalytics/PromisesObjC.xcframework)
 
 ### to use this pod configure your `robovm.xml`
 

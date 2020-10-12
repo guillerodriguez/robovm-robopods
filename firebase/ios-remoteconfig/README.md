@@ -1,15 +1,14 @@
 # Firebase iOS RemoteConfig framework
 
 ### Frameworks required for this pod: 
-* FirebaseRemoteConfig.framework
-* FirebaseABTesting.framework
-* FirebaseInstallations.framework
-* Protobuf.framework
+* FirebaseRemoteConfig.framework (from Firebase.zip/FirebaseRemoteConfig/FirebaseRemoteConfig.xcframework)
+* FirebaseABTesting.framework (from Firebase.zip/FirebaseRemoteConfig/FirebaseABTesting.xcframework)
+* FirebaseInstallations.framework (from Firebase.zip/FirebaseAnalytics/FirebaseInstallations.xcframework)
 
 Plus ones required for ios-core module:
-* GoogleUtilities.framework
-* FirebaseCore.framework
-* PromisesObjC.framework
+* FirebaseCore.framework (from Firebase.zip/FirebaseAnalytics/FirebaseCore.xcframework)
+* GoogleUtilities.framework (from Firebase.zip/FirebaseAnalytics/GoogleUtilities.xcframework)
+* PromisesObjC.framework (from Firebase.zip/FirebaseAnalytics/PromisesObjC.xcframework)
 
 ### to use this pod configure your `robovm.xml`
 

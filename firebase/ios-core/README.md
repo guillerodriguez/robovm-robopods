@@ -1,9 +1,9 @@
 # Firebase iOS Core framework
 
 ### Frameworks required for this pod: 
-* FirebaseCore.framework
-* GoogleUtilities.framework
-* PromisesObjC.framework
+* FirebaseCore.framework (from Firebase.zip/FirebaseAnalytics/FirebaseCore.xcframework)
+* GoogleUtilities.framework (from Firebase.zip/FirebaseAnalytics/GoogleUtilities.xcframework)
+* PromisesObjC.framework (from Firebase.zip/FirebaseAnalytics/PromisesObjC.xcframework)
 
 ### to use this pod configure your `robovm.xml`
 
