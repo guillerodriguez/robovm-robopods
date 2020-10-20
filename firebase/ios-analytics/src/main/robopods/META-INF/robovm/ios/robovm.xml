@@ -2,7 +2,9 @@
     <frameworks>
         <framework>FirebaseAnalytics</framework>
         <framework>FirebaseInstallations</framework>
+        <framework>FirebaseCoreDiagnostics</framework>
         <framework>GoogleAppMeasurement</framework>
+        <framework>GoogleDataTransport</framework>
         <framework>nanopb</framework>
 
         <framework>storekit</framework>

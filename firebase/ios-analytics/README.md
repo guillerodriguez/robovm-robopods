@@ -4,6 +4,8 @@
 * Firebase.zip/FirebaseAnalytics/FirebaseAnalytics.framework
 * Firebase.zip/FirebaseAnalytics/GoogleAppMeasurement.framework
 * FirebaseInstallations.framework (from Firebase.zip/FirebaseAnalytics/FirebaseInstallations.xcframework)
+* FirebaseCoreDiagnostics.framework (from Firebase.zip/FirebaseAnalytics/FirebaseCoreDiagnostics.xcframework)
+* GoogleDataTransport.framework (from Firebase.zip/FirebaseAnalytics/GoogleDataTransport.xcframework)  
 * nanopb.framework (from Firebase.zip/FirebaseAnalytics/nanopb.xcframework)
 
 Plus ones required for ios-core module:
