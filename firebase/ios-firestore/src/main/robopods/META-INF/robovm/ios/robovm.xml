@@ -1,0 +1,11 @@
+<config>
+    <frameworks>
+        <framework>FirebaseFirestore</framework>
+        <framework>abseil</framework>
+        <framework>BoringSSL-GRPC</framework>
+        <framework>gRPC-C++</framework>
+        <framework>gRPC-Core</framework>
+        <framework>leveldb-library</framework>
+        <framework>nanopb</framework>
+    </frameworks>
+</config>

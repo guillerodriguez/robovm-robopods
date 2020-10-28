@@ -18,6 +18,7 @@ Firebase gives you functionality like analytics, databases, messaging and crash 
 | [ios-google-ump](ios-google-ump/)        | Firebase iOS Google UMP       | 1.2.0*  |
 | [ios-messaging](ios-messaging/)          | Firebase iOS Messaging        | 4.7.1*  |
 | [ios-remoteconfig](ios-remoteconfig/)    | Firebase iOS Remote Config    | 4.9.1*  |
+| [ios-firestore](ios-remoteconfig/)       | Firebase iOS Firestore        | 1.19.0* |
 
 ## Versions
 
