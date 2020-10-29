@@ -33,5 +33,6 @@
         <module>ios-messaging</module>
         <module>ios-google-ump</module>
         <module>ios-firestore</module>
+        <module>ios-storage</module>
     </modules>
 </project>

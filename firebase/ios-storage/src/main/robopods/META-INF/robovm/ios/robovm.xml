@@ -1,0 +1,6 @@
+<config>
+    <frameworks>
+        <framework>FirebaseStorage</framework>
+        <framework>GTMSessionFetcher</framework>
+    </frameworks>
+</config>

@@ -1,0 +1,97 @@
+package: org.robovm.pods.firebase.storage
+include: [foundation, dispatch]
+framework: FirebaseStorage
+clang_args: ['-x', 'objective-c']
+headers:
+    - FirebaseStorage.h
+
+private_typedefs:
+    "FIRApp *": org.robovm.pods.firebase.core.FIRApp
+
+typedefs: {}
+
+enums:
+    FIRStorageTaskStatus: {}
+    FIRStorageErrorCode: {nserror: true}
+
+classes:
+    FIRStorage:
+        methods:
+            '-referenceWithPath:':
+                name: reference
+            '+storageWithURL:':
+                constructor: true
+                name: storage
+            '+storageForApp:URL:':
+                constructor: true
+                name: storageForApp
+    FIRStorageDownloadTask: {}
+    FIRStorageListResult: {}
+    FIRStorageMetadata:
+        methods:
+            '-initWithDictionary:':
+                name: init
+    FIRStorageObservableTask:
+        methods:
+            '-observeStatus:handler:':
+                name: observeStatus
+            '-removeObserverWithHandle:':
+                name: removeObserver
+    FIRStorageReference:
+        methods:
+            '-putData:metadata:':
+                name: putData
+            '-putData:metadata:completion:':
+                name: putData
+            '-putFile:metadata:':
+                name: putFile
+            '-putFile:metadata:completion:':
+                name: putFile
+            '-dataWithMaxSize:completion:':
+                name: data
+            '-downloadURLWithCompletion:':
+                name: downloadURL
+            '-writeToFile:completion:':
+                name: writeToFile
+            '-listAllWithCompletion:':
+                name: listAll
+            '-listWithMaxResults:completion:':
+                name: list
+            '-listWithMaxResults:pageToken:completion:':
+                name: list
+            '-metadataWithCompletion:':
+                name: metadata
+            '-updateMetadata:completion:':
+                name: updateMetadata
+            '-deleteWithCompletion:':
+                name: deleteWithCompletion$
+    FIRStorageTask: {}
+    FIRStorageTaskSnapshot: {}
+    FIRStorageUploadTask: {}
+
+protocols:
+    FIRStorageTaskManagement: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    FIRStorageErrorDomain:
+        class: FIRStorageErrorCode
+        name: getClassDomain
+    FIRStorageVersionString:
+        class: FIRStorage
+        name: VersionString
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
