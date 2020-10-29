@@ -16,7 +16,7 @@ Plus ones required for ios-core module:
 <config>
     ...
     <frameworkPaths>
-        <path>libs</path>  <!-- path where FirebaseFirestore.framework is located -->
+        <path>libs</path>  <!-- path where FirebaseStorage.framework is located -->
     </frameworkPaths>
 </config>
 ```
