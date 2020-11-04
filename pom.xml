@@ -204,5 +204,6 @@
         <module>flurry</module>
         <module>fyber</module>
         <module>inmobi</module>
+        <module>appcenter</module>
     </modules>
 </project>

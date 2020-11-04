@@ -1,0 +1,114 @@
+package: org.robovm.pods.appcenter.core
+framework: AppCenter
+include: [foundation]
+clang_args: ['-x', 'objective-c']
+headers:
+    - AppCenter.h
+
+private_typedefs:
+    # TODO: FIXME: these seems to be private objects and not available in framework headers
+    MSChannelDelegate: NSObject
+    MSChannelUnitProtocol: NSObject
+    MSIngestionProtocol: NSObject
+    MSChannelUnitConfiguration: NSObject
+enums:
+    MSLogLevel: {}
+    MSPriority: {}
+    MSInitializationPriority: {}
+    MSHTTPCodesNo: {}
+    MSACErrorCode: {nserror: true, prefix: MSAC, suffix: ErrorCode, first: MSACLogInvalidContainerErrorCode}
+    MSACErrorCode2: {prefix: MSAC, suffix: ErrorCode, first: MSACConnectionPausedErrorCode, merge_with: MSACErrorCode}
+
+classes:
+    MSAbstractLog: {}
+    MSAppCenter:
+        methods:
+            '+configureWithAppSecret:':
+                name: configure
+            '+start:withServices:':
+                name: start
+            '+startWithServices:':
+                name: start
+            '+startFromLibraryWithServices:':
+                name: startFromLibrary
+            '+setMaxStorageSize:completionHandler:':
+                name: setMaxStorageSize
+    MSCustomProperties:
+        methods:
+            '-setString:forKey:':
+                name: setString
+            '-setNumber:forKey:':
+                name: setNumber
+            '-setBool:forKey:':
+                name: setBool
+            '-setDate:forKey:':
+                name: setDate
+    MSDevice: {}
+    MSLogWithProperties: {}
+    MSLogger:
+        methods:
+            '+logMessage:level:tag:file:function:line:':
+                name: logMessage
+    MSServiceAbstract:
+        methods:
+            '-startWithChannelGroup:appSecret:transmissionTargetToken:fromApplication:':
+                name: start
+            '-updateConfigurationWithAppSecret:transmissionTargetToken:':
+                name: updateConfiguration
+    MSWrapperLogger:
+        methods:
+            '+MSWrapperLog:tag:level:':
+                constructor: true
+                name: create
+    MSWrapperSdk:
+        methods:
+            '-initWithWrapperSdkVersion:wrapperSdkName:wrapperRuntimeVersion:liveUpdateReleaseLabel:liveUpdateDeploymentKey:liveUpdatePackageHash:':
+                name: init
+protocols:
+    MSChannelGroupProtocol:
+        methods:
+            '-addChannelUnitWithConfiguration:':
+                name: addChannelUnit
+            '-addChannelUnitWithConfiguration:withIngestion:':
+                name: addChannelUnit
+            '-setMaxStorageSize:completionHandler:':
+                name: setMaxStorageSize
+    MSChannelProtocol:
+        methods:
+            '-pauseWithIdentifyingObject:':
+                name: pause
+            '-resumeWithIdentifyingObject:':
+                name: resume
+    MSEnable:
+        methods:
+            '-setEnabled:andDeleteDataOnDisabled:':
+                name: setEnabled
+    MSLog: {}
+    MSService: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    MS_APP_CENTER_BASE_DOMAIN:
+        exclude: true
+    kMSAC(.*)ErrorDesc:
+        class: MSACErrorCode
+        name: '#{g[0]}ErrorDesc'
+    kMSACConnectionHttpCodeErrorKey:
+        class: MSACErrorCode
+        name: getConnectionHttpCodeErrorKey
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
