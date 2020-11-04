@@ -1,0 +1,5 @@
+<config>
+    <frameworks>
+        <framework>AppCenterCrashes</framework>
+    </frameworks>
+</config>

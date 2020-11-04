@@ -1,0 +1,83 @@
+package: org.robovm.pods.appcenter.crashes
+framework: AppCenterCrashes
+include: [foundation]
+clang_args: ['-x', 'objective-c']
+headers:
+    - AppCenterCrashes.h
+
+private_typedefs:
+    "MSDevice *": org.robovm.pods.appcenter.core.MSDevice
+    # FIXME: bellow are missing or private items
+    MSChannelGroupProtocol: NSObject
+    MSException: NSObject
+enums:
+    MSErrorLogSetting: {}
+    MSUserConfirmation: {}
+
+classes:
+    MSAbstractLog: {}
+    MSCrashes:
+        methods:
+            '+notifyWithUserConfirmation:':
+                name: notify
+    MSErrorAttachmentLog:
+        methods:
+            '-initWithFilename:attachmentBinary:contentType:':
+                name: init
+            '-initWithFilename:attachmentText:':
+                name: init
+            '+attachmentWithText:filename:':
+                exclude: true
+            '+attachmentWithBinary:filename:contentType:':
+                exclude: true
+    MSErrorReport: {}
+    MSServiceAbstract:
+        methods:
+            '-startWithChannelGroup:appSecret:transmissionTargetToken:fromApplication:':
+                name: start
+            '-updateConfigurationWithAppSecret:transmissionTargetToken:':
+                name: updateConfiguration
+    MSWrapperCrashesHelper:
+        methods:
+            '+sendErrorAttachments:withIncidentIdentifier:':
+                name: sendErrorAttachments
+            '+trackModelException:withProperties:withAttachments:':
+                name: trackModelException
+            '+buildHandledErrorReportWithErrorID:':
+                name: buildHandledErrorReport
+protocols:
+    MSCrashHandlerSetupDelegate: {}
+    MSCrashesDelegate:
+        methods:
+            '-crashes:shouldProcessErrorReport:':
+                name: shouldProcessErrorReport
+            '-crashes:willSendErrorReport:':
+                name: willSendErrorReport
+            '-crashes:didSucceedSendingErrorReport:':
+                name: didSucceedSendingErrorReport
+            '-crashes:didFailSendingErrorReport:withError:':
+                name: didFailSendingErrorReport
+            '-attachmentsWithCrashes:forErrorReport:':
+                name: getAttachments
+    MSService: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    MSMSErrorLogAttachmentLogUtilityCategory:
+        exclude: true # TODO:not clear where it belongs to
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'

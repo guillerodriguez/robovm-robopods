@@ -21,6 +21,6 @@ Add the following dependency to your `build.gradle`:
 ```
 dependencies {
    ... other dependencies ...
-   compile "io.github.dkimitsa.robovm:robopods-appcenter-ios:$altpodsVersion"
+   compile "io.github.dkimitsa.robovm:robopods-appcenter-core-ios:$altpodsVersion"
 }
 ```
