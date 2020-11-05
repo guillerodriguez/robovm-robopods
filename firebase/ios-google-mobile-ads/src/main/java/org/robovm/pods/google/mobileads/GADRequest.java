@@ -68,6 +68,10 @@ import org.robovm.apple.uikit.*;
     public native String getContentURL();
     @Property(selector = "setContentURL:")
     public native void setContentURL(String v);
+    @Property(selector = "neighboringContentURLStrings")
+    public native NSArray<NSString> getNeighboringContentURLStrings();
+    @Property(selector = "setNeighboringContentURLStrings:")
+    public native void setNeighboringContentURLStrings(NSArray<NSString> v);
     @Property(selector = "requestAgent")
     public native String getRequestAgent();
     @Property(selector = "setRequestAgent:")

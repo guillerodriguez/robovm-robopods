@@ -53,6 +53,8 @@ import org.robovm.apple.uikit.*;
     /*<methods>*/
     @NotImplemented("loadBannerForAdConfiguration:completionHandler:")
     public void loadBanner(GADMediationBannerAdConfiguration adConfiguration, @Block Block2<GADMediationBannerAd, NSError, GADMediationBannerAdEventDelegate> completionHandler) {}
+    @NotImplemented("loadInterscrollerAdForAdConfiguration:completionHandler:")
+    public void loadInterscrollerAd(GADMediationBannerAdConfiguration adConfiguration, @Block Block2<GADMediationInterscrollerAd, NSError, GADMediationBannerAdEventDelegate> completionHandler) {}
     @NotImplemented("loadInterstitialForAdConfiguration:completionHandler:")
     public void loadInterstitial(GADMediationInterstitialAdConfiguration adConfiguration, @Block Block2<GADMediationInterstitialAd, NSError, GADMediationInterstitialAdEventDelegate> completionHandler) {}
     @NotImplemented("loadNativeAdForAdConfiguration:completionHandler:")

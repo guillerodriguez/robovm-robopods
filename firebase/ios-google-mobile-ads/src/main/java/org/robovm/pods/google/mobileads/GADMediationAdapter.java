@@ -51,6 +51,8 @@ import org.robovm.apple.uikit.*;
     /*<methods>*/
     @Method(selector = "loadBannerForAdConfiguration:completionHandler:")
     void loadBanner(GADMediationBannerAdConfiguration adConfiguration, @Block Block2<GADMediationBannerAd, NSError, GADMediationBannerAdEventDelegate> completionHandler);
+    @Method(selector = "loadInterscrollerAdForAdConfiguration:completionHandler:")
+    void loadInterscrollerAd(GADMediationBannerAdConfiguration adConfiguration, @Block Block2<GADMediationInterscrollerAd, NSError, GADMediationBannerAdEventDelegate> completionHandler);
     @Method(selector = "loadInterstitialForAdConfiguration:completionHandler:")
     void loadInterstitial(GADMediationInterstitialAdConfiguration adConfiguration, @Block Block2<GADMediationInterstitialAd, NSError, GADMediationInterstitialAdEventDelegate> completionHandler);
     @Method(selector = "loadNativeAdForAdConfiguration:completionHandler:")

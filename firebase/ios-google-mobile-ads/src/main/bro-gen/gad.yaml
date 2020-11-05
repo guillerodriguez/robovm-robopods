@@ -200,7 +200,32 @@ classes:
     GADVideoController: {}
     GADVideoOptions: {}
     GADAdNetworkResponseInfo: {}
-
+    GADInterstitialAdBeta:
+        methods:
+            '-canPresentFromRootViewController:error:':
+                name: canPresent
+            '+loadWithAdUnitID:request:completionHandler:':
+                name: load
+    GADRewardedAdBeta:
+        methods:
+            '-canPresentFromRootViewController:error:':
+                name: canPresent
+            '-presentFromRootViewController:userDidEarnRewardHandler:':
+                name: present
+            '+loadWithAdUnitID:request:completionHandler:':
+                name: load
+    GADRewardedInterstitialAd:
+        methods:
+            '-canPresentFromRootViewController:error:':
+                name: canPresent
+            '-presentFromRootViewController:userDidEarnRewardHandler:':
+                name: present
+            '+loadWithAdUnitID:request:completionHandler:':
+                name: load
+    GAMInterstitialAdBeta:
+        methods:
+            '+loadWithAdManagerAdUnitID:request:completionHandler:':
+                name: load
 protocols:
     DFPBannerAdLoaderDelegate:
         methods:
@@ -445,6 +470,8 @@ protocols:
                 name: setUp
             '-loadRewardedInterstitialAdForAdConfiguration:completionHandler:':
                 name: loadRewardedInterstitialAd
+            '-loadInterscrollerAdForAdConfiguration:completionHandler:':
+                name: loadInterscrollerAd
     GADMediationBannerAd: {}
     GADMediationBannerAdEventDelegate:
         skip_adapter: true
@@ -575,6 +602,15 @@ protocols:
             '-ad:didFailToPresentFullScreenContentWithError:':
                 name: didFailToPresentFullScreenContent
     GADFullScreenPresentingAd: {}
+    GADAdMetadataDelegate: {}
+    GADAdMetadataProvider: {}
+    GADAppEventDelegateBeta:
+        methods:
+            '-adView:didReceiveAppEvent:withInfo:':
+                name: didReceiveAppEvent
+            '-interstitialAd:didReceiveAppEvent:withInfo:':
+                name: didReceiveAppEvent
+    GADMediationInterscrollerAd: {}
 functions:
     # GADAdSize
     GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth:
