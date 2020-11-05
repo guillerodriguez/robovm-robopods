@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-firebase-storage-ios</artifactId>
-    <name>RoboPods Cloud Storage iOS v3.9.1 (Firebase v6.34.0)</name>
+    <name>RoboPods Cloud Storage iOS v7.0.0 (Firebase v7.0.0)</name>
     <packaging>jar</packaging>
 
     <licenses>

@@ -71,9 +71,6 @@ import org.robovm.apple.dispatch.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @GlobalValue(symbol="FIRStorageVersionString", optional=true)
-    public static native BytePtr VersionString();
-    
     @Method(selector = "reference")
     public native FIRStorageReference reference();
     @Method(selector = "referenceForURL:")
