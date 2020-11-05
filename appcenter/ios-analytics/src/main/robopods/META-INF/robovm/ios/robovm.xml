@@ -1,0 +1,5 @@
+<config>
+    <frameworks>
+        <framework>AppCenterAnalytics</framework>
+    </frameworks>
+</config>

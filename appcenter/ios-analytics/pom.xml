@@ -1,15 +1,14 @@
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.github.dkimitsa.robovm</groupId>
         <version>1.13.0-SNAPSHOT</version>
-        <artifactId>robopods-parent</artifactId>
+        <artifactId>robopods-appcenter-parent</artifactId>
     </parent>
 
-    <artifactId>robopods-appcenter-parent</artifactId>
-    <name>RoboPods Visual Studio App Center SDK for iOS Parent</name>
-    <packaging>pom</packaging>
+    <artifactId>robopods-appcenter-analytics-ios</artifactId>
+    <name>RoboPods Microsoft AppCenter Analytics iOS (v3.3.4)</name>
+    <packaging>jar</packaging>
 
     <licenses>
         <license>
@@ -19,9 +18,4 @@
         </license>
     </licenses>
 
-    <modules>
-        <module>ios-core</module>
-        <module>ios-crashes</module>
-        <module>ios-analytics</module>
-    </modules>
 </project>

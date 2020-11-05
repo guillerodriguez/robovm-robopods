@@ -1,0 +1,98 @@
+package: org.robovm.pods.appcenter.analytics
+framework: AppCenterAnalytics
+include: [foundation]
+clang_args: ['-x', 'objective-c']
+headers:
+    - AppCenterAnalytics.h
+
+private_typedefs:
+    # FIXME: bellow are missing or private items
+    MSChannelGroupProtocol: NSObject
+enums:
+    MSAnalyticsAuthenticationType: {}
+    MSFlags: {}
+
+classes:
+    MSAbstractLog: {}
+    MSAnalytics:
+        methods:
+            '+trackEvent:withProperties:':
+                name: trackEvent
+            '+trackEvent:withProperties:flags:':
+                name: trackEvent
+            '+trackEvent:withTypedProperties:':
+                name: trackEvent
+            '+trackEvent:withTypedProperties:flags:':
+                name: trackEvent
+    MSAnalyticsAuthenticationProvider:
+        methods:
+            '-initWithAuthenticationType:ticketKey:delegate:':
+                name: init
+    MSAnalyticsTransmissionTarget:
+        methods:
+            '-trackEvent:withProperties:':
+                name: trackEvent
+            '-trackEvent:withProperties:flags:':
+                name: trackEvent
+            '-trackEvent:withTypedProperties:':
+                name: trackEvent
+            '-trackEvent:withTypedProperties:flags:':
+                name: trackEvent
+    MSEventLog: {}
+    MSEventProperties:
+        methods:
+            '-setString:forKey:':
+                name: setString
+            '-setDouble:forKey:':
+                name: setDouble
+            '-setInt64:forKey:':
+                name: setInt64
+            '-setBool:forKey:':
+                name: setBool
+            '-setDate:forKey:':
+                name: setDate
+    MSLogWithNameAndProperties: {}
+    MSLogWithProperties: {}
+    MSPropertyConfigurator:
+        methods:
+            '-setEventPropertyString:forKey:':
+                name: setEventPropertyString
+            '-setEventPropertyDouble:forKey:':
+                name: setEventPropertyDouble
+            '-setEventPropertyInt64:forKey:':
+                name: setEventPropertyInt64$
+            '-setEventPropertyBool:forKey:':
+                name: setEventPropertyBool
+            '-setEventPropertyDate:forKey:':
+                name: setEventPropertyDate
+    MSServiceAbstract:
+        methods:
+            '-startWithChannelGroup:appSecret:transmissionTargetToken:fromApplication:':
+                name: start
+            '-updateConfigurationWithAppSecret:transmissionTargetToken:':
+                name: updateConfiguration
+protocols:
+    MSAnalyticsAuthenticationProviderDelegate:
+        methods:
+            '-authenticationProvider:acquireTokenWithCompletionHandler:':
+                name: acquireToken
+    MSService: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
