@@ -4,9 +4,6 @@ App Center Analytics helps you understand user behavior and customer engagement 
 ### Frameworks required for this pod:
 * AppCenterAnalytics.framework 
 
-Plus ones required for ios-core module:
-* AppCenter.framework
-
 ### to use this pod configure your `robovm.xml`
 
 ```
