@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Google
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,11 @@
  * limitations under the License.
  */
 
-#import "FIRApp.h"
-#import "FIRConfiguration.h"
-#import "FIRLoggerLevel.h"
-#import "FIROptions.h"
-#import "FIRVersion.h"
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+NS_SWIFT_NAME(FirebaseVersion())
+NSString* FIRFirebaseVersion(void);
+
+NS_ASSUME_NONNULL_END

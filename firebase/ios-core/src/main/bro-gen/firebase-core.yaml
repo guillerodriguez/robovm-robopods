@@ -27,6 +27,9 @@ classes:
 protocols: {}
 
 functions:
+    FIRFirebaseVersion:
+        class: FIRApp
+        name: getFirebaseVersion
     # Make sure we don't miss any functions if new ones are introduced in a later version
     (.*):
         class: __FixMe

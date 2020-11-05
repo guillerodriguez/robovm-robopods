@@ -42,7 +42,7 @@ import org.robovm.apple.foundation.*;
     /*<bind>*/static { ObjCRuntime.bind(FIROptions.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public FIROptions() {}
+    protected FIROptions() {}
     protected FIROptions(Handle h, long handle) { super(h, handle); }
     protected FIROptions(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithContentsOfFile:")

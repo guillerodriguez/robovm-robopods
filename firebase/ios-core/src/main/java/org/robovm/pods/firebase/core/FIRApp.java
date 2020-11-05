@@ -60,6 +60,9 @@ import org.robovm.apple.foundation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Bridge(symbol="FIRFirebaseVersion", optional=true)
+    public static native String getFirebaseVersion();
+    
     @Method(selector = "deleteApp:")
     public native void deleteApp(@Block VoidBooleanBlock completion);
     @Method(selector = "configure")
