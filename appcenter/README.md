@@ -4,7 +4,7 @@
 
 | RoboPod                           | Description                               |
 |-----------------------------------|-------------------------------------------|
-| [ios-appcente](ios-core/)         | AppCenter Core                            |
+| [ios-appcenter](ios-core/)        | AppCenter Core                            |
 | [ios-analytics](ios-analytics/)   | AppCenter Analytics                       |
 | [ios-crashes](ios-crashes/)       | AppCenter Crashes                         |
 | [ios-distribute](ios-distribute/) | AppCenter Distribute                      |
