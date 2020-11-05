@@ -65,8 +65,6 @@ import org.robovm.apple.coregraphics.*;
     public native void setMediationProvider(String v);
     @Property(selector = "adService")
     public native ALAdService getAdService();
-    @Property(selector = "nativeAdService")
-    public native ALNativeAdService getNativeAdService();
     @Property(selector = "postbackService")
     public native ALPostbackService getPostbackService();
     @Property(selector = "eventService")
@@ -79,6 +77,12 @@ import org.robovm.apple.coregraphics.*;
     public native String getUserIdentifier();
     @Property(selector = "setUserIdentifier:")
     public native void setUserIdentifier(String v);
+    /**
+     * @deprecated Native ads have been deprecated and will be removed in a future SDK version.
+     */
+    @Deprecated
+    @Property(selector = "nativeAdService")
+    public native ALNativeAdService getNativeAdService();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

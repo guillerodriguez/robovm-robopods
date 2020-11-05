@@ -65,6 +65,10 @@ import org.robovm.apple.coregraphics.*;
     public static native MAAdFormat getNative();
     @Property(selector = "size")
     public native @ByVal CGSize getSize();
+    @Property(selector = "isFullscreenAd")
+    public native boolean isFullscreenAd();
+    @Property(selector = "isAdViewAd")
+    public native boolean isAdViewAd();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
