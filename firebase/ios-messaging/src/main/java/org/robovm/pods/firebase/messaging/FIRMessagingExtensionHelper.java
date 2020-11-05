@@ -32,9 +32,7 @@ import org.robovm.apple.usernotifications.*;
 /*</imports>*/
 
 /*<javadoc>*/
-/**
- * @since Available in iOS 10.0 and later.
- */
+
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
 /*<visibility>*/public/*</visibility>*/ class /*<name>*/FIRMessagingExtensionHelper/*</name>*/ 

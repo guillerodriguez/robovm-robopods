@@ -45,12 +45,6 @@ import org.robovm.apple.foundation.*;
     public FIRRemoteConfigSettings() {}
     protected FIRRemoteConfigSettings(Handle h, long handle) { super(h, handle); }
     protected FIRRemoteConfigSettings(SkipInit skipInit) { super(skipInit); }
-    /**
-     * @deprecated This no longer needs to be set during development. Refer to documentation for additional details.
-     */
-    @Deprecated
-    @Method(selector = "initWithDeveloperModeEnabled:")
-    public FIRRemoteConfigSettings(boolean developerModeEnabled) { super((SkipInit) null); initObject(init(developerModeEnabled)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "minimumFetchInterval")
@@ -61,20 +55,9 @@ import org.robovm.apple.foundation.*;
     public native double getFetchTimeout();
     @Property(selector = "setFetchTimeout:")
     public native void setFetchTimeout(double v);
-    /**
-     * @deprecated This no longer needs to be set during development. Refer to documentation for additional details.
-     */
-    @Deprecated
-    @Property(selector = "isDeveloperModeEnabled")
-    public native boolean isDeveloperModeEnabled();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    /**
-     * @deprecated This no longer needs to be set during development. Refer to documentation for additional details.
-     */
-    @Deprecated
-    @Method(selector = "initWithDeveloperModeEnabled:")
-    protected native @Pointer long init(boolean developerModeEnabled);
+    
     /*</methods>*/
 }

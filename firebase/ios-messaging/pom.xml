@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>robopods-firebase-messaging-ios</artifactId>
-    <name>RoboPods FireBase Messaging iOS v4.7.1 (v6.30.4)</name>
+    <name>RoboPods FireBase Messaging iOS v7.0.0 (v7.0.0)</name>
     <packaging>jar</packaging>
 
     <dependencies>

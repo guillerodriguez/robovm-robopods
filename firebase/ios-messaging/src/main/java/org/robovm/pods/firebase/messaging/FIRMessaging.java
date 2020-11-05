@@ -52,24 +52,6 @@ import org.robovm.apple.usernotifications.*;
     public native FIRMessagingDelegate getDelegate();
     @Property(selector = "setDelegate:", strongRef = true)
     public native void setDelegate(FIRMessagingDelegate v);
-    /**
-     * @deprecated FCM direct channel is deprecated, please use APNs channel for downstream message delivery.
-     */
-    @Deprecated
-    @Property(selector = "shouldEstablishDirectChannel")
-    public native boolean shouldEstablishDirectChannel();
-    /**
-     * @deprecated FCM direct channel is deprecated, please use APNs channel for downstream message delivery.
-     */
-    @Deprecated
-    @Property(selector = "setShouldEstablishDirectChannel:")
-    public native void setShouldEstablishDirectChannel(boolean v);
-    /**
-     * @deprecated FCM direct channel is deprecated, please use APNs channel for downstream message delivery.
-     */
-    @Deprecated
-    @Property(selector = "isDirectChannelEstablished")
-    public native boolean isDirectChannelEstablished();
     @Property(selector = "APNSToken")
     public native NSData getAPNSToken();
     @Property(selector = "setAPNSToken:")
@@ -87,18 +69,6 @@ import org.robovm.apple.usernotifications.*;
     public static class Notifications {
         static { Bro.bind(Notifications.class); }
 
-        @Deprecated
-        @GlobalValue(symbol="FIRMessagingSendSuccessNotification", optional=true)
-        public static native NSString SendSuccess();
-        @Deprecated
-        @GlobalValue(symbol="FIRMessagingSendErrorNotification", optional=true)
-        public static native NSString SendError();
-        @Deprecated
-        @GlobalValue(symbol="FIRMessagingMessagesDeletedNotification", optional=true)
-        public static native NSString MessagesDeleted();
-        @Deprecated
-        @GlobalValue(symbol="FIRMessagingConnectionStateChangedNotification", optional=true)
-        public static native NSString ConnectionStateChanged();
         @GlobalValue(symbol="FIRMessagingRegistrationTokenRefreshedNotification", optional=true)
         public static native NSString RegistrationTokenRefreshed();
     }
@@ -121,12 +91,6 @@ import org.robovm.apple.usernotifications.*;
     public native void unsubscribeFromTopic(String topic);
     @Method(selector = "unsubscribeFromTopic:completion:")
     public native void unsubscribeFromTopic(String topic, @Block VoidBlock1<NSError> completion);
-    /**
-     * @deprecated Upstream messaging through direct channel is deprecated. For realtime updates, use Cloud Firestore, Realtime Database, or other services.
-     */
-    @Deprecated
-    @Method(selector = "sendMessage:to:withMessageID:timeToLive:")
-    public native void sendMessage(NSDictionary<?, ?> message, String receiver, String messageID, long ttl);
     @Method(selector = "appDidReceiveMessage:")
     public native FIRMessagingMessageInfo appDidReceiveMessage(NSDictionary<?, ?> message);
     @Method(selector = "deleteDataWithCompletion:")

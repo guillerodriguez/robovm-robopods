@@ -49,12 +49,6 @@ import org.robovm.apple.usernotifications.*;
     /*<methods>*/
     @Method(selector = "messaging:didReceiveRegistrationToken:")
     void didReceiveRegistrationToken(FIRMessaging messaging, String fcmToken);
-    /**
-     * @deprecated FCM direct channel is deprecated, please use APNs for downstream message handling.
-     */
-    @Deprecated
-    @Method(selector = "messaging:didReceiveMessage:")
-    void didReceiveMessage(FIRMessaging messaging, FIRMessagingRemoteMessage remoteMessage);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/
