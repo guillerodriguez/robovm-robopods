@@ -35,22 +35,29 @@ import org.robovm.apple.webkit.*;
 /*</imports>*/
 
 /*<javadoc>*/
+
 /*</javadoc>*/
-/*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBSDKCore/*</name>*/ 
-    extends /*<extends>*/CocoaUtility/*</extends>*/ 
+/*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/FBSDKAppLinkResolverRequestBuilder/*</name>*/ 
+    extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/
-    /*</ptr>*/
-    /*<bind>*/
-    /*</bind>*/
-    /*<constants>*/
-    public static final String Version = "8.1.0";
-    public static final String PlatformVersion = "v8.0";
-    /*</constants>*/
-    /*<constructors>*//*</constructors>*/
-    /*<properties>*//*</properties>*/
+    /*<ptr>*/public static class FBSDKAppLinkResolverRequestBuilderPtr extends Ptr<FBSDKAppLinkResolverRequestBuilder, FBSDKAppLinkResolverRequestBuilderPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(FBSDKAppLinkResolverRequestBuilder.class); }/*</bind>*/
+    /*<constants>*//*</constants>*/
+    /*<constructors>*/
+    public FBSDKAppLinkResolverRequestBuilder() {}
+    protected FBSDKAppLinkResolverRequestBuilder(Handle h, long handle) { super(h, handle); }
+    protected FBSDKAppLinkResolverRequestBuilder(SkipInit skipInit) { super(skipInit); }
+    /*</constructors>*/
+    /*<properties>*/
+    
+    /*</properties>*/
     /*<members>*//*</members>*/
-    /*<methods>*//*</methods>*/
+    /*<methods>*/
+    @Method(selector = "requestForURLs:")
+    public native FBSDKGraphRequest requestForURLs(NSArray<NSURL> urls);
+    @Method(selector = "getIdiomSpecificField")
+    public native String getIdiomSpecificField();
+    /*</methods>*/
 }

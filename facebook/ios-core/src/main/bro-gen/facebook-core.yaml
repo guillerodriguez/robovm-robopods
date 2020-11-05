@@ -209,6 +209,7 @@ classes:
             '+startGCDTimerWithInterval:block:':
                 name: startGCDTimer
     FBSDKWebViewAppLinkResolver: {}
+    FBSDKAppLinkResolverRequestBuilder: {}
 
 protocols:
     FBSDKAppLinkResolving:
