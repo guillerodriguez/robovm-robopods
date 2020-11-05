@@ -42,7 +42,7 @@ import org.robovm.apple.foundation.*;
     /*<bind>*/static { ObjCRuntime.bind(FIRAnalytics.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public FIRAnalytics() {}
+    protected FIRAnalytics() {}
     protected FIRAnalytics(Handle h, long handle) { super(h, handle); }
     protected FIRAnalytics(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
@@ -51,6 +51,26 @@ import org.robovm.apple.foundation.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
+    @Library(Library.INTERNAL)
+    public static class ConsentStatus {
+        static { Bro.bind(ConsentStatus.class); }
+
+        @GlobalValue(symbol="FIRConsentStatusDenied", optional=true)
+        public static native NSString Denied();
+        @GlobalValue(symbol="FIRConsentStatusGranted", optional=true)
+        public static native NSString Granted();
+    }
+
+    @Library(Library.INTERNAL)
+    public static class ConsentType {
+        static { Bro.bind(ConsentType.class); }
+
+        @GlobalValue(symbol="FIRConsentTypeAdStorage", optional=true)
+        public static native NSString AdStorage();
+        @GlobalValue(symbol="FIRConsentTypeAnalyticsStorage", optional=true)
+        public static native NSString AnalyticsStorage();
+    }
+    
     @Method(selector = "logEventWithName:parameters:")
     public static native void logEvent(String name, NSDictionary<NSString, ?> parameters);
     @Method(selector = "setUserPropertyString:forName:")
@@ -79,5 +99,7 @@ import org.robovm.apple.foundation.*;
     public static native void handleOpenURL(NSURL url);
     @Method(selector = "handleUserActivity:")
     public static native void handleUserActivity(NSObject userActivity);
+    @Method(selector = "setConsent:")
+    public static native void setConsent(NSDictionary<NSString, NSString> consentSettings);
     /*</methods>*/
 }

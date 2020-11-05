@@ -27,6 +27,17 @@ functions:
         name: 'Function_#{g[0]}'
 
 values:
+    FIRConsentType(.*):
+        class: FIRAnalytics
+        static_class: ConsentType
+        type: NSString
+        name: '#{g[0]}'
+    FIRConsentStatus(.*):
+        class: FIRAnalytics
+        static_class: ConsentStatus
+        type: NSString
+        name: '#{g[0]}'
+
     # Make sure we don't miss any values if new ones are introduced in a later version
     (.*):
         class: __FixMe
