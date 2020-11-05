@@ -1,13 +1,11 @@
 package: org.robovm.pods.appcenter.distribute
 framework: AppCenterDistribute
-include: [foundation]
+include: [foundation, ../../../../ios-core/src/main/bro-gen/appcenter.yaml]
 clang_args: ['-x', 'objective-c']
 headers:
     - AppCenterDistribute.h
 
 private_typedefs:
-    # FIXME: bellow are missing or private items
-    MSChannelGroupProtocol: NSObject
 
 enums:
     MSUpdateAction: {}
@@ -17,17 +15,14 @@ classes:
     MSDistribute: {}
     MSReleaseDetails: {}
     MSServiceAbstract:
-        methods:
-            '-startWithChannelGroup:appSecret:transmissionTargetToken:fromApplication:':
-                name: start
-            '-updateConfigurationWithAppSecret:transmissionTargetToken:':
-                name: updateConfiguration
+        exclude: true # part of core
 protocols:
     MSDistributeDelegate:
         methods:
             '-distribute:releaseAvailableWithDetails:':
                 name: releaseAvailable
-    MSService: {}
+    MSService:
+        exclude: true # part of core
 
 functions:
     # Make sure we don't miss any functions if new ones are introduced in a later version

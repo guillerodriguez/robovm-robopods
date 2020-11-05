@@ -1,21 +1,20 @@
 package: org.robovm.pods.appcenter.crashes
 framework: AppCenterCrashes
-include: [foundation]
+include: [foundation, ../../../../ios-core/src/main/bro-gen/appcenter.yaml]
 clang_args: ['-x', 'objective-c']
 headers:
     - AppCenterCrashes.h
 
 private_typedefs:
-    "MSDevice *": org.robovm.pods.appcenter.core.MSDevice
     # FIXME: bellow are missing or private items
-    MSChannelGroupProtocol: NSObject
     MSException: NSObject
 enums:
     MSErrorLogSetting: {}
     MSUserConfirmation: {}
 
 classes:
-    MSAbstractLog: {}
+    MSAbstractLog:
+        exclude: true # part of core
     MSCrashes:
         methods:
             '+notifyWithUserConfirmation:':
@@ -32,11 +31,7 @@ classes:
                 exclude: true
     MSErrorReport: {}
     MSServiceAbstract:
-        methods:
-            '-startWithChannelGroup:appSecret:transmissionTargetToken:fromApplication:':
-                name: start
-            '-updateConfigurationWithAppSecret:transmissionTargetToken:':
-                name: updateConfiguration
+        exclude: true # part of core
     MSWrapperCrashesHelper:
         methods:
             '+sendErrorAttachments:withIncidentIdentifier:':
@@ -59,7 +54,8 @@ protocols:
                 name: didFailSendingErrorReport
             '-attachmentsWithCrashes:forErrorReport:':
                 name: getAttachments
-    MSService: {}
+    MSService:
+        exclude: true # part of core
 
 functions:
     # Make sure we don't miss any functions if new ones are introduced in a later version

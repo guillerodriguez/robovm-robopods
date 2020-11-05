@@ -28,6 +28,7 @@ import org.robovm.rt.bro.*;
 import org.robovm.rt.bro.annotation.*;
 import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
+import org.robovm.pods.appcenter.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
@@ -62,7 +63,7 @@ import org.robovm.apple.foundation.*;
     @Property(selector = "appErrorTime")
     public native NSDate getAppErrorTime();
     @Property(selector = "device")
-    public native org.robovm.pods.appcenter.core.MSDevice getDevice();
+    public native MSDevice getDevice();
     @Property(selector = "appProcessIdentifier")
     public native @MachineSizedUInt long getAppProcessIdentifier();
     /*</properties>*/

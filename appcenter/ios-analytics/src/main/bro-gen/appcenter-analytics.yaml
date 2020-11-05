@@ -1,19 +1,19 @@
 package: org.robovm.pods.appcenter.analytics
 framework: AppCenterAnalytics
-include: [foundation]
+include: [foundation, ../../../../ios-core/src/main/bro-gen/appcenter.yaml]
 clang_args: ['-x', 'objective-c']
 headers:
     - AppCenterAnalytics.h
 
 private_typedefs:
-    # FIXME: bellow are missing or private items
-    MSChannelGroupProtocol: NSObject
+
 enums:
     MSAnalyticsAuthenticationType: {}
     MSFlags: {}
 
 classes:
-    MSAbstractLog: {}
+    MSAbstractLog:
+        exclude: true # part of core
     MSAnalytics:
         methods:
             '+trackEvent:withProperties:':
@@ -66,17 +66,14 @@ classes:
             '-setEventPropertyDate:forKey:':
                 name: setEventPropertyDate
     MSServiceAbstract:
-        methods:
-            '-startWithChannelGroup:appSecret:transmissionTargetToken:fromApplication:':
-                name: start
-            '-updateConfigurationWithAppSecret:transmissionTargetToken:':
-                name: updateConfiguration
+        exclude: true # part of core
 protocols:
     MSAnalyticsAuthenticationProviderDelegate:
         methods:
             '-authenticationProvider:acquireTokenWithCompletionHandler:':
                 name: acquireToken
-    MSService: {}
+    MSService:
+        exclude: true # part of core
 
 functions:
     # Make sure we don't miss any functions if new ones are introduced in a later version
