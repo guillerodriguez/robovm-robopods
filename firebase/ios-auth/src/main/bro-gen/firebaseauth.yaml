@@ -76,6 +76,8 @@ classes:
                 name: getStoredUser
             '+authWithApp:':
                 name: auth
+            '-useEmulatorWithHost:port:':
+                name: useEmulator
     FIRAuthCredential: {}
     FIRAuthDataResult: {}
     FIRAuthErrors: {exclude: true} # empty used only for aggregation

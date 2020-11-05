@@ -57,11 +57,6 @@ import org.robovm.apple.uikit.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    /**
-     * @deprecated Please directly use email or previousEmail properties instead.
-     */
-    @Deprecated
-    @Method(selector = "dataForKey:")
-    public native String dataForKey(FIRActionDataKey key);
+    
     /*</methods>*/
 }

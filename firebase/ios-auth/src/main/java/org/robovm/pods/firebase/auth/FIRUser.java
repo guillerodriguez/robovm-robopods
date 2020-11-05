@@ -89,12 +89,6 @@ import org.robovm.apple.uikit.*;
     public native void reload(@Block VoidBlock1<NSError> completion);
     @Method(selector = "reauthenticateWithCredential:completion:")
     public native void reauthenticate(FIRAuthCredential credential, @Block VoidBlock2<FIRAuthDataResult, NSError> completion);
-    /**
-     * @deprecated Please use reauthenticateWithCredential:completion: for Objective-C or reauthenticate(withCredential:completion:) for Swift instead.
-     */
-    @Deprecated
-    @Method(selector = "reauthenticateAndRetrieveDataWithCredential:completion:")
-    public native void reauthenticateAndRetrieveData(FIRAuthCredential credential, @Block VoidBlock2<FIRAuthDataResult, NSError> completion);
     @Method(selector = "reauthenticateWithProvider:UIDelegate:completion:")
     public native void reauthenticate(FIRFederatedAuthProvider provider, FIRAuthUIDelegate UIDelegate, @Block VoidBlock2<FIRAuthDataResult, NSError> completion);
     @Method(selector = "getIDTokenResultWithCompletion:")
@@ -105,12 +99,6 @@ import org.robovm.apple.uikit.*;
     public native void getIDToken(@Block VoidBlock2<NSString, NSError> completion);
     @Method(selector = "getIDTokenForcingRefresh:completion:")
     public native void getIDTokenForcingRefresh(boolean forceRefresh, @Block VoidBlock2<NSString, NSError> completion);
-    /**
-     * @deprecated Please use linkWithCredential:completion: for Objective-C or link(withCredential:completion:) for Swift instead.
-     */
-    @Deprecated
-    @Method(selector = "linkAndRetrieveDataWithCredential:completion:")
-    public native void linkAndRetrieveData(FIRAuthCredential credential, @Block VoidBlock2<FIRAuthDataResult, NSError> completion);
     @Method(selector = "linkWithCredential:completion:")
     public native void link(FIRAuthCredential credential, @Block VoidBlock2<FIRAuthDataResult, NSError> completion);
     @Method(selector = "linkWithProvider:UIDelegate:completion:")

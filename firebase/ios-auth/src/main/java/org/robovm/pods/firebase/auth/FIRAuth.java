@@ -73,10 +73,6 @@ import org.robovm.apple.uikit.*;
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @GlobalValue(symbol="FirebaseAuthVersionNum", optional=true)
-    public static native double getVersionNum();
-    @GlobalValue(symbol="FirebaseAuthVersionStr", optional=true)
-    public static native @org.robovm.rt.bro.annotation.Marshaler(StringMarshalers.AsAsciiZMarshaler.class) String getVersionStr();
     @Library(Library.INTERNAL)
     public static class Notifications {
         static { Bro.bind(Notifications.class); }
@@ -87,12 +83,6 @@ import org.robovm.apple.uikit.*;
     
     @Method(selector = "updateCurrentUser:completion:")
     public native void updateCurrentUser(FIRUser user, @Block VoidBlock1<NSError> completion);
-    /**
-     * @deprecated Please use fetchSignInMethodsForEmail:completion: for Objective-C or fetchSignInMethods(forEmail:completion:) for Swift instead.
-     */
-    @Deprecated
-    @Method(selector = "fetchProvidersForEmail:completion:")
-    public native void fetchProviders(String email, @Block VoidBlock2<NSArray<NSString>, NSError> completion);
     @Method(selector = "fetchSignInMethodsForEmail:completion:")
     public native void fetchSignInMethods(String email, @Block VoidBlock2<NSArray<NSString>, NSError> completion);
     @Method(selector = "signInWithEmail:password:completion:")
@@ -101,12 +91,6 @@ import org.robovm.apple.uikit.*;
     public native void signInUsingEmailLink(String email, String link, @Block VoidBlock2<FIRAuthDataResult, NSError> completion);
     @Method(selector = "signInWithProvider:UIDelegate:completion:")
     public native void signInUsingProvider(FIRFederatedAuthProvider provider, FIRAuthUIDelegate UIDelegate, @Block VoidBlock2<FIRAuthDataResult, NSError> completion);
-    /**
-     * @deprecated Please use signInWithCredential:completion: for Objective-C or signIn(with:completion:) for Swift instead.
-     */
-    @Deprecated
-    @Method(selector = "signInAndRetrieveDataWithCredential:completion:")
-    public native void signInAndRetrieveData(FIRAuthCredential credential, @Block VoidBlock2<FIRAuthDataResult, NSError> completion);
     @Method(selector = "signInWithCredential:completion:")
     public native void signInUsingCredential(FIRAuthCredential credential, @Block VoidBlock2<FIRAuthDataResult, NSError> completion);
     @Method(selector = "signInAnonymouslyWithCompletion:")
@@ -143,6 +127,8 @@ import org.robovm.apple.uikit.*;
     public native void removeIDTokenDidChangeListener(NSObject listenerHandle);
     @Method(selector = "useAppLanguage")
     public native void useAppLanguage();
+    @Method(selector = "useEmulatorWithHost:port:")
+    public native void useEmulator(String host, @MachineSizedSInt long port);
     @Method(selector = "canHandleURL:")
     public native boolean canHandleURL(NSURL URL);
     @Method(selector = "setAPNSToken:type:")
