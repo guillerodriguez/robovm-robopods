@@ -4,7 +4,6 @@
 * FirebaseMessaging.framework (from Firebase.zip/FirebaseMessaging/FirebaseMessaging.xcframework)
 * FirebaseInstanceID.framework (from Firebase.zip/FirebaseMessaging/FirebaseInstanceID.xcframework)
 * FirebaseInstallations.framework (from Firebase.zip/FirebaseAnalytics/FirebaseInstallations.xcframework)
-* Protobuf.framework (from Firebase.zip/FirebaseMessaging/Protobuf.xcframework)
 
 Plus ones required for ios-core module:
 * FirebaseCore.framework (from Firebase.zip/FirebaseAnalytics/FirebaseCore.xcframework)

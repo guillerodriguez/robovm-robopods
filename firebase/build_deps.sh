@@ -48,6 +48,7 @@ sort -o out/symbols out/symbols
 frameworks=(
   FirebaseCore
   FirebaseAnalytics
+  FirebaseCoreDiagnostics
   FirebaseAuth
   FirebaseCrashlytics
   FirebaseDatabase
@@ -57,6 +58,8 @@ frameworks=(
   UserMessagingPlatform
   FirebaseMessaging
   FirebaseRemoteConfig
+  FirebaseFirestore
+  FirebaseStorage
 )
 
 echo "Results:"
