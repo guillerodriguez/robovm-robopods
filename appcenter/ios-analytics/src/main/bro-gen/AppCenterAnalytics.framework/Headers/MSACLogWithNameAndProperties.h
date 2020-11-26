@@ -3,9 +3,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MSLogWithProperties.h"
+#import "MSACLogWithProperties.h"
 
-@interface MSLogWithNameAndProperties : MSLogWithProperties
+NS_SWIFT_NAME(LogWithNameAndProperties)
+@interface MSACLogWithNameAndProperties : MSACLogWithProperties
 
 /**
  * Name of the event.

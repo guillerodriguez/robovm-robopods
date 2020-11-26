@@ -35,17 +35,17 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSEventLog/*</name>*/ 
-    extends /*<extends>*/MSLogWithNameAndProperties/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACEventLog/*</name>*/ 
+    extends /*<extends>*/MSACLogWithNameAndProperties/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSEventLogPtr extends Ptr<MSEventLog, MSEventLogPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSEventLog.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACEventLogPtr extends Ptr<MSACEventLog, MSACEventLogPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACEventLog.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSEventLog() {}
-    protected MSEventLog(Handle h, long handle) { super(h, handle); }
-    protected MSEventLog(SkipInit skipInit) { super(skipInit); }
+    public MSACEventLog() {}
+    protected MSACEventLog(Handle h, long handle) { super(h, handle); }
+    protected MSACEventLog(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "eventId")
@@ -53,9 +53,9 @@ import org.robovm.pods.appcenter.core.*;
     @Property(selector = "setEventId:")
     public native void setEventId(String v);
     @Property(selector = "typedProperties")
-    public native MSEventProperties getTypedProperties();
+    public native MSACEventProperties getTypedProperties();
     @Property(selector = "setTypedProperties:")
-    public native void setTypedProperties(MSEventProperties v);
+    public native void setTypedProperties(MSACEventProperties v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/

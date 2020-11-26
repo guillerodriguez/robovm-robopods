@@ -34,9 +34,9 @@ import org.robovm.pods.appcenter.core.*;
 /*<javadoc>*/
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSAnalyticsAuthenticationProviderDelegateAdapter/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACAnalyticsAuthenticationProviderDelegateAdapter/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*/implements MSAnalyticsAuthenticationProviderDelegate/*</implements>*/ {
+    /*<implements>*/implements MSACAnalyticsAuthenticationProviderDelegate/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
@@ -50,6 +50,6 @@ import org.robovm.pods.appcenter.core.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @NotImplemented("authenticationProvider:acquireTokenWithCompletionHandler:")
-    public void acquireToken(MSAnalyticsAuthenticationProvider authenticationProvider, @Block VoidBlock2<NSString, NSDate> completionHandler) {}
+    public void acquireToken(MSACAnalyticsAuthenticationProvider authenticationProvider, @Block VoidBlock2<NSString, NSDate> completionHandler) {}
     /*</methods>*/
 }

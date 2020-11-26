@@ -3,32 +3,33 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MSAnalyticsAuthenticationProviderDelegate.h"
+#import "MSACAnalyticsAuthenticationProviderDelegate.h"
 
 /**
  * Different authentication types, e.g. MSA Compact, MSA Delegate, AAD,... .
  */
-typedef NS_ENUM(NSUInteger, MSAnalyticsAuthenticationType) {
+typedef NS_ENUM(NSUInteger, MSACAnalyticsAuthenticationType) {
 
   /**
    * AuthenticationType MSA Compact.
    */
-  MSAnalyticsAuthenticationTypeMsaCompact,
+  MSACAnalyticsAuthenticationTypeMsaCompact,
 
   /**
    * AuthenticationType MSA Delegate.
    */
-  MSAnalyticsAuthenticationTypeMsaDelegate
-};
+  MSACAnalyticsAuthenticationTypeMsaDelegate
+} NS_SWIFT_NAME(AnalyticsAuthenticationType);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MSAnalyticsAuthenticationProvider : NSObject
+NS_SWIFT_NAME(AnalyticsAuthenticationProvider)
+@interface MSACAnalyticsAuthenticationProvider : NSObject
 
 /**
  * The type.
  */
-@property(nonatomic, readonly, assign) MSAnalyticsAuthenticationType type;
+@property(nonatomic, readonly, assign) MSACAnalyticsAuthenticationType type;
 
 /**
  * The ticket key for this authentication provider.
@@ -40,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readonly, copy) NSString *ticketKeyHash;
 
-@property(nonatomic, readonly, weak) id<MSAnalyticsAuthenticationProviderDelegate> delegate;
+@property(nonatomic, readonly, weak) id<MSACAnalyticsAuthenticationProviderDelegate> delegate;
 
 /**
  * Create a new authentication provider.
@@ -51,9 +52,9 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return A new authentication provider.
  */
-- (instancetype)initWithAuthenticationType:(MSAnalyticsAuthenticationType)type
+- (instancetype)initWithAuthenticationType:(MSACAnalyticsAuthenticationType)type
                                  ticketKey:(NSString *)ticketKey
-                                  delegate:(id<MSAnalyticsAuthenticationProviderDelegate>)delegate;
+                                  delegate:(id<MSACAnalyticsAuthenticationProviderDelegate>)delegate;
 
 /**
  * Check expiration.

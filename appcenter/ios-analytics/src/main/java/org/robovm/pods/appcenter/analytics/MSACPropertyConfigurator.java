@@ -35,31 +35,38 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSPropertyConfigurator/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACPropertyConfigurator/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSPropertyConfiguratorPtr extends Ptr<MSPropertyConfigurator, MSPropertyConfiguratorPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSPropertyConfigurator.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACPropertyConfiguratorPtr extends Ptr<MSACPropertyConfigurator, MSACPropertyConfiguratorPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACPropertyConfigurator.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSPropertyConfigurator() {}
-    protected MSPropertyConfigurator(Handle h, long handle) { super(h, handle); }
-    protected MSPropertyConfigurator(SkipInit skipInit) { super(skipInit); }
+    public MSACPropertyConfigurator() {}
+    protected MSACPropertyConfigurator(Handle h, long handle) { super(h, handle); }
+    protected MSACPropertyConfigurator(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "appVersion")
+    public native String getAppVersion();
+    @Property(selector = "setAppVersion:")
+    public native void setAppVersion(String v);
+    @Property(selector = "appName")
+    public native String getAppName();
+    @Property(selector = "setAppName:")
+    public native void setAppName(String v);
+    @Property(selector = "appLocale")
+    public native String getAppLocale();
+    @Property(selector = "setAppLocale:")
+    public native void setAppLocale(String v);
+    @Property(selector = "userId")
+    public native String getUserId();
+    @Property(selector = "setUserId:")
+    public native void setUserId(String v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "setAppVersion:")
-    public native void setAppVersion(String appVersion);
-    @Method(selector = "setAppName:")
-    public native void setAppName(String appName);
-    @Method(selector = "setAppLocale:")
-    public native void setAppLocale(String appLocale);
-    @Method(selector = "setUserId:")
-    public native void setUserId(String userId);
     @Method(selector = "setEventPropertyString:forKey:")
     public native void setEventPropertyString(String propertyValue, String propertyKey);
     @Method(selector = "setEventPropertyDouble:forKey:")

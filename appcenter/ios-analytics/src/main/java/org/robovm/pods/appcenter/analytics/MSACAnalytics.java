@@ -35,20 +35,23 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSAnalytics/*</name>*/ 
-    extends /*<extends>*/MSServiceAbstract/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACAnalytics/*</name>*/ 
+    extends /*<extends>*/MSACServiceAbstract/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSAnalyticsPtr extends Ptr<MSAnalytics, MSAnalyticsPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSAnalytics.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACAnalyticsPtr extends Ptr<MSACAnalytics, MSACAnalyticsPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACAnalytics.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSAnalytics() {}
-    protected MSAnalytics(Handle h, long handle) { super(h, handle); }
-    protected MSAnalytics(SkipInit skipInit) { super(skipInit); }
+    public MSACAnalytics() {}
+    protected MSACAnalytics(Handle h, long handle) { super(h, handle); }
+    protected MSACAnalytics(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "transmissionInterval")
+    public static native @MachineSizedUInt long getTransmissionInterval();
+    @Property(selector = "setTransmissionInterval:")
+    public static native void setTransmissionInterval(@MachineSizedUInt long v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -57,18 +60,16 @@ import org.robovm.pods.appcenter.core.*;
     @Method(selector = "trackEvent:withProperties:")
     public static native void trackEvent(String eventName, NSDictionary<NSString, NSString> properties);
     @Method(selector = "trackEvent:withProperties:flags:")
-    public static native void trackEvent(String eventName, NSDictionary<NSString, NSString> properties, MSFlags flags);
+    public static native void trackEvent(String eventName, NSDictionary<NSString, NSString> properties, MSACFlags flags);
     @Method(selector = "trackEvent:withTypedProperties:")
-    public static native void trackEvent(String eventName, MSEventProperties properties);
+    public static native void trackEvent(String eventName, MSACEventProperties properties);
     @Method(selector = "trackEvent:withTypedProperties:flags:")
-    public static native void trackEvent(String eventName, MSEventProperties properties, MSFlags flags);
+    public static native void trackEvent(String eventName, MSACEventProperties properties, MSACFlags flags);
     @Method(selector = "pause")
     public static native void pause();
     @Method(selector = "resume")
     public static native void resume();
     @Method(selector = "transmissionTargetForToken:")
-    public static native MSAnalyticsTransmissionTarget transmissionTargetForToken(String token);
-    @Method(selector = "setTransmissionInterval:")
-    public static native void setTransmissionInterval(@MachineSizedUInt long interval);
+    public static native MSACAnalyticsTransmissionTarget transmissionTargetForToken(String token);
     /*</methods>*/
 }

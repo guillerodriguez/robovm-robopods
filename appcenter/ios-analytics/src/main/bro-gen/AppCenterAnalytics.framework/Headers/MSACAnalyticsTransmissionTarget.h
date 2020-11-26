@@ -3,22 +3,23 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MSAnalyticsAuthenticationProvider.h"
-#import "MSConstants+Flags.h"
-#import "MSPropertyConfigurator.h"
+#import "MSACAnalyticsAuthenticationProvider.h"
+#import "MSACConstants+Flags.h"
+#import "MSACPropertyConfigurator.h"
 
-@class MSEventProperties;
+@class MSACEventProperties;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MSAnalyticsTransmissionTarget : NSObject
+NS_SWIFT_NAME(AnalyticsTransmissionTarget)
+@interface MSACAnalyticsTransmissionTarget : NSObject
 
 /**
  * Property configurator.
  */
-@property(nonatomic, readonly, strong) MSPropertyConfigurator *propertyConfigurator;
+@property(nonatomic, readonly, strong) MSACPropertyConfigurator *propertyConfigurator;
 
-+ (void)addAuthenticationProvider:(MSAnalyticsAuthenticationProvider *)authenticationProvider
++ (void)addAuthenticationProvider:(MSACAnalyticsAuthenticationProvider *)authenticationProvider
     NS_SWIFT_NAME(addAuthenticationProvider(authenticationProvider:));
 
 /**
@@ -41,11 +42,11 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param eventName  event name.
  * @param properties dictionary of properties.
- * @param flags      Optional flags. Events tracked with the MSFlagsCritical flag will take precedence over all other events in
+ * @param flags      Optional flags. Events tracked with the MSACFlagsCritical flag will take precedence over all other events in
  * storage. An event tracked with this option will only be dropped if storage must make room for a newer event that is also marked with the
- * MSFlagsCritical flag.
+ * MSACFlagsCritical flag.
  */
-- (void)trackEvent:(NSString *)eventName withProperties:(nullable NSDictionary<NSString *, NSString *> *)properties flags:(MSFlags)flags;
+- (void)trackEvent:(NSString *)eventName withProperties:(nullable NSDictionary<NSString *, NSString *> *)properties flags:(MSACFlags)flags;
 
 /**
  * Track a custom event with name and optional typed properties.
@@ -70,16 +71,16 @@ NS_ASSUME_NONNULL_BEGIN
  * - The full event size when encoded as a JSON string cannot be larger than 1.9MB.
  */
 - (void)trackEvent:(NSString *)eventName
-    withTypedProperties:(nullable MSEventProperties *)properties NS_SWIFT_NAME(trackEvent(_:withProperties:));
+    withTypedProperties:(nullable MSACEventProperties *)properties NS_SWIFT_NAME(trackEvent(_:withProperties:));
 
 /**
  * Track a custom event with name and optional typed properties.
  *
  * @param eventName  Event name.
  * @param properties Typed properties.
- * @param flags      Optional flags. Events tracked with the MSFlagsCritical flag will take precedence over all other events in
+ * @param flags      Optional flags. Events tracked with the MSACFlagsCritical flag will take precedence over all other events in
  * storage. An event tracked with this option will only be dropped if storage must make room for a newer event that is also marked with the
- * MSFlagsCritical flag.
+ * MSACFlagsCritical flag.
  *
  * @discussion The following validation rules are applied:
  *
@@ -98,8 +99,8 @@ NS_ASSUME_NONNULL_BEGIN
  * - The full event size when encoded as a JSON string cannot be larger than 1.9MB.
  */
 - (void)trackEvent:(NSString *)eventName
-    withTypedProperties:(nullable MSEventProperties *)properties
-                  flags:(MSFlags)flags NS_SWIFT_NAME(trackEvent(_:withProperties:flags:));
+    withTypedProperties:(nullable MSACEventProperties *)properties
+                  flags:(MSACFlags)flags NS_SWIFT_NAME(trackEvent(_:withProperties:flags:));
 
 /**
  * Get a nested transmission target.
@@ -108,25 +109,13 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @returns A transmission target object nested to this parent transmission target.
  */
-- (MSAnalyticsTransmissionTarget *)transmissionTargetForToken:(NSString *)token NS_SWIFT_NAME(transmissionTarget(forToken:));
+- (MSACAnalyticsTransmissionTarget *)transmissionTargetForToken:(NSString *)token NS_SWIFT_NAME(transmissionTarget(forToken:));
 
 /**
- * Enable or disable this transmission target. It will also enable or disable nested transmission targets.
- *
- * @param isEnabled YES to enable, NO to disable.
- *
- * @see isEnabled
+ * The flag indicates whether or not this transmission target is enabled. Changing its state will also change states of nested transmission
+ * targets.
  */
-- (void)setEnabled:(BOOL)isEnabled;
-
-/**
- * Check whether this transmission target is enabled or not.
- *
- * @return YES if enabled, NO otherwise.
- *
- * @see setEnabled:
- */
-- (BOOL)isEnabled;
+@property(nonatomic, getter=isEnabled, setter=setEnabled:) BOOL enabled NS_SWIFT_NAME(enabled);
 
 /**
  * Pause sending logs for the transmission target. It doesn't pause any of its decendants.

@@ -35,21 +35,25 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSAnalyticsTransmissionTarget/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACAnalyticsTransmissionTarget/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSAnalyticsTransmissionTargetPtr extends Ptr<MSAnalyticsTransmissionTarget, MSAnalyticsTransmissionTargetPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSAnalyticsTransmissionTarget.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACAnalyticsTransmissionTargetPtr extends Ptr<MSACAnalyticsTransmissionTarget, MSACAnalyticsTransmissionTargetPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACAnalyticsTransmissionTarget.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSAnalyticsTransmissionTarget() {}
-    protected MSAnalyticsTransmissionTarget(Handle h, long handle) { super(h, handle); }
-    protected MSAnalyticsTransmissionTarget(SkipInit skipInit) { super(skipInit); }
+    public MSACAnalyticsTransmissionTarget() {}
+    protected MSACAnalyticsTransmissionTarget(Handle h, long handle) { super(h, handle); }
+    protected MSACAnalyticsTransmissionTarget(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "propertyConfigurator")
-    public native MSPropertyConfigurator getPropertyConfigurator();
+    public native MSACPropertyConfigurator getPropertyConfigurator();
+    @Property(selector = "isEnabled")
+    public native boolean isEnabled();
+    @Property(selector = "setEnabled:")
+    public native void setEnabled(boolean v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -58,22 +62,18 @@ import org.robovm.pods.appcenter.core.*;
     @Method(selector = "trackEvent:withProperties:")
     public native void trackEvent(String eventName, NSDictionary<NSString, NSString> properties);
     @Method(selector = "trackEvent:withProperties:flags:")
-    public native void trackEvent(String eventName, NSDictionary<NSString, NSString> properties, MSFlags flags);
+    public native void trackEvent(String eventName, NSDictionary<NSString, NSString> properties, MSACFlags flags);
     @Method(selector = "trackEvent:withTypedProperties:")
-    public native void trackEvent(String eventName, MSEventProperties properties);
+    public native void trackEvent(String eventName, MSACEventProperties properties);
     @Method(selector = "trackEvent:withTypedProperties:flags:")
-    public native void trackEvent(String eventName, MSEventProperties properties, MSFlags flags);
+    public native void trackEvent(String eventName, MSACEventProperties properties, MSACFlags flags);
     @Method(selector = "transmissionTargetForToken:")
-    public native MSAnalyticsTransmissionTarget transmissionTargetForToken(String token);
-    @Method(selector = "setEnabled:")
-    public native void setEnabled(boolean isEnabled);
-    @Method(selector = "isEnabled")
-    public native boolean isEnabled();
+    public native MSACAnalyticsTransmissionTarget transmissionTargetForToken(String token);
     @Method(selector = "pause")
     public native void pause();
     @Method(selector = "resume")
     public native void resume();
     @Method(selector = "addAuthenticationProvider:")
-    public static native void addAuthenticationProvider(MSAnalyticsAuthenticationProvider authenticationProvider);
+    public static native void addAuthenticationProvider(MSACAnalyticsAuthenticationProvider authenticationProvider);
     /*</methods>*/
 }

@@ -35,22 +35,22 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(Bits.AsMachineSizedIntMarshaler.class)/*</annotations>*/
-public final class /*<name>*/MSFlags/*</name>*/ extends Bits</*<name>*/MSFlags/*</name>*/> {
+public final class /*<name>*/MSACFlags/*</name>*/ extends Bits</*<name>*/MSACFlags/*</name>*/> {
     /*<values>*/
-    public static final MSFlags None = new MSFlags(0L);
-    public static final MSFlags Normal = new MSFlags(1L);
-    public static final MSFlags Critical = new MSFlags(2L);
+    public static final MSACFlags None = new MSACFlags(0L);
+    public static final MSACFlags Normal = new MSACFlags(1L);
+    public static final MSACFlags Critical = new MSACFlags(2L);
     /**
-     * @deprecated please use MSFlagsNormal
+     * @deprecated please use MSACFlagsNormal
      */
     @Deprecated
-    public static final MSFlags PersistenceNormal = new MSFlags(1L);
+    public static final MSACFlags PersistenceNormal = new MSACFlags(1L);
     /**
-     * @deprecated please use MSFlagsCritical
+     * @deprecated please use MSACFlagsCritical
      */
     @Deprecated
-    public static final MSFlags PersistenceCritical = new MSFlags(2L);
-    public static final MSFlags Default = new MSFlags(1L);
+    public static final MSACFlags PersistenceCritical = new MSACFlags(2L);
+    public static final MSACFlags Default = new MSACFlags(1L);
     /*</values>*/
 
     /*<bind>*/
@@ -58,17 +58,17 @@ public final class /*<name>*/MSFlags/*</name>*/ extends Bits</*<name>*/MSFlags/*
     /*<constants>*//*</constants>*/
     /*<methods>*//*</methods>*/
 
-    private static final /*<name>*/MSFlags/*</name>*/[] values = _values(/*<name>*/MSFlags/*</name>*/.class);
+    private static final /*<name>*/MSACFlags/*</name>*/[] values = _values(/*<name>*/MSACFlags/*</name>*/.class);
 
-    public /*<name>*/MSFlags/*</name>*/(long value) { super(value); }
-    private /*<name>*/MSFlags/*</name>*/(long value, long mask) { super(value, mask); }
-    protected /*<name>*/MSFlags/*</name>*/ wrap(long value, long mask) {
-        return new /*<name>*/MSFlags/*</name>*/(value, mask);
+    public /*<name>*/MSACFlags/*</name>*/(long value) { super(value); }
+    private /*<name>*/MSACFlags/*</name>*/(long value, long mask) { super(value, mask); }
+    protected /*<name>*/MSACFlags/*</name>*/ wrap(long value, long mask) {
+        return new /*<name>*/MSACFlags/*</name>*/(value, mask);
     }
-    protected /*<name>*/MSFlags/*</name>*/[] _values() {
+    protected /*<name>*/MSACFlags/*</name>*/[] _values() {
         return values;
     }
-    public static /*<name>*/MSFlags/*</name>*/[] values() {
+    public static /*<name>*/MSACFlags/*</name>*/[] values() {
         return values.clone();
     }
 }

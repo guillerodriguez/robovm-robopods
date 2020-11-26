@@ -8,13 +8,13 @@ headers:
 private_typedefs:
 
 enums:
-    MSAnalyticsAuthenticationType: {}
-    MSFlags: {}
+    MSACAnalyticsAuthenticationType: {}
+    MSACFlags: {}
 
 classes:
-    MSAbstractLog:
+    MSACAbstractLog:
         exclude: true # part of core
-    MSAnalytics:
+    MSACAnalytics:
         methods:
             '+trackEvent:withProperties:':
                 name: trackEvent
@@ -24,11 +24,11 @@ classes:
                 name: trackEvent
             '+trackEvent:withTypedProperties:flags:':
                 name: trackEvent
-    MSAnalyticsAuthenticationProvider:
+    MSACAnalyticsAuthenticationProvider:
         methods:
             '-initWithAuthenticationType:ticketKey:delegate:':
                 name: init
-    MSAnalyticsTransmissionTarget:
+    MSACAnalyticsTransmissionTarget:
         methods:
             '-trackEvent:withProperties:':
                 name: trackEvent
@@ -38,8 +38,8 @@ classes:
                 name: trackEvent
             '-trackEvent:withTypedProperties:flags:':
                 name: trackEvent
-    MSEventLog: {}
-    MSEventProperties:
+    MSACEventLog: {}
+    MSACEventProperties:
         methods:
             '-setString:forKey:':
                 name: setString
@@ -51,9 +51,9 @@ classes:
                 name: setBool
             '-setDate:forKey:':
                 name: setDate
-    MSLogWithNameAndProperties: {}
-    MSLogWithProperties: {}
-    MSPropertyConfigurator:
+    MSACLogWithNameAndProperties: {}
+    MSACLogWithProperties: {}
+    MSACPropertyConfigurator:
         methods:
             '-setEventPropertyString:forKey:':
                 name: setEventPropertyString
@@ -65,14 +65,14 @@ classes:
                 name: setEventPropertyBool
             '-setEventPropertyDate:forKey:':
                 name: setEventPropertyDate
-    MSServiceAbstract:
+    MSACServiceAbstract:
         exclude: true # part of core
 protocols:
-    MSAnalyticsAuthenticationProviderDelegate:
+    MSACAnalyticsAuthenticationProviderDelegate:
         methods:
             '-authenticationProvider:acquireTokenWithCompletionHandler:':
                 name: acquireToken
-    MSService:
+    MSACService:
         exclude: true # part of core
 
 functions:

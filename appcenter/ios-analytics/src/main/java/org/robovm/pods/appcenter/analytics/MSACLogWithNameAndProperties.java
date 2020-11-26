@@ -35,17 +35,17 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSLogWithNameAndProperties/*</name>*/ 
-    extends /*<extends>*/MSLogWithProperties/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACLogWithNameAndProperties/*</name>*/ 
+    extends /*<extends>*/MSACLogWithProperties/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSLogWithNameAndPropertiesPtr extends Ptr<MSLogWithNameAndProperties, MSLogWithNameAndPropertiesPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSLogWithNameAndProperties.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACLogWithNameAndPropertiesPtr extends Ptr<MSACLogWithNameAndProperties, MSACLogWithNameAndPropertiesPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACLogWithNameAndProperties.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSLogWithNameAndProperties() {}
-    protected MSLogWithNameAndProperties(Handle h, long handle) { super(h, handle); }
-    protected MSLogWithNameAndProperties(SkipInit skipInit) { super(skipInit); }
+    public MSACLogWithNameAndProperties() {}
+    protected MSACLogWithNameAndProperties(Handle h, long handle) { super(h, handle); }
+    protected MSACLogWithNameAndProperties(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "name")

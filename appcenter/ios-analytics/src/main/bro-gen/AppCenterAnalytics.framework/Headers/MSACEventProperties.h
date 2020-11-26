@@ -8,7 +8,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Contains typed event properties.
  */
-@interface MSEventProperties : NSObject
+NS_SWIFT_NAME(EventProperties)
+@interface MSACEventProperties : NSObject
 
 /**
  * Set a string property.

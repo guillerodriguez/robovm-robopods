@@ -1,17 +1,18 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#import "MSAnalyticsTransmissionTarget.h"
-#import "MSServiceAbstract.h"
+#import "MSACAnalyticsTransmissionTarget.h"
+#import "MSACServiceAbstract.h"
 
-@class MSEventProperties;
+@class MSACEventProperties;
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  * App Center analytics service.
  */
-@interface MSAnalytics : MSServiceAbstract
+NS_SWIFT_NAME(Analytics)
+@interface MSACAnalytics : MSACServiceAbstract
 
 /**
  * Track an event.
@@ -60,9 +61,9 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param eventName  Event name. Cannot be `nil` or empty.
  * @param properties Dictionary of properties. Keys and values must not be `nil`.
- * @param flags      Optional flags. Events tracked with the MSFlagsCritical flag will take precedence over all other events in
+ * @param flags      Optional flags. Events tracked with the MSACFlagsCritical flag will take precedence over all other events in
  * storage. An event tracked with this option will only be dropped if storage must make room for a newer event that is also marked with the
- * MSFlagsCritical flag.
+ * MSACFlagsCritical flag.
  *
  * @discussion Additional validation rules apply depending on the configured secret.
  *
@@ -85,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * - The full event size when encoded as a JSON string cannot be larger than 1.9MB.
  */
-+ (void)trackEvent:(NSString *)eventName withProperties:(nullable NSDictionary<NSString *, NSString *> *)properties flags:(MSFlags)flags;
++ (void)trackEvent:(NSString *)eventName withProperties:(nullable NSDictionary<NSString *, NSString *> *)properties flags:(MSACFlags)flags;
 
 /**
  * Track a custom event with name and optional typed properties.
@@ -124,16 +125,16 @@ NS_ASSUME_NONNULL_BEGIN
  * - The full event size when encoded as a JSON string cannot be larger than 1.9MB.
  */
 + (void)trackEvent:(NSString *)eventName
-    withTypedProperties:(nullable MSEventProperties *)properties NS_SWIFT_NAME(trackEvent(_:withProperties:));
+    withTypedProperties:(nullable MSACEventProperties *)properties NS_SWIFT_NAME(trackEvent(_:withProperties:));
 
 /**
  * Track a custom event with name and optional typed properties.
  *
  * @param eventName  Event name.
  * @param properties Typed properties.
- * @param flags      Optional flags. Events tracked with the MSFlagsCritical flag will take precedence over all other events in
+ * @param flags      Optional flags. Events tracked with the MSACFlagsCritical flag will take precedence over all other events in
  * storage. An event tracked with this option will only be dropped if storage must make room for a newer event that is also marked with the
- * MSFlagsCritical flag.
+ * MSACFlagsCritical flag.
  *
  * @discussion The following validation rules are applied:
  *
@@ -166,8 +167,8 @@ NS_ASSUME_NONNULL_BEGIN
  * - The full event size when encoded as a JSON string cannot be larger than 1.9MB.
  */
 + (void)trackEvent:(NSString *)eventName
-    withTypedProperties:(nullable MSEventProperties *)properties
-                  flags:(MSFlags)flags NS_SWIFT_NAME(trackEvent(_:withProperties:flags:));
+    withTypedProperties:(nullable MSACEventProperties *)properties
+                  flags:(MSACFlags)flags NS_SWIFT_NAME(trackEvent(_:withProperties:flags:));
 
 /**
  * Pause transmission of Analytics logs. While paused, Analytics logs are saved to disk.
@@ -195,18 +196,16 @@ NS_ASSUME_NONNULL_BEGIN
  * NS_SWIFT_NAME(transmissionTarget(forToken:)) as this is a static method that
  * doesn't get translated like a setter in Swift.
  *
- * @see MSAnalyticsTransmissionTarget for comparison.
+ * @see MSACAnalyticsTransmissionTarget for comparison.
  */
-+ (MSAnalyticsTransmissionTarget *)transmissionTargetForToken:(NSString *)token;
++ (MSACAnalyticsTransmissionTarget *)transmissionTargetForToken:(NSString *)token NS_SWIFT_NAME(transmissionTarget(forToken:));
 
 /**
- * Set the send time interval for non-critical logs.
+ * Send time interval for non-critical logs.
  * Must be between 3 seconds and 86400 seconds (1 day).
  * Must be called before Analytics service start.
- *
- * @param interval The flush interval for logs.
  */
-+ (void)setTransmissionInterval:(NSUInteger)interval;
+@property(class, atomic) NSUInteger transmissionInterval;
 
 @end
 

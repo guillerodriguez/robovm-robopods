@@ -35,17 +35,17 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSEventProperties/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACEventProperties/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSEventPropertiesPtr extends Ptr<MSEventProperties, MSEventPropertiesPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSEventProperties.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACEventPropertiesPtr extends Ptr<MSACEventProperties, MSACEventPropertiesPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACEventProperties.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSEventProperties() {}
-    protected MSEventProperties(Handle h, long handle) { super(h, handle); }
-    protected MSEventProperties(SkipInit skipInit) { super(skipInit); }
+    public MSACEventProperties() {}
+    protected MSACEventProperties(Handle h, long handle) { super(h, handle); }
+    protected MSACEventProperties(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -53,14 +53,14 @@ import org.robovm.pods.appcenter.core.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "setString:forKey:")
-    public native MSEventProperties setString(String value, String key);
+    public native MSACEventProperties setString(String value, String key);
     @Method(selector = "setDouble:forKey:")
-    public native MSEventProperties setDouble(double value, String key);
+    public native MSACEventProperties setDouble(double value, String key);
     @Method(selector = "setInt64:forKey:")
-    public native MSEventProperties setInt64(long value, String key);
+    public native MSACEventProperties setInt64(long value, String key);
     @Method(selector = "setBool:forKey:")
-    public native MSEventProperties setBool(boolean value, String key);
+    public native MSACEventProperties setBool(boolean value, String key);
     @Method(selector = "setDate:forKey:")
-    public native MSEventProperties setDate(NSDate value, String key);
+    public native MSACEventProperties setDate(NSDate value, String key);
     /*</methods>*/
 }

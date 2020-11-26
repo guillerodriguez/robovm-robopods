@@ -35,7 +35,7 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSAnalyticsAuthenticationProviderDelegate/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSACAnalyticsAuthenticationProviderDelegate/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
@@ -48,7 +48,7 @@ import org.robovm.pods.appcenter.core.*;
     /*</properties>*/
     /*<methods>*/
     @Method(selector = "authenticationProvider:acquireTokenWithCompletionHandler:")
-    void acquireToken(MSAnalyticsAuthenticationProvider authenticationProvider, @Block VoidBlock2<NSString, NSDate> completionHandler);
+    void acquireToken(MSACAnalyticsAuthenticationProvider authenticationProvider, @Block VoidBlock2<NSString, NSDate> completionHandler);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

@@ -1,12 +1,13 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#import "MSLogWithNameAndProperties.h"
+#import "MSACLogWithNameAndProperties.h"
 
-@class MSEventProperties;
-@class MSMetadataExtension;
+@class MSACEventProperties;
+@class MSACMetadataExtension;
 
-@interface MSEventLog : MSLogWithNameAndProperties
+NS_SWIFT_NAME(EventLog)
+@interface MSACEventLog : MSACLogWithNameAndProperties
 
 /**
  * Unique identifier for this event.
@@ -16,6 +17,6 @@
 /**
  * Event properties.
  */
-@property(nonatomic, strong) MSEventProperties *typedProperties;
+@property(nonatomic, strong) MSACEventProperties *typedProperties;
 
 @end
