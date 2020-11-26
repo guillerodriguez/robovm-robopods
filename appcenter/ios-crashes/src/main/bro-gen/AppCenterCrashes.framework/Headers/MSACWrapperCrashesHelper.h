@@ -3,46 +3,46 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MSCrashHandlerSetupDelegate.h"
+#import "MSACCrashHandlerSetupDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class MSErrorReport;
-@class MSErrorAttachmentLog;
-@class MSException;
+@class MSACErrorReport;
+@class MSACErrorAttachmentLog;
+@class MSACException;
 
 /**
  * This general class allows wrappers to supplement the Crashes SDK with their own behavior.
  */
-@interface MSWrapperCrashesHelper : NSObject
+NS_SWIFT_NAME(WrapperCrashesHelper)
+@interface MSACWrapperCrashesHelper : NSObject
 
 /**
- * Sets the crash handler setup delegate.
+ * The crash handler setup delegate.
  *
- * @param delegate The delegate to set.
  */
-+ (void)setCrashHandlerSetupDelegate:(id<MSCrashHandlerSetupDelegate>)delegate;
+@property(class, nonatomic) _Nullable id<MSACCrashHandlerSetupDelegate> crashHandlerSetupDelegate;
 
 /**
  * Gets the crash handler setup delegate.
  *
+ * @deprecated
+ *
  * @return The delegate being used by Crashes.
  */
-+ (id<MSCrashHandlerSetupDelegate>)getCrashHandlerSetupDelegate;
++ (id<MSACCrashHandlerSetupDelegate>)getCrashHandlerSetupDelegate DEPRECATED_MSG_ATTRIBUTE("Use crashHandlerSetupDelegate instead");
 
 /**
- * Enables or disables automatic crash processing.
- *
- * @param automaticProcessing Passing NO causes SDK not to send reports immediately, even if "Always Send" is true.
+ * Enables or disables automatic crash processing. Passing NO causes SDK not to send reports immediately, even if "Always Send" is true.
  */
-+ (void)setAutomaticProcessing:(BOOL)automaticProcessing;
+@property(class, nonatomic) BOOL automaticProcessing;
 
 /**
  * Gets a list of unprocessed crash reports. Will block until the service starts.
  *
  * @return An array of unprocessed error reports.
  */
-+ (NSArray<MSErrorReport *> *)unprocessedCrashReports;
+@property(class, readonly, nonatomic) NSArray<MSACErrorReport *> *unprocessedCrashReports;
 
 /**
  * Resumes processing for a given subset of the unprocessed reports.
@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param errorAttachments An array of error attachments that should be sent.
  * @param incidentIdentifier The identifier of the error report that the attachments will be associated with.
  */
-+ (void)sendErrorAttachments:(NSArray<MSErrorAttachmentLog *> *)errorAttachments withIncidentIdentifier:(NSString *)incidentIdentifier;
++ (void)sendErrorAttachments:(NSArray<MSACErrorAttachmentLog *> *)errorAttachments withIncidentIdentifier:(NSString *)incidentIdentifier;
 
 /**
  * Track handled exception directly as model form.
@@ -71,9 +71,9 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return handled error ID.
  */
-+ (nullable NSString *)trackModelException:(MSException *)exception
-                   withProperties:(nullable NSDictionary<NSString *, NSString *> *)properties
-                  withAttachments:(nullable NSArray<MSErrorAttachmentLog *> *)attachments;
++ (nullable NSString *)trackModelException:(MSACException *)exception
+                            withProperties:(nullable NSDictionary<NSString *, NSString *> *)properties
+                           withAttachments:(nullable NSArray<MSACErrorAttachmentLog *> *)attachments;
 
 /**
  * Get a generic error report representation for an handled exception.
@@ -83,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return an error report.
  */
-+ (MSErrorReport *)buildHandledErrorReportWithErrorID:(NSString *)errorID;
++ (MSACErrorReport *)buildHandledErrorReportWithErrorID:(NSString *)errorID;
 
 @end
 

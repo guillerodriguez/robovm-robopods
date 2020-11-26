@@ -1,63 +1,64 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#import "MSErrorReport.h"
-#import "MSServiceAbstract.h"
+#import "MSACErrorReport.h"
+#import "MSACServiceAbstract.h"
 
-@class MSCrashesDelegate;
+@class MSACCrashesDelegate;
 
 /**
  * Custom block that handles the alert that prompts the user whether crash reports need to be processed or not.
  *
  * @return Returns YES to discard crash reports, otherwise NO.
  */
-typedef BOOL (^MSUserConfirmationHandler)(NSArray<MSErrorReport *> *_Nonnull errorReports);
+typedef BOOL (^MSACUserConfirmationHandler)(NSArray<MSACErrorReport *> *_Nonnull errorReports) NS_SWIFT_NAME(UserConfirmationHandler);
 
 /**
  * Error Logging status.
  */
-typedef NS_ENUM(NSUInteger, MSErrorLogSetting) {
+typedef NS_ENUM(NSUInteger, MSACErrorLogSetting) {
 
   /**
    * Crash reporting is disabled.
    */
-  MSErrorLogSettingDisabled = 0,
+  MSACErrorLogSettingDisabled = 0,
 
   /**
    * User is asked each time before sending error logs.
    */
-  MSErrorLogSettingAlwaysAsk = 1,
+  MSACErrorLogSettingAlwaysAsk = 1,
 
   /**
    * Each error log is send automatically.
    */
-  MSErrorLogSettingAutoSend = 2
-};
+  MSACErrorLogSettingAutoSend = 2
+} NS_SWIFT_NAME(ErrorLogSetting);
 
 /**
  * Crash Manager alert user input.
  */
-typedef NS_ENUM(NSUInteger, MSUserConfirmation) {
+typedef NS_ENUM(NSUInteger, MSACUserConfirmation) {
 
   /**
    * User chose not to send the crash report.
    */
-  MSUserConfirmationDontSend = 0,
+  MSACUserConfirmationDontSend = 0,
 
   /**
    * User wants the crash report to be sent.
    */
-  MSUserConfirmationSend = 1,
+  MSACUserConfirmationSend = 1,
 
   /**
    * User wants to send all error logs.
    */
-  MSUserConfirmationAlways = 2
-};
+  MSACUserConfirmationAlways = 2
+} NS_SWIFT_NAME(UserConfirmation);
 
-@protocol MSCrashesDelegate;
+@protocol MSACCrashesDelegate;
 
-@interface MSCrashes : MSServiceAbstract
+NS_SWIFT_NAME(Crashes)
+@interface MSACCrashes : MSACServiceAbstract
 
 ///-----------------------------------------------------------------------------
 /// @name Testing Crashes Feature
@@ -87,19 +88,19 @@ typedef NS_ENUM(NSUInteger, MSUserConfirmation) {
  *
  * @return Returns YES is the app has crashed in the last session.
  */
-+ (BOOL)hasCrashedInLastSession;
+@property(class, readonly, nonatomic) BOOL hasCrashedInLastSession;
 
 /**
  * Check if the app received memory warning in the last session.
  *
  * @return Returns YES is the app received memory warning in the last session.
  */
-+ (BOOL)hasReceivedMemoryWarningInLastSession;
+@property(class, readonly, nonatomic) BOOL hasReceivedMemoryWarningInLastSession;
 
 /**
  * Provides details about the crash that occurred in the last app session
  */
-+ (nullable MSErrorReport *)lastSessionCrashReport;
+@property(class, nullable, readonly, nonatomic) MSACErrorReport *lastSessionCrashReport;
 
 #if TARGET_OS_OSX || TARGET_OS_MACCATALYST
 /**
@@ -125,13 +126,13 @@ typedef NS_ENUM(NSUInteger, MSUserConfirmation) {
  * want to disable the Mach exception handler, you should call this method _BEFORE_ starting the SDK. Your typical setup code would look
  * like this:
  *
- * `[MSCrashes disableMachExceptionHandler]`;
- * `[MSAppCenter start:@"YOUR_APP_ID" withServices:@[[MSCrashes class]]];`
+ * `[MSACCrashes disableMachExceptionHandler]`;
+ * `[MSACAppCenter start:@"YOUR_APP_ID" withServices:@[[MSACCrashes class]]];`
  *
  * or if you are using Swift:
  *
- * `MSCrashes.disableMachExceptionHandler()`
- * `MSAppCenter.start("YOUR_APP_ID", withServices: [MSAnalytics.self, MSCrashes.self])`
+ * `MSACCrashes.disableMachExceptionHandler()`
+ * `MSACAppCenter.start("YOUR_APP_ID", withServices: [MSACAnalytics.self, MSACCrashes.self])`
  *
  * tvOS does not support the Mach exception handler, thus crashes that are caused by stack overflows cannot be detected. As a result,
  * disabling the Mach exception server is not available in the tvOS SDK.
@@ -144,28 +145,26 @@ typedef NS_ENUM(NSUInteger, MSUserConfirmation) {
 
 /**
  * Set the delegate
- * Defines the class that implements the optional protocol `MSCrashesDelegate`.
+ * Defines the class that implements the optional protocol `MSACCrashesDelegate`.
  *
- * @see MSCrashesDelegate
+ * @see MSACCrashesDelegate
  */
-+ (void)setDelegate:(_Nullable id<MSCrashesDelegate>)delegate;
+@property(class, nonatomic, weak) id<MSACCrashesDelegate> _Nullable delegate;
 
 /**
  * Set a user confirmation handler that is invoked right before processing crash reports to determine whether sending crash reports or not.
  *
- * @param userConfirmationHandler A handler for user confirmation.
- *
- * @see MSUserConfirmationHandler
+ * @see MSACUserConfirmationHandler
  */
-+ (void)setUserConfirmationHandler:(_Nullable MSUserConfirmationHandler)userConfirmationHandler;
+@property(class, nonatomic) MSACUserConfirmationHandler _Nullable userConfirmationHandler;
 
 /**
  * Notify SDK with a confirmation to handle the crash report.
  *
  * @param userConfirmation A user confirmation.
  *
- * @see MSUserConfirmation.
+ * @see MSACUserConfirmation.
  */
-+ (void)notifyWithUserConfirmation:(MSUserConfirmation)userConfirmation;
++ (void)notifyWithUserConfirmation:(MSACUserConfirmation)userConfirmation;
 
 @end

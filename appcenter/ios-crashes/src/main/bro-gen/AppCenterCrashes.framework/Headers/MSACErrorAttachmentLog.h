@@ -3,12 +3,13 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MSAbstractLog.h"
+#import "MSACAbstractLog.h"
 
 /**
  * Error attachment log.
  */
-@interface MSErrorAttachmentLog : MSAbstractLog
+NS_SWIFT_NAME(ErrorAttachmentLog)
+@interface MSACErrorAttachmentLog : MSACAbstractLog
 
 /**
  * Content type (text/plain for text).
@@ -32,7 +33,7 @@
  * @param data The attachment data as `NSData`.
  * @param contentType The content type of your data as MIME type.
  *
- * @return An instance of `MSErrorAttachmentLog`.
+ * @return An instance of `MSACErrorAttachmentLog`.
  */
 - (instancetype)initWithFilename:(NSString *)filename attachmentBinary:(NSData *)data contentType:(NSString *)contentType;
 
@@ -42,7 +43,7 @@
  * @param filename The filename the attachment should get. If nil will get an automatically generated filename.
  * @param text The attachment text.
  *
- * @return An instance of `MSErrorAttachmentLog`.
+ * @return An instance of `MSACErrorAttachmentLog`.
  */
 - (instancetype)initWithFilename:(NSString *)filename attachmentText:(NSString *)text;
 

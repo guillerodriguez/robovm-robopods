@@ -35,21 +35,21 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSErrorAttachmentLog/*</name>*/ 
-    extends /*<extends>*/MSAbstractLog/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACErrorAttachmentLog/*</name>*/ 
+    extends /*<extends>*/MSACAbstractLog/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSErrorAttachmentLogPtr extends Ptr<MSErrorAttachmentLog, MSErrorAttachmentLogPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSErrorAttachmentLog.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACErrorAttachmentLogPtr extends Ptr<MSACErrorAttachmentLog, MSACErrorAttachmentLogPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACErrorAttachmentLog.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSErrorAttachmentLog() {}
-    protected MSErrorAttachmentLog(Handle h, long handle) { super(h, handle); }
-    protected MSErrorAttachmentLog(SkipInit skipInit) { super(skipInit); }
+    public MSACErrorAttachmentLog() {}
+    protected MSACErrorAttachmentLog(Handle h, long handle) { super(h, handle); }
+    protected MSACErrorAttachmentLog(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithFilename:attachmentBinary:contentType:")
-    public MSErrorAttachmentLog(String filename, NSData data, String contentType) { super((SkipInit) null); initObject(init(filename, data, contentType)); }
+    public MSACErrorAttachmentLog(String filename, NSData data, String contentType) { super((SkipInit) null); initObject(init(filename, data, contentType)); }
     @Method(selector = "initWithFilename:attachmentText:")
-    public MSErrorAttachmentLog(String filename, String text) { super((SkipInit) null); initObject(init(filename, text)); }
+    public MSACErrorAttachmentLog(String filename, String text) { super((SkipInit) null); initObject(init(filename, text)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "contentType")

@@ -35,38 +35,41 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSCrashes/*</name>*/ 
-    extends /*<extends>*/MSServiceAbstract/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACCrashes/*</name>*/ 
+    extends /*<extends>*/MSACServiceAbstract/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSCrashesPtr extends Ptr<MSCrashes, MSCrashesPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSCrashes.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACCrashesPtr extends Ptr<MSACCrashes, MSACCrashesPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACCrashes.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSCrashes() {}
-    protected MSCrashes(Handle h, long handle) { super(h, handle); }
-    protected MSCrashes(SkipInit skipInit) { super(skipInit); }
+    public MSACCrashes() {}
+    protected MSACCrashes(Handle h, long handle) { super(h, handle); }
+    protected MSACCrashes(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "hasCrashedInLastSession")
+    public static native boolean hasCrashedInLastSession();
+    @Property(selector = "hasReceivedMemoryWarningInLastSession")
+    public static native boolean hasReceivedMemoryWarningInLastSession();
+    @Property(selector = "lastSessionCrashReport")
+    public static native MSACErrorReport getLastSessionCrashReport();
+    @Property(selector = "delegate")
+    public static native MSACCrashesDelegate getDelegate();
+    @Property(selector = "setDelegate:", strongRef = true)
+    public static native void setDelegate(MSACCrashesDelegate v);
+    @Property(selector = "userConfirmationHandler")
+    public static native @Block Block1<NSArray<MSACErrorReport>, Boolean> getUserConfirmationHandler();
+    @Property(selector = "setUserConfirmationHandler:")
+    public static native void setUserConfirmationHandler(@Block Block1<NSArray<MSACErrorReport>, Boolean> v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "generateTestCrash")
     public static native void generateTestCrash();
-    @Method(selector = "hasCrashedInLastSession")
-    public static native boolean hasCrashedInLastSession();
-    @Method(selector = "hasReceivedMemoryWarningInLastSession")
-    public static native boolean hasReceivedMemoryWarningInLastSession();
-    @Method(selector = "lastSessionCrashReport")
-    public static native MSErrorReport lastSessionCrashReport();
     @Method(selector = "disableMachExceptionHandler")
     public static native void disableMachExceptionHandler();
-    @Method(selector = "setDelegate:")
-    public static native void setDelegate(MSCrashesDelegate delegate);
-    @Method(selector = "setUserConfirmationHandler:")
-    public static native void setUserConfirmationHandler(@Block Block1<NSArray<MSErrorReport>, Boolean> userConfirmationHandler);
     @Method(selector = "notifyWithUserConfirmation:")
-    public static native void notify(MSUserConfirmation userConfirmation);
+    public static native void notify(MSACUserConfirmation userConfirmation);
     /*</methods>*/
 }

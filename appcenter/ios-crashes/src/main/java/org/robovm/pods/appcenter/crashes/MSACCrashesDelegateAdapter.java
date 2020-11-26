@@ -34,9 +34,9 @@ import org.robovm.pods.appcenter.core.*;
 /*<javadoc>*/
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSCrashesDelegateAdapter/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACCrashesDelegateAdapter/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*/implements MSCrashesDelegate/*</implements>*/ {
+    /*<implements>*/implements MSACCrashesDelegate/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
@@ -50,14 +50,14 @@ import org.robovm.pods.appcenter.core.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @NotImplemented("crashes:shouldProcessErrorReport:")
-    public boolean shouldProcessErrorReport(MSCrashes crashes, MSErrorReport errorReport) { return false; }
+    public boolean shouldProcessErrorReport(MSACCrashes crashes, MSACErrorReport errorReport) { return false; }
     @NotImplemented("crashes:willSendErrorReport:")
-    public void willSendErrorReport(MSCrashes crashes, MSErrorReport errorReport) {}
+    public void willSendErrorReport(MSACCrashes crashes, MSACErrorReport errorReport) {}
     @NotImplemented("crashes:didSucceedSendingErrorReport:")
-    public void didSucceedSendingErrorReport(MSCrashes crashes, MSErrorReport errorReport) {}
+    public void didSucceedSendingErrorReport(MSACCrashes crashes, MSACErrorReport errorReport) {}
     @NotImplemented("crashes:didFailSendingErrorReport:withError:")
-    public void didFailSendingErrorReport(MSCrashes crashes, MSErrorReport errorReport, NSError error) {}
+    public void didFailSendingErrorReport(MSACCrashes crashes, MSACErrorReport errorReport, NSError error) {}
     @NotImplemented("attachmentsWithCrashes:forErrorReport:")
-    public NSArray<MSErrorAttachmentLog> getAttachments(MSCrashes crashes, MSErrorReport errorReport) { return null; }
+    public NSArray<MSACErrorAttachmentLog> getAttachments(MSACCrashes crashes, MSACErrorReport errorReport) { return null; }
     /*</methods>*/
 }

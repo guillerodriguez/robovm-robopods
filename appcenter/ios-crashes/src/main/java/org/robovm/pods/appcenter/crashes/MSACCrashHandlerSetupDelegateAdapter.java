@@ -34,9 +34,9 @@ import org.robovm.pods.appcenter.core.*;
 /*<javadoc>*/
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSCrashHandlerSetupDelegateAdapter/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACCrashHandlerSetupDelegateAdapter/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*/implements MSCrashHandlerSetupDelegate/*</implements>*/ {
+    /*<implements>*/implements MSACCrashHandlerSetupDelegate/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/

@@ -3,9 +3,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class MSDevice;
+@class MSACDevice;
 
-@interface MSErrorReport : NSObject
+NS_SWIFT_NAME(ErrorReport)
+@interface MSACErrorReport : NSObject
 
 /**
  * UUID for the crash report.
@@ -45,7 +46,7 @@
 /**
  * Device information of the app when it crashed.
  */
-@property(nonatomic, readonly, strong) MSDevice *device;
+@property(nonatomic, readonly, strong) MSACDevice *device;
 
 /**
  * Identifier of the app process that crashed.
@@ -59,10 +60,8 @@
  * thread for too long, or other reasons. See Apple documentation:
  * https://developer.apple.com/library/ios/qa/qa1693/_index.html.
  *
- * @return YES if the details represent an app kill instead of a crash.
- *
- * @see `[MSCrashes didReceiveMemoryWarningInLastSession]`
+ * @see `[MSACCrashes didReceiveMemoryWarningInLastSession]`
  */
-- (BOOL)isAppKill;
+@property(nonatomic, readonly) BOOL isAppKill;
 
 @end

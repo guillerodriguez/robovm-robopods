@@ -35,7 +35,7 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSCrashHandlerSetupDelegate/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSACCrashHandlerSetupDelegate/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/

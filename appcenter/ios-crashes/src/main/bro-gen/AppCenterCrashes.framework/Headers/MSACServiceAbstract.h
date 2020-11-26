@@ -1,20 +1,21 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#ifndef MS_SERVICE_ABSTRACT_H
-#define MS_SERVICE_ABSTRACT_H
+#ifndef MSAC_SERVICE_ABSTRACT_H
+#define MSAC_SERVICE_ABSTRACT_H
 
 #import <Foundation/Foundation.h>
 
-#import "MSService.h"
+#import "MSACService.h"
 
-@protocol MSChannelGroupProtocol;
+@protocol MSACChannelGroupProtocol;
 
 /**
  * Abstraction of services common logic.
  * This class is intended to be subclassed only not instantiated directly.
  */
-@interface MSServiceAbstract : NSObject <MSService>
+NS_SWIFT_NAME(ServiceAbstract)
+@interface MSACServiceAbstract : NSObject <MSACService>
 
 /**
  * The flag indicates whether the service is started from application or not.
@@ -29,7 +30,7 @@
  * @param token default transmission target token for this service.
  * @param fromApplication indicates whether the service started from an application or not.
  */
-- (void)startWithChannelGroup:(id<MSChannelGroupProtocol>)channelGroup
+- (void)startWithChannelGroup:(id<MSACChannelGroupProtocol>)channelGroup
                     appSecret:(NSString *)appSecret
       transmissionTargetToken:(NSString *)token
               fromApplication:(BOOL)fromApplication;
@@ -44,11 +45,9 @@
 - (void)updateConfigurationWithAppSecret:(NSString *)appSecret transmissionTargetToken:(NSString *)token;
 
 /**
- * Checks if the service needs the application secret.
- *
- * @return `YES` if the application secret is required, `NO` otherwise.
+ * The flag indicate whether the service needs the application secret or not.
  */
-- (BOOL)isAppSecretRequired;
+@property(atomic, readonly) BOOL isAppSecretRequired;
 
 @end
 

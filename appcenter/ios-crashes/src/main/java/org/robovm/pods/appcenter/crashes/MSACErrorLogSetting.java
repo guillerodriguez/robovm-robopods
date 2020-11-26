@@ -35,7 +35,7 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedUIntMarshaler.class)/*</annotations>*/
-public enum /*<name>*/MSErrorLogSetting/*</name>*/ implements ValuedEnum {
+public enum /*<name>*/MSACErrorLogSetting/*</name>*/ implements ValuedEnum {
     /*<values>*/
     Disabled(0L),
     AlwaysAsk(1L),
@@ -49,15 +49,15 @@ public enum /*<name>*/MSErrorLogSetting/*</name>*/ implements ValuedEnum {
 
     private final long n;
 
-    private /*<name>*/MSErrorLogSetting/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MSACErrorLogSetting/*</name>*/(long n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MSErrorLogSetting/*</name>*/ valueOf(long n) {
-        for (/*<name>*/MSErrorLogSetting/*</name>*/ v : values()) {
+    public static /*<name>*/MSACErrorLogSetting/*</name>*/ valueOf(long n) {
+        for (/*<name>*/MSACErrorLogSetting/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
             }
         }
         throw new IllegalArgumentException("No constant with value " + n + " found in " 
-            + /*<name>*/MSErrorLogSetting/*</name>*/.class.getName());
+            + /*<name>*/MSACErrorLogSetting/*</name>*/.class.getName());
     }
 }

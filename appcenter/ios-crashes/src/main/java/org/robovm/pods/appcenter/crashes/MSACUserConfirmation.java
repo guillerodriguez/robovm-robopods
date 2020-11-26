@@ -35,7 +35,7 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedUIntMarshaler.class)/*</annotations>*/
-public enum /*<name>*/MSUserConfirmation/*</name>*/ implements ValuedEnum {
+public enum /*<name>*/MSACUserConfirmation/*</name>*/ implements ValuedEnum {
     /*<values>*/
     DontSend(0L),
     Send(1L),
@@ -49,15 +49,15 @@ public enum /*<name>*/MSUserConfirmation/*</name>*/ implements ValuedEnum {
 
     private final long n;
 
-    private /*<name>*/MSUserConfirmation/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MSACUserConfirmation/*</name>*/(long n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MSUserConfirmation/*</name>*/ valueOf(long n) {
-        for (/*<name>*/MSUserConfirmation/*</name>*/ v : values()) {
+    public static /*<name>*/MSACUserConfirmation/*</name>*/ valueOf(long n) {
+        for (/*<name>*/MSACUserConfirmation/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
             }
         }
         throw new IllegalArgumentException("No constant with value " + n + " found in " 
-            + /*<name>*/MSUserConfirmation/*</name>*/.class.getName());
+            + /*<name>*/MSACUserConfirmation/*</name>*/.class.getName());
     }
 }

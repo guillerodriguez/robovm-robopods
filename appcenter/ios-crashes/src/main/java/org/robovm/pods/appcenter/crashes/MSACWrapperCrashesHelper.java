@@ -35,38 +35,39 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSWrapperCrashesHelper/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACWrapperCrashesHelper/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSWrapperCrashesHelperPtr extends Ptr<MSWrapperCrashesHelper, MSWrapperCrashesHelperPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSWrapperCrashesHelper.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACWrapperCrashesHelperPtr extends Ptr<MSACWrapperCrashesHelper, MSACWrapperCrashesHelperPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACWrapperCrashesHelper.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSWrapperCrashesHelper() {}
-    protected MSWrapperCrashesHelper(Handle h, long handle) { super(h, handle); }
-    protected MSWrapperCrashesHelper(SkipInit skipInit) { super(skipInit); }
+    public MSACWrapperCrashesHelper() {}
+    protected MSACWrapperCrashesHelper(Handle h, long handle) { super(h, handle); }
+    protected MSACWrapperCrashesHelper(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "crashHandlerSetupDelegate")
+    public static native MSACCrashHandlerSetupDelegate getCrashHandlerSetupDelegate();
+    @Property(selector = "setCrashHandlerSetupDelegate:")
+    public static native void setCrashHandlerSetupDelegate(MSACCrashHandlerSetupDelegate v);
+    @Property(selector = "automaticProcessing")
+    public static native boolean isAutomaticProcessing();
+    @Property(selector = "setAutomaticProcessing:")
+    public static native void setAutomaticProcessing(boolean v);
+    @Property(selector = "unprocessedCrashReports")
+    public static native NSArray<MSACErrorReport> getUnprocessedCrashReports();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "setCrashHandlerSetupDelegate:")
-    public static native void setCrashHandlerSetupDelegate(MSCrashHandlerSetupDelegate delegate);
-    @Method(selector = "getCrashHandlerSetupDelegate")
-    public static native MSCrashHandlerSetupDelegate getCrashHandlerSetupDelegate();
-    @Method(selector = "setAutomaticProcessing:")
-    public static native void setAutomaticProcessing(boolean automaticProcessing);
-    @Method(selector = "unprocessedCrashReports")
-    public static native NSArray<MSErrorReport> unprocessedCrashReports();
     @Method(selector = "sendCrashReportsOrAwaitUserConfirmationForFilteredIds:")
     public static native boolean sendCrashReportsOrAwaitUserConfirmationForFilteredIds(NSArray<NSString> filteredIds);
     @Method(selector = "sendErrorAttachments:withIncidentIdentifier:")
-    public static native void sendErrorAttachments(NSArray<MSErrorAttachmentLog> errorAttachments, String incidentIdentifier);
+    public static native void sendErrorAttachments(NSArray<MSACErrorAttachmentLog> errorAttachments, String incidentIdentifier);
     @Method(selector = "trackModelException:withProperties:withAttachments:")
-    public static native String trackModelException(NSObject exception, NSDictionary<NSString, NSString> properties, NSArray<MSErrorAttachmentLog> attachments);
+    public static native String trackModelException(NSObject exception, NSDictionary<NSString, NSString> properties, NSArray<MSACErrorAttachmentLog> attachments);
     @Method(selector = "buildHandledErrorReportWithErrorID:")
-    public static native MSErrorReport buildHandledErrorReport(String errorID);
+    public static native MSACErrorReport buildHandledErrorReport(String errorID);
     /*</methods>*/
 }

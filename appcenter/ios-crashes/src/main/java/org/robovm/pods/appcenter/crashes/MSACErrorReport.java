@@ -35,17 +35,17 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSErrorReport/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACErrorReport/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSErrorReportPtr extends Ptr<MSErrorReport, MSErrorReportPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSErrorReport.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACErrorReportPtr extends Ptr<MSACErrorReport, MSACErrorReportPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACErrorReport.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSErrorReport() {}
-    protected MSErrorReport(Handle h, long handle) { super(h, handle); }
-    protected MSErrorReport(SkipInit skipInit) { super(skipInit); }
+    public MSACErrorReport() {}
+    protected MSACErrorReport(Handle h, long handle) { super(h, handle); }
+    protected MSACErrorReport(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "incidentIdentifier")
@@ -63,13 +63,14 @@ import org.robovm.pods.appcenter.core.*;
     @Property(selector = "appErrorTime")
     public native NSDate getAppErrorTime();
     @Property(selector = "device")
-    public native MSDevice getDevice();
+    public native MSACDevice getDevice();
     @Property(selector = "appProcessIdentifier")
     public native @MachineSizedUInt long getAppProcessIdentifier();
+    @Property(selector = "isAppKill")
+    public native boolean isAppKill();
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "isAppKill")
-    public native boolean isAppKill();
+    
     /*</methods>*/
 }

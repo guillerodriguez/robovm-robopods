@@ -7,19 +7,19 @@ headers:
 
 private_typedefs:
     # FIXME: bellow are missing or private items
-    MSException: NSObject
+    MSACException: NSObject
 enums:
-    MSErrorLogSetting: {}
-    MSUserConfirmation: {}
+    MSACErrorLogSetting: {}
+    MSACUserConfirmation: {}
 
 classes:
-    MSAbstractLog:
+    MSACAbstractLog:
         exclude: true # part of core
-    MSCrashes:
+    MSACCrashes:
         methods:
             '+notifyWithUserConfirmation:':
                 name: notify
-    MSErrorAttachmentLog:
+    MSACErrorAttachmentLog:
         methods:
             '-initWithFilename:attachmentBinary:contentType:':
                 name: init
@@ -29,10 +29,10 @@ classes:
                 exclude: true
             '+attachmentWithBinary:filename:contentType:':
                 exclude: true
-    MSErrorReport: {}
-    MSServiceAbstract:
+    MSACErrorReport: {}
+    MSACServiceAbstract:
         exclude: true # part of core
-    MSWrapperCrashesHelper:
+    MSACWrapperCrashesHelper:
         methods:
             '+sendErrorAttachments:withIncidentIdentifier:':
                 name: sendErrorAttachments
@@ -40,9 +40,11 @@ classes:
                 name: trackModelException
             '+buildHandledErrorReportWithErrorID:':
                 name: buildHandledErrorReport
+            '+getCrashHandlerSetupDelegate':
+                exclude: true
 protocols:
-    MSCrashHandlerSetupDelegate: {}
-    MSCrashesDelegate:
+    MSACCrashHandlerSetupDelegate: {}
+    MSACCrashesDelegate:
         methods:
             '-crashes:shouldProcessErrorReport:':
                 name: shouldProcessErrorReport
@@ -54,7 +56,7 @@ protocols:
                 name: didFailSendingErrorReport
             '-attachmentsWithCrashes:forErrorReport:':
                 name: getAttachments
-    MSService:
+    MSACService:
         exclude: true # part of core
 
 functions:
@@ -64,7 +66,7 @@ functions:
         name: 'Function_#{g[0]}'
 
 values:
-    MSMSErrorLogAttachmentLogUtilityCategory:
+    MSACMSACErrorLogAttachmentLogUtilityCategory:
         exclude: true # TODO:not clear where it belongs to
 
     # Make sure we don't miss any values if new ones are introduced in a later version

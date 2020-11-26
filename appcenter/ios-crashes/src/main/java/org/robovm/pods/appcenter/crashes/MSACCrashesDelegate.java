@@ -35,7 +35,7 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSCrashesDelegate/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSACCrashesDelegate/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
@@ -48,15 +48,15 @@ import org.robovm.pods.appcenter.core.*;
     /*</properties>*/
     /*<methods>*/
     @Method(selector = "crashes:shouldProcessErrorReport:")
-    boolean shouldProcessErrorReport(MSCrashes crashes, MSErrorReport errorReport);
+    boolean shouldProcessErrorReport(MSACCrashes crashes, MSACErrorReport errorReport);
     @Method(selector = "crashes:willSendErrorReport:")
-    void willSendErrorReport(MSCrashes crashes, MSErrorReport errorReport);
+    void willSendErrorReport(MSACCrashes crashes, MSACErrorReport errorReport);
     @Method(selector = "crashes:didSucceedSendingErrorReport:")
-    void didSucceedSendingErrorReport(MSCrashes crashes, MSErrorReport errorReport);
+    void didSucceedSendingErrorReport(MSACCrashes crashes, MSACErrorReport errorReport);
     @Method(selector = "crashes:didFailSendingErrorReport:withError:")
-    void didFailSendingErrorReport(MSCrashes crashes, MSErrorReport errorReport, NSError error);
+    void didFailSendingErrorReport(MSACCrashes crashes, MSACErrorReport errorReport, NSError error);
     @Method(selector = "attachmentsWithCrashes:forErrorReport:")
-    NSArray<MSErrorAttachmentLog> getAttachments(MSCrashes crashes, MSErrorReport errorReport);
+    NSArray<MSACErrorAttachmentLog> getAttachments(MSACCrashes crashes, MSACErrorReport errorReport);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/
