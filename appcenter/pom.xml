@@ -24,6 +24,5 @@
         <module>ios-crashes</module>
         <module>ios-analytics</module>
         <module>ios-distribute</module>
-        <module>ios-push</module>
     </modules>
 </project>
