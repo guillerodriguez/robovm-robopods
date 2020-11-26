@@ -14,6 +14,7 @@ This is the list of currently available AltPods. Click them to get more informat
 |------------------------------------|----------------------------------------------------------------------------------------|
 | [AppLovinSDK](applovinsdk/)        | An advertisement mediator SDK                                                          |
 | [AppCenter](appcenter/)            | Visual Studio App Center SDK                                                           |
+| [Azure](azure/)                    | Microsoft Azure SDKs                                                                   |
 | [BranchMetrics](branchmetrics/)    | The Branch Metrics iOS SDK for deferred and contextual mobile deep linking             |
 | [Charts](charts/)                  | Beautiful charts for iOS/tvOS/OSX! The Apple side of the crossplatform MPAndroidChart. |
 | [Facebook](facebook/)              | Used to integrate the Facebook Platform with your iOS & tvOS apps                      |
@@ -35,7 +36,8 @@ v1.14.0 -- in development
 | Name                               | 1.14.0 |
 |------------------------------------|--------|
 | [AppLovinSDK](applovinsdk/)        | 6.14.6 |
-| [AppCenter](appcenter/)            | 4.0.0  |
+| [AppCenter](appcenter/)            | 4.0.0* |
+| [Azure](Azure/)                    | 3.1.1* |
 | [BranchMetrics](branchmetrics/)    | 0.35.1 |
 | [Charts](charts/)                  | 3.6.0  |
 | [Facebook](facebook/)              | 8.1.0  |

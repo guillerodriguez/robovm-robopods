@@ -205,5 +205,6 @@
         <module>fyber</module>
         <module>inmobi</module>
         <module>appcenter</module>
+        <module>azure</module>
     </modules>
 </project>

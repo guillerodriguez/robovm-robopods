@@ -1,0 +1,141 @@
+package: org.robovm.pods.azure.notificationhubs
+framework: WindowsAzureMessaging
+include: [foundation]
+clang_args: ['-x', 'objective-c']
+headers:
+    - WindowsAzureMessaging.h
+    - SBRegistration.h
+enums:
+
+classes:
+    MSInstallation:
+        methods:
+            '-setTemplate:forKey:':
+                name: setTemplate
+    MSInstallationTemplate:
+        methods:
+            '-setHeaderValue:forKey:':
+                name: setHeaderValue
+    MSNotificationHub:
+        methods:
+            '+startWithConnectionString:hubName:':
+                name: start
+            '+startWithInstallationManagement:':
+                name: start
+            '+didRegisterForRemoteNotificationsWithDeviceToken:':
+                name: didRegisterForRemoteNotifications
+            '+didFailToRegisterForRemoteNotificationsWithError:':
+                name: didFailToRegisterForRemoteNotifications
+            '+setTemplate:forKey:':
+                name: setTemplate
+    MSNotificationHubMessage: {}
+    SBConnectionString:
+        methods:
+            '+stringWithEndpoint:issuer:issuerSecret:':
+                name: createByEndpointIssuerIssuerSecret
+            '+stringWithEndpoint:fullAccessSecret:':
+                name: createByEndpointFullAccessSecret
+            '+stringWithEndpoint:listenAccessSecret:':
+                name: createByEndpointListenAccessSecret
+            '+stringWithEndpoint:sharedAccessKeyName:accessSecret:':
+                name: createByEndpointSharedAccessKeyNameAccessSecret
+    SBLocalStorage:
+        methods:
+            '-initWithNotificationHubPath:':
+                name: init
+            '-refreshFinishedWithDeviceToken:':
+                name: refreshFinished
+            '-getStoredRegistrationEntryWithRegistrationName:':
+                name: getStoredRegistrationEntry
+            '-updateWithRegistrationName:registration:':
+                name: update
+            '-updateWithRegistrationName:registrationId:eTag:deviceToken:':
+                name: update
+            '-updateWithRegistration:':
+                name: update
+            '-deleteWithRegistrationName:':
+                name: delete
+    SBNotificationHub:
+        methods:
+            '-initWithConnectionString:notificationHubPath:':
+                name: init
+            '-registerNativeWithDeviceToken:tags:completion:':
+                name: registerNative
+            '-registerTemplateWithDeviceToken:name:jsonBodyTemplate:expiryTemplate:tags:completion:':
+                name: registerTemplate
+            '-registerTemplateWithDeviceToken:name:jsonBodyTemplate:expiryTemplate:priorityTemplate:tags:completion:':
+                name: registerTemplate
+            '-unregisterNativeWithCompletion:':
+                name: unregisterNative
+            '-unregisterTemplateWithName:completion:':
+                name: unregisterTemplate
+            '-unregisterAllWithDeviceToken:completion:':
+                name: unregisterAll
+            '-registerNativeWithDeviceToken:tags:error:':
+                name: registerNative
+            '-registerTemplateWithDeviceToken:name:jsonBodyTemplate:expiryTemplate:tags:error:':
+                name: registerTemplate
+            '-registerTemplateWithDeviceToken:name:jsonBodyTemplate:expiryTemplate:priorityTemplate:tags:error:':
+                name: registerTemplate
+            '-unregisterNativeWithError:':
+                name: unregisterNative
+            '-unregisterTemplateWithName:error:':
+                name: unregisterTemplate
+            '-unregisterAllWithDeviceToken:error:':
+                name: unregisterAll
+    SBTokenProvider:
+        methods:
+            '-initWithConnectionDictinary:':
+                name: init
+            '-setTokenWithRequest:completion:':
+                name: setToken
+            '-setTokenWithRequest:error:':
+                name: setToken
+    StoredRegistrationEntry:
+        methods:
+            '-initWithString:':
+                name: init
+    SBRegistration:
+        methods:
+            '+payloadWithDeviceToken:tags:':
+                name: getPayload
+protocols:
+    MSChangeTracking: {}
+    MSInstallationEnrichmentDelegate:
+        methods:
+            '-notificationHub:willEnrichInstallation:':
+                name: willEnrichInstallation
+    MSInstallationLifecycleDelegate:
+        methods:
+            '-notificationHub:didSaveInstallation:':
+                name: didSaveInstallation
+            '-notificationHub:didFailToSaveInstallation:withError:':
+                name: didFailToSaveInstallation
+    MSInstallationManagementDelegate:
+        methods:
+            '-notificationHub:willUpsertInstallation:completionHandler:':
+                name: willUpsertInstallation
+    MSNotificationHubDelegate:
+        methods:
+            '-notificationHub:didReceivePushNotification:':
+                name: didReceivePushNotification
+    MSTaggable: {}
+
+functions:
+    # Make sure we don't miss any functions if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Function_#{g[0]}'
+
+values:
+    # Make sure we don't miss any values if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Value_#{g[0]}'
+
+constants:
+
+    # Make sure we don't miss any constants if new ones are introduced in a later version
+    (.*):
+        class: __FixMe
+        name: 'Constant__#{g[0]}'
