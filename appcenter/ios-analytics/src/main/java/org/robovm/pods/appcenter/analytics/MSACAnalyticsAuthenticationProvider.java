@@ -16,19 +16,11 @@
 package org.robovm.pods.appcenter.analytics;
 
 /*<imports>*/
-import java.io.*;
-import java.nio.*;
-import java.util.*;
 import org.robovm.objc.*;
 import org.robovm.objc.annotation.*;
-import org.robovm.objc.block.*;
-import org.robovm.rt.*;
-import org.robovm.rt.annotation.*;
-import org.robovm.rt.bro.*;
 import org.robovm.rt.bro.annotation.*;
 import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
-import org.robovm.pods.appcenter.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
@@ -47,11 +39,11 @@ import org.robovm.pods.appcenter.core.*;
     protected MSAnalyticsAuthenticationProvider(Handle h, long handle) { super(h, handle); }
     protected MSAnalyticsAuthenticationProvider(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithAuthenticationType:ticketKey:delegate:")
-    public MSAnalyticsAuthenticationProvider(MSAnalyticsAuthenticationType type, String ticketKey, MSAnalyticsAuthenticationProviderDelegate delegate) { super((SkipInit) null); initObject(init(type, ticketKey, delegate)); }
+    public MSAnalyticsAuthenticationProvider(MSACAnalyticsAuthenticationType type, String ticketKey, MSAnalyticsAuthenticationProviderDelegate delegate) { super((SkipInit) null); initObject(init(type, ticketKey, delegate)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "type")
-    public native MSAnalyticsAuthenticationType getType();
+    public native MSACAnalyticsAuthenticationType getType();
     @Property(selector = "ticketKey")
     public native String getTicketKey();
     @Property(selector = "ticketKeyHash")
@@ -62,7 +54,7 @@ import org.robovm.pods.appcenter.core.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "initWithAuthenticationType:ticketKey:delegate:")
-    protected native @Pointer long init(MSAnalyticsAuthenticationType type, String ticketKey, MSAnalyticsAuthenticationProviderDelegate delegate);
+    protected native @Pointer long init(MSACAnalyticsAuthenticationType type, String ticketKey, MSAnalyticsAuthenticationProviderDelegate delegate);
     @Method(selector = "checkTokenExpiry")
     public native void checkTokenExpiry();
     /*</methods>*/

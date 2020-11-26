@@ -16,26 +16,15 @@
 package org.robovm.pods.appcenter.analytics;
 
 /*<imports>*/
-import java.io.*;
-import java.nio.*;
-import java.util.*;
-import org.robovm.objc.*;
-import org.robovm.objc.annotation.*;
-import org.robovm.objc.block.*;
-import org.robovm.rt.*;
-import org.robovm.rt.annotation.*;
 import org.robovm.rt.bro.*;
 import org.robovm.rt.bro.annotation.*;
-import org.robovm.rt.bro.ptr.*;
-import org.robovm.apple.foundation.*;
-import org.robovm.pods.appcenter.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedUIntMarshaler.class)/*</annotations>*/
-public enum /*<name>*/MSAnalyticsAuthenticationType/*</name>*/ implements ValuedEnum {
+public enum /*<name>*/MSACAnalyticsAuthenticationType/*</name>*/ implements ValuedEnum {
     /*<values>*/
     MsaCompact(0L),
     MsaDelegate(1L);
@@ -48,15 +37,15 @@ public enum /*<name>*/MSAnalyticsAuthenticationType/*</name>*/ implements Valued
 
     private final long n;
 
-    private /*<name>*/MSAnalyticsAuthenticationType/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MSACAnalyticsAuthenticationType/*</name>*/(long n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MSAnalyticsAuthenticationType/*</name>*/ valueOf(long n) {
-        for (/*<name>*/MSAnalyticsAuthenticationType/*</name>*/ v : values()) {
+    public static /*<name>*/MSACAnalyticsAuthenticationType/*</name>*/ valueOf(long n) {
+        for (/*<name>*/MSACAnalyticsAuthenticationType/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
             }
         }
         throw new IllegalArgumentException("No constant with value " + n + " found in " 
-            + /*<name>*/MSAnalyticsAuthenticationType/*</name>*/.class.getName());
+            + /*<name>*/MSACAnalyticsAuthenticationType/*</name>*/.class.getName());
     }
 }
