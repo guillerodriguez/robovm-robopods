@@ -34,17 +34,17 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSCustomProperties/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACCustomProperties/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSCustomPropertiesPtr extends Ptr<MSCustomProperties, MSCustomPropertiesPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSCustomProperties.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACCustomPropertiesPtr extends Ptr<MSACCustomProperties, MSACCustomPropertiesPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACCustomProperties.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSCustomProperties() {}
-    protected MSCustomProperties(Handle h, long handle) { super(h, handle); }
-    protected MSCustomProperties(SkipInit skipInit) { super(skipInit); }
+    public MSACCustomProperties() {}
+    protected MSACCustomProperties(Handle h, long handle) { super(h, handle); }
+    protected MSACCustomProperties(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -52,14 +52,14 @@ import org.robovm.apple.foundation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "setString:forKey:")
-    public native MSCustomProperties setString(String value, String key);
+    public native MSACCustomProperties setString(String value, String key);
     @Method(selector = "setNumber:forKey:")
-    public native MSCustomProperties setNumber(NSNumber value, String key);
+    public native MSACCustomProperties setNumber(NSNumber value, String key);
     @Method(selector = "setBool:forKey:")
-    public native MSCustomProperties setBool(boolean value, String key);
+    public native MSACCustomProperties setBool(boolean value, String key);
     @Method(selector = "setDate:forKey:")
-    public native MSCustomProperties setDate(NSDate value, String key);
+    public native MSACCustomProperties setDate(NSDate value, String key);
     @Method(selector = "clearPropertyForKey:")
-    public native MSCustomProperties clearPropertyForKey(String key);
+    public native MSACCustomProperties clearPropertyForKey(String key);
     /*</methods>*/
 }

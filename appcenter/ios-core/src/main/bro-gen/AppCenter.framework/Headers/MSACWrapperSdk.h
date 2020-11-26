@@ -1,12 +1,13 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#ifndef MS_WRAPPER_SDK_H
-#define MS_WRAPPER_SDK_H
+#ifndef MSAC_WRAPPER_SDK_H
+#define MSAC_WRAPPER_SDK_H
 
 #import <Foundation/Foundation.h>
 
-@interface MSWrapperSdk : NSObject
+NS_SWIFT_NAME(WrapperSdk)
+@interface MSACWrapperSdk : NSObject
 
 /*
  * Version of the wrapper SDK. When the SDK is embedding another base SDK (for example Xamarin.Android wraps Android), the Xamarin specific

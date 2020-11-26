@@ -34,7 +34,7 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
-public enum /*<name>*/MSACErrorCode/*</name>*/ implements NSErrorCode {
+public enum /*<name>*/MSACACErrorCode/*</name>*/ implements NSErrorCode {
     /*<values>*/
     LogInvalidContainer(1L),
     Canceled(2L),
@@ -51,23 +51,23 @@ public enum /*<name>*/MSACErrorCode/*</name>*/ implements NSErrorCode {
     public static final String DisabledErrorDesc = "The service is disabled.";
     public static final String ConnectionHttpErrorDesc = "An HTTP error occured.";
     public static final String ConnectionPausedErrorDesc = "Canceled, connection paused with log deletion.";
-    public static final String getConnectionHttpCodeErrorKey = "MSACConnectionHttpCode";
+    public static final String getConnectionHttpCodeErrorKey = "MSConnectionHttpCode";
     /*</constants>*/
     /*<members>*//*</members>*/
     /*<methods>*//*</methods>*/
 
     private final long n;
 
-    private /*<name>*/MSACErrorCode/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MSACACErrorCode/*</name>*/(long n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MSACErrorCode/*</name>*/ valueOf(long n) {
-        for (/*<name>*/MSACErrorCode/*</name>*/ v : values()) {
+    public static /*<name>*/MSACACErrorCode/*</name>*/ valueOf(long n) {
+        for (/*<name>*/MSACACErrorCode/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
             }
         }
         throw new IllegalArgumentException("No constant with value " + n + " found in "
-            + /*<name>*/MSACErrorCode/*</name>*/.class.getName());
+            + /*<name>*/MSACACErrorCode/*</name>*/.class.getName());
     }
 
     // TODO: manually added code
@@ -83,7 +83,7 @@ public enum /*<name>*/MSACErrorCode/*</name>*/ implements NSErrorCode {
 
         @Override public NSErrorCode getErrorCode() {
              try {
-                 return  /*<name>*/MSACErrorCode/*</name>*/.valueOf(getCode());
+                 return  /*<name>*/MSACACErrorCode/*</name>*/.valueOf(getCode());
              } catch (IllegalArgumentException e) {
                  return null;
              }
@@ -91,7 +91,7 @@ public enum /*<name>*/MSACErrorCode/*</name>*/ implements NSErrorCode {
 
         public static String getClassDomain() {
             /** must be inserted in value section */
-            return /*<name>*/MSACErrorCode/*</name>*/.getClassDomain();
+            return /*<name>*/MSACACErrorCode/*</name>*/.getClassDomain();
         }
     }
 }

@@ -34,25 +34,64 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSAppCenter/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACAppCenter/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSAppCenterPtr extends Ptr<MSAppCenter, MSAppCenterPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSAppCenter.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACAppCenterPtr extends Ptr<MSACAppCenter, MSACAppCenterPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACAppCenter.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSAppCenter() {}
-    protected MSAppCenter(Handle h, long handle) { super(h, handle); }
-    protected MSAppCenter(SkipInit skipInit) { super(skipInit); }
+    public MSACAppCenter() {}
+    protected MSACAppCenter(Handle h, long handle) { super(h, handle); }
+    protected MSACAppCenter(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
-    
+    @Property(selector = "isConfigured")
+    public static native boolean isConfigured();
+    @Property(selector = "isRunningInAppCenterTestCloud")
+    public static native boolean isRunningInAppCenterTestCloud();
+    @Property(selector = "isEnabled")
+    public static native boolean isEnabled();
+    @Property(selector = "setEnabled:")
+    public static native void setEnabled(boolean v);
+    @Property(selector = "logLevel")
+    public static native MSACLogLevel getLogLevel();
+    @Property(selector = "setLogLevel:")
+    public static native void setLogLevel(MSACLogLevel v);
+    @Property(selector = "logUrl")
+    public static native String getLogUrl();
+    @Property(selector = "setLogUrl:")
+    public static native void setLogUrl(String v);
+    @Property(selector = "logHandler")
+    public static native @Block("(@Block,,,,,)") VoidBlock6<Block0<String>, MSACLogLevel, NSString, BytePtr, BytePtr, Integer> getLogHandler();
+    @Property(selector = "setLogHandler:")
+    public static native void setLogHandler(@Block("(@Block,,,,,)") VoidBlock6<Block0<String>, MSACLogLevel, NSString, BytePtr, BytePtr, Integer> v);
+    @Property(selector = "wrapperSdk")
+    public static native MSACWrapperSdk getWrapperSdk();
+    @Property(selector = "setWrapperSdk:")
+    public static native void setWrapperSdk(MSACWrapperSdk v);
+    @Property(selector = "isAppDelegateForwarderEnabled")
+    public static native boolean isAppDelegateForwarderEnabled();
+    @Property(selector = "installId")
+    public static native NSUUID getInstallId();
+    @Property(selector = "isDebuggerAttached")
+    public static native boolean isDebuggerAttached();
+    @Property(selector = "sdkVersion")
+    public static native String getSdkVersion();
+    @Property(selector = "userId")
+    public static native String getUserId();
+    @Property(selector = "setUserId:")
+    public static native void setUserId(String v);
+    @Property(selector = "countryCode")
+    public static native String getCountryCode();
+    @Property(selector = "setCountryCode:")
+    public static native void setCountryCode(String v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "sharedInstance")
-    public static native MSAppCenter sharedInstance();
+    public static native MSACAppCenter sharedInstance();
     @Method(selector = "configureWithAppSecret:")
     public static native void configure(String appSecret);
     @Method(selector = "configure")
@@ -65,39 +104,9 @@ import org.robovm.apple.foundation.*;
     public static native void startService(Class<?> service);
     @Method(selector = "startFromLibraryWithServices:")
     public static native void startFromLibrary(NSArray<?> services);
-    @Method(selector = "isConfigured")
-    public static native boolean isConfigured();
-    @Method(selector = "isRunningInAppCenterTestCloud")
-    public static native boolean isRunningInAppCenterTestCloud();
-    @Method(selector = "setLogUrl:")
-    public static native void setLogUrl(String logUrl);
-    @Method(selector = "setEnabled:")
-    public static native void setEnabled(boolean isEnabled);
-    @Method(selector = "isEnabled")
-    public static native boolean isEnabled();
-    @Method(selector = "logLevel")
-    public static native MSLogLevel logLevel();
-    @Method(selector = "setLogLevel:")
-    public static native void setLogLevel(MSLogLevel logLevel);
-    @Method(selector = "setLogHandler:")
-    public static native void setLogHandler(@Block("(@Block,,,,,)") VoidBlock6<Block0<String>, MSLogLevel, NSString, BytePtr, BytePtr, Integer> logHandler);
-    @Method(selector = "setWrapperSdk:")
-    public static native void setWrapperSdk(MSWrapperSdk wrapperSdk);
     @Method(selector = "setCustomProperties:")
-    public static native void setCustomProperties(MSCustomProperties customProperties);
-    @Method(selector = "isAppDelegateForwarderEnabled")
-    public static native boolean isAppDelegateForwarderEnabled();
-    @Method(selector = "installId")
-    public static native NSUUID installId();
-    @Method(selector = "isDebuggerAttached")
-    public static native boolean isDebuggerAttached();
-    @Method(selector = "sdkVersion")
-    public static native String sdkVersion();
+    public static native void setCustomProperties(MSACCustomProperties customProperties);
     @Method(selector = "setMaxStorageSize:completionHandler:")
     public static native void setMaxStorageSize(@MachineSizedSInt long sizeInBytes, @Block VoidBooleanBlock completionHandler);
-    @Method(selector = "setUserId:")
-    public static native void setUserId(String userId);
-    @Method(selector = "setCountryCode:")
-    public static native void setCountryCode(String countryCode);
     /*</methods>*/
 }

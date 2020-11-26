@@ -34,35 +34,35 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSServiceAbstract/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACServiceAbstract/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*/implements MSService/*</implements>*/ {
+    /*<implements>*/implements MSACService/*</implements>*/ {
 
-    /*<ptr>*/public static class MSServiceAbstractPtr extends Ptr<MSServiceAbstract, MSServiceAbstractPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSServiceAbstract.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACServiceAbstractPtr extends Ptr<MSACServiceAbstract, MSACServiceAbstractPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACServiceAbstract.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSServiceAbstract() {}
-    protected MSServiceAbstract(Handle h, long handle) { super(h, handle); }
-    protected MSServiceAbstract(SkipInit skipInit) { super(skipInit); }
+    public MSACServiceAbstract() {}
+    protected MSACServiceAbstract(Handle h, long handle) { super(h, handle); }
+    protected MSACServiceAbstract(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "startedFromApplication")
     public native boolean isStartedFromApplication();
     @Property(selector = "setStartedFromApplication:")
     public native void setStartedFromApplication(boolean v);
+    @Property(selector = "isAppSecretRequired")
+    public native boolean isAppSecretRequired();
+    @Property(selector = "isEnabled")
+    public static native boolean isEnabled();
+    @Property(selector = "setEnabled:")
+    public static native void setEnabled(boolean v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "startWithChannelGroup:appSecret:transmissionTargetToken:fromApplication:")
-    public native void start(MSChannelGroupProtocol channelGroup, String appSecret, String token, boolean fromApplication);
+    public native void start(MSACChannelGroupProtocol channelGroup, String appSecret, String token, boolean fromApplication);
     @Method(selector = "updateConfigurationWithAppSecret:transmissionTargetToken:")
     public native void updateConfiguration(String appSecret, String token);
-    @Method(selector = "isAppSecretRequired")
-    public native boolean isAppSecretRequired();
-    @Method(selector = "setEnabled:")
-    public static native void setEnabled(boolean isEnabled);
-    @Method(selector = "isEnabled")
-    public static native boolean isEnabled();
     /*</methods>*/
 }

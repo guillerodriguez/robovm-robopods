@@ -34,17 +34,17 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSLogWithProperties/*</name>*/ 
-    extends /*<extends>*/MSAbstractLog/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACLogWithProperties/*</name>*/ 
+    extends /*<extends>*/MSACAbstractLog/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSLogWithPropertiesPtr extends Ptr<MSLogWithProperties, MSLogWithPropertiesPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSLogWithProperties.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACLogWithPropertiesPtr extends Ptr<MSACLogWithProperties, MSACLogWithPropertiesPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACLogWithProperties.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSLogWithProperties() {}
-    protected MSLogWithProperties(Handle h, long handle) { super(h, handle); }
-    protected MSLogWithProperties(SkipInit skipInit) { super(skipInit); }
+    public MSACLogWithProperties() {}
+    protected MSACLogWithProperties(Handle h, long handle) { super(h, handle); }
+    protected MSACLogWithProperties(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "properties")

@@ -34,17 +34,17 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSAbstractLog/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACAbstractLog/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSAbstractLogPtr extends Ptr<MSAbstractLog, MSAbstractLogPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSAbstractLog.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACAbstractLogPtr extends Ptr<MSACAbstractLog, MSACAbstractLogPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACAbstractLog.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSAbstractLog() {}
-    protected MSAbstractLog(Handle h, long handle) { super(h, handle); }
-    protected MSAbstractLog(SkipInit skipInit) { super(skipInit); }
+    public MSACAbstractLog() {}
+    protected MSACAbstractLog(Handle h, long handle) { super(h, handle); }
+    protected MSACAbstractLog(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     

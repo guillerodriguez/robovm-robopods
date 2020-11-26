@@ -34,7 +34,7 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSLog/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSACLog/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
@@ -64,9 +64,9 @@ import org.robovm.apple.foundation.*;
     @Property(selector = "setUserId:")
     void setUserId(String v);
     @Property(selector = "device")
-    MSDevice getDevice();
+    MSACDevice getDevice();
     @Property(selector = "setDevice:")
-    void setDevice(MSDevice v);
+    void setDevice(MSACDevice v);
     @Property(selector = "tag")
     NSObject getTag();
     @Property(selector = "setTag:")

@@ -1,36 +1,37 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#ifndef MS_CHANNEL_PROTOCOL_H
-#define MS_CHANNEL_PROTOCOL_H
+#ifndef MSAC_CHANNEL_PROTOCOL_H
+#define MSAC_CHANNEL_PROTOCOL_H
 
 #import <Foundation/Foundation.h>
 
-#import "MSEnable.h"
+#import "MSACEnable.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol MSChannelDelegate;
+@protocol MSACChannelDelegate;
 
 /**
- * `MSChannelProtocol` contains the essential operations of a channel. Channels are broadly responsible for enqueuing logs to be sent to the
- * backend and/or stored on disk.
+ * `MSACChannelProtocol` contains the essential operations of a channel. Channels are broadly responsible for enqueuing logs to be sent to
+ * the backend and/or stored on disk.
  */
-@protocol MSChannelProtocol <NSObject, MSEnable>
+NS_SWIFT_NAME(ChannelProtocol)
+@protocol MSACChannelProtocol <NSObject, MSACEnable>
 
 /**
  * Add delegate.
  *
  * @param delegate delegate.
  */
-- (void)addDelegate:(id<MSChannelDelegate>)delegate;
+- (void)addDelegate:(id<MSACChannelDelegate>)delegate;
 
 /**
  * Remove delegate.
  *
  * @param delegate delegate.
  */
-- (void)removeDelegate:(id<MSChannelDelegate>)delegate;
+- (void)removeDelegate:(id<MSACChannelDelegate>)delegate;
 
 /**
  * Pause operations, logs will be stored but not sent.

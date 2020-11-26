@@ -34,7 +34,7 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSEnable/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSACEnable/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/

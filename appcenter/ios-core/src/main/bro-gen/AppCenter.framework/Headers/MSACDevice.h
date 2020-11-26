@@ -1,14 +1,15 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#ifndef MS_DEVICE_H
-#define MS_DEVICE_H
+#ifndef MSAC_DEVICE_H
+#define MSAC_DEVICE_H
 
 #import <Foundation/Foundation.h>
 
-#import "MSWrapperSdk.h"
+#import "MSACWrapperSdk.h"
 
-@interface MSDevice : MSWrapperSdk
+NS_SWIFT_NAME(Device)
+@interface MSACDevice : MSACWrapperSdk
 
 /*
  * Name of the SDK. Consists of the name of the SDK and the platform, e.g. "appcenter.ios", "appcenter.android"

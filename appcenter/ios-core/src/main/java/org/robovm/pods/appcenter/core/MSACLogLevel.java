@@ -34,7 +34,7 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedUIntMarshaler.class)/*</annotations>*/
-public enum /*<name>*/MSLogLevel/*</name>*/ implements ValuedEnum {
+public enum /*<name>*/MSACLogLevel/*</name>*/ implements ValuedEnum {
     /*<values>*/
     Verbose(2L),
     Debug(3L),
@@ -52,15 +52,15 @@ public enum /*<name>*/MSLogLevel/*</name>*/ implements ValuedEnum {
 
     private final long n;
 
-    private /*<name>*/MSLogLevel/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MSACLogLevel/*</name>*/(long n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MSLogLevel/*</name>*/ valueOf(long n) {
-        for (/*<name>*/MSLogLevel/*</name>*/ v : values()) {
+    public static /*<name>*/MSACLogLevel/*</name>*/ valueOf(long n) {
+        for (/*<name>*/MSACLogLevel/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
             }
         }
         throw new IllegalArgumentException("No constant with value " + n + " found in " 
-            + /*<name>*/MSLogLevel/*</name>*/.class.getName());
+            + /*<name>*/MSACLogLevel/*</name>*/.class.getName());
     }
 }

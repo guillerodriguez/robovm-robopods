@@ -33,9 +33,9 @@ import org.robovm.apple.foundation.*;
 /*<javadoc>*/
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSLogAdapter/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACLogAdapter/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*/implements MSLog/*</implements>*/ {
+    /*<implements>*/implements MSACLog/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
@@ -65,9 +65,9 @@ import org.robovm.apple.foundation.*;
     @NotImplemented("setUserId:")
     public void setUserId(String v) {}
     @NotImplemented("device")
-    public MSDevice getDevice() { return null; }
+    public MSACDevice getDevice() { return null; }
     @NotImplemented("setDevice:")
-    public void setDevice(MSDevice v) {}
+    public void setDevice(MSACDevice v) {}
     @NotImplemented("tag")
     public NSObject getTag() { return null; }
     @NotImplemented("setTag:")

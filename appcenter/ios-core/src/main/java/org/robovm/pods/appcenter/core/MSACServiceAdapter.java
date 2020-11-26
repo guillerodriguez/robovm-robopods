@@ -33,9 +33,9 @@ import org.robovm.apple.foundation.*;
 /*<javadoc>*/
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSServiceAdapter/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACServiceAdapter/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*/implements MSService/*</implements>*/ {
+    /*<implements>*/implements MSACService/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/

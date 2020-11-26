@@ -34,8 +34,8 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSChannelProtocol/*</name>*/ 
-    /*<implements>*/extends NSObjectProtocol, MSEnable/*</implements>*/ {
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSACChannelProtocol/*</name>*/ 
+    /*<implements>*/extends NSObjectProtocol, MSACEnable/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/

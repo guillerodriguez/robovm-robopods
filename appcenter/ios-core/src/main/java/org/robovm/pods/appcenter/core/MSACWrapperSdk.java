@@ -34,19 +34,19 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSWrapperSdk/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACWrapperSdk/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSWrapperSdkPtr extends Ptr<MSWrapperSdk, MSWrapperSdkPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSWrapperSdk.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACWrapperSdkPtr extends Ptr<MSACWrapperSdk, MSACWrapperSdkPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACWrapperSdk.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSWrapperSdk() {}
-    protected MSWrapperSdk(Handle h, long handle) { super(h, handle); }
-    protected MSWrapperSdk(SkipInit skipInit) { super(skipInit); }
+    public MSACWrapperSdk() {}
+    protected MSACWrapperSdk(Handle h, long handle) { super(h, handle); }
+    protected MSACWrapperSdk(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithWrapperSdkVersion:wrapperSdkName:wrapperRuntimeVersion:liveUpdateReleaseLabel:liveUpdateDeploymentKey:liveUpdatePackageHash:")
-    public MSWrapperSdk(String wrapperSdkVersion, String wrapperSdkName, String wrapperRuntimeVersion, String liveUpdateReleaseLabel, String liveUpdateDeploymentKey, String liveUpdatePackageHash) { super((SkipInit) null); initObject(init(wrapperSdkVersion, wrapperSdkName, wrapperRuntimeVersion, liveUpdateReleaseLabel, liveUpdateDeploymentKey, liveUpdatePackageHash)); }
+    public MSACWrapperSdk(String wrapperSdkVersion, String wrapperSdkName, String wrapperRuntimeVersion, String liveUpdateReleaseLabel, String liveUpdateDeploymentKey, String liveUpdatePackageHash) { super((SkipInit) null); initObject(init(wrapperSdkVersion, wrapperSdkName, wrapperRuntimeVersion, liveUpdateReleaseLabel, liveUpdateDeploymentKey, liveUpdatePackageHash)); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "wrapperSdkVersion")

@@ -34,25 +34,25 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSWrapperLogger/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACWrapperLogger/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSWrapperLoggerPtr extends Ptr<MSWrapperLogger, MSWrapperLoggerPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSWrapperLogger.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACWrapperLoggerPtr extends Ptr<MSACWrapperLogger, MSACWrapperLoggerPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACWrapperLogger.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSWrapperLogger() {}
-    protected MSWrapperLogger(Handle h, long handle) { super(h, handle); }
-    protected MSWrapperLogger(SkipInit skipInit) { super(skipInit); }
-    public MSWrapperLogger(@Block Block0<String> message, String tag, MSLogLevel level) { super((Handle) null, create(message, tag, level)); retain(getHandle()); }
+    public MSACWrapperLogger() {}
+    protected MSACWrapperLogger(Handle h, long handle) { super(h, handle); }
+    protected MSACWrapperLogger(SkipInit skipInit) { super(skipInit); }
+    public MSACWrapperLogger(@Block Block0<String> message, String tag, MSACLogLevel level) { super((Handle) null, create(message, tag, level)); retain(getHandle()); }
     /*</constructors>*/
     /*<properties>*/
     
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "MSWrapperLog:tag:level:")
-    protected static native @Pointer long create(@Block Block0<String> message, String tag, MSLogLevel level);
+    @Method(selector = "MSACWrapperLog:tag:level:")
+    protected static native @Pointer long create(@Block Block0<String> message, String tag, MSACLogLevel level);
     /*</methods>*/
 }

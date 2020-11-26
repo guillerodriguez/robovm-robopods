@@ -33,9 +33,9 @@ import org.robovm.apple.foundation.*;
 /*<javadoc>*/
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSEnableAdapter/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACEnableAdapter/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*/implements MSEnable/*</implements>*/ {
+    /*<implements>*/implements MSACEnable/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/

@@ -3,14 +3,15 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MSConstants.h"
+#import "MSACConstants.h"
 
 /**
  * This is a utility for producing App Center style log messages. It is only intended for use by App Center services and wrapper SDKs of App
  * Center.
  */
-@interface MSWrapperLogger : NSObject
+NS_SWIFT_NAME(WrapperLogger)
+@interface MSACWrapperLogger : NSObject
 
-+ (void)MSWrapperLog:(MSLogMessageProvider)message tag:(NSString *)tag level:(MSLogLevel)level;
++ (void)MSACWrapperLog:(MSACLogMessageProvider)message tag:(NSString *)tag level:(MSACLogLevel)level;
 
 @end

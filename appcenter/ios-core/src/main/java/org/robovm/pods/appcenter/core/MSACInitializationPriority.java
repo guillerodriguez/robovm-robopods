@@ -34,7 +34,7 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
-public enum /*<name>*/MSInitializationPriority/*</name>*/ implements ValuedEnum {
+public enum /*<name>*/MSACInitializationPriority/*</name>*/ implements ValuedEnum {
     /*<values>*/
     Default(500L),
     High(750L),
@@ -48,15 +48,15 @@ public enum /*<name>*/MSInitializationPriority/*</name>*/ implements ValuedEnum 
 
     private final long n;
 
-    private /*<name>*/MSInitializationPriority/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MSACInitializationPriority/*</name>*/(long n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MSInitializationPriority/*</name>*/ valueOf(long n) {
-        for (/*<name>*/MSInitializationPriority/*</name>*/ v : values()) {
+    public static /*<name>*/MSACInitializationPriority/*</name>*/ valueOf(long n) {
+        for (/*<name>*/MSACInitializationPriority/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
             }
         }
         throw new IllegalArgumentException("No constant with value " + n + " found in " 
-            + /*<name>*/MSInitializationPriority/*</name>*/.class.getName());
+            + /*<name>*/MSACInitializationPriority/*</name>*/.class.getName());
     }
 }

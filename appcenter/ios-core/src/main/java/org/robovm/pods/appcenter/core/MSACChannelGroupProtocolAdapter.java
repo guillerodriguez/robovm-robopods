@@ -33,9 +33,9 @@ import org.robovm.apple.foundation.*;
 /*<javadoc>*/
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSChannelGroupProtocolAdapter/*</name>*/ 
-    extends /*<extends>*/MSChannelProtocolAdapter/*</extends>*/ 
-    /*<implements>*/implements MSChannelGroupProtocol/*</implements>*/ {
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACChannelGroupProtocolAdapter/*</name>*/ 
+    extends /*<extends>*/MSACChannelProtocolAdapter/*</extends>*/ 
+    /*<implements>*/implements MSACChannelGroupProtocol/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
@@ -44,7 +44,14 @@ import org.robovm.apple.foundation.*;
     /*<constants>*//*</constants>*/
     /*<constructors>*//*</constructors>*/
     /*<properties>*/
-    
+    @NotImplemented("logUrl")
+    public String getLogUrl() { return null; }
+    @NotImplemented("setLogUrl:")
+    public void setLogUrl(String v) {}
+    @NotImplemented("appSecret")
+    public String getAppSecret() { return null; }
+    @NotImplemented("setAppSecret:")
+    public void setAppSecret(String v) {}
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
@@ -52,10 +59,6 @@ import org.robovm.apple.foundation.*;
     public NSObject addChannelUnit(NSObject configuration) { return null; }
     @NotImplemented("addChannelUnitWithConfiguration:withIngestion:")
     public NSObject addChannelUnit(NSObject configuration, NSObject ingestion) { return null; }
-    @NotImplemented("setLogUrl:")
-    public void setLogUrl(String logUrl) {}
-    @NotImplemented("setAppSecret:")
-    public void setAppSecret(String appSecret) {}
     @NotImplemented("setMaxStorageSize:completionHandler:")
     public void setMaxStorageSize(@MachineSizedSInt long sizeInBytes, @Block VoidBooleanBlock completionHandler) {}
     @NotImplemented("channelUnitForGroupId:")

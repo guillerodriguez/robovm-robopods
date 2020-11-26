@@ -1,15 +1,16 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#ifndef MS_ENABLE_H
-#define MS_ENABLE_H
+#ifndef MSAC_ENABLE_H
+#define MSAC_ENABLE_H
 
 #import <Foundation/Foundation.h>
 
 /**
  * Protocol to define an instance that can be enabled/disabled.
  */
-@protocol MSEnable <NSObject>
+NS_SWIFT_NAME(Enable)
+@protocol MSACEnable <NSObject>
 
 @required
 
@@ -19,7 +20,7 @@
  * @param isEnabled  A boolean value set to YES to enable the instance or NO to disable it.
  * @param deleteData A boolean value set to YES to delete data or NO to keep it.
  */
-- (void)setEnabled:(BOOL)isEnabled andDeleteDataOnDisabled:(BOOL)deleteData;
+- (void)setEnabled:(BOOL)isEnabled andDeleteDataOnDisabled:(BOOL)deleteData NS_SWIFT_NAME(setEnabled(_:deleteDataOnDisabled:));
 
 @end
 

@@ -34,7 +34,7 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
-public enum /*<name>*/MSPriority/*</name>*/ implements ValuedEnum {
+public enum /*<name>*/MSACPriority/*</name>*/ implements ValuedEnum {
     /*<values>*/
     Background(0L),
     Default(1L),
@@ -48,15 +48,15 @@ public enum /*<name>*/MSPriority/*</name>*/ implements ValuedEnum {
 
     private final long n;
 
-    private /*<name>*/MSPriority/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MSACPriority/*</name>*/(long n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MSPriority/*</name>*/ valueOf(long n) {
-        for (/*<name>*/MSPriority/*</name>*/ v : values()) {
+    public static /*<name>*/MSACPriority/*</name>*/ valueOf(long n) {
+        for (/*<name>*/MSACPriority/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
             }
         }
         throw new IllegalArgumentException("No constant with value " + n + " found in " 
-            + /*<name>*/MSPriority/*</name>*/.class.getName());
+            + /*<name>*/MSACPriority/*</name>*/.class.getName());
     }
 }

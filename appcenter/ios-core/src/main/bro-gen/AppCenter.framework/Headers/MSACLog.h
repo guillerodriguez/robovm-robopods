@@ -1,14 +1,15 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#ifndef MS_LOG_H
-#define MS_LOG_H
+#ifndef MSAC_LOG_H
+#define MSAC_LOG_H
 
 #import <Foundation/Foundation.h>
 
-@class MSDevice;
+@class MSACDevice;
 
-@protocol MSLog <NSObject>
+NS_SWIFT_NAME(Log)
+@protocol MSACLog <NSObject>
 
 /**
  * Log type.
@@ -39,7 +40,7 @@
 /**
  * Device properties associated to this log.
  */
-@property(nonatomic, strong) MSDevice *device;
+@property(nonatomic, strong) MSACDevice *device;
 
 /**
  * Transient object tag. For example, a log can be tagged with a transmission target. We do this currently to prevent properties being

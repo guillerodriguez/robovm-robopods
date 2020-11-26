@@ -34,8 +34,8 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSChannelGroupProtocol/*</name>*/ 
-    /*<implements>*/extends MSChannelProtocol/*</implements>*/ {
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSACChannelGroupProtocol/*</name>*/ 
+    /*<implements>*/extends MSACChannelProtocol/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
@@ -43,17 +43,20 @@ import org.robovm.apple.foundation.*;
     /*</bind>*/
     /*<constants>*//*</constants>*/
     /*<properties>*/
-    
+    @Property(selector = "logUrl")
+    String getLogUrl();
+    @Property(selector = "setLogUrl:")
+    void setLogUrl(String v);
+    @Property(selector = "appSecret")
+    String getAppSecret();
+    @Property(selector = "setAppSecret:")
+    void setAppSecret(String v);
     /*</properties>*/
     /*<methods>*/
     @Method(selector = "addChannelUnitWithConfiguration:")
     NSObject addChannelUnit(NSObject configuration);
     @Method(selector = "addChannelUnitWithConfiguration:withIngestion:")
     NSObject addChannelUnit(NSObject configuration, NSObject ingestion);
-    @Method(selector = "setLogUrl:")
-    void setLogUrl(String logUrl);
-    @Method(selector = "setAppSecret:")
-    void setAppSecret(String appSecret);
     @Method(selector = "setMaxStorageSize:completionHandler:")
     void setMaxStorageSize(@MachineSizedSInt long sizeInBytes, @Block VoidBooleanBlock completionHandler);
     @Method(selector = "channelUnitForGroupId:")

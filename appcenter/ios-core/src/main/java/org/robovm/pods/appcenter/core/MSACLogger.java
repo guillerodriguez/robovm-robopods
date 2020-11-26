@@ -34,17 +34,17 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSLogger/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACLogger/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSLoggerPtr extends Ptr<MSLogger, MSLoggerPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSLogger.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACLoggerPtr extends Ptr<MSACLogger, MSACLoggerPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACLogger.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSLogger() {}
-    protected MSLogger(Handle h, long handle) { super(h, handle); }
-    protected MSLogger(SkipInit skipInit) { super(skipInit); }
+    public MSACLogger() {}
+    protected MSACLogger(Handle h, long handle) { super(h, handle); }
+    protected MSACLogger(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     
@@ -52,6 +52,6 @@ import org.robovm.apple.foundation.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @Method(selector = "logMessage:level:tag:file:function:line:")
-    public static native void logMessage(@Block Block0<String> messageProvider, MSLogLevel loglevel, String tag, BytePtr file, BytePtr function, int line);
+    public static native void logMessage(@Block Block0<String> messageProvider, MSACLogLevel loglevel, String tag, BytePtr file, BytePtr function, int line);
     /*</methods>*/
 }

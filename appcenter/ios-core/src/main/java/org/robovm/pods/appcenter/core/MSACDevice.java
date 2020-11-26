@@ -34,19 +34,19 @@ import org.robovm.apple.foundation.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSDevice/*</name>*/ 
-    extends /*<extends>*/MSWrapperSdk/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACDevice/*</name>*/ 
+    extends /*<extends>*/MSACWrapperSdk/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSDevicePtr extends Ptr<MSDevice, MSDevicePtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSDevice.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACDevicePtr extends Ptr<MSACDevice, MSACDevicePtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACDevice.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSDevice() {}
-    protected MSDevice(Handle h, long handle) { super(h, handle); }
-    protected MSDevice(SkipInit skipInit) { super(skipInit); }
+    public MSACDevice() {}
+    protected MSACDevice(Handle h, long handle) { super(h, handle); }
+    protected MSACDevice(SkipInit skipInit) { super(skipInit); }
     @Method(selector = "initWithWrapperSdkVersion:wrapperSdkName:wrapperRuntimeVersion:liveUpdateReleaseLabel:liveUpdateDeploymentKey:liveUpdatePackageHash:")
-    public MSDevice(String wrapperSdkVersion, String wrapperSdkName, String wrapperRuntimeVersion, String liveUpdateReleaseLabel, String liveUpdateDeploymentKey, String liveUpdatePackageHash) { super(wrapperSdkVersion, wrapperSdkName, wrapperRuntimeVersion, liveUpdateReleaseLabel, liveUpdateDeploymentKey, liveUpdatePackageHash); }
+    public MSACDevice(String wrapperSdkVersion, String wrapperSdkName, String wrapperRuntimeVersion, String liveUpdateReleaseLabel, String liveUpdateDeploymentKey, String liveUpdatePackageHash) { super(wrapperSdkVersion, wrapperSdkName, wrapperRuntimeVersion, liveUpdateReleaseLabel, liveUpdateDeploymentKey, liveUpdatePackageHash); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "sdkName")
