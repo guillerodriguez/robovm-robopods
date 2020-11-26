@@ -16,36 +16,28 @@
 package org.robovm.pods.appcenter.distribute;
 
 /*<imports>*/
-import java.io.*;
-import java.nio.*;
-import java.util.*;
 import org.robovm.objc.*;
 import org.robovm.objc.annotation.*;
-import org.robovm.objc.block.*;
-import org.robovm.rt.*;
-import org.robovm.rt.annotation.*;
-import org.robovm.rt.bro.*;
 import org.robovm.rt.bro.annotation.*;
 import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
-import org.robovm.pods.appcenter.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSDistribute/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACDistribute/*</name>*/
     extends /*<extends>*/MSServiceAbstract/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSDistributePtr extends Ptr<MSDistribute, MSDistributePtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSDistribute.class); }/*</bind>*/
+    /*<ptr>*/public static class MSDistributePtr extends Ptr<MSACDistribute, MSDistributePtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACDistribute.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSDistribute() {}
-    protected MSDistribute(Handle h, long handle) { super(h, handle); }
-    protected MSDistribute(SkipInit skipInit) { super(skipInit); }
+    public MSACDistribute() {}
+    protected MSACDistribute(Handle h, long handle) { super(h, handle); }
+    protected MSACDistribute(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "updateTrack")
