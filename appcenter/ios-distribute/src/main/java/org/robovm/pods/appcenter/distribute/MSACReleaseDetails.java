@@ -35,17 +35,17 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSReleaseDetails/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACReleaseDetails/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSReleaseDetailsPtr extends Ptr<MSReleaseDetails, MSReleaseDetailsPtr> {}/*</ptr>*/
-    /*<bind>*/static { ObjCRuntime.bind(MSReleaseDetails.class); }/*</bind>*/
+    /*<ptr>*/public static class MSACReleaseDetailsPtr extends Ptr<MSACReleaseDetails, MSACReleaseDetailsPtr> {}/*</ptr>*/
+    /*<bind>*/static { ObjCRuntime.bind(MSACReleaseDetails.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
-    public MSReleaseDetails() {}
-    protected MSReleaseDetails(Handle h, long handle) { super(h, handle); }
-    protected MSReleaseDetails(SkipInit skipInit) { super(skipInit); }
+    public MSACReleaseDetails() {}
+    protected MSACReleaseDetails(Handle h, long handle) { super(h, handle); }
+    protected MSACReleaseDetails(SkipInit skipInit) { super(skipInit); }
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "id")

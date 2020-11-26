@@ -35,7 +35,7 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*/@Marshaler(ValuedEnum.AsMachineSizedSIntMarshaler.class)/*</annotations>*/
-public enum /*<name>*/MSUpdateTrack/*</name>*/ implements ValuedEnum {
+public enum /*<name>*/MSACUpdateTrack/*</name>*/ implements ValuedEnum {
     /*<values>*/
     Public(1L),
     Private(2L);
@@ -48,15 +48,15 @@ public enum /*<name>*/MSUpdateTrack/*</name>*/ implements ValuedEnum {
 
     private final long n;
 
-    private /*<name>*/MSUpdateTrack/*</name>*/(long n) { this.n = n; }
+    private /*<name>*/MSACUpdateTrack/*</name>*/(long n) { this.n = n; }
     public long value() { return n; }
-    public static /*<name>*/MSUpdateTrack/*</name>*/ valueOf(long n) {
-        for (/*<name>*/MSUpdateTrack/*</name>*/ v : values()) {
+    public static /*<name>*/MSACUpdateTrack/*</name>*/ valueOf(long n) {
+        for (/*<name>*/MSACUpdateTrack/*</name>*/ v : values()) {
             if (v.n == n) {
                 return v;
             }
         }
         throw new IllegalArgumentException("No constant with value " + n + " found in " 
-            + /*<name>*/MSUpdateTrack/*</name>*/.class.getName());
+            + /*<name>*/MSACUpdateTrack/*</name>*/.class.getName());
     }
 }

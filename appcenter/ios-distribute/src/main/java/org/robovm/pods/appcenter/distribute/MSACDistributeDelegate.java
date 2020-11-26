@@ -35,7 +35,7 @@ import org.robovm.pods.appcenter.core.*;
 
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSDistributeDelegate/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ interface /*<name>*/MSACDistributeDelegate/*</name>*/ 
     /*<implements>*/extends NSObjectProtocol/*</implements>*/ {
 
     /*<ptr>*/
@@ -48,7 +48,7 @@ import org.robovm.pods.appcenter.core.*;
     /*</properties>*/
     /*<methods>*/
     @Method(selector = "distribute:releaseAvailableWithDetails:")
-    boolean releaseAvailable(MSDistribute distribute, MSReleaseDetails details);
+    boolean releaseAvailable(MSACDistribute distribute, MSACReleaseDetails details);
     /*</methods>*/
     /*<adapter>*/
     /*</adapter>*/

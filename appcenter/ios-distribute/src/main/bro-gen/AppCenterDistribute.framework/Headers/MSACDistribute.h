@@ -1,51 +1,50 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#import "MSDistributeDelegate.h"
-#import "MSServiceAbstract.h"
+#import "MSACDistributeDelegate.h"
+#import "MSACServiceAbstract.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  * App Center Distribute service.
  */
-@interface MSDistribute : MSServiceAbstract
+NS_SWIFT_NAME(Distribute)
+@interface MSACDistribute : MSACServiceAbstract
 
-typedef NS_ENUM(NSInteger, MSUpdateAction) {
+typedef NS_ENUM(NSInteger, MSACUpdateAction) {
 
   /**
    * Action to trigger update.
    */
-  MSUpdateActionUpdate,
+  MSACUpdateActionUpdate,
 
   /**
    * Action to postpone update.
    */
-  MSUpdateActionPostpone
-};
+  MSACUpdateActionPostpone
+} NS_SWIFT_NAME(UpdateAction);
 
-typedef NS_ENUM(NSInteger, MSUpdateTrack) {
+typedef NS_ENUM(NSInteger, MSACUpdateTrack) {
 
   /**
    * An update track for tracking public updates.
    */
-  MSUpdateTrackPublic = 1,
+  MSACUpdateTrackPublic = 1,
 
   /**
    * An update track for tracking updates sent to private groups.
    */
-  MSUpdateTrackPrivate = 2
-};
+  MSACUpdateTrackPrivate = 2
+} NS_SWIFT_NAME(UpdateTrack);
 
 /**
  * Update track.
  */
-@property(class, nonatomic) MSUpdateTrack updateTrack;
+@property(class, nonatomic) MSACUpdateTrack updateTrack;
 
 /**
- * Set a Distribute delegate
- *
- * @param delegate A Distribute delegate.
+ * Distribute delegate
  *
  * @discussion If Distribute delegate is set and releaseAvailableWithDetails is returning <code>YES</code>, you must call
  * notifyUpdateAction: with one of update actions to handle a release properly.
@@ -53,26 +52,23 @@ typedef NS_ENUM(NSInteger, MSUpdateTrack) {
  * @see releaseAvailableWithDetails:
  * @see notifyUpdateAction:
  */
-+ (void)setDelegate:(id<MSDistributeDelegate>)delegate;
+@property(class, nonatomic, weak) id<MSACDistributeDelegate> _Nullable delegate;
+
+/**
+ * URL that is used for generic update related tasks.
+ */
+@property(class, nonatomic, copy, setter=setApiUrl:) NSString *apiUrl;
+
+/**
+ * URL that is used to install update.
+ *
+ */
+@property(class, nonatomic, copy, setter=setInstallUrl:) NSString *installUrl;
 
 /**
  * Notify SDK with an update action to handle the release.
  */
-+ (void)notifyUpdateAction:(MSUpdateAction)action;
-
-/**
- * Change The URL that will be used for generic update related tasks.
- *
- * @param apiUrl The new URL.
- */
-+ (void)setApiUrl:(NSString *)apiUrl;
-
-/**
- * Change the base URL that is used to install update.
- *
- * @param installUrl The new URL.
- */
-+ (void)setInstallUrl:(NSString *)installUrl;
++ (void)notifyUpdateAction:(MSACUpdateAction)action;
 
 /**
  * Process URL request for the service.

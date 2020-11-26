@@ -3,12 +3,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class MSDistributionGroup;
+@class MSACDistributionGroup;
 
 /**
  * Details of an uploaded release.
  */
-@interface MSReleaseDetails : NSObject
+NS_SWIFT_NAME(ReleaseDetails)
+@interface MSACReleaseDetails : NSObject
 
 /**
  * ID identifying this unique release.
@@ -37,7 +38,7 @@
 /**
  * The flag that indicates whether the release is a mandatory update or not.
  */
-@property(nonatomic, getter=isMandatoryUpdate, assign) BOOL mandatoryUpdate;
+@property(nonatomic, getter=isMandatoryUpdate, assign) BOOL mandatoryUpdate NS_SWIFT_NAME(mandatoryUpdate);
 
 /**
  * The URL that hosts the release notes for this release.

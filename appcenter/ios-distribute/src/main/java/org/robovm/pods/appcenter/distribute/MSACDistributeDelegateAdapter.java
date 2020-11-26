@@ -34,9 +34,9 @@ import org.robovm.pods.appcenter.core.*;
 /*<javadoc>*/
 /*</javadoc>*/
 /*<annotations>*//*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSDistributeDelegateAdapter/*</name>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACDistributeDelegateAdapter/*</name>*/ 
     extends /*<extends>*/NSObject/*</extends>*/ 
-    /*<implements>*/implements MSDistributeDelegate/*</implements>*/ {
+    /*<implements>*/implements MSACDistributeDelegate/*</implements>*/ {
 
     /*<ptr>*/
     /*</ptr>*/
@@ -50,6 +50,6 @@ import org.robovm.pods.appcenter.core.*;
     /*<members>*//*</members>*/
     /*<methods>*/
     @NotImplemented("distribute:releaseAvailableWithDetails:")
-    public boolean releaseAvailable(MSDistribute distribute, MSReleaseDetails details) { return false; }
+    public boolean releaseAvailable(MSACDistribute distribute, MSACReleaseDetails details) { return false; }
     /*</methods>*/
 }

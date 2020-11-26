@@ -8,20 +8,20 @@ headers:
 private_typedefs:
 
 enums:
-    MSUpdateAction: {}
-    MSUpdateTrack: {}
+    MSACUpdateAction: {}
+    MSACUpdateTrack: {}
 
 classes:
-    MSDistribute: {}
-    MSReleaseDetails: {}
-    MSServiceAbstract:
+    MSACDistribute: {}
+    MSACReleaseDetails: {}
+    MSACServiceAbstract:
         exclude: true # part of core
 protocols:
-    MSDistributeDelegate:
+    MSACDistributeDelegate:
         methods:
             '-distribute:releaseAvailableWithDetails:':
                 name: releaseAvailable
-    MSService:
+    MSACService:
         exclude: true # part of core
 
 functions:

@@ -16,22 +16,30 @@
 package org.robovm.pods.appcenter.distribute;
 
 /*<imports>*/
+import java.io.*;
+import java.nio.*;
+import java.util.*;
 import org.robovm.objc.*;
 import org.robovm.objc.annotation.*;
+import org.robovm.objc.block.*;
+import org.robovm.rt.*;
+import org.robovm.rt.annotation.*;
+import org.robovm.rt.bro.*;
 import org.robovm.rt.bro.annotation.*;
 import org.robovm.rt.bro.ptr.*;
 import org.robovm.apple.foundation.*;
+import org.robovm.pods.appcenter.core.*;
 /*</imports>*/
 
 /*<javadoc>*/
 
 /*</javadoc>*/
 /*<annotations>*/@Library(Library.INTERNAL) @NativeClass/*</annotations>*/
-/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACDistribute/*</name>*/
-    extends /*<extends>*/MSServiceAbstract/*</extends>*/ 
+/*<visibility>*/public/*</visibility>*/ class /*<name>*/MSACDistribute/*</name>*/ 
+    extends /*<extends>*/MSACServiceAbstract/*</extends>*/ 
     /*<implements>*//*</implements>*/ {
 
-    /*<ptr>*/public static class MSDistributePtr extends Ptr<MSACDistribute, MSDistributePtr> {}/*</ptr>*/
+    /*<ptr>*/public static class MSACDistributePtr extends Ptr<MSACDistribute, MSACDistributePtr> {}/*</ptr>*/
     /*<bind>*/static { ObjCRuntime.bind(MSACDistribute.class); }/*</bind>*/
     /*<constants>*//*</constants>*/
     /*<constructors>*/
@@ -41,20 +49,26 @@ import org.robovm.apple.foundation.*;
     /*</constructors>*/
     /*<properties>*/
     @Property(selector = "updateTrack")
-    public static native MSUpdateTrack getUpdateTrack();
+    public static native MSACUpdateTrack getUpdateTrack();
     @Property(selector = "setUpdateTrack:")
-    public static native void setUpdateTrack(MSUpdateTrack v);
+    public static native void setUpdateTrack(MSACUpdateTrack v);
+    @Property(selector = "delegate")
+    public static native MSACDistributeDelegate getDelegate();
+    @Property(selector = "setDelegate:", strongRef = true)
+    public static native void setDelegate(MSACDistributeDelegate v);
+    @Property(selector = "apiUrl")
+    public static native String getApiUrl();
+    @Property(selector = "setApiUrl:")
+    public static native void setApiUrl(String v);
+    @Property(selector = "installUrl")
+    public static native String getInstallUrl();
+    @Property(selector = "setInstallUrl:")
+    public static native void setInstallUrl(String v);
     /*</properties>*/
     /*<members>*//*</members>*/
     /*<methods>*/
-    @Method(selector = "setDelegate:")
-    public static native void setDelegate(MSDistributeDelegate delegate);
     @Method(selector = "notifyUpdateAction:")
-    public static native void notifyUpdateAction(MSUpdateAction action);
-    @Method(selector = "setApiUrl:")
-    public static native void setApiUrl(String apiUrl);
-    @Method(selector = "setInstallUrl:")
-    public static native void setInstallUrl(String installUrl);
+    public static native void notifyUpdateAction(MSACUpdateAction action);
     @Method(selector = "openURL:")
     public static native boolean openURL(NSURL url);
     @Method(selector = "disableAutomaticCheckForUpdate")
